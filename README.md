@@ -24,8 +24,8 @@ It includes three study modes, instant feedback, and score tracking.
 
 - Total Questions: 112
 - Weeks Covered: 1-12
-- Multi-Select Questions: 21
-- Single-Select Questions: 91
+- Multi-Select Questions: 20
+- Single-Select Questions: 92
 
 ## Project Structure
 
