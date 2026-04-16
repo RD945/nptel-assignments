@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { questions as allQuestions, Question } from "@/data/questions";
+import FormattedText from "@/components/FormattedText";
 import styles from "./quiz.module.css";
 
 interface QuizState {
@@ -163,7 +164,9 @@ export default function Quiz() {
       </div>
 
       <div className={styles.questionCard}>
-        <h2 className={styles.questionText}>{currentQuestion.text}</h2>
+        <h2 className={styles.questionText}>
+          <FormattedText text={currentQuestion.text} />
+        </h2>
 
         <div className={styles.options}>
           {currentQuestion.options.map((option) => (
@@ -191,7 +194,9 @@ export default function Quiz() {
                 }`}
               >
                 <span className={styles.optionLabel}>{option.label}.</span>
-                <span className={styles.optionText}>{option.text}</span>
+                <span className={styles.optionText}>
+                  <FormattedText text={option.text} />
+                </span>
               </label>
             </div>
           ))}
@@ -202,7 +207,8 @@ export default function Quiz() {
             <div className={styles.feedbackMessage}>{state.feedback}</div>
             {currentQuestion.explanation && (
               <div className={styles.explanation}>
-                <strong>Explanation:</strong> {currentQuestion.explanation}
+                <strong>Explanation:</strong>{" "}
+                <FormattedText text={currentQuestion.explanation} />
               </div>
             )}
           </div>

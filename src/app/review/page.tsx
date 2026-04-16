@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { questions as allQuestions } from "@/data/questions";
+import FormattedText from "@/components/FormattedText";
 import styles from "./review.module.css";
 
 export default function Review() {
@@ -39,7 +40,7 @@ export default function Review() {
             {questionsByWeek[week].map((question, idx) => (
               <div key={question.id} className={styles.questionCard}>
                 <div className={styles.questionNumber}>
-                  Q{idx + 1}. {question.text}
+                  Q{idx + 1}. <FormattedText text={question.text} />
                 </div>
 
                 <div className={styles.optionsList}>
@@ -53,7 +54,9 @@ export default function Review() {
                       }`}
                     >
                       <span className={styles.optionLabel}>{option.label}.</span>
-                      <span className={styles.optionText}>{option.text}</span>
+                      <span className={styles.optionText}>
+                        <FormattedText text={option.text} />
+                      </span>
                       {question.correctAnswers.includes(option.label) && (
                         <span className={styles.correctBadge}>✓ CORRECT</span>
                       )}
@@ -67,7 +70,8 @@ export default function Review() {
 
                 {question.explanation && (
                   <div className={styles.explanation}>
-                    <strong>Explanation:</strong> {question.explanation}
+                    <strong>Explanation:</strong>{" "}
+                    <FormattedText text={question.explanation} />
                   </div>
                 )}
               </div>
