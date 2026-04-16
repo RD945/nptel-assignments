@@ -1,0 +1,301 @@
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.backLink:hover {
+  background-color: #f0f0f0;
+}
+
+.weekSelector {
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.weekButton {
+  padding: 20px 15px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.weekButton:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.weekButtonTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.weekButtonCount {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Quiz screen styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.counter {
+  color: #666;
+}
+
+.week {
+  color: #666;
+  font-weight: bold;
+}
+
+.questionCard {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.questionText {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.optionWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.input {
+  margin-top: 3px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.label {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  flex: 1;
+}
+
+.input:disabled ~ .label {
+  cursor: not-allowed;
+}
+
+.label:hover {
+  background-color: #f9f9f9;
+}
+
+.label.correct {
+  background-color: #d4f4dd;
+  color: #155724;
+  font-weight: 500;
+}
+
+.label.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: 500;
+}
+
+.optionLabel {
+  font-weight: bold;
+  min-width: 20px;
+  flex-shrink: 0;
+}
+
+.optionText {
+  word-break: break-word;
+}
+
+.feedback {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.feedbackMessage {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.explanation {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 4px;
+  border-left: 3px solid #666;
+  max-height: none;
+  overflow: visible;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.submitButton,
+.nextButton {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 120px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover,
+.nextButton:hover {
+  background-color: #f0f0f0;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Results screen */
+.results {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.resultsTitle {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.scoreinfo {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.weekScoresContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.weekScore {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.weekScoreName {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.weekScoreValue {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.score {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.homeButton {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.homeButton:hover {
+  background-color: #f0f0f0;
+}

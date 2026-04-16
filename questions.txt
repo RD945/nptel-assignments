@@ -1,0 +1,1571 @@
+Introduction to Large Language Models
+Assignment- 1
+TYPE OF QUESTION: MCQ
+Number of questions: 10 Total mark: 10 X 1 = 10
+_________________________________________________________________________
+QUESTION 1:
+Consider the word “paper” in the following sentences:
+She submitted her research paper.
+He wrapped the gift in paper.
+The word “paper” is an example of:
+a. Homonymy
+b. Synonymy
+c. Polysemy
+d. Antonymy
+Correct Answer: c
+QUESTION 2:
+Based on Distributional Semantics, which of the following statements is/are true?
+(i) The meaning of a word is defined by its relationship to other words.
+(ii) The meaning of a word does not rely on its surrounding context.
+a. Both (i) and (ii) are correct
+b. Only (ii) is correct
+c. Only (i) is correct
+d. Neither (i) nor (ii) is correct
+Correct Answer: d
+Solution: According to Distributional Semantics, the meanings of words can be derived from
+their distributional properties in a large corpora of text. It relies on the context in which words
+appear.
+QUESTION 3:
+The sentence “Ravi saw the man with the binoculars.” is ambiguous because of:
+a. Lexical ambiguity
+b. Morphological ambiguity
+c. Syntactic ambiguity
+d. Pragmatic ambiguity
+Correct Answer: c
+Solution:
+The prepositional phrase “with the binoculars” can attach to either Ravi or the man, hence
+the type of ambiguity is syntactic.
+QUESTION 4:
+Consider the sentences:
+Anita met Kavya after work. She was tired.
+Who does “she” most likely refer to?
+a. Anita
+b. Kavya
+c. Both equally
+d. Cannot be determined
+Correct Answer: d
+Solution: It is difficult to resolve whether the pronoun “she” refers to Anita or Kavya without
+additional context.
+QUESTION 5:
+What is the correct morpheme breakdown of the word “unhappiness”?
+a. un + happy + ness
+b. unhappi + ness
+c. un + happi + ness
+d. unhappiness
+Correct Answer: a
+QUESTION 6:
+In the sentence:
+“The chef cooked pasta for the guests.”
+What is the semantic role of “the guests”?
+a. Agent
+b. Patient
+c. Beneficiary
+d. Instrument
+Correct Answer: c
+QUESTION 7:
+Below is a sentence with lexical ambiguity.
+Rose rose to put rose roes on her rows of roses.
+How many senses of rose are present in the sentence?
+a. 2
+b. 3
+c. 1
+d. 4
+Correct Answer: d
+Solution: Rose
+1
+rose
+2
+to put rose
+3
+roes on her rows of roses
+4
+.
+The word rose has four senses:
+1. Proper Noun: A person named Rose
+2. Verb: stood
+3. Adjective: pink-colored (describing roes)
+4. Noun: Flower
+QUESTION 8:
+What issues can be observed in the following text?
+On a much-needed #workcation in beautiful Goa. Workin & chillin by d waves!
+a. Idioms
+b. Non-standard English
+c. Tricky Entity Names
+d. Neologisms
+Correct Answer: b,d
+Solution: We can observe usage of non-standard English such as workin and chillin,
+neologisms such as workcation in the text.
+QUESTION 9:
+Sentence 1: Arjun bought a brand-new laptop.
+Sentence 2: Arjun owns a laptop.
+a. Entailed
+b. Contradicted
+c. Neutral
+Correct Answer: a
+QUESTION 10:
+Which relation holds between “engine” and “car”?
+a. Synonymy
+b. Antonymy
+c. Meronymy
+d. Hyponymy
+Correct Answer: c
+Solution: An engine is a part of a car.
+Introduction to Large Language Models
+Assignment- 2
+TYPE OF QUESTION: MCQ
+Number of questions: 6 Total mark: 3 X 1 + 2 X 2 + 1 X 3 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+A language model that conditions each word on the previous three words is equivalent to
+which Markov model?
+a. First-order
+b. Second-order
+c. Third-order
+d. Fourth-order
+Correct Answer: c
+Solution: Please refer to lecture slides.
+QUESTION 2: [1 mark]
+Which smoothing technique leverages the number of unique contexts a word appears in?
+a. Good-Turing
+b. Add-k
+c. Kneser-Ney
+d. Absolute Discounting
+Correct Answer: c
+Solution: Kneser-Ney uses continuation probability which counts the number of unique left
+contexts.
+QUESTION 3: [1 mark]
+Using a language model inside a machine translation system to measure BLEU score is an
+example of:
+a. Intrinsic evaluation
+b. Extrinsic evaluation
+c. Perplexity evaluation
+d. Likelihood estimation
+Correct Answer: b
+Solution: Performance is measured on a downstream task, hence extrinsic evaluation.
+For Question 4 to 6, consider the following corpus:
+<s> the wizard sees the dragon </s>
+<s> the dragon breathes fire </s>
+<s> the wizard casts a spell </s>
+QUESTION 4: [2 marks]
+Assuming a bi-gram language model, calculate the probability of the sentence:
+<s> the dragon casts fire </s>
+Ignore the unigram probability of P(<s>) in your calculation.
+a. 2/37
+b. 1/27
+c. 0
+d. 1/36
+Correct Answer: c
+Solution:
+P(<s> the dragon casts fire </s>) =
+P(the∣<s>) x P(dragon∣the) x P(casts∣dragon) x P(fire∣casts) x P(</s>∣fire)
+P(casts∣dragon) = P(fire∣casts) = 0
+P(<s> the dragon casts fire </s>) = 0
+QUESTION 5: [3 marks]
+Using add-one smoothing, compute the probability of the sentence:
+<s> the dragon casts fire </s>
+Assume vocabulary size V includes all unique words (excluding <s>, </s>).
+a. 1/7150
+b. 1/35
+c. 1/67
+d. 1/9900
+Correct Answer: a
+Solution:
+P(<s> the dragon casts fire </s>) =
+P(the∣<s>) x P(dragon∣the) x P(casts∣dragon) x P(fire∣casts) x P(</s>∣fire)
+Unique tokens:
+the, wizard, sees, dragon, breathes, fire, casts, a, spell
+<s> the wizard sees the dragon </s>
+<s> the dragon breathes fire </s>
+<s> the wizard casts a spell </s>
+Vocabulary size V= 9
+P(wi∣wi−1
+) =
+𝐶𝑜𝑢𝑛𝑡(𝑤
+𝑖−1
+, 𝑤
+𝑖
+) + 1
+𝐶𝑜𝑢𝑛𝑡(𝑤
+𝑖−1
+) + 𝑉
+P(the | <s>) = 3+1/3+9 = 4/12 = 1/3
+P(dragon | the) = 2+1/4+9 = 3/13
+P(casts | dragon) = 0+1/2+9 = 1/11
+P(fire | casts) = 0+1/1+9 = 1/10
+P(</s> | fire) = 1+1/1+9 =2/10 = 1/5
+P(<s> the dragon casts fire </s>) =1/3 x 3/13 x 1/11 x 1/10 x 1/5 = 1/7150
+QUESTION 6: [2 marks]
+Using the smoothed probability, compute the perplexity of:
+<s> the dragon casts fire </s>
+(Exclude <s> and </s> from word count.)
+a. 9000
+1/5
+b. 7150
+1/4
+c. 1/35
+1/5
+d. 1/9900
+1/4
+Correct Answer: b
+Solution:
+Sentence length N=4
+Probability P=1/7150
+Perplexity=(1/7150)
+−1/4 = 7150
+1/4
+Introduction to Large Language Models
+Assignment- 3
+TYPE OF QUESTION: MCQ
+Number of questions: 10 Total mark: 10 X 1 = 10
+_________________________________________________________________________
+Question 1:
+Which component of a neural network introduces non-linearity into the model?
+a. Weights
+b. Bias
+c. Activation function
+d. Loss function
+Correct Answer: c
+Solution: Activation functions introduce non-linearity, enabling neural networks to learn
+complex patterns beyond linear relationships.
+Question 2:
+If all activation functions in an MLP are linear, what will be the effect on the network?
+a. It becomes equivalent to logistic regression
+b. It becomes equivalent to a single linear transformation
+c. It will not converge
+d. It will overfit
+Correct Answer: b
+Solution: A composition of linear functions is still linear, so multiple layers collapse into one
+linear transformation.
+Question 3:
+Which activation function is least likely to suffer from vanishing gradients?
+a. Tanh
+b. Sigmoid
+c. ReLU
+Correct Answer: c
+Solution: Its gradient is 1 for positive input and 0 for negative input, so it allows gradients to
+flow effectively
+Question 4:
+What happens to dropout during inference?
+a. Dropout is applied with higher probability
+b. Dropout is applied with lower probability
+c. Dropout is disabled
+d. Dropout is replaced by L2 regularization
+Correct Answer: c
+Solution: Dropout is only used during training
+Question 5:
+Why can a single-layer perceptron not solve the XOR problem?
+a. XOR requires probabilistic outputs
+b. XOR is non-linear and not linearly separable
+c. XOR has more than two classes
+d. XOR requires backpropagation
+Correct Answer: b
+Solution: XOR cannot be separated by a single straight line, so it requires at least one
+hidden layer.
+Question 6:
+Among the following options, select the statements that are TRUE about backpropagation.
+a. It updates weights using only forward pass
+b. It is used to randomly update the weights of a neural network
+c. It applies the chain rule from output to input layers
+d. It works only for sigmoid activations
+Correct Answer: c
+Solution: Backpropagation efficiently computes gradients by applying the chain rule
+backward through the network.
+Question 7:
+Which type of regularization encourages sparsity in the weights?
+a. L1 regularization
+b. L2 regularization
+c. Dropout
+d. Early stopping
+Correct Answer: a
+Solution: L1 regularization encourages sparsity in the weights.
+Question 8:
+What can one observe during the training of a neural network if the learning rate in gradient
+descent is set too high?
+a. Loss decreases smoothly
+b. Loss oscillates or diverges
+c. The loss always stays zero
+d. None of these
+Correct Answer: b
+Question 9:
+State the reason for softmax being commonly used in multi-class classification.
+a. Outputs values in [−1,1]
+b. Produces probabilities that sum to 1
+c. Avoids overfitting
+d. Eliminates the need for regularization
+Correct Answer: b
+Question 10:
+What is the primary goal of regularization in machine learning?
+a. To speed up the training process and help in faster convergence
+b. To reduce overfitting and improve generalization
+c. To help increase the model complexity
+d. None of these
+Correct Answer: b
+Introduction to Large Language Models
+Assignment- 4
+TYPE OF QUESTION: MCQ
+Number of questions: 10 Total mark: 8 X 1 + 1 X 2 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+State True or False.
+The Continuous Bag of Words (CBOW) model predicts the surrounding context words given
+a center target word.
+Correct Answer: False
+Solution: CBOW uses a window of surrounding words to predict the target word whereas the
+Skip-gram model uses a target word to predict surrounding context words.
+QUESTION 2: [1 mark]
+What is the main drawback of representing words as one-hot vectors?
+a. They cannot capture semantic similarity between words.
+b. They are computationally inefficient.
+c. They cannot incorporate word order effectively.
+d. They are not robust to unseen words.
+Correct Answer: a
+Solution: One-hot vectors are orthogonal and do not capture relationships or similarities
+between words.
+QUESTION 3: [1 mark]
+A toy corpus has an initial base vocabulary of 6 unique characters: {a, b, c, g, s, t}. If the
+BPE algorithm performs exactly three merge operations, what will be the final size of the
+vocabulary?
+a. 6
+b. 3
+c. 9
+d. 10
+Correct Answer: c
+Solution: Starting with 6 characters and adding 3 new merged tokens results in a
+vocabulary size of 9.
+QUESTION 4: [1 mark]
+Which formula is used by WordPiece to compute the score of a pair of tokens (Token A and
+Token B) to determine if they should be merged?
+a. Score = Frequency(A, B) + Frequency(A) + Frequency(B)
+b. Score = Frequency(A, B) / (Frequency(A) x Frequency(B))
+c. Score = Frequency(A, B) x (Frequency(A) + Frequency(B))
+d. Score = (Frequency(A) x Frequency(B)) / Frequency(A, B)
+Correct Answer: b
+Solution: Please refer to lecture slides
+QUESTION 5: [1 mark]
+How does the WordPiece algorithm identify tokens during the tokenization of a new word?
+a. It applies merge rules successively in the exact order they were learned during training.
+b. It identifies the longest subword starting from the beginning of the word that exists in the
+vocabulary.
+c. It uses the Viterbi algorithm to find the most probable sequence of tokens.
+d. It randomly splits the word into subwords and calculates the frequency of each.
+Correct Answer: b
+Solution: Please refer to lecture slides.
+QUESTION 6: [1 mark]
+Which of the following statements are true about subword tokenization?
+a. Frequently used words should be decomposed into smaller subwords to save space.
+b. Rare words should be decomposed into meaningful subwords.
+c. It serves as a middle ground between word-based and character-based tokenization.
+d. It consists of two components: a token learner to generate a vocabulary and a token
+segmenter to process raw text.
+Correct Answer: b, c, d
+Solution: Please refer to lecture slides.
+QUESTION 7: [2 marks]
+For tf-idf weighting, if a word t appears in every single document in a collection of size N,
+what is its idft value?
+a. 1
+b. N
+c. log10 N
+d. 0
+Correct Answer: d
+Solution: Please refer to lecture slides.
+QUESTION 8: [1 mark]
+What does the term "self-supervision" mean in the context of Word2Vec?
+a. Using labels provided by human annotators
+b. Automatically generating labels based on the relationship between words and their
+context
+c. Supervising the training process manually
+d. Employing external datasets for additional supervision
+Correct Answer: b
+Solution: Self-supervision in Word2Vec refers to the use of context words as labels to train
+the model without manual annotations.
+QUESTION 9: [1 mark]
+What is the key concept underlying Word2Vec?
+a. Ontological semantics
+b. Decompositional semantics
+c. Distributional semantics
+d. Morphological analysis
+Correct Answer: c
+Solution: Please refer to lecture slides.
+Introduction to Large Language Models
+Assignment- 5
+TYPE OF QUESTION: MCQ
+Number of questions: 8 Total mark: 7 X 1 + 1 X 3 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+State True or False.
+Increasing the temperature parameter during the decoding process makes the probability
+distribution sharper, resulting in a more confident and deterministic output.
+a. True
+b. False
+Correct Answer: b
+Solution: Please refer to lecture slides.
+QUESTION 2: [3 marks]
+Given the following encoder and decoder hidden states, compute the attention scores. (Use
+dot product as the scoring function)
+Encoder hidden states: h1=[2,1], h2=[0,3], h3=[4,2]
+Decoder hidden state: s=[1,2]
+a. 0.015, 0.843, 0.141
+b. 0.843, 0.015, 0.141
+c. 0.141, 0.843, 0.015
+d. 0.016, 0.117, 0.867
+Correct Answer: d
+Solution:
+e1=2⋅1+1⋅2=2+2=4
+e2=0⋅1+3⋅2=0+6=6
+e3=4⋅1+2⋅2=4+4=8
+α1 = e
+4
+/(e
+4 + e
+6 + e
+8
+) = 0.0159
+α2 = e
+6
+/(e
+4 + e
+6 + e
+8
+) = 0.1173
+α3 = e
+8
+/(e
+4 + e
+6 + e
+8
+) = 0.867
+QUESTION 3: [1 mark]
+What improvement does attention bring to the basic Seq2Seq model?
+a. Reduces training time
+b. Removes the need for an encoder
+c. Allows access to all encoder states during decoding
+d. Reduces the number of model parameters
+Correct Answer: c
+QUESTION 4: [1 mark]
+Which gate in an LSTM is responsible for deciding how much of the cell state to keep?
+a. Output gate
+b. Input gate
+c. Forget gate
+d. Cell candidate gate
+Correct Answer: c
+Solution:
+The forget gate determines what fraction of the previous cell state should be retained in the
+current timestep.
+QUESTION 5: [1 mark]
+What is the benefit of using multiple attention heads in a Transformer model?
+a. It reduces the number of computations required.
+b. It allows attending to multiple parts of the sequence from different representation
+subspaces.
+c. It increases model sparsity.
+d. It replaces the need for positional encodings.
+Correct Answer: b
+Solution: Each head can learn to focus on different types of relationships or dependencies
+within the input sequence.
+QUESTION 6: [1 mark]
+Why is masking used in the decoder part of a Transformer during training?
+a. To prevent gradient explosion
+b. To ensure the model does not attend to future tokens
+c. To avoid overfitting
+d. To normalize attention weights
+Correct Answer: b
+Solution: Causal masking ensures the decoder predicts one token at a time by masking out
+future positions.
+QUESTION 7: [1 mark]
+Why are RNNs preferred over fixed-window neural models?
+a. They have a smaller parameter size.
+b. They can process sequences of arbitrary length.
+c. None of the above.
+Correct Answer: b
+Solution: Please refer to lecture slides.
+QUESTION 8: [1 mark]
+Which of the following is true about Seq2Seq models?
+(i) Seq2Seq models are always conditioned on the source sentence.
+(ii) The encoder compresses the input sequence into a fixed-size vector representation.
+(iii) Seq2Seq models cannot handle variable-length sequences.
+a. (i) and (ii)
+b. (ii) only
+c. (iii) only
+d. (i), (ii), and (iii)
+Correct Answer: a
+Solution: Seq2Seq models are designed to encode variable-length sequences but
+compress them into fixed-size vector representations.
+Introduction to Large Language Models
+Assignment- 6
+TYPE OF QUESTION: MCQ
+Number of questions: 10 Total mark: 10 X 1 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+State True or False:
+In Transformers, masking is used only during inference to prevent looking at future tokens.
+a. True
+b. False
+Correct Answer: b
+Solution: Masking is used during both training and inference in autoregressive models to
+ensure that predictions depend only on past tokens.
+QUESTION 2: [1 mark]
+In self-attention, which of the following is true?
+a. Queries and values are always equal
+b. Each token attends only to the previous token
+c. The output of each token is a weighted sum over all values
+d. The key vectors are fixed after initialization
+Correct Answer: c
+QUESTION 3: [1 mark]
+What is the purpose of masked decoding in Transformers?
+a. Prevents attention lookups into the future
+b. Discards irrelevant tokens from the sequence
+c. Applies dropout to the attention weights
+d. Limits the attention span of the model
+Correct Answer: a
+Solution: Please refer to the slides.
+QUESTION 4: [1 mark]
+For Rotary Position Embedding (RoPE), which of the following statements are true?
+a. Combines relative and absolute positional information
+b. Applies a multiplicative rotation matrix to encode positions
+c. Eliminates the need for positional encodings
+d. All of the above
+Correct Answer: a, b
+Solution: Please refer to the slides.
+QUESTION 5: [1 mark]
+Which of the following statements is NOT true?
+a. Self-attention allows tokens to attend to every other token in the sequence.
+b. Multi-head attention increases the overall dimensionality of the transformer model.
+c. Relative positional encoding captures the distance between tokens rather than their
+absolute positions.
+d. Positional encoding is necessary because self-attention alone is permutation invariant.
+Correct Answer: b
+Solution: Please refer to the slides.
+QUESTION 6: [1 mark]
+What is the primary motivation behind using transformers instead of RNNs or LSTMs?
+a. To improve computational efficiency by avoiding sequential processing
+b. To reduce the need for large datasets
+c. To improve generalization to unseen data
+d. To reduce the number of model parameters
+Answer: a
+QUESTION 7: [1 mark]
+What is the primary reason for using layer normalization in transformers instead of batch
+normalization?
+a. Layer normalization is faster than batch normalization.
+b. Batch normalization is not effective for sequence models.
+c. Layer normalization reduces overfitting.
+d. Batch normalization does not work with positional encodings.
+Answer: b
+QUESTION 8: [1 mark]
+Fill in the blank:
+The sinusoidal positional encoding uses sine for even dimensions and ___ for odd
+dimensions.
+a. sine
+b. cosine
+c. tangent
+d. None of these
+Answer: b
+Solution: Please refer to lecture slides.
+QUESTION 9: [1 mark]
+You are given a self-attention layer with input dimension 2048, using 64 heads. What is the
+output dimension per head?
+a. 64
+b. 128
+c. 32
+d. 256
+Answer: c
+Solution: Each head processes 2048/64 = 32 dimensions
+QUESTION 10: [1 mark]
+___________ maps the values of a feature in the range [0,1].
+a. Standardization
+b. Normalization
+c. Transformation
+d. Scaling
+Correct Answer: b
+Solution: Normalization works by mapping all values of a feature to be in the range [0,1]
+using the transformation.
+Introduction to Large Language Models
+Assignment- 7
+Number of questions: 9 Total mark: 8 X 1 + 1 X 2 = 10
+QUESTION 1: [1 mark]
+ELMo and BERT represent two different pre-training strategies for language models. Which
+of the following statement(s) about these approaches is/are true?
+a) ELMo uses a bi-directional LSTM to pre-train word representations, while BERT uses
+a transformer encoder with masked language modeling.
+b) ELMo provides context-independent word representations, whereas BERT provides
+context-dependent representations.
+c) Pre-training of both ELMo and BERT involve next token prediction.
+d) Both ELMo and BERT produce contextual embeddings usable for downstream tasks.
+Correct Answer: a, d
+Solution:
+(a) True. ELMo’s base model is a bidirectional language model implemented with stacked
+LSTMs (forward and backward LMs). BERT is a Transformer encoder trained with Masked
+Language Modeling (MLM) and Next Sentence Prediction (NSP).
+(b) False. ELMo produces context-dependent token representations (its pooled
+representations depend on surrounding tokens via the BiLM). BERT also produces contextdependent representations. The statement claims ELMo is context-independent - that is
+incorrect.
+(c) False. ELMo is trained with language-modeling objectives (predict next token in forward
+LM and previous token in backward LM), so it uses next-token prediction in its LM training.
+BERT, however, uses masked LM (MLM) rather than standard next-token prediction; it
+predicts a masked token given context. Thus “both involve next token prediction” is incorrect.
+(d) True. Both produce contextual embeddings that downstream tasks can use and adapt:
+ELMo provides layerwise LM activations that tasks combine; BERT is fine-tuned, either endto-end or an additional classification head is learnt, for tasks.
+________________________________________________________________________
+QUESTION 2: [1 mark]
+Which model family is natively designed for conditional sequence-to-sequence tasks of the
+form P(y|x) without architectural modification?
+a) Decoder-only language models
+b) Encoder-only models
+c) Encoder-decoder models
+d) Character-CNN models
+Correct Answer: c
+Solution:
+Encoder-decoder architectures (e.g., T5, BART) are built for seq2seq tasks: the encoder
+encodes x, the decoder autoregressively generates y conditioned on the encoder output.
+This matches P(y|x) natively. Decoder-only models can be prompted to approximate P(y|x)
+(with special concatenation/prefixing), but are not strictly architecturally seq2seq without
+prompts; encoder-only models (like BERT) do not generate sequences autoregressively by
+design.
+_________________________________________________________________________
+QUESTION 3: [1 mark]
+Which of the following corruption strategies was/were explored in the pre-training of BART?
+a) Token masking, i.e., random tokens replaced by mask markers
+b) Token deletion
+c) Sentence permutation
+d) Text infilling, i.e., replacing spans with a single sentinel and tasking decoder to
+generate the spans.
+Correct Answer: a, b, c, d
+Solution:
+BART explored a family of noising/corruption strategies including token masking (random
+tokens replaced by mask markers), token deletion, sentence permutation (shuffling sentence
+order), and text infilling (replacing contiguous spans with sentinel tokens and asking decoder
+to reconstruct).
+_________________________________________________________________________
+QUESTION 4: [1 mark]
+What were the major changes introduced in GPT-2 family of models, compared to GPT-1?
+a) Addition of layer normalization between sub-blocks
+b) Increased vocabulary size
+c) Increased context size
+d) Addition of Rotary Positional Embedding (RoPE)
+Correct Answer: a, b, c
+Solution: GPT-2 kept the Transformer decoder architecture but introduced practical
+architectural and training changes: e.g., different layer-norm placement/tweaks (reported
+differences in normalization), larger vocabulary (~50k WordPiece/GPT tokenizer variants),
+and larger context window (GPT-2 used up to 1024 tokens).
+Rotary Positional Embeddings (RoPE) were however introduced later (not in GPT-2), so
+option (d) is false.
+_________________________________________________________________________
+QUESTION 5: [1 mark]
+Which of the following architectures are most suited for the sentiment classification task
+(given a sentence, assign one sentiment among positive, negative and neutral to it) and the
+machine translation task, respectively?
+a) Sentiment Classification: Encoder-Decoder; Machine-Translation: Encoder-only
+b) Sentiment Classification: Decoder-only; Machine-Translation: Encoder-only
+c) Sentiment Classification: Encoder-only; Machine-Translation: Decoder-only
+d) Sentiment Classification: Encoder-only; Machine-Translation: Encoder-Decoder
+Correct Answer: d
+Solution: For sentence-level classification (like sentiment classification), an encoder-only
+Transformer (e.g., BERT) is ideal: it creates a sentence representation used for a
+classification head.
+For machine translation, a full encoder-decoder seq2seq model (e.g., BART/T5) is the
+natural match because it must map an input sequence in one language to an output
+sequence in another language. Thus, option (d) is correct.
+_________________________________________________________________________
+QUESTION 6: [1 mark]
+The chain-rule factorization used when training an autoregressive language model for a
+sentence 𝑠 = {𝑡!,𝑡", … ,𝑡#} leads to the log probability of 𝑠 being expressed as:
+a) log 𝑃(𝑠) = ∑ log 𝑃(𝑡$) #
+$%!
+b) log 𝑃(𝑠) = log 𝑃(𝑡!) + ∑ log 𝑃(𝑡$&!|𝑡!, … ,𝑡$) #'!
+$%!
+c) log 𝑃(𝑠) = log 𝑃(𝑡!) × ∏ log 𝑃(𝑡$&!|𝑡!, … ,𝑡$) #'!
+$%!
+d) log 𝑃(𝑠) = ∏ log 𝑃(𝑡$) #
+$%!
+Correct Answer: b
+Solution: Please refer to the lecture slides.
+QUESTION 7: [1 mark]
+Why does ELMo build its input token representations from a character-level CNN instead of
+fixed word embeddings?
+a) To reduce training time by sharing parameters
+b) To avoid UNK tokens and generate representations for any string
+c) To compress embeddings to 128 dimensions
+d) To ensure the same vector for a word in every context
+Correct Answer: b
+Solution: The main motivations for using a character-level CNN in ELMo are: (i) to avoid
+OOV/UNK tokens. Character composition lets the model form vectors for any token
+(including rare or unseen tokens), and (ii) to capture morphological patterns (prefixes,
+suffixes), reducing reliance on a fixed word vocabulary.
+Options about compressing to 128 dims or guaranteeing same vector across contexts are
+incorrect (ELMo produces contextual vectors; the char-CNN simply forms a token
+representation before contextualization). So (b) is correct.
+QUESTION 8: [1 mark]
+In the ELMo task-specific combination formula, what is the role of the scalar 𝛾()*+?
+a) It enforces a unit norm on the combined vector.
+b) It selects which of forward/backward LSTMs to use.
+c) It is an embedding for the task label.
+d) It allows the downstream task to scale the overall magnitude of the combined
+representation.
+Correct Answer: d
+Solution: ELMo combines layer outputs as 𝐸𝐿𝑀𝑜+
+()*+ = 𝛾()*+ ∑ 𝑠$
+()*+ℎ+,$
+-.
+$ . The learned
+scalar 𝛾()*+ lets the downstream task adjust (scale) the overall magnitude of the combined
+representation. It is not a norm constraint or a selector of forward/backward LSTMs. So (d) is
+correct.
+QUESTION 9: (Numerical Question) [2 marks]
+The einsum function in numpy is used as a generalized operation for performing tensor
+multiplications. Now, consider two matrices: 𝐴 = ;
+3 0
+1 −1 @ and 𝐵 = ;
+−2 8
+7 −7 @ . Then,
+what is the output of the following numpy operation?
+numpy.einsum('ij,ji->', A, B)
+Correct Answer: 9
+Solution: numpy.einsum('ij,ji->', A, B)computes ∑/ ∑$ 𝐴/$𝐵$/ , i.e., the Frobenius
+inner product between 𝐴 and 𝐵0.
+Thus the final answer is: [(3* (-2)) + (0*7) + (1*8) + ((-1)*(-7))] = -6 + 0 + 8 + 7 = 9.
+Introduction to Large Language Models
+Assignment- 8
+Number of questions: 10 Total mark: 10 X 1 = 10
+QUESTION 1: [1 mark]
+Which factors influence the effectiveness of instruction tuning?
+a) The number of instruction templates used in training.
+b) The tokenization algorithm used by the model.
+c) The diversity of tasks in the fine-tuning dataset.
+d) The order in which tasks are presented during fine-tuning.
+Correct Answers: a, c, d
+Explanation:
+1. Number of instruction templates (a): Having multiple, varied instruction templates
+helps the model learn how to follow instructions in different styles and formats. This
+increases the robustness of the model’s instruction-following capability.
+2. Diversity of tasks in the fine-tuning dataset (c): Exposing the model to a broad
+spectrum of tasks (e.g., classification, summarization, translation) teaches it to
+generalize better. If the dataset lacks diversity, the model risks overfitting to a narrow
+range of instructions.
+3. Order in which tasks are presented (d): The sequence of tasks during multi-task or
+sequential fine-tuning can affect how well the model retains and integrates learned
+instructions. Certain curricula strategies (i.e., scheduling tasks in a deliberate
+sequence) often yield better performance.
+4. Why not the tokenization algorithm (b)? While tokenization can impact model
+performance overall, it is not typically considered a primary factor in the effectiveness
+of instruction tuning itself. It plays a role in how text is broken down but is less critical
+than the factors in (a), (c), and (d).
+_________________________________________________________________________
+QUESTION 2: [1 mark]
+What are key challenges of soft prompts in prompt-based learning?
+a) Forward pass with them is computationally inefficient compared to that with hard
+prompts.
+b) They require additional training, unlike discrete prompts.
+c) They cannot be interpreted or used effectively by non-expert users.
+d) They require specialized architectures that differ from standard transformers.
+Correct Answers: b, c
+Explanation:
+1. They require additional training (b): Soft prompts are continuous embeddings
+learned during training. Unlike hard (discrete) prompts, which are just tokens inserted
+into the text, soft prompts require gradient-based optimization. This necessitates a
+training procedure rather than a simple manual prompt.
+2. They cannot be interpreted or used effectively by non-expert users (c): Since
+soft prompts are embedding vectors (continuous parameters), humans cannot
+directly read or interpret them. They are not as transparent or easily modifiable as
+typed-out text prompts.
+3. Why not (a) or (d)?
+(a) Soft prompts do not necessarily result in a computationally inefficient forward
+pass compared to normal token embeddings. The computational overhead is minor
+and similar to standard embedding lookups.
+(d) Soft prompts generally do not require a specialized architecture; they can be
+applied to standard transformer-based models.
+_________________________________________________________________________
+QUESTION 3: [1 mark]
+Which statement best describes the impact of fine-tuning versus prompting in LLMs?
+a) Fine-tuning is always superior to prompting in generalization tasks.
+b) Prompting requires gradient updates, while fine-tuning does not.
+c) Fine-tuning modifies the model weights permanently, while prompting does not.
+d) Prompting performs better on in-domain tasks compared to fine-tuning.
+Correct Answer: c
+Explanation:
+• Fine-tuning modifies model weights permanently (c): During fine-tuning, the
+model’s parameters are updated, leading to a permanent change in its internal
+weights. In contrast, prompting relies on creating or inserting instructions (hard
+prompts) or learned embeddings (soft prompts) without altering the core model
+parameters.
+• Why not a, b, or d?
+(a) Fine-tuning is not always superior to prompting; performance can vary based on
+task, data availability, and use case.
+(b) Prompting usually does not require gradient updates (unless you are using soft
+prompts or another trainable method of prompting). Fine-tuning does require gradient
+updates.
+(d) Prompting does not necessarily outperform fine-tuning on in-domain tasks; in
+some scenarios, a well-fine-tuned model can achieve higher in-domain accuracy.
+________________________________________________________________________
+QUESTION 4: [1 mark]
+Which of the following aspects of the model outputs are captured by POSIX?
+a) Diversity in the responses to intent-preserving prompt variations
+b) Entropy of the distribution of response frequencies
+c) Time required to generate responses for intent-preserving prompt variations
+d) Variance in the log-likelihood of the same response for different input prompt
+variations
+Correct Answer: a, b, d
+Explanation:
+1. Diversity in responses (a): POSIX aims to measure how many different valid
+responses the model produces under prompt variations that preserve the same
+intent.
+2. Entropy of response frequencies (b): Entropy reflects how spread out or uncertain
+the model’s responses are. POSIX takes into account how often each distinct
+response occurs, capturing response variability.
+3. Variance in log-likelihood under different prompts (d): By measuring the loglikelihood of a particular response across varied prompts, POSIX can quantify how
+sensitive the model is to small changes in prompt phrasing.
+4. Why not (c)?
+The time required for inference is not directly part of POSIX’s metric. POSIX primarily
+focuses on response diversity and sensitivity to prompt variations, not computational
+speed.
+_________________________________________________________________________
+QUESTION 5: [1 mark]
+Which key mechanism makes Tree-of-Thought (ToT) prompting more effective than Chainof-Thought (CoT)?
+a) ToT uses reinforcement learning for better generalization.
+b) ToT allows backtracking to explore multiple reasoning paths.
+c) ToT reduces hallucination by using domain-specific heuristics.
+d) ToT eliminates the need for manual prompt engineering.
+Correct Answer: b
+Explanation:
+• ToT allows backtracking (b): Tree-of-Thought prompting structures the reasoning
+process in a tree-shaped manner, exploring multiple branches of thought. It can
+backtrack and test different solution paths, which helps uncover correct reasoning
+steps even if some initial paths were flawed.
+• Why not a, c, or d?
+(a) While some implementations might use reinforcement learning, it is not the
+defining reason for ToT’s effectiveness.
+(c) ToT does not inherently rely on domain-specific heuristics to reduce
+hallucination—rather, it systematically explores more possible reasoning paths.
+(d) ToT still benefits from careful prompt design for best results.
+_________________________________________________________________________
+QUESTION 6: [1 mark]
+What is a key limitation of measuring accuracy alone when evaluating LLMs?
+a) Accuracy is always correlated with model size.
+b) Accuracy cannot be measured on open-ended tasks.
+c) Accuracy is independent of the training dataset size.
+d) Accuracy does not account for prompt sensitivity.
+Correct Answer: d
+Explanation:
+• Accuracy does not account for prompt sensitivity (d): Large Language Models
+can produce significantly different responses depending on how the prompt is
+phrased. Simply measuring accuracy on a set of prompts does not tell us whether the
+model’s performance is stable across different prompt variations.
+• Why not a, b, or c?
+(a) Accuracy is not always correlated with model size.
+(b) Accuracy can be measured (in some form) even on open-ended tasks if
+appropriate metrics or reference answers are defined.
+(c) Accuracy can be influenced by the training data size and quality. It is not truly
+independent of dataset size.
+_________________________________________________________________________
+QUESTION 7: [1 mark]
+Why is instruction tuning not sufficient for aligning large language models?
+a) It does not generalize to unseen tasks.
+b) It cannot prevent models from generating undesired responses.
+c) It reduces model performance on downstream tasks.
+d) It makes models less capable of learning from new data.
+Correct Answer: b
+Explanation:
+• It cannot prevent models from generating undesired responses (b): While
+instruction tuning can help a model better follow user instructions, it does not fully
+address safe or ethical generation. A model might still produce harmful, biased, or
+factually incorrect outputs if not further aligned with techniques such as reinforcement
+learning from human feedback (RLHF) or safety guardrails.
+• Why not a, c, or d?
+(a) Properly designed instruction tuning can help models generalize to new tasks,
+though not perfectly.
+(c) Instruction tuning does not inherently reduce performance on downstream tasks—
+often it aims to improve it.
+(d) Instruction tuning does not necessarily hinder a model’s ability to learn from new
+data.
+_________________________________________________________________________
+QUESTION 8: [1 mark]
+Why is KL divergence minimized in regularized reward maximization?
+a) To maximize the probability of generating high-reward responses.
+b) To make training more computationally efficient.
+c) To prevent the amplification of bias in training data.
+d) To ensure models do not diverge too far from the reference model.
+Correct Answer: d
+Explanation:
+• Ensuring the model does not diverge too far (d): Minimizing KL divergence
+between the updated policy (the newly optimized model) and a reference policy (the
+base model) constrains the model’s changes. This helps the model exploit reward
+signals while retaining behaviours learned previously, avoiding catastrophic
+deviations that degrade performance or cause instability.
+• Why not a, b, or c?
+(a) While reward maximization is the core goal, the reason to minimize KL is not
+specifically “to maximize high-reward responses” but to balance staying close to the
+original policy while moving toward higher reward.
+(b) KL divergence minimization does not necessarily make training more efficient
+computationally; it’s more about controlling how drastically the policy updates.
+(c) Minimizing KL divergence can help with bias issues indirectly, but its primary
+purpose is to control the distribution shift rather than specifically address data bias.
+_________________________________________________________________________
+QUESTION 9: [1 mark]
+What is the primary advantage of using the log-derivative trick in REINFORCE?
+a) Reducing data requirements
+b) Expanding the token vocabulary
+c) Simplifying gradient computation
+d) Improving sampling diversity
+Correct Answer: c
+Explanation:
+• Simplifying gradient computation (c): The log-derivative trick in the REINFORCE
+algorithm allows one to compute gradients of an expectation without having to
+differentiate the reward function directly (which might be discrete or nondifferentiable). By bringing the log of the model’s probability into the gradient
+expression, one can handle policy gradients in a more straightforward way.
+• Why not a, b, or d?
+(a) The trick primarily addresses gradient calculation; it does not necessarily reduce
+how much data is needed.
+(b) It is unrelated to increasing the model’s vocabulary.
+(d) While it might affect how sampling is done during training, improving diversity is
+not its primary purpose.
+_________________________________________________________________________
+QUESTION 10: [1 mark]
+Which method combines reward maximization and minimizing KL divergence?
+a) REINFORCE
+b) Monte Carlo Approximation
+c) Proximal Policy Optimization
+d) Constitutional AI
+Correct Answer: c
+Explanation:
+• Proximal Policy Optimization (PPO) (c): PPO is an algorithm designed to
+maximize a reward function while explicitly minimizing the KL divergence between
+the updated policy and the old policy. By doing so, it ensures that each update does
+not shift the policy too drastically, leading to more stable learning.
+• Why not a, b, or d?
+(a) REINFORCE maximizes reward but does not inherently include a KL-based
+constraint to keep the new policy close to the old policy.
+(b) Monte Carlo Approximation is a technique, not a specific RL algorithm that
+enforces KL constraints.
+(d) Constitutional AI is a framework for aligning language models using a constitution
+of principles, not specifically about reward maximization combined with KL
+minimization in the same way PPO is.
+_________________________________________________________________________
+Introduction to Large Language Models
+Assignment- 9
+Number of questions: 10 Total mark: 10 X 1 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+Which of the following statement best describes why knowledge graphs (KGs) are
+considered more powerful than a traditional relational knowledge base (KB)?
+a. KGs require no schema, whereas KBs must have strict schemas.
+b. KGs store data only in the form of hypergraphs, eliminating redundancy.
+c. KGs allow flexible, graph-based connections and typed edges, enabling richer
+relationships and inferences compared to KBs.
+d. KGs completely replace the need for textual sources by storing all possible facts.
+Correct Answer: c
+Explanation:
+• Traditional relational knowledge bases enforce strict schemas (rows, columns,
+tables). In contrast, KGs store entities as nodes with typed edges (relations) between
+them, allowing richer and more flexible relationships.
+• KGs can represent complex connections (e.g., multi-edges, different relation types)
+and support inference by traversing these connections.
+• While some knowledge graphs can be partially schema-less or schema-flexible,
+choice (c) specifically highlights the flexibility in graph connections and typed edges,
+which is what makes KGs generally more powerful for representing rich, interlinked
+data.
+_______________________________________________________________________
+QUESTION 2: [1 mark]
+Entity alignment and relation alignment are crucial between KGs of different languages.
+Which of the following factors contribute to effective alignment?
+a. Aligning relations solely by their lexical similarity, ignoring semantic context
+b. Transliteration or language-based string matching for entity labels
+c. Ensuring all language aliases are represented identically in each KG
+d. Matching neighbours, or connected entities, across different KGs
+Correct Answer: b, d
+Explanation:
+• Transliteration or language-based string matching (b): For multilingual KGs,
+matching entity labels across languages (e.g., transliterating names or matching
+synonyms) is key to identifying equivalent entities.
+• Matching neighbours (d): Alignment goes beyond just matching labels; you also
+look at the graph structure - if two entities are neighbours or connected to the same
+concept in each KG, that supports they might be the same or related.
+• Why not a or c?
+(a) Lexical similarity alone (ignoring context) is insufficient, as terms might match
+lexically but differ in meaning across languages.
+(c) It is often not possible or necessary to have identical labels for all language
+aliases if they mean the same thing in context; the important aspect is linking them,
+not forcing identical representations.
+_________________________________________________________________________
+QUESTION 3: [1 mark]
+In the context of knowledge graph completion (KGC), which statement best describes the
+role of the scoring function 𝑓(𝑠, 𝑟, 𝑜)?
+a. It determines whether two entities refer to the same real-world concept.
+b. It produces a raw confidence score indicating how plausible a triple (𝑠, 𝑟, 𝑜) is.
+c. It explicitly encodes only the subject’s embedding, ignoring the relation and object
+embeddings.
+d. It ensures that every negative triple gets a higher score than any positive triple.
+Correct Answer: b
+Explanation:
+• A raw confidence score for plausibility (b): In KGC, the scoring function evaluates
+a triple (𝑠, 𝑟, 𝑜) (subject, relation, object) to determine how likely it is to be true
+according to the learned embeddings. A higher (or lower, depending on the
+convention) score indicates higher plausibility.
+• Why not the others?
+(a) That relates to entity resolution, not necessarily the KGC scoring function.
+(c) The scoring function typically factors in all three embeddings (subject, relation,
+and object).
+(d) While in training we often prefer valid triples to have higher scores than negative
+ones, the scoring function itself just produces a plausibility value. It doesn’t guarantee
+all negative triples score higher or lower unconditionally.
+_________________________________________________________________________
+QUESTION 4: [1 mark]
+One key difference between the differentiable KG approach and the semantic interpretation
+approach to KGQA is:
+a. Differentiable KG approaches are fully rule-based, while semantic interpretation is
+purely neural.
+b. Differentiable KG approaches do not require any graph embeddings, relying instead
+on explicit logical forms.
+c. Semantic interpretation is more transparent or interpretable, whereas differentiable
+KG is end-to-end trainable but less interpretable.
+d. Both approaches use logical forms; the primary difference is the type of question they
+can answer.
+Correct Answer: c
+Explanation:
+• Semantic interpretation is more interpretable, differentiable KG is more end-toend (c):
+o Semantic interpretation methods typically rely on building an explicit logical
+form of the question, which is transparent and can be easily explained.
+o Differentiable KGQA uses neural embeddings and end-to-end
+backpropagation over the graph, making it powerful but less humaninterpretable.
+• Why not the others?
+(a) Differentiable KG approaches are not fully rule-based — in fact, they’re more
+neural and less rule-based.
+(b) Differentiable approaches definitely do use graph embeddings.
+(d) While both can handle complex questions, the key difference in c is the
+interpretability vs. end-to-end trainability.
+________________________________________________________________________
+QUESTION 5: [1 mark]
+Considering the differentiable KG approach, which elements are typically learned jointly
+when training an end-to-end KGQA model?
+a. The textual question representation (e.g., BERT embeddings)
+b. The graph structure encoding (e.g., GCN or transformer-based graph embeddings)
+c. Predefined logical forms to ensure interpretability
+d. The final answer selection mechanism that identifies which node(s) in the graph
+satisfy the question
+Correct Answer: a, b, d
+Explanation:
+• Textual question representation (a): The system learns how to embed the input
+question (often with a neural model like BERT).
+• Graph structure encoding (b): It also learns how to encode nodes and relations in
+the knowledge graph (using a graph neural network, attention, etc.).
+• Final answer selection (d): Finally, the model learns how to map from the question
+and graph embeddings to the correct node(s) in the KG.
+• Why not (c)? Predefined logical forms are more typical of semantic-parsing-based
+KGQA, not differentiable KGQA approaches. Differentiable KGQA is usually end-toend and does not require manually crafted logical forms.
+_________________________________________________________________________
+QUESTION 6: [1 mark]
+Uniform negative sampling can have high variance and may require large number of
+samples. Why is that the case?
+a. Because the margin-based loss cannot converge without big mini-batches.
+b. Because randomly picking negative entities does not guarantee close or challenging
+negatives, causing unstable training estimates.
+c. Because negative sampling must ensure every possible negative triple is covered.
+d. Because the number of relations in the KG is too large for small number of samples.
+Correct Answer: b
+Explanation:
+• High variance arises when negatives are not challenging (b): If negative
+examples are chosen completely at random, many will be too easy for the model to
+distinguish, providing limited learning signal. The model sees less “borderline” cases,
+so estimates of how well the model can separate real vs. fake facts fluctuate
+significantly.
+• Why not the others?
+(a) Margin-based losses can converge with or without large mini-batches if sampling
+is done carefully.
+(c) We don’t need to cover every possible negative triple, just enough meaningful
+ones for training.
+(d) The number of relations in a KG might be large, but that alone doesn’t necessarily
+drive the variance issue.
+_________________________________________________________________________
+QUESTION 7: [1 mark]
+In testing embedding and score quality for KG completion, mean rank and hits@K are typical
+metrics. What does hits@K specifically measure in this context?
+a. The percentage of queries for which the correct answer appears in the top-K of the
+ranked list.
+b. The reciprocal of the rank of the correct answer.
+c. The probability of the correct answer appearing as the highest scored candidate.
+d. The margin of the correct triple score relative to all negative triples.
+Correct Answer: a
+Explanation:
+• Hits@K = The percentage of queries for which the correct entity (or triple) is in
+the top-K predictions (a). This means if the correct answer is within the first K
+results in the ranking, we call it a “hit.” We then compute how many queries achieve
+this, divided by the total.
+• Why not b, c, or d?
+(b) That is more like Mean Reciprocal Rank (MRR), not hits@K.
+(c) If K=1, that might coincide with hits@1, but the metric hits@K is about the top-K in
+general, not exclusively the top candidate.
+(d) That describes a margin-based idea, not hits@K.
+_________________________________________________________________________
+QUESTION 8: [1 mark]
+In the TransE model, the scoring function for a triple (𝑠, 𝑟, 𝑜) is typically defined as
+𝑓(𝑠, 𝑟, 𝑜) =∥ 𝑒! + 𝑒" − 𝑒# ∥
+where 𝑒!, 𝑒", 𝑒# are embeddings of the subject, relation, and object, respectively. Which
+statement best explains what a low value of 𝑓(𝑠, 𝑟, 𝑜) indicates in this context?
+a. That (𝑠, 𝑟, 𝑜) is an invalid triple according to the learned embeddings.
+b. That 𝑒! and 𝑒# must be orthogonal.
+c. That the relation embedding 𝑒" is zero.
+d. That (𝑠, 𝑟, 𝑜) has a high likelihood of being a true fact in the knowledge graph.
+Correct Answer: d
+Explanation:
+• A low distance = a high plausibility (d): In TransE, the model is trained such that
+𝑠 + 𝑟 ≈ 𝑜 for a valid triple. If the norm ∥ 𝑠 + 𝑟 − 𝑜 ∥ is small, it means the subject,
+relation, and object embeddings line up well, indicating that triple is likely true.
+• Why not a, b, c?
+(a) A high value would correspond to an invalid triple.
+(b) Orthogonality is not directly indicated by a small distance in TransE.
+(c) Zero relation embedding is not required for plausibility; the relation embedding
+can be non-zero and still yield a low distance.
+_________________________________________________________________________
+QUESTION 9: [1 mark]
+In RotatE, if a relation 𝑟 is intended to be symmetric, how would that typically manifest in the
+complex plane?
+a. The relation embedding 𝑒" must always equal zero.
+b. The angle of 𝑒" must be $
+% .
+c. The relation embedding 𝑒" is its own inverse (i.e., a 180° rotation when squared).
+d. The magnitude of 𝑒" must be greater than 1.
+Correct Answer: c
+Explanation:
+• Relation embedding is its own inverse (c): In RotatE, each relation is modeled as
+a rotation in the complex plane. For a relation to be symmetric, applying that relation
+twice would yield the original entity, so 𝑟% = 1. A 180° rotation (i.e., 𝜋 radians) is its
+own inverse because rotating twice by 180° brings you back to the same orientation.
+• Why not a, b, or d?
+(a) A zero embedding is not characteristic of symmetry in RotatE.
+(b) An angle of 𝜋 radians alone indicates an inverse relation, but the question
+specifically references the notion of the embedding being its own inverse, which
+implies 𝑟% = 1.
+(d) The magnitude constraint (often magnitude = 1 in RotatE) is not specifically about
+symmetry.
+_________________________________________________________________________
+QUESTION 10: [1 mark]
+Which main advantage do rotation-based models (like RotatE) have over translation-based
+ones (like TransE) when it comes to complex multi-relational patterns in a KG?
+a. Rotation-based models cannot model any symmetry or inverse patterns, so they are
+simpler.
+b. Rotation-based models handle a broader set of relation properties (symmetry, antisymmetry, inverses, composition) more naturally.
+c. Rotation-based models have no hyperparameters to tune, unlike TransE.
+d. Rotation-based models are guaranteed to yield perfect link prediction.
+Correct Answer: b
+Explanation:
+• Rotation-based models can capture more complex relational properties (b): By
+representing relations as rotations in the complex plane, RotatE naturally supports
+symmetric relations (𝑟% = 1) anti-symmetric relations, inverses (rotations in the
+opposite direction), and composition (cumulative rotations).
+• Why not a, c, or d?
+(a) In fact, they can model symmetry, inverses, etc.
+(c) They do have hyperparameters (e.g., embedding dimension, learning rate); it is
+not hyperparameter-free.
+(d) No model is guaranteed to be perfect for all link prediction tasks.
+_________________________________________________________________________
+Introduction to Large Language Models
+Assignment- 10
+Number of questions: 10 Total mark: 10 X 1 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+How do Prefix Tuning and Adapters differ in terms of where they inject new task-specific
+parameters in the Transformer architecture?
+a. Prefix Tuning adds new feed-forward networks after every attention block, while
+Adapters prepend tokens.
+b. Both approaches modify only the final output layer but in different ways.
+c. Prefix Tuning learns trainable “prefix” hidden states at each layer’s input, whereas
+Adapters insert small bottleneck modules inside the Transformer blocks.
+d. Both approaches rely entirely on attention masks to inject new task-specific
+knowledge.
+Correct Answer: c
+Explanation:
+• Prefix Tuning: In this approach, we learn a sequence of “prefix” embeddings -
+trainable hidden states - that get prepended to the model’s internal representations at
+each layer. This means the main Transformer weights stay frozen, and the prefix acts
+like extra context or “virtual tokens” that the model attends to.
+• Adapters: Adapters insert small, trainable modules (often feed-forward “bottleneck”
+layers) inside each Transformer layer, typically after the attention or feed-forward
+sub-layers. They are small enough to keep the main model weights mostly intact
+while still enabling fine-tuning for new tasks.
+Therefore, the main difference is that Prefix Tuning adds trainable “prefix” embeddings at the
+input side of each layer, while Adapters add small modules inside the architecture.
+_______________________________________________________________________
+QUESTION 2: [1 mark]
+The Structure-Aware Intrinsic Dimension (SAID) improves over earlier low-rank adaptation
+approaches by:
+a. Ignoring the network structure entirely
+b. Learning one scalar per layer for layer-wise scaling
+c. Sharing the same random matrix across all layers
+d. Using adapters within self-attention layers
+Correct Answer: b
+Explanation:
+• Structure-Aware Intrinsic Dimension (SAID): This method learns a small set of
+parameters - often including one scalar per layer - to scale or adjust each layer.
+Instead of ignoring the model’s structure, it captures the global scaling behaviour
+across layers with minimal additional parameters.
+• Why not the others?
+(a) SAID explicitly does not ignore the network structure; it leverages per-layer
+learnable parameters.
+(c) Sharing the exact same random matrix across all layers is a different approach
+(not specifically SAID’s main method).
+(d) SAID is more about scalar scaling factors, not inserting adapter modules.
+_________________________________________________________________________
+QUESTION 3: [1 mark]
+Which of the following are correct about the extensions of LoRA?
+a. LongLoRA supports inference on longer sequences using global attention
+b. QLoRA supports low-rank adaptation on 4-bit quantized models
+c. DyLoRA automatically selects the optimal rank during training
+d. LoRA+ introduces gradient clipping to stabilize training
+Correct Answer: b, c
+Explanation:
+• QLoRA (b) applies the LoRA idea to a quantized model, typically at 4-bit precision,
+enabling efficient fine-tuning with significantly reduced memory use.
+• DyLoRA (c) is an approach that dynamically picks the optimal rank during training,
+thereby adapting the low-rank decomposition to the task at hand.
+• Why not (a) or (d)?
+(a) “LongLoRA” is not a commonly recognized extension that specifically implements
+global attention for longer sequences as part of LoRA. (Some methods support
+longer-context inference, but that is not typically referred to as “LongLoRA.”)
+(d) While “LoRA+” might be used informally in some contexts, the “+” here does not
+refer to a widely acknowledged official extension that only introduces gradient
+clipping.
+_________________________________________________________________________
+QUESTION 4: [1 mark]
+Which pruning technique specifically removes weights with the smallest absolute values first,
+potentially followed by retraining to recover accuracy?
+a. Magnitude Pruning
+b. Structured Pruning
+c. Random Pruning
+d. Knowledge Distillation
+Correct Answer: a
+Explanation:
+• Magnitude Pruning removes weights whose absolute values are below a certain
+threshold (i.e., the smallest magnitudes). The rationale is that weights with small
+magnitudes contribute less to overall model outputs. After pruning them, one can
+optionally retrain (also called “fine-tuning” after pruning) to recover lost accuracy.
+• Structured Pruning (b) removes entire groups of weights (e.g., entire filters or
+channels).
+• Random Pruning (c) removes weights randomly, with no magnitude criterion.
+• Knowledge Distillation (d) is a different approach, transferring knowledge from a
+teacher to a student model, not a direct pruning method.
+________________________________________________________________________
+QUESTION 5: [1 mark]
+In Post-Training Quantization (PTQ) for LLMs, why is a calibration dataset used?
+a. To precompute the entire attention matrix for all tokens.
+b. To remove outlier dimensions before applying magnitude-based pruning.
+c. To fine-tune the entire model on a small dataset and store the new weights.
+d. To estimate scale factors for quantizing weights and activations under representative
+data conditions.
+Correct Answer: d
+Explanation:
+• Calibration Dataset: In PTQ, you typically don’t retrain the model. Instead, you
+gather a small “calibration set” of representative examples. By running these
+examples through the model, you observe the distribution of activations (and possibly
+weights). This helps you pick appropriate scale factors (or quantization parameters)
+so that the quantized model preserves accuracy as much as possible.
+• Thus, it’s about extracting distribution statistics to set the quantization scale and
+zero points.
+_________________________________________________________________________
+QUESTION 6: [1 mark]
+Which best summarizes the function of the unembedding matrix 𝑊!?
+a. It merges the queries and keys for each token before final classification.
+b. It converts the final residual vector into vocabulary logits for next-token prediction.
+c. It is used for normalizing the QK and OV circuits so that their norms match.
+d. It acts as a second attention layer that aggregates multiple heads.
+Correct Answer: b
+Explanation:
+• The unembedding matrix (often the transpose of the embedding matrix – if weight
+sharing is enabled) takes the final hidden state (i.e., the final residual or contextual
+representation of each token) and maps it to a distribution over the vocabulary. That
+distribution is used to pick the next token.
+• Why not the others?
+(a) Merging queries and keys is part of the attention mechanism, not the
+unembedding step.
+(c) Normalizing QK or OV circuits usually involves layer norms or other scaling
+parameters, not the unembedding.
+(d) A second attention layer is not typically called the “unembedding” layer.
+_________________________________________________________________________
+QUESTION 7: [1 mark]
+Which definition best matches an induction head as discovered in certain Transformer
+circuits?
+a. A head that specifically attends to punctuation tokens to determine sentence
+boundaries
+b. A feed-forward sub-layer specialized for outputting next-token probabilities for out-ofdistribution tokens
+c. A head that looks for previous occurrences of a token A, retrieves the token B that
+followed it last time, and then predicts B again
+d. A masking head that prevents the model from looking ahead at future tokens
+Correct Answer: c
+Explanation:
+• Induction heads: These specialized attention heads implement a pattern that can be
+described like: “If we see a token A repeated, we look back to see what token came
+after A the last time it appeared, and we hypothesize that token will appear again.”
+This mechanism is behind repeating patterns or reusing local context the model has
+seen before.
+• It is effectively a memory pattern that picks up repeated sequences in text.
+_________________________________________________________________________
+QUESTION 8: [1 mark]
+In mechanistic interpretability, how can we define ‘circuit’?
+a. A data pipeline for collecting training examples in an autoregressive model
+b. A small LSTM module inserted into a Transformer for additional memory
+c. A device external to the neural network used to fine-tune certain parameters after
+training
+d. A subgraph of the neural network hypothesized to implement a specific function or
+behaviour
+Correct Answer: d
+Explanation:
+• In mechanistic interpretability, a circuit is a subgraph of a neural network—
+specific connections and components (e.g., heads, neurons, MLP layers)—that
+collectively implement a certain interpretable function. Researchers attempt to
+identify and visualize these circuits to understand how the model handles specific
+patterns or tasks.
+_________________________________________________________________________
+QUESTION 9: [1 mark]
+Which best describes the role of Double Quantization in QLoRA?
+a. It quantizes the attention weights twice to achieve 1-bit representations.
+b. It reinitializes parts of the model with random bit patterns for improved regularization.
+c. It quantizes the quantization constants themselves for additional memory savings.
+d. It systematically reverts partial quantized weights back to FP16 whenever
+performance degrades.
+Correct Answer: c
+Explanation:
+• Double Quantization in QLoRA means not only are the main weights quantized, but
+the scaling factors (quantization constants) are themselves stored in a lower
+precision format to reduce memory usage further. It’s essentially a second layer of
+quantization on top of the initial quantization scheme, yielding additional memory
+compression.
+• Why not the others? There’s no step of reinitializing with random bit patterns, nor
+switching to 1-bit, nor automatically reverting to FP16.
+_________________________________________________________________________
+QUESTION 10: [1 mark]
+Which of the following are true about sequence-level distillation for LLMs?
+a. It trains a student model by matching the teacher’s sequence outputs (e.g., predicted
+token sequences) rather than just individual token distributions.
+b. It requires storing only the top-1 predictions from the teacher model for each token.
+c. It can be combined with word-level distillation to transfer both local and global
+knowledge.
+d. It forces the teacher to produce a chain-of-thought explanation for each example.
+Correct Answer: a, c
+Explanation:
+• Sequence-level distillation: Instead of just matching the teacher’s probability
+distribution at each token, the student is trained to mimic the teacher’s entire output
+sequence (which can capture global, multi-token patterns).
+o (a) True: The student tries to match the teacher’s full sequence outputs, not
+just per-token probabilities in isolation.
+o (c) True: Combining sequence-level with word-level distillation can yield a
+comprehensive approach where the student learns local token distribution
+and overall sequence structure.
+• Why not (b) or (d)?
+o (b) Typically, sequence-level distillation can store more than top-1 predictions
+(e.g., entire sequences). Just top-1 might lose richer distribution information.
+o (d) It does not necessarily require chain-of-thought. Sequence-level distillation
+focuses on final outputs; it doesn’t force an intermediate chain-of-thought
+explanation.
+_________________________________________________________________________
+Introduction to Large Language Models
+Assignment- 11
+Number of questions: 10 Total mark: 10 X 1 = 10
+_________________________________________________________________________
+QUESTION 1: [1 mark]
+What is the main modification that SimplE makes to DistMult-like models to handle
+asymmetric relations?
+a. Replacing entity embeddings with random fixed vectors
+b. Introducing separate entity embeddings for subject and object roles, along with
+inverse relations
+c. Restricting the rank of the relation tensor to 1
+d. Using negative sampling for half of the triple set
+Correct Answer: b
+Explanation:
+• SimplE extends the DistMult approach by using two different embeddings for each
+entity: one as a subject (head) and one as an object (tail). It also learns inverse
+relation embeddings to handle asymmetry.
+• DistMult alone struggles with asymmetric relations because its scoring function
+𝑠𝑐𝑜𝑟𝑒(𝑠, 𝑟, 𝑜) is symmetrical in 𝑠 and 𝑜. SimplE partially addresses this by modelling
+subject/object roles distinctly and considering inverse relations.
+_______________________________________________________________________
+QUESTION 2: [1 mark]
+Which statements correctly characterize the basic DistMult approach for knowledge graph
+completion?
+a. Each relation 𝑟 is parameterized by a full D×D matrix that can capture asymmetric
+relations.
+b. The relation embedding is a diagonal matrix, leading to a multiplicative interaction of
+entity embeddings.
+c. DistMult struggles with non-symmetric relations because score(s, r, o) = as
+T Mr ao is
+inherently symmetric in s and o.
+d. DistMult’s performance is typically tested only on fully symmetric KGs.
+Correct Answer: b, c
+Explanation:
+• DistMult stands for “Diagonal bilinear model”, meaning each relation 𝑟 has a
+diagonal embedding 𝑀!. This is effectively a vector multiplied element-wise (since a
+diagonal matrix just scales each coordinate).
+• This diagonal constraint leads to symmetric scoring: swapping 𝑠 and 𝑜 yields the
+same value because of the multiplication pattern.
+• Therefore:
+o (b) is true: the relation embedding is diagonal.
+o (c) is true: it struggles with asymmetric relations because 𝑎"
+#(𝑑𝑖𝑎𝑔(𝑟))𝑎$ is
+symmetric in 𝑎" and 𝑎$.
+• (a) is false because DistMult does not use a full D×D matrix; it specifically uses a
+diagonal matrix.
+• (d) is also false: DistMult can be tested on general KGs (not only fully symmetric
+ones), though it does poorly with strongly asymmetric relations.
+_________________________________________________________________________
+QUESTION 3: [1 mark]
+Which statements about the ComplEx extension of DistMult are true?
+a. It uses complex-valued embeddings to better capture asymmetric or anti-symmetric
+relations.
+b. It replaces the multiplication in DistMult with element-wise addition of real-valued
+vectors.
+c. For a perfectly symmetric relation, one could set the imaginary part of the relation
+embedding to zero.
+d. ComplEx requires each entity vector to be unit norm in the complex plane.
+Correct Answer: a, c
+Explanation:
+ComplEx extends DistMult to the complex domain, allowing it to handle asymmetric
+relations by using conjugate-based interactions. A typical ComplEx scoring function is: 𝑅𝑒(<
+𝑎", 𝑟, 𝑎11$1 >), where 𝑎", 𝑟, 𝑎$ are complex vectors, and 1𝑎1$1 is the complex conjugate of 𝑎$ .
+• (a) True: The use of complex embeddings allows capturing asymmetry via imaginary
+components and conjugation.
+• (c) True: If the imaginary part is zero, the relation effectively behaves like DistMult in
+the real domain, which is symmetric.
+• (b) is false: It still uses multiplicative interactions, not element-wise addition.
+• (d) is not necessarily required; while some implementations might normalize
+embeddings, ComplEx does not strictly require each entity to have unit norm. It’s a
+common training choice but not an inherent necessity.
+_________________________________________________________________________
+QUESTION 4: [1 mark]
+Which best describes the main advantage of using a factorized representation (e.g.,
+DistMult, ComplEx) for large KGs?
+a. It enforces that every relation in the KG be perfectly symmetric.
+b. It ensures each entity is stored as a one-hot vector, simplifying nearest-neighbour
+queries.
+c. It collapses the entire KG into a single scalar value.
+d. It significantly reduces parameters and enables generalization to unseen triples by
+capturing low-rank structure.
+Correct Answer: d
+Explanation:
+• Factorized models (DistMult, ComplEx, etc.) leverage low-rank embeddings for
+entities and relations, drastically reducing the parameters needed compared to
+storing a full adjacency or full 3D tensor for the entire knowledge graph.
+• This low-rank structure also helps the model learn patterns and generalize to
+unseen triples (i.e., it can guess new edges that weren’t explicitly in training).
+________________________________________________________________________
+QUESTION 5: [1 mark]
+Which statement best describes the reshaping of a 3D KG tensor 𝑋 ∈ 𝑅|&|×|(|×|&| into a
+matrix factorization problem?
+a. One axis remains for subject, one axis remains for object, and relations are
+combined into a single expanded axis.
+b. The subject dimension is repeated to match the relation dimension, resulting in a 2D
+matrix.
+c. Each subject–relation pair is collapsed into a single dimension, while objects remain
+as separate entries.
+d. The entire KG is vectorized into a 1D array and then factorized with an SVD
+approach.
+Correct Answer: c
+Explanation:
+• A 3D KG tensor 𝑋 ∈ 𝑅|&|×|(|×|&|
+ typically has subject-relation-object axes.
+• One common approach is to “unfold” or “reshape” the tensor along one axis to
+produce a matrix. E.g., you can merge the subject and relation dimensions into a
+single dimension (subject-relation pairs) and keep the object axis separate, yielding a
+2D matrix factorization problem.
+• This approach is used in some methods to apply standard matrix factorization to the
+KG data.
+_________________________________________________________________________
+QUESTION 6: [1 mark]
+Which key property of hierarchical relationships (e.g. is-a, transitivity) motivates the
+exploration of specialized embedding methods over standard Euclidean KG embeddings?
+a. Symmetry in the relation (A, is-a, B) implying (B, is-a, A)
+b. Frequent presence of cycles in hierarchical graphs
+c. Transitivity in the form (camel, is-a, mammal) and (mammal, is-a, animal) ⟹
+(camel,is-a,animal)
+d. The high dimensionality of the entity embeddings
+Correct Answer: c
+Explanation:
+• Hierarchical “is-a” relations typically exhibit transitivity: if A is-a B, and B is-a C,
+then A is-a C. Standard Euclidean embeddings (like DistMult, ComplEx) do not
+directly enforce or encourage transitivity.
+• Specialized approaches (e.g., hyperbolic embeddings, order embeddings) do a better
+job of naturally capturing such transitive relations.
+_________________________________________________________________________
+QUESTION 7: [1 mark]
+Which of the following statements correctly describe hyperbolic (Poincare) embeddings for
+hierarchical data?
+a. They map nodes onto a disk (or ball) such that large branching factors can be
+represented with lower distortion than in Euclidean space.
+b. Distance grows slowly near the centre and becomes infinite near the boundary,
+making it naturally suited for tree-like structures.
+c. They require each node to be embedded on the surface of the Poincare disk of
+radius 1.
+d. They can achieve arbitrarily low distortion embeddings for trees with the same
+dimension as Euclidean space.
+Correct Answers: a, b
+Explanation:
+• Hyperbolic (Poincaré) embeddings place points in a disk (2D) or ball (higher-D)
+where distances near the boundary can become very large, effectively allowing the
+model to represent tree-like expansions with less distortion than Euclidean.
+• Specifically:
+o (a) True: Large branching structures are more compactly represented.
+o (b) True: Distances blow up near the boundary, which helps model
+hierarchical “depth.”
+• (c) is not strictly correct: points reside within the disk, not necessarily on the
+boundary (though some parameterizations might keep norms < 1).
+• (d) is also not entirely correct in claiming “arbitrarily low distortion in the same
+dimension.” Hyperbolic embeddings do better than Euclidean in capturing tree
+metrics, but not everything is guaranteed “arbitrarily low” in the same dimension.
+They do reduce distortion significantly compared to Euclidean though.
+_________________________________________________________________________
+QUESTION 8: [1 mark]
+Why might a partial-order-based approach (like order embeddings) be beneficial for
+modelling ‘is-a’ relationships compared to purely distance-based approaches?
+a. They explicitly encode the ancestor–descendant relation as a coordinate-wise
+inequality or containment.
+b. They can represent negative correlations (i.e., sibling vs. ancestor) more easily than
+distance metrics.
+c. They inherently guarantee transitive closure of the hierarchy in the learned
+embedding space.
+d. They do not rely on pairwise distances but use a notion of coordinate-wise ordering
+or interval containment.
+Correct Answer: a, d
+Explanation:
+• Order embeddings interpret the “is-a” relationship as a partial order, typically using
+coordinate-wise constraints (for instance, 𝑋 ≤ 𝑌 if	𝑥) ≤ 𝑦) ∀𝑖 ).	This can capture
+ancestor-descendant with a straightforward geometric interpretation (e.g., intervals,
+boxes, or cones).
+• They do not rely solely on a distance measure; they rely on the geometry of
+“containment” or inequality in each coordinate.
+• Hence, (a) and (d) are correct.
+• (b) is not necessarily guaranteed or specifically a reason they do it more easily;
+negative correlation is a different concept.
+• (c) They do not automatically guarantee full transitive closure in the sense that it’s not
+a built-in “guarantee.” The embeddings typically encourage partial ordering, but some
+additional constraints or training objectives are needed.
+_________________________________________________________________________
+QUESTION 9: [1 mark]
+Which statement about box embeddings in hierarchical modelling is most accurate?
+a. Each entity or type is assigned a single real-valued vector, ignoring bounding
+volumes.
+b. Containment 𝐼* ⊆ 𝐼+ all dimensions encodes 𝑥 ≺ 𝑦 .
+c. They rely on spherical distances around a central node to measure tree depth.
+d. They cannot be used to represent set intersections or partial overlap.
+Correct Answer: b
+Explanation:
+• Box Embeddings assign each concept or entity a “box” in some coordinate space,
+typically described by two vectors 𝑙 ≤ 𝑢 (lower and upper corners).
+• If box X is contained within box Y on every coordinate dimension (i.e., 𝑙, ≥ 𝑙- and
+𝑢, ≤ 𝑢-), that corresponds to an “is-a” or subset relationship.
+• This approach can also represent partial overlaps (intersecting boxes) and so on, so
+(d) is incorrect.
+• (c) describes a more spherical or Euclidean method, not boxes.
+• (a) is the opposite of the box approach (which does not ignore bounding volumes but
+explicitly uses them).
+_________________________________________________________________________
+QUESTION 10: [1 mark]
+What is a key challenge with axis-aligned open-cone (order) embeddings for hierarchical KG
+data?
+a. They enforce that all sibling categories have identical cone apices, which causes
+overlap.
+b. They require symmetrical relationships for all edges.
+c. They do not allow partial orders to be extended to total orders.
+d. The volume (measure) of cones is the same regardless of how “broad” or “narrow”
+the cone is, making sub-categories indistinguishable by volume.
+Correct Answer: d
+Explanation:
+• In axis-aligned cone embeddings, each entity is associated with an open cone in a
+coordinate space. The cones can be wide or narrow, but the measure of the open
+cone does not reflect “how big” or “small” the category is, which makes it difficult to
+distinguish sub-categories based on “volume.”
+• This is a known limitation: the geometry does not allow easily using volume-based
+notions to reflect hierarchical or subset relationships beyond the angular direction.
+_________________________________________________________________________
