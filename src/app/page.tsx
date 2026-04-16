@@ -32,6 +32,14 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link href="/quiz-multi-select" className={styles.modeCard}>
+          <div className={styles.modeTitle}>🔀 Multi-Select Shuffle</div>
+          <div className={styles.modeDescription}>
+            Only questions with multiple correct answers, shuffled together from
+            all weeks
+          </div>
+        </Link>
+
         <Link href="/quiz" className={styles.modeCard}>
           <div className={styles.modeTitle}>🎲 Full Shuffle</div>
           <div className={styles.modeDescription}>
