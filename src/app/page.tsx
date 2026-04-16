@@ -24,6 +24,14 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link href="/quiz-weekly-shuffled" className={styles.modeCard}>
+          <div className={styles.modeTitle}>📅 Weekly Quiz + Shuffled Options</div>
+          <div className={styles.modeDescription}>
+            Same weekly flow, but the answer choices are shuffled in the UI so
+            the option pattern changes every time
+          </div>
+        </Link>
+
         <Link href="/quiz" className={styles.modeCard}>
           <div className={styles.modeTitle}>🎲 Full Shuffle</div>
           <div className={styles.modeDescription}>

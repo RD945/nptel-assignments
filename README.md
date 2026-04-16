@@ -6,9 +6,10 @@ It includes three study modes, instant feedback, and score tracking.
 ## Features
 
 - 102 total questions across 11 weeks
-- 3 modes:
+- 4 modes:
    - Full Shuffle Quiz (all questions in random order)
    - Weekly Quiz (choose week, randomized within that week)
+   - Weekly Quiz + Shuffled Options (same weekly flow with randomized answer order)
    - Review Mode (all questions in week-wise order)
 - Single-select and multi-select question support
 - Instant correctness feedback after submit
@@ -30,7 +31,7 @@ It includes three study modes, instant feedback, and score tracking.
 ```
 src/
 ├── app/
-│   ├── page.tsx                    # Home page (3 mode cards)
+│   ├── page.tsx                    # Home page (4 mode cards)
 │   ├── page.module.css             # Home page styles
 │   ├── layout.tsx                  # Root layout
 │   ├── globals.css                 # Global styles
@@ -41,6 +42,8 @@ src/
 │   ├── quiz-weekly/
 │   │   ├── page.tsx                # Week-by-week quiz mode
 │   │   └── quiz-weekly.module.css
+│   ├── quiz-weekly-shuffled/
+│   │   └── page.tsx                # Week-by-week quiz with shuffled option order
 │   └── review/
 │       ├── page.tsx                # Full review mode (ordered by week)
 │       └── review.module.css
