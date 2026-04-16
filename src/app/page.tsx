@@ -47,6 +47,13 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link href="/notes" className={styles.modeCard}>
+          <div className={styles.modeTitle}>Notes</div>
+          <div className={styles.modeDescription}>
+            Study notes in two sections: term definitions and lecture notes
+          </div>
+        </Link>
+
         <Link href="/quiz" className={styles.modeCard}>
           <div className={styles.modeTitle}>🎲 Full Shuffle</div>
           <div className={styles.modeDescription}>

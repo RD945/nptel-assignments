@@ -1,0 +1,99 @@
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.backLink:hover {
+  background-color: #f0f0f0;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0 0 8px;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.section {
+  margin-bottom: 28px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.sectionTitle {
+  margin: 0;
+  padding: 16px 18px;
+  border-bottom: 1px solid #eee;
+  font-size: 24px;
+  color: #000;
+}
+
+.contentBlock {
+  padding: 18px;
+}
+
+.paragraph {
+  margin: 0 0 12px;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+    padding: 12px 14px;
+  }
+
+  .contentBlock {
+    padding: 14px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

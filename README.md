@@ -6,12 +6,13 @@ It includes multiple study modes, instant feedback, and score tracking.
 ## Features
 
 - 112 total questions across 12 weeks
-- 6 modes:
+- 7 modes:
    - Full Shuffle Quiz (all questions in random order)
    - Weekly Quiz (choose week, randomized within that week)
    - Weekly Quiz + Shuffled Options (same weekly flow with randomized answer order)
    - Multi-Select Shuffle (only multi-select questions from all weeks)
    - AI Generated Practice Questions (45 AI-generated questions in one shuffled pool)
+   - Notes (two sections: term definitions and lecture notes)
    - Review Mode (all questions in week-wise order)
 - Single-select and multi-select question support
 - Instant correctness feedback after submit
@@ -33,7 +34,7 @@ It includes multiple study modes, instant feedback, and score tracking.
 ```
 src/
 ├── app/
-│   ├── page.tsx                    # Home page (5 mode cards)
+│   ├── page.tsx                    # Home page (7 mode cards)
 │   ├── page.module.css             # Home page styles
 │   ├── layout.tsx                  # Root layout
 │   ├── globals.css                 # Global styles
@@ -50,12 +51,16 @@ src/
 │   │   └── page.tsx                # Shuffled quiz of multi-select questions only
 │   ├── quiz-ai-practice/
 │   │   └── page.tsx                # AI-generated practice quiz mode
+│   ├── notes/
+│   │   ├── page.tsx                # Notes page with two study sections
+│   │   └── notes.module.css
 │   └── review/
 │       ├── page.tsx                # Full review mode (ordered by week)
 │       └── review.module.css
 └── data/
    ├── questions.ts                # Typed question dataset (112)
-   └── ai-practice-questions.ts    # AI-generated practice dataset (45)
+   ├── ai-practice-questions.ts    # AI-generated practice dataset (45)
+   └── notes-content.ts            # Notes content source (terms + lecture notes)
 ```
 
 ## Question Data Structure
