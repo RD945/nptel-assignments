@@ -1,490 +1,492 @@
-export const termDefinitionsContent = `Linguistics and NLP Fundamentals
+export const termDefinitionsContent = `Complete NLP Term Reference - All Terms, 2 Sentences Each
 
-Homonymy — Two words share the same spelling/pronunciation but have completely unrelated meanings. Example: "bat" (animal) vs. "bat" (cricket bat). NLP models must use context to disambiguate.
+Linguistics and NLP Fundamentals
 
-Synonymy — Words that share the same or very similar meaning. Example: "happy" and "joyful." Important for semantic similarity tasks.
+Homonymy — Two completely unrelated words happen to share the same spelling or pronunciation. Example: bat (flying animal) vs. bat (cricket bat) are unrelated meanings with the same word form.
 
-Polysemy — A single word has multiple closely related meanings. Example: "man" = adult male OR human species. Unlike homonymy, meanings share a common origin.
+Synonymy — Words that have the same or very similar meaning in a language. Example: happy, joyful, and elated are synonyms and can often substitute each other in a sentence.
 
-Antonymy — Words with opposite meanings. Example: "hot" and "cold." Two types: gradable (hot/cold) and complementary (alive/dead).
+Polysemy — A single word has multiple meanings that are historically or conceptually related. Example: head can mean the body part, the head of an organization, or the head of a river, all linked by the idea of top or leader.
 
-Distributional Semantics — The idea that words with similar meanings appear in similar contexts ("you shall know a word by the company it keeps"). Basis for word embeddings like Word2Vec.
+Antonymy — A semantic relationship between words with opposite meanings. Antonyms can be gradable (hot/cold) or complementary (alive/dead, with no middle ground).
 
-Corpus / Corpora — A large structured collection of text used for training or evaluating NLP models. Corpora is the plural.
+Distributional Semantics — The theory that words occurring in similar contexts tend to have similar meanings, often summarized as you shall know a word by the company it keeps. This is the theoretical foundation for word embeddings like Word2Vec and GloVe.
 
-Lexical Ambiguity — Ambiguity arising from a word having multiple meanings (homonymy/polysemy). Example: "I went to the bank" — financial or river bank?
+Corpus / Corpora — A corpus is a large, structured collection of text used to train, evaluate, or study NLP systems; corpora is the plural form. Examples include Wikipedia dumps, the Penn Treebank, or Common Crawl.
 
-Syntactic Ambiguity — When a sentence has multiple valid parse trees. Example: "I saw the man with the telescope" — who has the telescope?
+Lexical Ambiguity — Ambiguity caused by a word having more than one meaning through homonymy or polysemy. Example: I went to the bank can mean river bank or financial bank, so context is required.
 
-Morphological Ambiguity — A word form is ambiguous due to morphology. Example: "flies" = plural noun or verb (present tense of "fly").
+Syntactic Ambiguity — Ambiguity arising when a sentence can be parsed in more than one grammatically valid way. Example: I saw the man with the telescope may mean I used a telescope or the man had a telescope.
 
-Pragmatic Ambiguity — Ambiguity arising from context or speaker intent beyond literal meaning. Example: "Can you pass the salt?" is literally a yes/no question but pragmatically a request.
+Morphological Ambiguity — A single word form has multiple morphological analyses. Example: flies can be a third-person verb (time flies) or a plural noun (flies are insects).
 
-Morpheme — The smallest meaningful unit of language. Example: "unhappy" has three morphemes: "un-", "happy", and zero. Free morphemes stand alone; bound morphemes attach to others.
+Pragmatic Ambiguity — Ambiguity stemming from speaker intent or discourse context, not only word meaning or grammar. Example: Can you close the window is literally about ability, but pragmatically a request.
 
-Semantic Role — The functional role a noun phrase plays with respect to a verb:
-Agent: The doer of the action.
-Patient: The entity affected by the action.
-Beneficiary: The entity that benefits from the action.
-Instrument: The tool used for an action.
+Morpheme — The smallest unit of meaning in a language that cannot be divided further without losing meaning. Example: unhappiness has three morphemes: un- + happy + -ness.
 
-Neologism — A newly coined word or expression. Example: "selfie", "tweet" as a verb.
+Semantic Role — The abstract functional role that a noun phrase plays in the event described by a verb. Roles include Agent, Patient, Beneficiary, and Instrument and capture who did what to whom.
 
-Non-standard English — Dialects, slang, or grammatical forms that deviate from formal written English. A challenge for NLP systems trained on formal text.
+Agent — The entity that intentionally performs or initiates the action described by the verb. Example: In Alice kicked the ball, Alice is the Agent.
 
-Entailment — In Natural Language Inference (NLI), sentence A entails B if B must be true whenever A is true.
+Patient — The entity directly affected by or undergoing the action of the verb. Example: In Alice kicked the ball, the ball is the Patient.
 
-Contradiction — In NLI, A and B cannot both be true at the same time.
+Beneficiary — The entity for whose benefit an action is performed. Example: In She baked him a cake, him is the Beneficiary.
 
-Neutral (NLI context) — A and B are neither entailed nor contradictory; B might or might not be true given A.
+Instrument — The tool or means used by the Agent to carry out the action. Example: In He cut the rope with a knife, knife is the Instrument.
 
-Meronymy — A part-whole relationship between words. Example: "wheel" is a meronym of "car." The reverse (car -> wheel) is holonymy.
+Neologism — A newly coined word or expression that has entered usage recently. Examples: selfie, tweet as a verb, googling.
 
-Hyponymy — A word is a specific type of a more general word. Example: "poodle" is a hyponym of "dog." The general word ("dog") is the hypernym.
+Non-standard English — Language varieties that deviate from formal Standard English, including dialects, slang, and internet language. Example: gonna, wanna, AAVE, and social-media abbreviations.
+
+Entailment — In Natural Language Inference (NLI), sentence A entails sentence B if B must be true whenever A is true. Example: A dog is chasing a cat entails An animal is moving.
+
+Contradiction — In NLI, two sentences are contradictions if they cannot both be true simultaneously. Example: The man is sleeping contradicts The man is running.
+
+Neutral (NLI context) — In NLI, two sentences are neutral if neither entails nor contradicts the other. Example: Alice is a doctor is neutral to Alice is happy.
+
+Meronymy — A lexical relation where one word denotes a part of what the other denotes. Example: wheel is a meronym of car.
+
+Hyponymy — A lexical relation where one word is a more specific type of another word. Example: poodle is a hyponym of dog.
 
 Language Models and Probabilistic Concepts
 
-Language Model — A model that assigns probabilities to sequences of words or predicts the next word given previous words.
+Language Model — A probabilistic model that assigns probability to sequences or predicts next words from context. It is a foundation of modern NLP systems.
 
-Markov Model — A probabilistic model that assumes the future state depends only on the current state (the Markov assumption).
+Markov Model — A probabilistic model where each state depends only on a limited context window rather than full history. This simplifies modeling while capturing short-range dependencies.
 
-First-order Markov Model — The probability of a word depends only on the immediately preceding word (bigram model).
+First-order Markov Model — Each word depends only on the immediately preceding word. This corresponds to a bigram approximation P(w_i | w_1...w_{i-1}) approximately P(w_i | w_{i-1}).
 
-Second-order Markov Model — Word probability depends on the two preceding words (trigram model).
+Second-order Markov Model — Each word depends on the previous two words. This corresponds to trigram modeling with richer context than first-order.
 
-Third-order Markov Model — Word probability depends on the three preceding words (4-gram model).
+Third-order Markov Model — Each word depends on the previous three words, equivalent to a 4-gram model. Higher order can fit training data better but increases sparsity.
 
-N-gram Model — A language model that predicts the next word based on the previous N−1 words.
+N-gram Model — A model that approximates word probabilities using N-1 prior words as context. Unigram ignores context, bigram uses one word, trigram uses two.
 
-Bigram Model — A specific N-gram where N=2.
+Bigram Model — A specific n-gram model where N=2 and each token is conditioned on one previous token. Example: P(cat | the) estimated from count(the cat) over count(the).
 
-Probability Estimation — Computing the probability of a word or sequence from observed counts in a corpus.
+Probability Estimation — Estimating conditional probabilities from observed corpus counts. Maximum Likelihood Estimation sets probabilities proportional to observed frequency.
 
-Likelihood Estimation — The probability of observed data given model parameters.
+Likelihood Estimation — Computing probability of observed data given model parameters. Maximizing likelihood is equivalent to minimizing cross-entropy.
 
-Intrinsic Evaluation — Evaluating a model directly on a language modeling metric like perplexity, without using it on a downstream task.
+Intrinsic Evaluation — Evaluating a model directly on language-model metrics such as perplexity. It measures language-model quality without downstream task integration.
 
-Extrinsic Evaluation — Evaluating a model indirectly via performance on a real downstream task.
+Extrinsic Evaluation — Evaluating by downstream task impact, such as MT BLEU or QA performance. It is practically meaningful but often more expensive.
 
-BLEU Score — Measures n-gram overlap between model output and reference translations.
+BLEU Score — Bilingual Evaluation Understudy, measuring n-gram precision with brevity penalty against references. Scores range from 0 to 1 and higher is generally better.
 
-Perplexity — A measure of how surprised a language model is by test data.
-PP(W) = [product over i=1..N of 1 / P(w_i | w_{i-1})]^(1/N).
-Lower perplexity means better model.
+Perplexity — A surprise metric over held-out data: PP(W) = (product over i=1..N of 1 / P(w_i | w_{i-1}))^(1/N). Lower perplexity indicates better predictive modeling.
 
-Vocabulary — The complete set of unique tokens a model knows.
+Vocabulary — The set of unique tokens known by the model. OOV words are outside this set and need handling strategies.
 
-Token — The basic unit the model processes — word, subword, or character.
+Token — The basic processing unit used by a model, such as word, subword, or character. Tokenization choice affects sequence length and generalization.
 
-Sentence Probability — The probability assigned to an entire sentence, computed as the product of conditional word probabilities.
+Sentence Probability — The probability of a full sentence computed as a product of conditional token probabilities. Language models are trained to assign higher probability to natural sentences.
 
 Smoothing Techniques
 
-These techniques redistribute probability mass to avoid assigning zero probability to unseen n-grams.
+Add-one Smoothing (Laplace) — Adds 1 to every n-gram count before normalization. It is simple but often over-smooths for large vocabularies.
 
-Add-one (Laplace) Smoothing — Adds 1 to every n-gram count, including unseen ones.
+Add-k Smoothing — Adds a fractional constant k instead of 1. It offers tunable smoothing strength but still lacks context-sensitive plausibility.
 
-Add-k Smoothing — A generalization of add-one; adds a fractional constant k < 1 instead of 1.
+Good-Turing Smoothing — Re-estimates counts using frequency-of-frequency statistics. It uses events seen once to estimate unseen probability mass.
 
-Good-Turing Smoothing — Estimates counts for unseen n-grams by borrowing probability mass from n-grams seen once.
+Kneser-Ney Smoothing — A strong classical smoother using continuation probability rather than raw frequency. It better reflects whether a word appears in diverse contexts.
 
-Kneser-Ney Smoothing — Uses continuation probability — how likely a word is to appear in a new context, not just how often it appears.
+Absolute Discounting — Subtracts a fixed discount D from observed counts and redistributes the saved mass. Kneser-Ney extends this with continuation-aware backoff.
 
-Absolute Discounting — Subtracts a fixed amount (discount D, usually around 0.75) from all observed counts and redistributes that mass.
-
-Continuation Probability — Probability based on number of unique contexts a word appears in, not raw frequency.
+Continuation Probability — A word probability based on how many unique left contexts it appears with. In Kneser-Ney this helps distinguish broadly reusable words from context-locked frequent words.
 
 Neural Networks and Deep Learning
 
-Neural Network — A layered computational model of interconnected neurons.
+Neural Network — A layered function approximator using weighted connections and non-linear activations. It learns representations from data through optimization.
 
-Weights — Learnable parameters that scale inputs.
+Weights — Learnable scalar parameters on neuron connections. Training updates them to reduce loss.
 
-Bias — Additional learnable offset before activation.
+Bias — A learnable additive offset before activation. It allows shifting decision boundaries beyond the origin.
 
-Activation Function — Non-linear function enabling complex mappings.
+Activation Function — A non-linear transform applied to pre-activation values. Common choices include ReLU, sigmoid, and tanh.
 
-Loss Function — Measures prediction error to optimize.
+Loss Function — Quantifies prediction error against targets. Optimization minimizes this objective.
 
-MLP (Multi-Layer Perceptron) — Feedforward neural network with hidden layers.
+MLP (Multi-Layer Perceptron) — A feedforward network with one or more hidden layers. It combines linear transforms and non-linear activations.
 
-Linear Transformation — y = Wx + b.
+Linear Transformation — Matrix projection y = Wx + b. Stacking only linear transforms remains linear overall.
 
-Non-linearity — Required to avoid collapse to a single linear mapping.
+Non-linearity — Property introduced by activations to model complex functions. Without it deep stacks collapse to a single linear map.
 
-Vanishing Gradient — Gradients become tiny in deep or recurrent networks.
+Vanishing Gradient — Backpropagated gradients shrink toward zero across many layers or timesteps. Early layers then learn very slowly.
 
-Gradient Flow — Backward propagation of learning signal.
+Gradient Flow — The quality of backward signal propagation through a network. Better flow improves trainability.
 
-Dropout — Randomly zeroes activations during training.
+Dropout — Randomly zeroes activations during training with probability p. It reduces co-adaptation and overfitting.
 
-Inference — Using trained model for predictions.
+Inference — Running a trained model for prediction without parameter updates. It is typically cheaper than training.
 
-Training — Updating model parameters to reduce loss.
+Training — Iteratively computing loss and updating parameters via gradients. It can be compute-intensive depending on data and model scale.
 
-XOR Problem — Not linearly separable by a single-layer perceptron.
+XOR Problem — A classic case not solvable by a single-layer perceptron because classes are not linearly separable. A hidden non-linear layer solves it.
 
-Linear Separability — Classes separable by a hyperplane.
+Linear Separability — A property where classes can be split by a hyperplane. Linear models only solve linearly separable problems.
 
-Hidden Layer — Intermediate feature-extraction layer.
+Hidden Layer — An intermediate representation layer between input and output. Deeper hidden stacks can learn richer abstractions.
 
-Backpropagation — Chain-rule-based gradient computation through layers.
+Backpropagation — Efficient gradient computation through layered compositions using the chain rule. It enables practical deep-network training.
 
-Chain Rule — Derivative rule for composed functions.
+Chain Rule — Derivative rule for composed functions. Backprop repeatedly applies it layer by layer.
 
-Gradient Descent — Iterative optimization: theta <- theta - eta * gradient.
+Gradient Descent — Parameter update rule theta <- theta - eta * gradient_theta(L). Variants include SGD, Adam, and AdamW.
 
-Learning Rate (eta) — Step size hyperparameter.
+Learning Rate (eta) — Step-size hyperparameter for gradient updates. Too high can diverge, too low can stall learning.
 
-Loss Oscillation — Loss fluctuates, often due to high learning rate.
+Loss Oscillation — Loss fluctuates sharply instead of decreasing smoothly. Often caused by an overly high learning rate.
 
-Divergence — Loss rises instead of falling.
+Divergence — Training becomes unstable and loss grows. Common causes include too-large learning rate or exploding gradients.
 
 Regularization and Optimization
 
-Regularization — Techniques to reduce overfitting.
+Regularization — Constraints or penalties that improve generalization. Typical methods include L1, L2, dropout, and early stopping.
 
-L1 Regularization (Lasso) — L + lambda * sum |w_i|. Encourages sparse weights.
+L1 Regularization (Lasso) — Adds lambda * sum |w_i| to loss. It promotes sparse parameter solutions.
 
-L2 Regularization (Ridge) — L + lambda * sum w_i^2. Encourages small but non-zero weights.
+L2 Regularization (Ridge) — Adds lambda * sum w_i^2 to loss. It shrinks weights smoothly toward zero.
 
-Early Stopping — Stop when validation performance stops improving.
+Early Stopping — Stop training when validation performance no longer improves. This prevents late-stage overfitting.
 
-Overfitting — Good training performance, poor unseen performance.
+Overfitting — High training performance but weak test performance. The model memorizes training-specific patterns.
 
-Generalization — Performance on unseen data.
+Generalization — Ability to perform well on unseen samples from the same distribution. It is the central objective beyond training fit.
 
 Classification and Output Layers
 
-Softmax — Converts logits to a probability distribution summing to 1.
+Softmax — Converts logits into a normalized probability distribution. It is standard in multi-class output heads.
 
-Multi-class Classification — Assign input to one among multiple classes.
+Multi-class Classification — Assigning each input to one of many discrete classes. Exactly one class is chosen in single-label settings.
 
-Probability Distribution — Outcome probabilities summing to 1.
+Probability Distribution — Non-negative probabilities over outcomes summing to 1. Language models emit this over vocabulary each step.
 
 Word Representations and Tokenization
 
-One-hot Encoding — Sparse identity vectors with no semantic similarity.
+One-hot Encoding — Sparse vectors with one active index per token. They encode identity but no semantic similarity.
 
-Word Embedding — Dense vectors capturing semantic relations.
+Word Embedding — Dense low-dimensional vectors capturing semantic structure. Similar words occupy nearby points.
 
-Word2Vec — Learns embeddings via CBOW or Skip-gram.
+Word2Vec — Learns embeddings from context prediction using CBOW or Skip-gram. It is trained with self-supervised signals.
 
-CBOW — Predicts target from context.
+CBOW — Predicts target token from surrounding context tokens. It is efficient and strong for frequent words.
 
-Skip-gram — Predicts context from target.
+Skip-gram — Predicts context tokens from a target token. It often works better for rare words.
 
-Self-supervision — Learning from data-internal signals without manual labels.
+Self-supervision — Supervision signal derived from input structure itself. No manual labels are required.
 
-Tokenization — Splitting text into processable units.
+Tokenization — Splitting text into model-consumable units. Token granularity influences performance and efficiency.
 
-Subword Tokenization — Uses smaller units to handle rare words.
+Subword Tokenization — Splits words into reusable pieces to handle rare terms and limit vocabulary growth. It is widely used in modern LLMs.
 
-Character-based Tokenization — Character-level units.
+Character-based Tokenization — Uses individual characters as tokens. It avoids OOV but creates long sequences.
 
-Word-based Tokenization — Word-level units.
+Word-based Tokenization — Uses full words as tokens. It is simple but vulnerable to OOV and large vocabularies.
 
 Tokenization Algorithms
 
-BPE (Byte Pair Encoding) — Iteratively merges frequent adjacent symbols.
+BPE (Byte Pair Encoding) — Iteratively merges frequent adjacent symbols to build subword vocabulary. Used in GPT-style pipelines.
 
-WordPiece — Merges subwords based on corpus likelihood criteria.
+WordPiece — Chooses merges that maximize corpus likelihood rather than raw frequency. Used in BERT-style pipelines.
 
-Viterbi Algorithm — Dynamic programming for most probable state or segmentation sequence.
+Viterbi Algorithm — Dynamic programming for most probable state/segmentation sequence. Used in HMM decoding, tagging, and some tokenization setups.
 
 Text Processing and IR Concepts
 
-TF-IDF — TF(t,d) * IDF(t), highlights document-specific terms.
+TF-IDF — Product of term frequency and inverse document frequency. It emphasizes terms frequent in one document but rare globally.
 
-IDF — log(N / df(t)), downweights common terms.
+IDF — Log-scaled rarity across documents, typically log(N/df(t)). Very common terms get low IDF.
 
 Sequence Models
 
-Seq2Seq — Maps one sequence to another via encoder and decoder.
+Seq2Seq — Maps variable-length input sequences to variable-length output sequences. Core architecture for translation and summarization.
 
-Encoder — Encodes input sequence.
+Encoder — Reads input sequence and builds latent representations. In transformers this is bidirectional contextual encoding.
 
-Decoder — Generates output sequence.
+Decoder — Generates output autoregressively conditioned on prior outputs and encoded input. It is the generation component.
 
-Encoder-Decoder Model — Combined architecture for conditional generation.
+Encoder-Decoder Model — Combined architecture using encoder representations inside decoder generation. It is standard for conditional generation tasks.
 
-Hidden State — Internal recurrent representation.
+Hidden State — Recurrent internal representation at each timestep. It summarizes seen sequence context.
 
-Context Vector — Fixed-size encoded summary in basic seq2seq.
+Context Vector — Fixed summary vector from encoder in vanilla seq2seq. It creates bottlenecks for long inputs.
 
-Fixed-size Representation — Bottleneck of vanilla seq2seq.
+Fixed-size Representation — Constraint where whole input is compressed to one vector. Attention was introduced to alleviate this.
 
-Variable-length Sequence — Arbitrary-length input or output.
+Variable-length Sequence — Input or output with non-fixed token length. Sequence models are designed to handle this naturally.
 
 Attention Mechanisms
 
-Attention — Lets decoder focus on relevant encoder outputs per step.
+Attention — Computes relevance-weighted combination of source information for each target step. It enables dynamic focus instead of fixed bottlenecks.
 
-Attention Score — Relevance scalar for each source state.
+Attention Score — Scalar compatibility between query and key vectors. Higher scores imply greater relevance.
 
-Dot Product Attention — score(Q,K) = QK^T.
+Dot Product Attention — Uses query-key dot product, typically scaled by sqrt(d_k). It is efficient and GPU-friendly.
 
-Softmax Normalization — Converts scores to weights.
+Softmax Normalization — Converts raw attention scores into weights summing to 1. This produces interpretable relevance distributions.
 
-Attention Weights — Normalized relevance coefficients.
+Attention Weights — Normalized coefficients applied to value vectors. Their weighted sum yields attention output.
 
-Multi-head Attention — Parallel attention heads over different subspaces.
+Multi-head Attention — Runs attention in parallel heads with different projections. It captures diverse relational patterns simultaneously.
 
-Attention Heads — Individual specialized attention computations.
+Attention Heads — Individual parallel attention submodules inside multi-head attention. Different heads often specialize in different dependencies.
 
-Query (Q), Key (K), Value (V) — Output = softmax(QK^T / sqrt(d_k))V.
+Query, Key, Value — Query specifies what to retrieve, key indexes candidates, value carries retrievable content. Output is softmax(QK^T/sqrt(d_k))V.
 
-Self-attention — Q, K, V from same sequence.
+Self-attention — Attention where Q, K, and V come from the same sequence. Every token can condition on all others.
 
-Masking — Blocks attention to disallowed positions.
+Masking — Blocking specific positions before softmax by setting scores to negative infinity. Used for padding and causality constraints.
 
-Causal Masking — Prevents access to future tokens in autoregressive decoding.
+Causal Masking — Prevents tokens from attending to future positions in autoregressive decoding. It enforces left-to-right generation.
 
 RNN and Variants
 
-RNN — Sequential model with recurrent hidden state.
+RNN — Recurrent model that processes sequences timestep-by-timestep with hidden state recurrence. It struggles with long-term dependencies due to vanishing gradients.
 
-LSTM — Gated RNN variant for long dependencies.
+LSTM — Gated RNN with cell state designed for longer memory retention. It mitigates vanishing-gradient issues in sequence learning.
 
-Forget Gate — Controls retention from prior cell state.
+Forget Gate — Learns what portion of prior cell state to retain. It controls memory persistence.
 
-Input Gate — Controls writing new information.
+Input Gate — Learns what new candidate information to write into cell state. It regulates memory updates.
 
-Output Gate — Controls exposed hidden output.
+Output Gate — Controls how much cell-state information is exposed as hidden output. It shapes downstream signal flow.
 
-Cell State — Long-term memory pathway.
+Cell State — Long-term memory pathway in LSTM that carries information across many timesteps. Gates control its read/write behavior.
 
 Transformers
 
-Transformer — Attention-only architecture without recurrence.
+Transformer — Attention-centric architecture without recurrence. It enables high parallelism and strong long-range modeling.
 
-Transformer Encoder — Bidirectional self-attention stack.
+Transformer Encoder — Stack of self-attention and feedforward layers processing full input bidirectionally. Often used for understanding tasks.
 
-Transformer Decoder — Autoregressive stack with causal masking.
+Transformer Decoder — Autoregressive stack using causal self-attention and optional cross-attention to encoder outputs. Used for generation.
 
-Positional Encoding — Injects token order information.
+Positional Encoding — Injects order information into token representations. Necessary because attention alone is order-agnostic.
 
-Sinusoidal Encoding — Sine and cosine frequency-based positional scheme.
+Sinusoidal Encoding — Deterministic sin/cos positional features across dimensions. Supports extrapolation to longer lengths in principle.
 
-RoPE — Rotary positional embedding for relative-position effects in attention.
+RoPE — Encodes position via rotational transforms in query/key space. Naturally captures relative offsets in attention.
 
-Relative Positional Encoding — Encodes token distance relationships.
+Relative Positional Encoding — Represents token distances rather than absolute indices. Improves robustness across sequence lengths.
 
-Permutation Invariance — Attention without positional info is order-agnostic.
+Permutation Invariance — Property of plain attention where token order does not change representation. Position signals break this invariance.
 
-Layer Normalization — Per-sample feature normalization.
+Layer Normalization — Normalizes features within each token representation. Stabilizes optimization in deep transformers.
 
-Batch Normalization — Batch-wise normalization.
+Batch Normalization — Normalizes across batch statistics. Less common in transformers than layer norm.
 
 Advanced LLM Architectures
 
-ELMo — Contextual embeddings from bidirectional LSTM language models.
+ELMo — Bidirectional language-model embeddings from stacked BiLSTMs. Produces context-dependent token representations.
 
-BERT — Encoder-only transformer with MLM pretraining.
+BERT — Encoder-only transformer pretrained with masked language modeling. Strong for understanding-oriented tasks.
 
-GPT — Decoder-only autoregressive transformer.
+GPT — Decoder-only autoregressive transformer predicting next token. Strong for generation-oriented tasks.
 
-GPT-2 — Larger GPT variant with improved generation coherence.
+GPT-2 — Larger GPT-scale model demonstrating coherent long-form generation at scale. It highlighted the importance of scaling laws.
 
-BART — Denoising encoder-decoder transformer.
+BART — Denoising encoder-decoder model combining bidirectional encoding and autoregressive decoding. Strong on seq2seq generation tasks.
 
-T5 — Text-to-text encoder-decoder framework.
+T5 — Text-to-text encoder-decoder framework casting every NLP task into text I/O format. It unifies task formulation.
 
-Encoder-only Model — Best for understanding and classification.
+Encoder-only Model — Uses only encoder stack with bidirectional context. Best suited for classification and retrieval-style understanding tasks.
 
-Decoder-only Model — Best for generation.
+Decoder-only Model — Uses only decoder stack with causal masking. Best suited for open-ended generation tasks.
 
-Encoder-decoder Model — Best for sequence-to-sequence tasks.
+Encoder-decoder Model — Combines both stacks with cross-attention. Best suited for conditional generation tasks.
 
-Masked Language Modeling — Predict masked tokens.
+Masked Language Modeling (MLM) — Predicts masked tokens using surrounding context. Enables bidirectional contextual learning.
 
-Next Sentence Prediction — Predict whether sentence B follows sentence A.
+Next Sentence Prediction (NSP) — Binary objective predicting whether sentence B follows sentence A. Used in original BERT pretraining.
 
-Autoregressive Model — Predict next token from previous tokens.
+Autoregressive Model — Generates each token conditioned on previously generated context. It models sequence probability left-to-right.
 
-Bidirectional LSTM — Context from both forward and backward passes.
+Bidirectional LSTM — Processes sequences in both forward and backward directions. It captures context from both sides.
 
-Contextual Embeddings — Word vectors vary by surrounding context.
+Contextual Embeddings — Token vectors that depend on surrounding words. Same surface form can map to different vectors by context.
 
 Pretraining and Fine-tuning
 
-Pre-training — Large-scale unsupervised language learning.
+Pre-training — Large-scale training on broad unlabeled data to learn transferable language representations. It provides strong initialization.
 
-Fine-tuning — Task-specific adaptation on labeled data.
+Fine-tuning — Task-specific supervised adaptation from pretrained weights. It usually outperforms from-scratch training in low-data settings.
 
-Instruction Tuning — Fine-tuning on instruction-response pairs.
+Instruction Tuning — Fine-tunes on instruction-response datasets to improve instruction-following behavior. Common in assistant-style LLMs.
 
-Prompting — Steering behavior through input design only.
+Prompting — Task steering via input text without changing model parameters. Useful for zero-shot and few-shot use.
 
-Hard Prompt — Discrete text prompt.
+Hard Prompt — Human-written discrete token prompt. Interpretable but difficult to optimize algorithmically.
 
-Soft Prompt — Learned continuous vectors prepended to input.
+Soft Prompt — Learned continuous prompt vectors prepended to model input embeddings. Optimized by gradient descent.
 
-Prompt Engineering — Crafting prompts for target behavior.
+Prompt Engineering — Systematic design and iteration of prompts for better model behavior. Includes formatting, examples, and constraint phrasing.
 
 Prompting Techniques
 
-Chain-of-Thought — Explicit intermediate reasoning.
+Chain-of-Thought (CoT) — Prompts models to output intermediate reasoning steps before final answer. Often improves multi-step reasoning tasks.
 
-Tree-of-Thought — Branching multi-path reasoning search.
+Tree-of-Thought (ToT) — Explores multiple reasoning branches and evaluates them before committing. Useful for search-like complex problems.
 
-Prompt Sensitivity — Output variability due to small prompt phrasing changes.
+Prompt Sensitivity — Small wording changes in prompts can cause large output shifts. This is a core reliability challenge in deployment.
 
 Evaluation and Metrics
 
-Accuracy — Correct predictions over total predictions.
+Accuracy — Ratio of correct predictions to total predictions. Simple but can mislead under severe class imbalance.
 
-Entropy — H(X) = -sum p(x) log p(x). Measures uncertainty.
+Entropy — Uncertainty measure H(X) = -sum p(x) log p(x). Higher entropy implies greater uncertainty.
 
-Log-likelihood — Log probability of observed data under model.
+Log-likelihood — Log probability assigned to observed data under model parameters. Maximized during MLE training.
 
-Variance — Spread in predictions; high variance often indicates overfitting.
+Variance — Dispersion of predictions/estimates around the mean. High model variance is associated with overfitting.
 
-POSIX (evaluation context) — Position-based structured prediction metric.
+POSIX (evaluation context) — Position-oriented evaluation framing in some structured prediction contexts. It emphasizes positional correctness in outputs.
 
 Reinforcement Learning and Alignment
 
-RLHF — Reinforcement Learning from Human Feedback.
+RLHF — Training paradigm combining human preference data, reward modeling, and RL policy optimization. Widely used for assistant alignment.
 
-Reward Maximization — Optimize expected cumulative reward.
+Reward Maximization — Objective of maximizing expected cumulative reward under policy. In RLHF reward is typically learned from preferences.
 
-KL Divergence — Measures distribution difference; used to constrain policy drift.
+KL Divergence — Distribution divergence measure D_KL(P||Q) = sum P(x) log(P(x)/Q(x)). Used as a regularizer to keep policy near a reference model.
 
-Policy — Mapping from context/state to action/token distribution.
+Policy — Mapping from states/contexts to action distributions. In LLM RL this is the token distribution function.
 
-REINFORCE — Policy-gradient algorithm.
+REINFORCE Algorithm — Monte Carlo policy-gradient method using reward-weighted log-probability gradients. Unbiased but often high variance.
 
-Log-derivative Trick — Gradient identity for stochastic policy optimization.
+Log-derivative Trick — Identity turning gradients of probabilities into gradients of log-probabilities. Enables practical policy-gradient estimators.
 
-PPO — Stable clipped policy optimization, used in RLHF.
+PPO — Clipped policy optimization method constraining overly large policy updates. Standard RLHF optimizer due to stability.
 
-Monte Carlo Approximation — Estimate expectations by sample averaging.
+Monte Carlo Approximation — Estimating expectations via sample averages. Used for stochastic gradient estimates in RL.
 
 Knowledge Graphs
 
-Knowledge Graph — Entity-relation graph representation.
+Knowledge Graph (KG) — Graph of entities connected by typed relations representing factual knowledge. Supports multi-hop reasoning.
 
-Knowledge Base — General structured knowledge repository class.
+Knowledge Base (KB) — Broader structured knowledge repository concept. KGs are one graph-structured subtype.
 
-Node — Entity vertex.
+Node — Graph vertex representing an entity or concept. Nodes are connected by relation edges.
 
-Edge — Relation connection.
+Edge — Graph connection between nodes. In KGs edges are typically directed and typed.
 
-Relation — Type label of an edge.
+Relation — Semantic label describing edge meaning. Examples include bornIn, partOf, and worksFor.
 
-Entity — Real-world object/concept node.
+Entity — Real-world object/concept represented as a node. Can be people, places, organizations, events, etc.
 
-Triple (s, r, o) — Subject-relation-object fact.
+Triple (s, r, o) — Atomic KG fact: subject, relation, object. Entire KGs are sets of such triples.
 
-Entity Alignment — Match equivalent entities across KGs.
+Entity Alignment — Matching equivalent entities across different KGs. Important for KG integration and multilingual fusion.
 
-Relation Alignment — Match equivalent relation types across KGs.
+Relation Alignment — Matching semantically equivalent relation types across KGs. Needed for cross-graph interoperability.
 
-Knowledge Graph Completion — Predict missing triples.
+Knowledge Graph Completion — Predicting missing entities/relations in incomplete triples. Also called link prediction.
 
-Scoring Function — Plausibility scoring for triples.
+Scoring Function — Function assigning plausibility to candidate triples. Higher scores indicate more likely facts.
 
-Embedding — Dense vector representation.
+Embedding — Dense vector representation of entities/relations. Geometry is learned to reflect KG semantics.
 
 KG Embedding Models
 
-TransE — Translation model, s + r approximately equals o.
+TransE — Translation-based model where valid triples satisfy s + r approximately equals o. Simple and efficient baseline.
 
-RotatE — Complex-space rotation relation modeling.
+RotatE — Complex-vector model representing relations as rotations. Captures symmetry, inversion, and composition patterns.
 
-DistMult — Diagonal bilinear model, symmetric bias.
+DistMult — Bilinear diagonal model efficient but inherently symmetric in subject/object roles. Poor for strongly asymmetric relations.
 
-ComplEx — Complex-valued extension for asymmetry.
+ComplEx — Complex-valued extension of DistMult handling asymmetry via conjugation. Strong general-purpose KG baseline.
 
-SimplE — Separate role embeddings with improved expressiveness.
+SimplE — Uses separate head/tail entity embeddings and inverse-relation terms. Improves expressiveness for directed relations.
 
 Graph Concepts
 
-Graph Embedding — Low-dimensional representation of graph structure.
+Graph Embedding — Learning compact vectors that preserve graph structure and semantics. Enables downstream ML over graph data.
 
-GCN — Graph neural network aggregating neighborhood information.
+GCN — Graph Convolutional Network aggregating neighborhood information layer by layer. Learns context-aware node features.
 
-Typed Edges — Relation-labeled edges.
+Typed Edges — Edges with explicit relation labels rather than unlabeled adjacency. Core property of knowledge graphs.
 
-Hypergraph — Edges may connect more than two nodes.
+Hypergraph — Generalized graph where one edge can connect multiple nodes simultaneously. Useful for higher-order relations.
 
 KG Evaluation Metrics
 
-Mean Rank — Average rank of correct entity, lower is better.
+Mean Rank — Average rank position of true answer among candidates. Lower values indicate better ranking quality.
 
-Hits@K — Fraction where correct entity is in top-K.
+Hits@K — Fraction of queries where true answer appears in top K predictions. Higher is better.
 
-Mean Reciprocal Rank — Average inverse rank, higher is better.
+Mean Reciprocal Rank — Average reciprocal of true-answer rank across queries. Higher values indicate better early ranking.
 
 Training Techniques
 
-Negative Sampling — Generate false triples for discriminative training.
+Negative Sampling — Generate false triples to contrast against true triples during training. Essential for discriminative KG objectives.
 
-Uniform Negative Sampling — Randomly replace subject/object.
+Uniform Negative Sampling — Corrupt subject or object uniformly at random. Simple but may create many easy negatives.
 
-Margin-based Loss — max(0, gamma - f(pos) + f(neg)).
+Margin-based Loss — Enforces true triple score to exceed negative score by margin gamma. Common pairwise ranking objective.
 
-Mini-batch — Train on small random subsets each step.
+Mini-batch — Train using subsets of data per step for efficiency and gradient stability. Standard in large-scale optimization.
 
 Model Optimization and Efficiency
 
-Quantization — Lower precision for memory and speed improvements.
+Quantization — Lower-precision representation of weights/activations to reduce memory and increase speed. Often trades small accuracy loss for large efficiency gain.
 
-Post-Training Quantization — Quantize model after training.
+Post-Training Quantization — Quantize after training without full retraining. Requires calibration to set scales.
 
-Calibration Dataset — Small representative set to tune quantization scales.
+Calibration Dataset — Small representative sample used to estimate activation ranges/scales for quantization. It is not a training dataset.
 
-Scale Factor — Maps full-precision values to quantized values.
+Scale Factor — Numerical mapping between floating-point and quantized integer ranges. Critical for quantization fidelity.
 
-Double Quantization — Quantize quantization constants themselves.
+Double Quantization — Quantizing quantization constants themselves for additional memory savings. Used in some low-bit fine-tuning pipelines.
 
-FP16 — Half-precision floating point.
+FP16 — 16-bit floating-point format reducing memory and increasing throughput compared with FP32. Common in mixed-precision training.
 
-4-bit Quantization — Very low precision for high compression.
+4-bit Quantization — Extremely low-bit representation for strong compression. Enables larger model deployment on limited hardware.
 
 Parameter-efficient Fine-tuning
 
-LoRA — Low-rank adaptation with frozen base weights.
+LoRA — Low-rank adapter updates while base model weights remain frozen. Greatly reduces trainable parameter count.
 
-QLoRA — LoRA applied on quantized base models.
+QLoRA — LoRA training on top of quantized base weights. Enables efficient fine-tuning of large models on smaller GPUs.
 
-DyLoRA — Dynamic-rank LoRA.
+DyLoRA — Dynamic-rank LoRA training strategy reducing need for fixed-rank hyperparameter search. Offers flexible adaptation capacity.
 
-Prefix Tuning — Trainable prefix vectors in attention states.
+Prefix Tuning — Learns trainable prefix vectors injected into attention computation. Keeps core model parameters fixed.
 
-Adapters — Small trainable modules inserted between transformer blocks.
+Adapters — Small bottleneck modules inserted in transformer blocks and trained while backbone stays frozen. Parameter-efficient alternative to full fine-tuning.
 
-SAID — Structure-aware intrinsic-dimension guided adaptation.
+SAID — Structure-aware intrinsic-dimension strategy for selecting where/what to adapt efficiently. Aims to maximize adaptation impact per parameter.
 
 Model Compression
 
-Pruning — Remove parameters for smaller/faster models.
+Pruning — Removing parameters, heads, or layers to shrink model size and compute. Often followed by fine-tuning for recovery.
 
-Magnitude Pruning — Remove small-magnitude weights.
+Magnitude Pruning — Removes smallest absolute-value weights under contribution assumption. Simple and widely used.
 
-Structured Pruning — Remove full neurons/heads/layers.
+Structured Pruning — Removes whole units (neurons/heads/layers) rather than individual weights. More hardware-friendly than unstructured sparsity.
 
-Random Pruning — Random-removal baseline.
+Random Pruning — Baseline pruning by random removal. Useful for comparing informed pruning strategies.
 
-Knowledge Distillation — Student model learns from teacher outputs.
+Knowledge Distillation — Trains smaller student model to match teacher behavior/output distributions. Transfers capability with reduced footprint.
 
-Sequence-level Distillation — Distill from teacher-generated sequences.
+Sequence-level Distillation — Distills from complete teacher-generated sequences rather than token-level targets alone. Useful in generation tasks.
 
 Mechanistic Interpretability
 
-Circuit — Subgraph implementing a specific behavior.
+Circuit — Minimal subnetwork responsible for a specific behavior. Helps map model computation to interpretable components.
 
-Induction Head — Attention head that copies repeated continuation patterns.
+Induction Head — Attention head pattern that copies continuation after matching prior token pattern. Key mechanism in in-context learning behavior.
 
-Attention Head Pattern — Specialized per-head attention behavior.
+Attention Head Pattern — Characteristic attention behavior learned by a head across contexts. Different heads specialize in different functions.
 
 Mathematical and Tensor Operations
 
-Einstein Summation (einsum) — Compact index notation for tensor operations.
+Einstein Summation (einsum) — Compact notation for tensor contractions and batched linear algebra. Widely used in deep-learning implementations.
 
-Frobenius Inner Product — Sum of element-wise products of matrices.
+Frobenius Inner Product — Sum of elementwise products between two same-shaped matrices. Equivalent to trace(A^T B).
 
-Tensor Multiplication — Generalized multiplication over higher-order tensors.`;
+Tensor Multiplication — Generalized multiplication over higher-order arrays with index contractions. Fundamental to modern deep-learning computation.``;
 
 export const lectureNotesContent = `Lecture Notes for Weeks 1 to 11
 
