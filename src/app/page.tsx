@@ -40,6 +40,13 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link href="/quiz-ai-practice" className={styles.modeCard}>
+          <div className={styles.modeTitle}>🤖 AI Generated Practice Questions</div>
+          <div className={styles.modeDescription}>
+            45 AI-generated practice questions in one fully shuffled pool
+          </div>
+        </Link>
+
         <Link href="/quiz" className={styles.modeCard}>
           <div className={styles.modeTitle}>🎲 Full Shuffle</div>
           <div className={styles.modeDescription}>
