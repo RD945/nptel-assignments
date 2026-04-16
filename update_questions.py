@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert questions_2.json (102 questions) to TypeScript format"""
+"""Convert questions_2.json (112 questions) to TypeScript format"""
 
 import json
 

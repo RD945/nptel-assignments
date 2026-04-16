@@ -13,7 +13,7 @@ export default function Home() {
         <Link href="/review" className={styles.modeCard}>
           <div className={styles.modeTitle}>📖 Review All Questions</div>
           <div className={styles.modeDescription}>
-            View all questions and answers in order from Week 1 to Week 11
+            View all questions and answers in order from Week 1 to Week 12
           </div>
         </Link>
 

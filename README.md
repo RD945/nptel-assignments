@@ -5,7 +5,7 @@ It includes three study modes, instant feedback, and score tracking.
 
 ## Features
 
-- 102 total questions across 11 weeks
+- 112 total questions across 12 weeks
 - 5 modes:
    - Full Shuffle Quiz (all questions in random order)
    - Weekly Quiz (choose week, randomized within that week)
@@ -22,10 +22,10 @@ It includes three study modes, instant feedback, and score tracking.
 
 ## Question Statistics
 
-- Total Questions: 102
-- Weeks Covered: 1-11
-- Multi-Select Questions: 17
-- Single-Select Questions: 85
+- Total Questions: 112
+- Weeks Covered: 1-12
+- Multi-Select Questions: 21
+- Single-Select Questions: 91
 
 ## Project Structure
 
@@ -51,7 +51,7 @@ src/
 │       ├── page.tsx                # Full review mode (ordered by week)
 │       └── review.module.css
 └── data/
-      └── questions.ts                # Typed question dataset (102)
+      └── questions.ts                # Typed question dataset (112)
 ```
 
 ## Question Data Structure

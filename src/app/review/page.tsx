@@ -30,7 +30,7 @@ export default function Review() {
       </Link>
 
       <h1 className={styles.title}>All Questions & Answers</h1>
-      <p className={styles.subtitle}>Week 1 to Week 11 in order</p>
+      <p className={styles.subtitle}>Week 1 to Week 12 in order</p>
 
       <div className={styles.questions}>
         {weeks.map((week) => (

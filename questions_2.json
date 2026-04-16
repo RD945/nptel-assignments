@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "total_questions": 102,
-    "weeks": 11,
-    "total_weeks": 11,
+    "total_questions": 112,
+    "weeks": 12,
+    "total_weeks": 12,
     "questions_per_week": {
       "1": 10,
       "2": 6,
@@ -14,10 +14,11 @@
       "8": 10,
       "9": 10,
       "10": 10,
-      "11": 10
+      "11": 10,
+      "12": 10
     },
-    "multi_select_count": 17,
-    "single_select_count": 85,
+    "multi_select_count": 21,
+    "single_select_count": 91,
     "source": "Introduction to Large Language Models - All Weeks Assignment Solutions"
   },
   "questions": [
@@ -2863,6 +2864,289 @@
         "d"
       ],
       "explanation": "The volume of open cones does not reflect how big or small a category is, making it hard to distinguish sub-categories by volume.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q1",
+      "week": 12,
+      "text": "Which statements correctly characterize \u201cbias\u201d in the context of LLMs?\n\n1. Bias can generate objectionable or stereotypical views in model outputs.\n2. Bias is always intentionally introduced by malicious data curators.\n3. Bias can cause harmful real-world impacts such as reinforcing discrimination.\n4. Bias only affects low-resource languages; high-resource languages are unaffected.",
+      "options": [
+        {
+          "label": "a",
+          "text": "1 and 2"
+        },
+        {
+          "label": "b",
+          "text": "1 and 3"
+        },
+        {
+          "label": "c",
+          "text": "2 and 4"
+        },
+        {
+          "label": "d",
+          "text": "1, 3, and 4"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Bias can produce stereotypical outputs and cause harmful real-world impacts, including discrimination.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q2",
+      "week": 12,
+      "text": "The Stereotype Score (ss) refers to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "The frequency with which a language model rejects biased associations."
+        },
+        {
+          "label": "b",
+          "text": "The measure of how often a model's predictions are meaningless as opposed to meaningful."
+        },
+        {
+          "label": "c",
+          "text": "A ratio of positive sentiment to negative sentiment in model outputs."
+        },
+        {
+          "label": "d",
+          "text": "The proportion of examples in which a model chooses a stereotypical association over an anti-stereotypical one."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "The stereotype score measures how often stereotypical associations are chosen over anti-stereotypical ones.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q3",
+      "week": 12,
+      "text": "Which of the following are prominent sources of bias in LLMs?\n\n1. Improper selection of training data leading to skewed distributions.\n2. Reliance on older datasets causing \u201ctemporal bias.\u201d\n3. Overemphasis on low-resource languages causing \u201clinguistic inversion.\u201d\n4. Unequal focus on high-resource languages resulting in \u201ccultural bias.\u201d",
+      "options": [
+        {
+          "label": "a",
+          "text": "1 and 2 only"
+        },
+        {
+          "label": "b",
+          "text": "2 and 3 only"
+        },
+        {
+          "label": "c",
+          "text": "1, 2, and 4"
+        },
+        {
+          "label": "d",
+          "text": "1, 3, and 4"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Improper data selection, temporal bias, and cultural bias are prominent sources of bias in LLMs.",
+      "isMultiSelect": true
+    },
+    {
+      "id": "w12q4",
+      "week": 12,
+      "text": "In the context of bias mitigation based on adversarial triggers, which best describes the goal of prepending specially chosen tokens to prompts?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To directly fine-tune the model parameters to remove bias"
+        },
+        {
+          "label": "b",
+          "text": "To override all prior knowledge in a model, effectively \u201cresetting\u201d it"
+        },
+        {
+          "label": "c",
+          "text": "To exploit the model's distributional patterns, thereby neutralizing or flipping biased associations in generated text"
+        },
+        {
+          "label": "d",
+          "text": "To randomly shuffle the tokens so that the model becomes more robust"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Adversarial triggers aim to exploit distributional patterns to neutralize or flip biased associations.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q5",
+      "week": 12,
+      "text": "Which of the following best describes the \u201cregard\u201d metric?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It is a measure of how well a model can explain its internal decision process."
+        },
+        {
+          "label": "b",
+          "text": "It is a measurement of a model's perplexity on demographically sensitive text."
+        },
+        {
+          "label": "c",
+          "text": "It is the proportion of times a model self-corrects discriminatory language."
+        },
+        {
+          "label": "d",
+          "text": "It is a classification label reflecting the attitude towards a demographic group in the generated text."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Regard is a classification label reflecting the attitude towards a demographic group in generated text.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q6",
+      "week": 12,
+      "text": "Which of the following steps compose the approach for improving response safety via in-context learning?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Retrieving safety demonstrations similar to the user query."
+        },
+        {
+          "label": "b",
+          "text": "Fine-tuning the model with additional labeled data after generation."
+        },
+        {
+          "label": "c",
+          "text": "Providing retrieved demonstrations as examples in the prompt to guide the model's response generation."
+        },
+        {
+          "label": "d",
+          "text": "Sampling multiple outputs from LLMs and choosing the majority opinion."
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "explanation": "Safety demonstrations are retrieved and then inserted into the prompt to guide response generation.",
+      "isMultiSelect": true
+    },
+    {
+      "id": "w12q7",
+      "week": 12,
+      "text": "Which statement(s) is/are correct about how high-resource (HRL) vs. low-resource languages (LRL) affect model training?",
+      "options": [
+        {
+          "label": "a",
+          "text": "LRLs typically have higher performance metrics due to smaller population sizes."
+        },
+        {
+          "label": "b",
+          "text": "HRLs get more data, so the model might overfit to HRL cultural perspectives."
+        },
+        {
+          "label": "c",
+          "text": "LRLs are often under-represented, leading to potential underestimation of their cultural nuances."
+        },
+        {
+          "label": "d",
+          "text": "The dominance of HRLs can cause a reinforcing cycle that perpetuates imbalance."
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "HRLs receive more data, LRLs can be under-represented, and dominance of HRLs can reinforce imbalance.",
+      "isMultiSelect": true
+    },
+    {
+      "id": "w12q8",
+      "week": 12,
+      "text": "The \u201cResponsible LLM\u201d concept is stated to address:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Only the bias in LLMs"
+        },
+        {
+          "label": "b",
+          "text": "A set of concerns including explainability, fairness, robustness, and security"
+        },
+        {
+          "label": "c",
+          "text": "Balancing training costs with carbon footprint"
+        },
+        {
+          "label": "d",
+          "text": "Implementation of purely rule-based safety filters"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Responsible LLMs address a broader set of concerns including explainability, fairness, robustness, and security.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q9",
+      "week": 12,
+      "text": "Within the StereoSet framework, the icat metric specifically refers to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "The ratio of anti-stereotypical associations to neutral associations"
+        },
+        {
+          "label": "b",
+          "text": "The percentage of times a model refuses to generate content deemed hateful"
+        },
+        {
+          "label": "c",
+          "text": "A measure of domain coverage across different demographic groups"
+        },
+        {
+          "label": "d",
+          "text": "A balanced metric capturing both a model's language modelling ability and the tendency to avoid stereotypical bias"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "ICAT balances language modelling ability with the tendency to avoid stereotypical bias.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q10",
+      "week": 12,
+      "text": "Bias due to improper selection of training data typically arises in LLMs when:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Data are selected exclusively from curated, balanced sources with equal representation"
+        },
+        {
+          "label": "b",
+          "text": "The language model sees only real-time social media feeds without any historical texts"
+        },
+        {
+          "label": "c",
+          "text": "The training corpus over-represents some topics or groups, creating a skewed distribution"
+        },
+        {
+          "label": "d",
+          "text": "All data are automatically filtered to remove any demographic markers"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Bias typically arises when the training corpus over-represents some topics or groups, creating a skewed distribution.",
       "isMultiSelect": false
     }
   ]
