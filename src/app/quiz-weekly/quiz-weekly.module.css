@@ -114,11 +114,12 @@
 
 .optionWrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
 
 .input {
+  margin-top: 4px;
   cursor: pointer;
   width: 18px;
   height: 18px;
