@@ -134,3 +134,75 @@
   border-radius: 4px;
   line-height: 1.6;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .backLink {
+    padding: 6px 10px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .questions {
+    gap: 25px;
+  }
+
+  .weekSection {
+    padding-left: 15px;
+  }
+
+  .weekHeader {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .questionCard {
+    padding: 15px;
+    margin-bottom: 12px;
+  }
+
+  .questionNumber {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .optionsList {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .option {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .correctBadge {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .correctAnswer {
+    font-size: 13px;
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .explanation {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

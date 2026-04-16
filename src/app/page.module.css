@@ -59,3 +59,38 @@
   color: #555;
   line-height: 1.6;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .container {
+    gap: 20px;
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .modesGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .modeCard {
+    padding: 20px;
+  }
+
+  .modeTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .modeDescription {
+    font-size: 13px;
+  }
+}

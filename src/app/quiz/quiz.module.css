@@ -51,12 +51,11 @@
 
 .optionWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
 }
 
 .input {
-  margin-top: 3px;
   cursor: pointer;
   width: 18px;
   height: 18px;
@@ -246,4 +245,86 @@
   padding: 12px 40px;
   font-size: 16px;
   font-weight: bold;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .questionCard {
+    padding: 15px;
+  }
+
+  .questionText {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .options {
+    gap: 10px;
+  }
+
+  .optionWrapper {
+    gap: 10px;
+  }
+
+  .submitButton,
+  .nextButton,
+  .restartButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+
+  .feedback {
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  .feedbackMessage {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .explanation {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .results {
+    padding: 20px;
+  }
+
+  .resultsTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .score {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .percentage {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .resultActions {
+    gap: 10px;
+  }
+
+  .homeButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+
+  .backLink {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
 }

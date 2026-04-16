@@ -114,12 +114,11 @@
 
 .optionWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
 }
 
 .input {
-  margin-top: 3px;
   cursor: pointer;
   width: 18px;
   height: 18px;
@@ -298,4 +297,133 @@
 
 .homeButton:hover {
   background-color: #f0f0f0;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .weekGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .weekButton {
+    padding: 15px 10px;
+  }
+
+  .weekButtonTitle {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .weekButtonCount {
+    font-size: 11px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .questionCard {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .questionText {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .options {
+    gap: 10px;
+  }
+
+  .optionWrapper {
+    gap: 10px;
+  }
+
+  .feedback {
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  .feedbackMessage {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .explanation {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .submitButton,
+  .nextButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+
+  .results {
+    padding: 20px;
+  }
+
+  .resultsTitle {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .scoreinfo {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .weekScoresContainer {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .weekScore {
+    padding: 10px;
+  }
+
+  .weekScoreName {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .weekScoreValue {
+    font-size: 18px;
+  }
+
+  .score {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .homeButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .backLink {
+    padding: 6px 10px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
 }
