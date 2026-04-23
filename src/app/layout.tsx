@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SubjectProvider } from "@/context/SubjectContext";
 
 export const metadata: Metadata = {
-  title: "LLM Assignment Quiz",
-  description: "Quiz application for Large Language Models course",
+  title: "Quiz Flash Cards",
+  description: "Multi-subject quiz application for course review and practice",
 };
 
 export default function RootLayout({
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="container">{children}</main>
+        <SubjectProvider>
+          <main className="container">{children}</main>
+        </SubjectProvider>
       </body>
     </html>
   );

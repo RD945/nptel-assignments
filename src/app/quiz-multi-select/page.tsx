@@ -1,8 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { questions as allQuestions, Question } from "@/data/questions";
+import SubjectSelector from "@/components/SubjectSelector";
+import SubjectHeader from "@/components/SubjectHeader";
+import { useSubject } from "@/context/SubjectContext";
+import { getQuestionsForSubject } from "@/data/subject-questions";
+import type { Question } from "@/data/questions";
 import FormattedText from "@/components/FormattedText";
 import styles from "../quiz/quiz.module.css";
 
@@ -26,10 +30,20 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function QuizMultiSelect() {
+  const { subject, setSubject } = useSubject();
   const [state, setState] = useState<QuizState | null>(null);
+  const questions = subject ? getQuestionsForSubject(subject) : [];
+  const multiSelectQuestions = useMemo(
+    () => questions.filter((question) => question.isMultiSelect),
+    [questions]
+  );
 
   useEffect(() => {
-    const multiSelectQuestions = allQuestions.filter((question) => question.isMultiSelect);
+    if (!subject) {
+      setState(null);
+      return;
+    }
+
     const shuffled = shuffleArray(multiSelectQuestions);
     setState({
       shuffledQuestions: shuffled,
@@ -40,7 +54,38 @@ export default function QuizMultiSelect() {
       score: 0,
       finished: false,
     });
-  }, []);
+  }, [subject, multiSelectQuestions]);
+
+  if (!subject) {
+    return (
+      <SubjectSelector
+        title="Choose a subject"
+        subtitle="Select a subject to start the multi-select quiz."
+        onSelect={setSubject}
+        showBackLink
+      />
+    );
+  }
+
+  if (multiSelectQuestions.length === 0) {
+    return (
+      <div className={styles.container}>
+        <Link href="/" className={styles.backLink}>
+          ← Back to Home
+        </Link>
+
+        <div className={styles.results}>
+          <h2 className={styles.resultsTitle}>No multi-select questions</h2>
+          <div className={styles.score}>
+            This subject does not have any multi-select questions.
+          </div>
+          <Link href="/" className={styles.homeButton}>
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   if (!state) {
     return <div className={styles.container}>Loading...</div>;
@@ -99,7 +144,6 @@ export default function QuizMultiSelect() {
   };
 
   const handleRestart = () => {
-    const multiSelectQuestions = allQuestions.filter((question) => question.isMultiSelect);
     const shuffled = shuffleArray(multiSelectQuestions);
     setState({
       shuffledQuestions: shuffled,
@@ -115,9 +159,7 @@ export default function QuizMultiSelect() {
   if (state.finished) {
     return (
       <div className={styles.container}>
-        <Link href="/" className={styles.backLink}>
-          ← Back to Home
-        </Link>
+        <SubjectHeader />
 
         <div className={styles.results}>
           <h2 className={styles.resultsTitle}>Multi-Select Quiz Complete!</h2>
@@ -142,6 +184,8 @@ export default function QuizMultiSelect() {
 
   return (
     <div className={styles.container}>
+      <SubjectHeader />
+
       <div className={styles.header}>
         <div className={styles.counter}>
           Multi-Select Question {state.currentIndex + 1} / {totalQuestions}

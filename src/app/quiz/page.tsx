@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { questions as allQuestions, Question } from "@/data/questions";
+import SubjectSelector from "@/components/SubjectSelector";
+import SubjectHeader from "@/components/SubjectHeader";
+import { useSubject } from "@/context/SubjectContext";
+import { getQuestionsForSubject } from "@/data/subject-questions";
+import type { Question } from "@/data/questions";
 import FormattedText from "@/components/FormattedText";
 import styles from "./quiz.module.css";
 
@@ -26,11 +30,18 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function Quiz() {
+  const { subject, setSubject } = useSubject();
   const [state, setState] = useState<QuizState | null>(null);
+  const questions = subject ? getQuestionsForSubject(subject) : [];
 
   // Initialize quiz on mount
   useEffect(() => {
-    const shuffled = shuffleArray(allQuestions);
+    if (!subject) {
+      setState(null);
+      return;
+    }
+
+    const shuffled = shuffleArray(questions);
     setState({
       shuffledQuestions: shuffled,
       currentIndex: 0,
@@ -40,7 +51,18 @@ export default function Quiz() {
       score: 0,
       finished: false,
     });
-  }, []);
+  }, [subject, questions]);
+
+  if (!subject) {
+    return (
+      <SubjectSelector
+        title="Choose a subject"
+        subtitle="Select a subject to start the full shuffle quiz."
+        onSelect={setSubject}
+        showBackLink
+      />
+    );
+  }
 
   if (!state) {
     return <div className={styles.container}>Loading...</div>;
@@ -112,7 +134,7 @@ export default function Quiz() {
   };
 
   const handleRestart = () => {
-    const shuffled = shuffleArray(allQuestions);
+    const shuffled = shuffleArray(questions);
     setState({
       shuffledQuestions: shuffled,
       currentIndex: 0,
@@ -128,9 +150,7 @@ export default function Quiz() {
   if (state.finished) {
     return (
       <div className={styles.container}>
-        <Link href="/" className={styles.backLink}>
-          ← Back to Home
-        </Link>
+        <SubjectHeader />
         
         <div className={styles.results}>
           <h2 className={styles.resultsTitle}>Quiz Complete!</h2>
@@ -156,6 +176,8 @@ export default function Quiz() {
   // Quiz screen
   return (
     <div className={styles.container}>
+      <SubjectHeader />
+
       <div className={styles.header}>
         <div className={styles.counter}>
           Question {state.currentIndex + 1} / {totalQuestions}

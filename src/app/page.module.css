@@ -10,6 +10,38 @@
   padding: 20px;
 }
 
+.subjectHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.subjectLabel {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.changeSubjectButton {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.changeSubjectButton:hover {
+  background-color: #f0f0f0;
+}
+
 .title {
   font-size: 48px;
   font-weight: bold;
@@ -47,6 +79,16 @@
   transform: translateY(-2px);
 }
 
+.modeCardDisabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.modeCardDisabled:hover {
+  background-color: #fff;
+  transform: none;
+}
+
 .modeTitle {
   font-size: 22px;
   font-weight: bold;
@@ -65,6 +107,11 @@
   .container {
     gap: 20px;
     padding: 12px;
+  }
+
+  .subjectHeader {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .title {

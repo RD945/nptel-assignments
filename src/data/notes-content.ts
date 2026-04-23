@@ -486,7 +486,7 @@ Einstein Summation (einsum) — Compact notation for tensor contractions and bat
 
 Frobenius Inner Product — Sum of elementwise products between two same-shaped matrices. Equivalent to trace(A^T B).
 
-Tensor Multiplication — Generalized multiplication over higher-order arrays with index contractions. Fundamental to modern deep-learning computation.``;
+Tensor Multiplication — Generalized multiplication over higher-order arrays with index contractions. Fundamental to modern deep-learning computation.`;
 
 export const lectureNotesContent = `Lecture Notes for Weeks 1 to 11
 

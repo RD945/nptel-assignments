@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
-import { questions as allQuestions, Question } from "@/data/questions";
+import type { Question } from "@/data/questions";
 import FormattedText from "@/components/FormattedText";
+import SubjectHeader from "@/components/SubjectHeader";
 import styles from "@/app/quiz-weekly/quiz-weekly.module.css";
 
 interface WeeklyQuizState {
@@ -21,6 +22,7 @@ interface WeeklyQuizState {
 }
 
 interface WeeklyQuizModeProps {
+  questions: Question[];
   shuffleOptions?: boolean;
   title: string;
   subtitle: string;
@@ -209,6 +211,7 @@ function WeeklyQuizQuestionScreen({
 }
 
 export default function WeeklyQuizMode({
+  questions,
   shuffleOptions = false,
   title,
   subtitle,
@@ -216,9 +219,9 @@ export default function WeeklyQuizMode({
   const [state, setState] = useState<WeeklyQuizState | null>(null);
 
   useEffect(() => {
-    const weeksAvailable = Array.from(
-      new Set(allQuestions.map((q) => q.week))
-    ).sort((a, b) => a - b);
+    const weeksAvailable = Array.from(new Set(questions.map((q) => q.week))).sort(
+      (a, b) => a - b
+    );
 
     setState({
       weeksAvailable,
@@ -232,26 +235,40 @@ export default function WeeklyQuizMode({
       weekScores: {},
       finished: false,
     });
-  }, []);
+  }, [questions]);
 
   if (!state) {
     return <div className={styles.container}>Loading...</div>;
   }
 
+  if (questions.length === 0) {
+    return (
+      <div className={styles.container}>
+        <SubjectHeader title={title} subtitle={subtitle} />
+
+        <div className={styles.results}>
+          <h2 className={styles.resultsTitle}>No questions available</h2>
+          <p className={styles.scoreinfo}>
+            This subject does not have any questions for the weekly mode yet.
+          </p>
+          <Link href="/" className={styles.homeButton}>
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   if (state.currentWeek === null) {
     return (
       <div className={styles.container}>
-        <Link href="/" className={styles.backLink}>
-          ← Back to Home
-        </Link>
+        <SubjectHeader title={title} subtitle={subtitle} />
 
         <div className={styles.weekSelector}>
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.subtitle}>{subtitle}</p>
 
           <div className={styles.weekGrid}>
             {state.weeksAvailable.map((week) => {
-              const weekQuestions = allQuestions.filter(
+              const weekQuestions = questions.filter(
                 (q) => q.week === week
               );
               return (
@@ -287,9 +304,7 @@ export default function WeeklyQuizMode({
   if (!state.finished) {
     return (
       <div className={styles.container}>
-        <Link href="/" className={styles.backLink}>
-          ← Back to Home
-        </Link>
+        <SubjectHeader title={title} subtitle={subtitle} />
 
         <WeeklyQuizQuestionScreen
           state={state}
@@ -302,9 +317,7 @@ export default function WeeklyQuizMode({
 
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.backLink}>
-        ← Back to Home
-      </Link>
+      <SubjectHeader title={title} subtitle={subtitle} />
 
       <div className={styles.results}>
         <h2 className={styles.resultsTitle}>Quiz Complete!</h2>

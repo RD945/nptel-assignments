@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.backLink {
+  align-self: flex-start;
+  display: inline-block;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.backLink:hover {
+  background-color: #f0f0f0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.card {
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 28px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font: inherit;
+}
+
+.card:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+    gap: 18px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+}

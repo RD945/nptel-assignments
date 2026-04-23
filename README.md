@@ -1,12 +1,13 @@
-# LLM Assignment Quiz App
+# Quiz Flash Cards
 
-A Next.js quiz application for the Introduction to Large Language Models course.
+A Next.js quiz application with a first-load subject picker for two courses:
+LLM / NLP and Entrepreneurship Essentials.
 It includes multiple study modes, instant feedback, and score tracking.
 
 ## Features
 
-- 112 total questions across 12 weeks
-- 7 modes:
+- First-load subject picker for LLM / NLP or Entrepreneurship Essentials
+- LLM / NLP mode set:
    - Full Shuffle Quiz (all questions in random order)
    - Weekly Quiz (choose week, randomized within that week)
    - Weekly Quiz + Shuffled Options (same weekly flow with randomized answer order)
@@ -14,6 +15,11 @@ It includes multiple study modes, instant feedback, and score tracking.
    - AI Generated Practice Questions (45 AI-generated questions in one shuffled pool)
    - Notes (two sections: term definitions and lecture notes)
    - Review Mode (all questions in week-wise order)
+- Entrepreneurship Essentials mode set:
+   - Full Shuffle Quiz
+   - Weekly Quiz
+   - Weekly Quiz + Shuffled Options
+   - Review Mode
 - Single-select and multi-select question support
 - Instant correctness feedback after submit
 - Color-coded answers (green correct, red incorrect)
@@ -28,13 +34,15 @@ It includes multiple study modes, instant feedback, and score tracking.
 - Weeks Covered: 1-12
 - Multi-Select Questions: 20
 - Single-Select Questions: 92
+- Entrepreneurship Essentials: 120 questions across 12 weeks
+- Subject choice is session-only, so the app asks again on refresh
 
 ## Project Structure
 
 ```
 src/
 ├── app/
-│   ├── page.tsx                    # Home page (7 mode cards)
+│   ├── page.tsx                    # Subject picker and home page
 │   ├── page.module.css             # Home page styles
 │   ├── layout.tsx                  # Root layout
 │   ├── globals.css                 # Global styles
@@ -58,9 +66,17 @@ src/
 │       ├── page.tsx                # Full review mode (ordered by week)
 │       └── review.module.css
 └── data/
-   ├── questions.ts                # Typed question dataset (112)
-   ├── ai-practice-questions.ts    # AI-generated practice dataset (45)
-   └── notes-content.ts            # Notes content source (terms + lecture notes)
+   ├── questions.ts                 # LLM / NLP typed question dataset (112)
+   ├── entrepreneurship-questions.ts# Entrepreneurship typed question dataset (120)
+   ├── subject-questions.ts         # Subject-to-dataset lookup helpers
+   ├── subjects.ts                  # Subject registry and labels
+   ├── ai-practice-questions.ts     # AI-generated practice dataset (45)
+   └── notes-content.ts             # Notes content source (terms + lecture notes)
+
+src/components/
+├── SubjectContext.tsx               # Session-only subject selection state
+├── SubjectHeader.tsx                # Shared subject switch header
+└── SubjectSelector.tsx             # First-load subject picker
 ```
 
 ## Question Data Structure

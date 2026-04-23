@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.subjectLabel {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.subjectName {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.homeButton,
+.changeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.homeButton:hover,
+.changeButton:hover {
+  background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .homeButton,
+  .changeButton {
+    flex: 1;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

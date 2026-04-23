@@ -1,11 +1,30 @@
 "use client";
 
-import Link from "next/link";
-import { questions as allQuestions } from "@/data/questions";
+import SubjectSelector from "@/components/SubjectSelector";
+import SubjectHeader from "@/components/SubjectHeader";
+import { useSubject } from "@/context/SubjectContext";
+import { getQuestionsForSubject } from "@/data/subject-questions";
+import { getSubjectInfo } from "@/data/subjects";
 import FormattedText from "@/components/FormattedText";
 import styles from "./review.module.css";
 
 export default function Review() {
+  const { subject, setSubject } = useSubject();
+
+  if (!subject) {
+    return (
+      <SubjectSelector
+        title="Choose a subject"
+        subtitle="Select a subject to review all questions and answers."
+        onSelect={setSubject}
+        showBackLink
+      />
+    );
+  }
+
+  const allQuestions = getQuestionsForSubject(subject);
+  const subjectInfo = getSubjectInfo(subject);
+
   // Group questions by week and sort
   const questionsByWeek = allQuestions.reduce(
     (acc, question) => {
@@ -25,12 +44,10 @@ export default function Review() {
 
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.backLink}>
-        ← Back to Home
-      </Link>
-
-      <h1 className={styles.title}>All Questions & Answers</h1>
-      <p className={styles.subtitle}>Week 1 to Week 12 in order</p>
+      <SubjectHeader
+        title={`${subjectInfo?.label} Questions & Answers`}
+        subtitle="Week 1 to Week 12 in order"
+      />
 
       <div className={styles.questions}>
         {weeks.map((week) => (
@@ -79,10 +96,6 @@ export default function Review() {
           </div>
         ))}
       </div>
-
-      <Link href="/" className={styles.backLink}>
-        ← Back to Home
-      </Link>
     </div>
   );
 }
