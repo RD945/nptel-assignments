@@ -1,10 +1,18 @@
 import { questions as llmQuestions } from "@/data/questions";
 import { entrepreneurshipQuestions } from "@/data/entrepreneurship-questions";
+import { foundationsDeepLearningQuestions } from "@/data/foundations-deep-learning-questions";
 import type { Question } from "@/data/questions";
 import type { SubjectId } from "@/data/subjects";
 
 export function getQuestionsForSubject(subject: SubjectId): Question[] {
-  return subject === "entrepreneurship" ? entrepreneurshipQuestions : llmQuestions;
+  switch (subject) {
+    case "entrepreneurship":
+      return entrepreneurshipQuestions;
+    case "foundations-deep-learning":
+      return foundationsDeepLearningQuestions;
+    default:
+      return llmQuestions;
+  }
 }
 
 export function hasMultiSelectQuestions(subject: SubjectId): boolean {
