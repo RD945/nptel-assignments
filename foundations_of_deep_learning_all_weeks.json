@@ -1,0 +1,3402 @@
+{
+  "metadata": {
+    "course": "Foundations of Deep Learning: Concepts and Applications",
+    "platform": "NPTEL / Online Certification",
+    "total_questions": 120,
+    "weeks": 12,
+    "questions_per_week": {
+      "1": 10,
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 10,
+      "6": 10,
+      "7": 10,
+      "8": 10,
+      "9": 10,
+      "10": 10,
+      "11": 10,
+      "12": 10
+    },
+    "multi_select_count": 0,
+    "single_select_count": 120,
+    "marks_per_question": 1,
+    "total_marks": 120,
+    "week_titles": {
+      "1": "Single Layer Perceptron",
+      "2": "Optimization & Regularization",
+      "3": "Convolutional Neural Networks (CNNs)",
+      "4": "Advanced CNN Architectures & Transfer Learning",
+      "5": "Explainable AI (XAI) for CNNs",
+      "6": "Image Segmentation & Object Detection",
+      "7": "Recurrent Neural Networks (RNNs)",
+      "8": "LSTMs, GRUs & Attention Mechanism",
+      "9": "NLP Fundamentals & Word Representations",
+      "10": "Autoencoders & Variational Autoencoders",
+      "11": "Transformers & Self-Supervised Learning",
+      "12": "Large Language Models (LLMs)"
+    }
+  },
+  "questions": [
+    {
+      "id": "w1q1",
+      "week": 1,
+      "text": "What type of problems can a Single Layer Perceptron solve?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Any nonlinear classification problem"
+        },
+        {
+          "label": "b",
+          "text": "Only regression problems"
+        },
+        {
+          "label": "c",
+          "text": "Linearly separable classification problems"
+        },
+        {
+          "label": "d",
+          "text": "Sequence prediction problems"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "A Single Layer Perceptron can only solve linearly separable classification problems. It finds a linear decision boundary (hyperplane) that separates two classes. It fails on problems like XOR which are not linearly separable.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q2",
+      "week": 1,
+      "text": "The output of a perceptron before applying the activation function is called",
+      "options": [
+        {
+          "label": "a",
+          "text": "Error"
+        },
+        {
+          "label": "b",
+          "text": "Net input (weighted sum)"
+        },
+        {
+          "label": "c",
+          "text": "Gradient"
+        },
+        {
+          "label": "d",
+          "text": "Bias"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The net input (also called weighted sum or pre-activation) is computed as z = Σ(wᵢxᵢ) + b. This is the raw linear combination of inputs and weights before the activation function is applied.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q3",
+      "week": 1,
+      "text": "Which activation function is traditionally used in a single layer perceptron?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sigmoid"
+        },
+        {
+          "label": "b",
+          "text": "ReLU"
+        },
+        {
+          "label": "c",
+          "text": "Step (threshold) function"
+        },
+        {
+          "label": "d",
+          "text": "Softmax"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The original perceptron uses a Step (threshold) function: output = 1 if z ≥ 0, else 0. This produces binary outputs suitable for binary classification.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q4",
+      "week": 1,
+      "text": "Consider a perceptron with weights w = [1, −2], bias b = 0.5, input x = [2, 1]. What is the perceptron output using a step activation (threshold = 0)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "0"
+        },
+        {
+          "label": "b",
+          "text": "1"
+        },
+        {
+          "label": "c",
+          "text": "−1"
+        },
+        {
+          "label": "d",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Net input z = (1×2) + (−2×1) + 0.5 = 2 − 2 + 0.5 = 0.5. Since z = 0.5 ≥ 0, the step function outputs 1.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q5",
+      "week": 1,
+      "text": "Which learning rule is used to update weights in a perceptron?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Gradient descent"
+        },
+        {
+          "label": "b",
+          "text": "Hebbian learning"
+        },
+        {
+          "label": "c",
+          "text": "Perceptron learning rule"
+        },
+        {
+          "label": "d",
+          "text": "Backpropagation"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The Perceptron Learning Rule updates weights based on the error: w_new = w_old + η × (t − y) × x. It only updates when there is a misclassification, unlike gradient descent which always updates.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q6",
+      "week": 1,
+      "text": "Why is a perceptron implemented in Keras usually trained with multiple epochs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To increase model depth"
+        },
+        {
+          "label": "b",
+          "text": "To repeatedly update weights until convergence"
+        },
+        {
+          "label": "c",
+          "text": "To increase number of neurons"
+        },
+        {
+          "label": "d",
+          "text": "To normalize the data"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Multiple epochs allow the model to see the training data repeatedly, adjusting weights each time until the loss converges to a minimum and the model learns the correct decision boundary.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q7",
+      "week": 1,
+      "text": "A single layer perceptron has: Input x = [1, 2], Initial weights: w1 = 0.4, w2 = −0.6, Bias: b = 0.2. What is the net input z to the perceptron?",
+      "options": [
+        {
+          "label": "a",
+          "text": "−0.4"
+        },
+        {
+          "label": "b",
+          "text": "−0.6"
+        },
+        {
+          "label": "c",
+          "text": "0.2"
+        },
+        {
+          "label": "d",
+          "text": "0.6"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "z = w1×x1 + w2×x2 + b = (0.4×1) + (−0.6×2) + 0.2 = 0.4 − 1.2 + 0.2 = −0.6",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q8",
+      "week": 1,
+      "text": "Using the same perceptron (x=[1,2], w1=0.4, w2=−0.6, b=0.2, step activation: y=1 if z≥0, else 0), what is the predicted output?",
+      "options": [
+        {
+          "label": "a",
+          "text": "−1"
+        },
+        {
+          "label": "b",
+          "text": "0"
+        },
+        {
+          "label": "c",
+          "text": "0.5"
+        },
+        {
+          "label": "d",
+          "text": "1"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "z = −0.6 (from previous calculation). Since z < 0, the step function outputs y = 0.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q9",
+      "week": 1,
+      "text": "Using the same perceptron (predicted output y=0, target t=1, learning rate η=0.1), what is the error term used for weight update?",
+      "options": [
+        {
+          "label": "a",
+          "text": "−1"
+        },
+        {
+          "label": "b",
+          "text": "0"
+        },
+        {
+          "label": "c",
+          "text": "0.5"
+        },
+        {
+          "label": "d",
+          "text": "1"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Error = t − y = 1 − 0 = 1. This error drives the weight update in the perceptron learning rule.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w1q10",
+      "week": 1,
+      "text": "What are the updated values of weights and bias after one iteration? (x=[1,2], w1=0.4, w2=−0.6, b=0.2, η=0.1, error=1)",
+      "options": [
+        {
+          "label": "a",
+          "text": "w1 = 0.3, w2 = −0.8, b = 0.1"
+        },
+        {
+          "label": "b",
+          "text": "w1 = 0.4, w2 = −0.6, b = 0.2"
+        },
+        {
+          "label": "c",
+          "text": "w1 = 0.5, w2 = −0.4, b = 0.3"
+        },
+        {
+          "label": "d",
+          "text": "w1 = 0.6, w2 = −0.2, b = 0.4"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "w1_new = 0.4 + 0.1×1×1 = 0.5. w2_new = −0.6 + 0.1×1×2 = −0.4. b_new = 0.2 + 0.1×1×1 = 0.3. Update rule: w_new = w_old + η × error × x.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q1",
+      "week": 2,
+      "text": "Which of the following best describes the objective of Gradient Descent?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To maximize the loss function by updating weights"
+        },
+        {
+          "label": "b",
+          "text": "To minimize the loss function by iteratively updating parameters"
+        },
+        {
+          "label": "c",
+          "text": "To randomly initialize network parameters"
+        },
+        {
+          "label": "d",
+          "text": "To compute gradients only during forward propagation"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Gradient Descent iteratively updates model parameters by moving in the direction opposite to the gradient of the loss function, thereby minimizing the loss.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q2",
+      "week": 2,
+      "text": "In backpropagation, why is the chain rule essential?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It initializes the network weights"
+        },
+        {
+          "label": "b",
+          "text": "It allows gradients to be computed layer by layer"
+        },
+        {
+          "label": "c",
+          "text": "It prevents overfitting in deep networks"
+        },
+        {
+          "label": "d",
+          "text": "It speeds up forward propagation"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The chain rule from calculus allows gradients of the loss with respect to each layer's parameters to be computed by propagating gradients backwards through the network, one layer at a time.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q3",
+      "week": 2,
+      "text": "Momentum-based Gradient Descent helps in",
+      "options": [
+        {
+          "label": "a",
+          "text": "Increasing learning rate dynamically"
+        },
+        {
+          "label": "b",
+          "text": "Reducing memory usage"
+        },
+        {
+          "label": "c",
+          "text": "Accelerating convergence and reducing oscillations"
+        },
+        {
+          "label": "d",
+          "text": "Eliminating local minima"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Momentum accumulates a velocity vector in directions of persistent gradient, dampening oscillations and accelerating convergence in relevant directions by building up speed along low-curvature dimensions.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q4",
+      "week": 2,
+      "text": "How does Nesterov Accelerated Gradient (NAG) differ from classical momentum?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It uses adaptive learning rates"
+        },
+        {
+          "label": "b",
+          "text": "It calculates gradients after a look-ahead step"
+        },
+        {
+          "label": "c",
+          "text": "It removes the velocity term"
+        },
+        {
+          "label": "d",
+          "text": "It works only for convex functions"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "NAG computes the gradient at the anticipated future position (after applying the current velocity), giving it a 'look-ahead' that results in more responsive and accurate updates compared to classical momentum.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q5",
+      "week": 2,
+      "text": "Which optimization algorithm adapts the learning rate based on the sum of past squared gradients?",
+      "options": [
+        {
+          "label": "a",
+          "text": "RMSProp"
+        },
+        {
+          "label": "b",
+          "text": "Adam"
+        },
+        {
+          "label": "c",
+          "text": "AdaGrad"
+        },
+        {
+          "label": "d",
+          "text": "SGD"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "AdaGrad (Adaptive Gradient Algorithm) accumulates the sum of squared past gradients and divides the learning rate by its square root, giving smaller updates for frequently occurring features.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q6",
+      "week": 2,
+      "text": "RMSProp mainly addresses which drawback of AdaGrad?",
+      "options": [
+        {
+          "label": "a",
+          "text": "High memory usage"
+        },
+        {
+          "label": "b",
+          "text": "Vanishing gradients"
+        },
+        {
+          "label": "c",
+          "text": "Learning rate becoming too small"
+        },
+        {
+          "label": "d",
+          "text": "Exploding gradients"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "AdaGrad's accumulated sum of squared gradients grows monotonically, causing the learning rate to shrink to near zero over time. RMSProp uses an exponentially decaying moving average instead, preventing this issue.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q7",
+      "week": 2,
+      "text": "Adam optimizer combines the concepts of",
+      "options": [
+        {
+          "label": "a",
+          "text": "SGD and Momentum"
+        },
+        {
+          "label": "b",
+          "text": "AdaGrad and RMSProp"
+        },
+        {
+          "label": "c",
+          "text": "Momentum and RMSProp"
+        },
+        {
+          "label": "d",
+          "text": "SGD and AdaDelta"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Adam (Adaptive Moment Estimation) combines Momentum (first moment — mean of gradients) and RMSProp (second moment — uncentered variance of gradients), benefiting from both adaptive learning rates and momentum.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q8",
+      "week": 2,
+      "text": "Which regularization technique adds a penalty proportional to the absolute value of weights?",
+      "options": [
+        {
+          "label": "a",
+          "text": "L2 Regularization"
+        },
+        {
+          "label": "b",
+          "text": "Dropout"
+        },
+        {
+          "label": "c",
+          "text": "L1 Regularization"
+        },
+        {
+          "label": "d",
+          "text": "Early stopping"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "L1 Regularization (Lasso) adds a penalty term λ×Σ|wᵢ| to the loss function. This promotes sparsity as it tends to drive small weights to exactly zero, effectively performing feature selection.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q9",
+      "week": 2,
+      "text": "Dropout helps prevent overfitting by",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reducing learning rate"
+        },
+        {
+          "label": "b",
+          "text": "Increasing training data"
+        },
+        {
+          "label": "c",
+          "text": "Randomly disabling neurons during training"
+        },
+        {
+          "label": "d",
+          "text": "Adding noise to input features"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Dropout randomly sets a fraction of neurons to zero during each training pass, forcing the network to learn redundant representations and preventing co-adaptation, which reduces overfitting.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w2q10",
+      "week": 2,
+      "text": "Early stopping is based on monitoring",
+      "options": [
+        {
+          "label": "a",
+          "text": "Training accuracy only"
+        },
+        {
+          "label": "b",
+          "text": "Training loss only"
+        },
+        {
+          "label": "c",
+          "text": "Validation loss or validation accuracy"
+        },
+        {
+          "label": "d",
+          "text": "Test accuracy"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Early stopping monitors validation loss (or validation accuracy) and stops training when validation performance stops improving, preventing the model from overfitting to the training data.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q1",
+      "week": 3,
+      "text": "Which of the following best explains why CNNs are preferred over fully connected networks for image data?",
+      "options": [
+        {
+          "label": "a",
+          "text": "CNNs use fewer neurons"
+        },
+        {
+          "label": "b",
+          "text": "CNNs avoid backpropagation"
+        },
+        {
+          "label": "c",
+          "text": "CNNs exploit spatial locality and parameter sharing"
+        },
+        {
+          "label": "d",
+          "text": "CNNs do not require activation functions"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "CNNs exploit the spatial structure of images through local connectivity (spatial locality) and share the same filter weights across all spatial positions (parameter sharing), drastically reducing parameters while capturing spatial patterns.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q2",
+      "week": 3,
+      "text": "An RGB image of size 128 × 128 × 3 is passed through a convolution layer with 32 filters of size 3 × 3, stride = 1, and no padding. What is the output feature map size?",
+      "options": [
+        {
+          "label": "a",
+          "text": "128 × 128 × 32"
+        },
+        {
+          "label": "b",
+          "text": "126 × 126 × 3"
+        },
+        {
+          "label": "c",
+          "text": "126 × 126 × 32"
+        },
+        {
+          "label": "d",
+          "text": "124 × 124 × 32"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Output size = ((Input − Filter) / Stride) + 1 = ((128 − 3) / 1) + 1 = 126. With 32 filters, the output is 126 × 126 × 32.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q3",
+      "week": 3,
+      "text": "Given an input feature map of size 64 × 64 × 16, applying a 2 × 2 max-pooling with stride 2 results in:",
+      "options": [
+        {
+          "label": "a",
+          "text": "32 × 32 × 16"
+        },
+        {
+          "label": "b",
+          "text": "64 × 64 × 8"
+        },
+        {
+          "label": "c",
+          "text": "32 × 32 × 8"
+        },
+        {
+          "label": "d",
+          "text": "62 × 62 × 16"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Max-pooling with 2×2 filter and stride 2 halves both spatial dimensions: 64/2 = 32. The depth (channels) remains unchanged at 16. Output: 32 × 32 × 16.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q4",
+      "week": 3,
+      "text": "In a convolution operation, which parameter controls how much the filter shifts across the image?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Kernel size"
+        },
+        {
+          "label": "b",
+          "text": "Padding"
+        },
+        {
+          "label": "c",
+          "text": "Stride"
+        },
+        {
+          "label": "d",
+          "text": "Depth"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Stride defines the step size of the filter as it moves across the input. A stride of 1 moves the filter one pixel at a time; a stride of 2 skips every other position, reducing the output size.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q5",
+      "week": 3,
+      "text": "Which of the following statements about ReLU activation in CNNs is TRUE?",
+      "options": [
+        {
+          "label": "a",
+          "text": "ReLU causes vanishing gradients"
+        },
+        {
+          "label": "b",
+          "text": "ReLU outputs values between 0 and 1"
+        },
+        {
+          "label": "c",
+          "text": "ReLU introduces non-linearity and sparsity"
+        },
+        {
+          "label": "d",
+          "text": "ReLU is used only in the output layer"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "ReLU (f(x) = max(0, x)) introduces non-linearity allowing the network to learn complex patterns, and promotes sparsity since negative values become zero. It helps mitigate vanishing gradients (unlike sigmoid/tanh).",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q6",
+      "week": 3,
+      "text": "If padding is set to 'same' in a convolution layer, what is the key effect?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Output size becomes smaller"
+        },
+        {
+          "label": "b",
+          "text": "Output size remains same as input (for stride = 1)"
+        },
+        {
+          "label": "c",
+          "text": "Number of filters reduces"
+        },
+        {
+          "label": "d",
+          "text": "Convolution becomes linear"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "'Same' padding adds zeros around the input so that the output spatial dimensions equal the input dimensions (for stride = 1). 'Valid' padding (no padding) reduces the output size.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q7",
+      "week": 3,
+      "text": "Which of the following is the correct Keras code to add a convolution layer with 32 filters of size 3×3 and ReLU activation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "model.add(Conv2D(3, 32, activation='relu'))"
+        },
+        {
+          "label": "b",
+          "text": "model.add(Conv2D(32, (3,3), activation='relu'))"
+        },
+        {
+          "label": "c",
+          "text": "model.add(Conv2D((3,3), 32, activation='relu'))"
+        },
+        {
+          "label": "d",
+          "text": "model.add(Conv(32, 3, activation='relu'))"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The correct Keras syntax is Conv2D(filters, kernel_size, activation). So Conv2D(32, (3,3), activation='relu') adds 32 filters of size 3×3 with ReLU activation.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q8",
+      "week": 3,
+      "text": "Why is the Flatten layer used before adding Dense layers in a CNN?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To reduce overfitting"
+        },
+        {
+          "label": "b",
+          "text": "To convert 2D feature maps into 1D vector"
+        },
+        {
+          "label": "c",
+          "text": "To apply activation function"
+        },
+        {
+          "label": "d",
+          "text": "To normalize pixel values"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Dense layers expect 1D input vectors. The Flatten layer reshapes the 3D output (height × width × channels) of the last convolutional/pooling layer into a single 1D vector for the fully connected layers.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q9",
+      "week": 3,
+      "text": "Which Keras function is used to load images from directory structure for CNN training?",
+      "options": [
+        {
+          "label": "a",
+          "text": "load_images_from_folder()"
+        },
+        {
+          "label": "b",
+          "text": "flow_from_dataframe()"
+        },
+        {
+          "label": "c",
+          "text": "flow_from_directory()"
+        },
+        {
+          "label": "d",
+          "text": "image_loader()"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "ImageDataGenerator.flow_from_directory() reads images from a folder structure (where each subfolder is a class label), automatically handles batching, resizing, and class labeling.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w3q10",
+      "week": 3,
+      "text": "Which activation function is most commonly used in the output layer for multiclass image classification in Keras?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sigmoid"
+        },
+        {
+          "label": "b",
+          "text": "ReLU"
+        },
+        {
+          "label": "c",
+          "text": "Softmax"
+        },
+        {
+          "label": "d",
+          "text": "Tanh"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Softmax converts raw output scores into a probability distribution over all classes (summing to 1), making it ideal for multiclass classification. Sigmoid is used for binary classification.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q1",
+      "week": 4,
+      "text": "What was a major hardware-related innovation used in AlexNet to speed up training?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Training on TPUs"
+        },
+        {
+          "label": "b",
+          "text": "Model parallelism using multiple GPUs"
+        },
+        {
+          "label": "c",
+          "text": "Use of depthwise separable convolutions"
+        },
+        {
+          "label": "d",
+          "text": "Use of residual connections"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "AlexNet pioneered the use of two GPUs in parallel for training, splitting the model across both GPUs. This GPU parallelism dramatically reduced training time for large-scale image classification.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q2",
+      "week": 4,
+      "text": "VGGNet is characterized by which design principle?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Using large convolutional filters (7×7, 11×11)"
+        },
+        {
+          "label": "b",
+          "text": "Replacing pooling layers with strided convolutions"
+        },
+        {
+          "label": "c",
+          "text": "Stacking multiple small (3×3) convolution filters"
+        },
+        {
+          "label": "d",
+          "text": "Using parallel convolution paths"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "VGGNet's key design insight was that stacking multiple 3×3 conv layers achieves the same receptive field as larger filters (e.g., two 3×3 layers ≈ one 5×5) but with fewer parameters and more non-linearity.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q3",
+      "week": 4,
+      "text": "Why does VGGNet have a very high number of parameters compared to other CNNs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Use of residual blocks"
+        },
+        {
+          "label": "b",
+          "text": "Deep architecture with large fully connected layers"
+        },
+        {
+          "label": "c",
+          "text": "Use of 1×1 convolutions"
+        },
+        {
+          "label": "d",
+          "text": "Use of global average pooling"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "VGGNet (VGG-16) has ~138 million parameters, most of which come from the three large fully connected layers at the end of the network, each with 4096 neurons.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q4",
+      "week": 4,
+      "text": "The main motivation behind GoogLeNet's Inception module is to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reduce training time using GPUs"
+        },
+        {
+          "label": "b",
+          "text": "Increase image resolution"
+        },
+        {
+          "label": "c",
+          "text": "Capture multi-scale features efficiently"
+        },
+        {
+          "label": "d",
+          "text": "Eliminate convolution layers"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The Inception module applies multiple filter sizes (1×1, 3×3, 5×5) and pooling in parallel, concatenating their outputs. This captures features at multiple scales efficiently within the same layer.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q5",
+      "week": 4,
+      "text": "Which operation inside an Inception module helps reduce computational cost?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Max pooling"
+        },
+        {
+          "label": "b",
+          "text": "Batch normalization"
+        },
+        {
+          "label": "c",
+          "text": "1×1 convolution"
+        },
+        {
+          "label": "d",
+          "text": "Dropout"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "1×1 convolutions act as dimensionality reduction bottlenecks, reducing the number of channels before expensive 3×3 and 5×5 convolutions, significantly cutting computational cost.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q6",
+      "week": 4,
+      "text": "What problem do residual connections in ResNet primarily solve?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Overfitting"
+        },
+        {
+          "label": "b",
+          "text": "Exploding gradients"
+        },
+        {
+          "label": "c",
+          "text": "Vanishing gradients"
+        },
+        {
+          "label": "d",
+          "text": "Data imbalance"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Residual connections (skip connections) in ResNet allow gradients to flow directly through the identity shortcut during backpropagation, addressing the vanishing gradient problem that limits very deep networks.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q7",
+      "week": 4,
+      "text": "In ResNet, the residual mapping is mathematically represented as:",
+      "options": [
+        {
+          "label": "a",
+          "text": "H(x) = Wx + b"
+        },
+        {
+          "label": "b",
+          "text": "H(x) = σ(Wx)"
+        },
+        {
+          "label": "c",
+          "text": "H(x) = F(x) + x"
+        },
+        {
+          "label": "d",
+          "text": "H(x) = F(x) − x"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The residual block computes H(x) = F(x) + x, where F(x) is the residual mapping to be learned and x is the identity shortcut. The network learns the residual F(x) = H(x) − x instead of the full mapping.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q8",
+      "week": 4,
+      "text": "Which scenario is MOST suitable for applying transfer learning?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Very large labeled dataset and limited computation"
+        },
+        {
+          "label": "b",
+          "text": "Very small labeled dataset with a pretrained model available"
+        },
+        {
+          "label": "c",
+          "text": "Randomly initialized CNN with no prior knowledge"
+        },
+        {
+          "label": "d",
+          "text": "Unsupervised clustering task"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Transfer learning is most beneficial when you have a small labeled dataset, leveraging a pretrained model's learned features to avoid overfitting and reduce the need for large amounts of training data.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q9",
+      "week": 4,
+      "text": "Freezing early layers in a pretrained CNN during transfer learning is useful because:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Early layers learn task-specific features"
+        },
+        {
+          "label": "b",
+          "text": "Early layers learn generic features like edges and textures"
+        },
+        {
+          "label": "c",
+          "text": "It increases the number of trainable parameters"
+        },
+        {
+          "label": "d",
+          "text": "It prevents gradient descent from converging"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Early layers of CNNs learn low-level, generic features (edges, corners, textures) that are useful across many tasks. Freezing them preserves these useful representations and speeds up training.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w4q10",
+      "week": 4,
+      "text": "Why does an ensemble of CNN models often outperform a single model?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It reduces model size"
+        },
+        {
+          "label": "b",
+          "text": "It eliminates the need for training"
+        },
+        {
+          "label": "c",
+          "text": "It averages out individual model errors"
+        },
+        {
+          "label": "d",
+          "text": "It increases training speed"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Each model in an ensemble makes different errors due to different initializations, architectures, or training subsets. Averaging or voting across models cancels out individual errors, improving overall accuracy.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q1",
+      "week": 5,
+      "text": "In Occlusion sensitivity, a region is considered important if:",
+      "options": [
+        {
+          "label": "a",
+          "text": "The activation value is high"
+        },
+        {
+          "label": "b",
+          "text": "The class probability increases"
+        },
+        {
+          "label": "c",
+          "text": "The prediction confidence drops significantly"
+        },
+        {
+          "label": "d",
+          "text": "The gradient becomes zero"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "In occlusion sensitivity, a patch of the image is systematically masked. If occluding a region causes a significant drop in prediction confidence, that region is identified as important for the classification decision.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q2",
+      "week": 5,
+      "text": "Which XAI method is based on game theory and Shapley values?",
+      "options": [
+        {
+          "label": "a",
+          "text": "LIME"
+        },
+        {
+          "label": "b",
+          "text": "SHAP"
+        },
+        {
+          "label": "c",
+          "text": "Grad-CAM"
+        },
+        {
+          "label": "d",
+          "text": "CAM"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "SHAP (SHapley Additive exPlanations) is based on Shapley values from cooperative game theory. It assigns each feature an importance value representing its contribution to the prediction.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q3",
+      "week": 5,
+      "text": "LIME explains predictions by:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Using gradients of logits"
+        },
+        {
+          "label": "b",
+          "text": "Training a local surrogate interpretable model"
+        },
+        {
+          "label": "c",
+          "text": "Visualizing feature maps"
+        },
+        {
+          "label": "d",
+          "text": "Using attention weights"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "LIME (Local Interpretable Model-agnostic Explanations) perturbs the input data and trains a simple interpretable model (e.g., linear model) locally around the prediction to approximate the complex model's behaviour.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q4",
+      "week": 5,
+      "text": "In Grad-CAM, gradients are computed with respect to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Input image pixels"
+        },
+        {
+          "label": "b",
+          "text": "Fully connected layer outputs"
+        },
+        {
+          "label": "c",
+          "text": "Last convolutional feature maps"
+        },
+        {
+          "label": "d",
+          "text": "Loss function"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Grad-CAM computes the gradient of the class score with respect to the feature maps of the last convolutional layer. These gradients are globally averaged to produce weights for generating the class activation heatmap.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q5",
+      "week": 5,
+      "text": "Why is Grad-CAM applied to the last convolutional layer?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It has maximum number of parameters"
+        },
+        {
+          "label": "b",
+          "text": "It preserves spatial information and high-level semantics"
+        },
+        {
+          "label": "c",
+          "text": "It produces class probabilities"
+        },
+        {
+          "label": "d",
+          "text": "It reduces computational cost"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The last convolutional layer retains spatial (localization) information while capturing the highest-level semantic features. Earlier layers are too low-level; fully connected layers lose spatial information.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q6",
+      "week": 5,
+      "text": "Which XAI technique produces class-specific heatmaps without modifying the CNN architecture?",
+      "options": [
+        {
+          "label": "a",
+          "text": "CAM"
+        },
+        {
+          "label": "b",
+          "text": "Grad-CAM"
+        },
+        {
+          "label": "c",
+          "text": "LIME"
+        },
+        {
+          "label": "d",
+          "text": "SHAP"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Grad-CAM works with any CNN architecture without requiring modification (unlike CAM which requires Global Average Pooling). It uses gradients to generate class-discriminative localization maps.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q7",
+      "week": 5,
+      "text": "In CAM (Class Activation Mapping), which architectural constraint must be satisfied?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Use sigmoid activation"
+        },
+        {
+          "label": "b",
+          "text": "Use max pooling only"
+        },
+        {
+          "label": "c",
+          "text": "Use Global Average Pooling before classification"
+        },
+        {
+          "label": "d",
+          "text": "Use dropout"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "CAM requires a Global Average Pooling (GAP) layer immediately before the final classification layer. GAP averages each feature map, whose weighted combination produces the class activation map.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q8",
+      "week": 5,
+      "text": "What does Guided Backpropagation modify compared to standard backpropagation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Forward pass only"
+        },
+        {
+          "label": "b",
+          "text": "Loss function"
+        },
+        {
+          "label": "c",
+          "text": "Gradient flow through ReLU"
+        },
+        {
+          "label": "d",
+          "text": "Weight initialization"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Guided Backpropagation modifies gradient flow through ReLU by only passing gradients that are positive AND where the forward activation was positive, producing sharper, cleaner saliency maps.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q9",
+      "week": 5,
+      "text": "Which XAI technique is most suitable for validating CNN decisions with medical experts due to intuitive visual explanations?",
+      "options": [
+        {
+          "label": "a",
+          "text": "SHAP summary plots"
+        },
+        {
+          "label": "b",
+          "text": "Numerical feature attribution"
+        },
+        {
+          "label": "c",
+          "text": "Grad-CAM heatmaps"
+        },
+        {
+          "label": "d",
+          "text": "Confusion matrix"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Grad-CAM heatmaps overlay on the original image, visually highlighting which regions influenced the prediction. This spatial visualization is intuitive for medical experts to validate CNN decisions (e.g., tumor localization).",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w5q10",
+      "week": 5,
+      "text": "While implementing Grad-CAM, a student mistakenly selects a Dense layer instead of the last convolutional layer. What will be the consequence?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Heatmap becomes sharper"
+        },
+        {
+          "label": "b",
+          "text": "Spatial localization is lost"
+        },
+        {
+          "label": "c",
+          "text": "Gradients become zero"
+        },
+        {
+          "label": "d",
+          "text": "Output shape mismatch"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Dense layers operate on flattened vectors and have no spatial structure. Using a Dense layer for Grad-CAM loses the spatial information needed to create a 2D heatmap, making spatial localization impossible.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q1",
+      "week": 6,
+      "text": "What is the primary role of skip connections in U-Net?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reduce the number of parameters"
+        },
+        {
+          "label": "b",
+          "text": "Increase network depth"
+        },
+        {
+          "label": "c",
+          "text": "Preserve spatial information for precise localization"
+        },
+        {
+          "label": "d",
+          "text": "Replace pooling layers"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Skip connections in U-Net concatenate feature maps from the encoder path to the corresponding decoder path, preserving fine-grained spatial details that are lost during max-pooling for precise pixel-wise localization.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q2",
+      "week": 6,
+      "text": "Which architectural feature of U-Net helps recover fine-grained details during upsampling?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Skip connections between encoder and decoder"
+        },
+        {
+          "label": "b",
+          "text": "Max pooling layers"
+        },
+        {
+          "label": "c",
+          "text": "Fully connected layers"
+        },
+        {
+          "label": "d",
+          "text": "Batch normalization layers"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Skip connections between encoder and decoder pass high-resolution feature maps from earlier encoding layers directly to the decoder, allowing the network to recover spatial details lost during the encoding (downsampling) process.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q3",
+      "week": 6,
+      "text": "In Attention-based U-Net, attention gates are mainly used to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Speed up training"
+        },
+        {
+          "label": "b",
+          "text": "Reduce vanishing gradients"
+        },
+        {
+          "label": "c",
+          "text": "Replace skip connections"
+        },
+        {
+          "label": "d",
+          "text": "Suppress irrelevant background features"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Attention gates in Attention U-Net selectively emphasize relevant foreground features and suppress irrelevant background regions in the skip connections, improving segmentation accuracy especially in noisy backgrounds.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q4",
+      "week": 6,
+      "text": "Which component provides the gating signal in an Attention U-Net?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Encoder feature maps"
+        },
+        {
+          "label": "b",
+          "text": "Decoder feature maps"
+        },
+        {
+          "label": "c",
+          "text": "Input image"
+        },
+        {
+          "label": "d",
+          "text": "Output segmentation mask"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "In Attention U-Net, the gating signal comes from the decoder (coarser-resolution features), which guides what regions in the encoder skip connections are relevant for the final segmentation.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q5",
+      "week": 6,
+      "text": "What is the key drawback of the original R-CNN model?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Poor detection accuracy"
+        },
+        {
+          "label": "b",
+          "text": "Very slow due to per-region CNN computation"
+        },
+        {
+          "label": "c",
+          "text": "Inability to detect multiple objects"
+        },
+        {
+          "label": "d",
+          "text": "No bounding box regression"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "R-CNN runs a CNN forward pass for each of ~2000 region proposals independently, making it extremely slow (47 seconds per image). This per-region CNN computation is the primary bottleneck.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q6",
+      "week": 6,
+      "text": "Which innovation allows Faster R-CNN to eliminate Selective Search?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Region Proposal Network (RPN)"
+        },
+        {
+          "label": "b",
+          "text": "Region of Interest Align"
+        },
+        {
+          "label": "c",
+          "text": "Fully connected layers"
+        },
+        {
+          "label": "d",
+          "text": "Anchor boxes"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Faster R-CNN introduces the Region Proposal Network (RPN) — a small CNN that shares convolutional features with the detection network and proposes regions directly from feature maps, eliminating the slow Selective Search algorithm.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q7",
+      "week": 6,
+      "text": "In Faster R-CNN, anchor boxes are used to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Perform image segmentation"
+        },
+        {
+          "label": "b",
+          "text": "Generate multi-scale region proposals"
+        },
+        {
+          "label": "c",
+          "text": "Normalize feature maps"
+        },
+        {
+          "label": "d",
+          "text": "Reduce model size"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Anchor boxes are predefined bounding boxes of multiple scales and aspect ratios placed at each spatial location in the feature map. The RPN predicts offsets to these anchors to generate region proposals at multiple scales.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q8",
+      "week": 6,
+      "text": "What makes YOLO fundamentally different from R-CNN-based detectors?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Uses CNN for feature extraction"
+        },
+        {
+          "label": "b",
+          "text": "Predicts bounding boxes and classes in a single forward pass"
+        },
+        {
+          "label": "c",
+          "text": "Uses region proposals"
+        },
+        {
+          "label": "d",
+          "text": "Performs pixel-wise classification"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "YOLO (You Only Look Once) frames object detection as a single regression problem, predicting bounding box coordinates and class probabilities directly from the full image in one forward pass, unlike two-stage R-CNN detectors.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q9",
+      "week": 6,
+      "text": "Why is YOLO generally faster than Faster R-CNN?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It uses fewer convolution layers"
+        },
+        {
+          "label": "b",
+          "text": "It avoids bounding box regression"
+        },
+        {
+          "label": "c",
+          "text": "It performs detection as a single regression problem"
+        },
+        {
+          "label": "d",
+          "text": "It uses selective search"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "YOLO treats the entire detection pipeline as a single regression problem processed in one forward pass, eliminating the two-stage proposal + classification pipeline of R-CNN, enabling real-time detection speeds.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w6q10",
+      "week": 6,
+      "text": "Which task is best suited for U-Net rather than YOLO?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Tumor boundary segmentation in medical images"
+        },
+        {
+          "label": "b",
+          "text": "Face detection"
+        },
+        {
+          "label": "c",
+          "text": "Pedestrian detection"
+        },
+        {
+          "label": "d",
+          "text": "Real-time traffic monitoring"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "U-Net is designed for pixel-wise semantic segmentation, making it ideal for delineating precise boundaries (like tumor margins) in medical images. YOLO produces bounding boxes, not pixel-level segmentation masks.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q1",
+      "week": 7,
+      "text": "Why are feedforward neural networks (ANNs) not suitable for sequence data?",
+      "options": [
+        {
+          "label": "a",
+          "text": "They cannot use activation functions"
+        },
+        {
+          "label": "b",
+          "text": "They cannot share weights"
+        },
+        {
+          "label": "c",
+          "text": "They do not retain information from previous inputs"
+        },
+        {
+          "label": "d",
+          "text": "They cannot be trained using backpropagation"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Feedforward ANNs process each input independently without any memory of past inputs. They have no mechanism to retain or propagate information across time steps, making them unsuitable for sequential data.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q2",
+      "week": 7,
+      "text": "Which component in an RNN is responsible for capturing temporal dependency?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Input weight matrix"
+        },
+        {
+          "label": "b",
+          "text": "Output weight matrix"
+        },
+        {
+          "label": "c",
+          "text": "Hidden state and recurrent connection"
+        },
+        {
+          "label": "d",
+          "text": "Loss function"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The hidden state h_t acts as memory that carries information from previous time steps. The recurrent connection feeds h_(t-1) back into the current computation, enabling the network to capture temporal dependencies.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q3",
+      "week": 7,
+      "text": "The hidden state update equation of a simple RNN is:",
+      "options": [
+        {
+          "label": "a",
+          "text": "h_t = Wx_t + Uh_(t−1)"
+        },
+        {
+          "label": "b",
+          "text": "h_t = f(Wx_t + Uh_(t−1) + b)"
+        },
+        {
+          "label": "c",
+          "text": "h_t = f(Wx_t)"
+        },
+        {
+          "label": "d",
+          "text": "h_t = f(Uh_(t−1))"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The full hidden state update equation is h_t = f(Wx_t + Uh_(t−1) + b), where W is the input weight matrix, U is the recurrent weight matrix, b is bias, and f is the activation function (typically tanh).",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q4",
+      "week": 7,
+      "text": "Which activation function is most commonly used in the hidden layer of a vanilla RNN?",
+      "options": [
+        {
+          "label": "a",
+          "text": "ReLU"
+        },
+        {
+          "label": "b",
+          "text": "Sigmoid"
+        },
+        {
+          "label": "c",
+          "text": "Softmax"
+        },
+        {
+          "label": "d",
+          "text": "Tanh"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Tanh is traditionally used in vanilla RNN hidden layers because it outputs values in [-1, 1], is zero-centered (unlike sigmoid), and was found to work well for capturing temporal patterns in early RNN research.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q5",
+      "week": 7,
+      "text": "Consider an RNN where the same weight matrix W is used at every time step. This property is known as:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Feature sharing"
+        },
+        {
+          "label": "b",
+          "text": "Temporal pooling"
+        },
+        {
+          "label": "c",
+          "text": "Parameter sharing across time"
+        },
+        {
+          "label": "d",
+          "text": "Weight freezing"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Parameter sharing across time means the same weight matrices (W, U, b) are used at every time step. This drastically reduces the number of parameters and allows the model to generalize across different sequence positions.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q6",
+      "week": 7,
+      "text": "Given a sequence of length T, how many times are the recurrent weights updated during one BPTT pass?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Once"
+        },
+        {
+          "label": "b",
+          "text": "T times"
+        },
+        {
+          "label": "c",
+          "text": "T−1 times"
+        },
+        {
+          "label": "d",
+          "text": "Depends on batch size"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "In Backpropagation Through Time (BPTT), gradients are accumulated across all T time steps but the weight update is applied once per pass (after summing all gradient contributions), since weights are shared across time.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q7",
+      "week": 7,
+      "text": "Which technique is commonly used to control exploding gradients in RNNs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Dropout"
+        },
+        {
+          "label": "b",
+          "text": "Batch normalization"
+        },
+        {
+          "label": "c",
+          "text": "Gradient clipping"
+        },
+        {
+          "label": "d",
+          "text": "Early stopping"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Gradient clipping rescales the gradient vector when its norm exceeds a threshold, preventing exploding gradients (which destabilize training) while allowing vanishing gradients to be addressed by architecture choices like LSTM.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q8",
+      "week": 7,
+      "text": "Which argument in SimpleRNN allows the model to return output at every time step?",
+      "options": [
+        {
+          "label": "a",
+          "text": "return_sequence=True"
+        },
+        {
+          "label": "b",
+          "text": "return_state=True"
+        },
+        {
+          "label": "c",
+          "text": "return_sequences=True"
+        },
+        {
+          "label": "d",
+          "text": "stateful=True"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The correct Keras argument is return_sequences=True (plural). When set to True, the layer returns the hidden state for every time step in the sequence, not just the last one. This is needed for stacked RNNs or sequence-to-sequence tasks.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q9",
+      "week": 7,
+      "text": "What is the expected input shape for a Keras RNN layer?",
+      "options": [
+        {
+          "label": "a",
+          "text": "(batch_size, features)"
+        },
+        {
+          "label": "b",
+          "text": "(batch_size, timesteps, features)"
+        },
+        {
+          "label": "c",
+          "text": "(timesteps, batch_size, features)"
+        },
+        {
+          "label": "d",
+          "text": "(features, timesteps)"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Keras RNN layers expect 3D input of shape (batch_size, timesteps, features), where timesteps is the sequence length and features is the dimensionality of each time step's input vector.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w7q10",
+      "week": 7,
+      "text": "What happens if return_sequences=False in the final RNN layer?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Output is produced for every time step"
+        },
+        {
+          "label": "b",
+          "text": "Only the last hidden state is returned"
+        },
+        {
+          "label": "c",
+          "text": "Model cannot be trained"
+        },
+        {
+          "label": "d",
+          "text": "Gradients are not computed"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "When return_sequences=False (default), the RNN layer returns only the hidden state from the final time step. This is commonly used for sequence classification tasks where a single output vector represents the whole sequence.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q1",
+      "week": 8,
+      "text": "What problem was the LSTM architecture specifically designed to address?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Overfitting in neural networks"
+        },
+        {
+          "label": "b",
+          "text": "Vanishing gradient problem in RNNs"
+        },
+        {
+          "label": "c",
+          "text": "High computational cost of CNNs"
+        },
+        {
+          "label": "d",
+          "text": "Lack of parallelism in training"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "LSTM (Long Short-Term Memory) was introduced by Hochreiter & Schmidhuber (1997) specifically to address the vanishing gradient problem in vanilla RNNs, enabling learning of long-range dependencies through gated cell states.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q2",
+      "week": 8,
+      "text": "Which component of an LSTM is responsible for removing irrelevant information from the cell state?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Input gate"
+        },
+        {
+          "label": "b",
+          "text": "Output gate"
+        },
+        {
+          "label": "c",
+          "text": "Forget gate"
+        },
+        {
+          "label": "d",
+          "text": "Candidate state"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The forget gate applies a sigmoid function to produce values near 0 (forget) or 1 (keep) for each cell state element. Values near 0 cause that information to be erased from the cell state.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q3",
+      "week": 8,
+      "text": "In a Bidirectional LSTM, how is contextual information processed?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Only from past to future"
+        },
+        {
+          "label": "b",
+          "text": "Only from future to past"
+        },
+        {
+          "label": "c",
+          "text": "By skipping intermediate time steps"
+        },
+        {
+          "label": "d",
+          "text": "Independently in two opposite directions"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "A Bidirectional LSTM runs two separate LSTMs — one processes the sequence forward (past → future) and one backward (future → past). Their outputs are concatenated, giving each position access to full context from both directions.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q4",
+      "week": 8,
+      "text": "What is the primary advantage of stacking multiple LSTM layers?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reduces model size"
+        },
+        {
+          "label": "b",
+          "text": "Captures hierarchical temporal representations"
+        },
+        {
+          "label": "c",
+          "text": "Eliminates the need for preprocessing"
+        },
+        {
+          "label": "d",
+          "text": "Improves training speed"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Stacked LSTMs allow higher layers to learn more abstract temporal representations based on lower-level patterns learned by earlier layers, similar to how deep CNNs learn hierarchical spatial features.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q5",
+      "week": 8,
+      "text": "Which architectural difference makes GRUs computationally faster than LSTMs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Use of attention layers"
+        },
+        {
+          "label": "b",
+          "text": "Fewer gates and no separate cell state"
+        },
+        {
+          "label": "c",
+          "text": "Larger hidden state size"
+        },
+        {
+          "label": "d",
+          "text": "Use of bidirectional connections"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "GRU has only 2 gates (reset and update) vs LSTM's 3 gates (input, forget, output), and merges the cell state and hidden state into one. This reduces the number of parameters and matrix operations per time step.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q6",
+      "week": 8,
+      "text": "When is it generally preferable to use a GRU instead of an LSTM?",
+      "options": [
+        {
+          "label": "a",
+          "text": "When very long-term dependencies are required"
+        },
+        {
+          "label": "b",
+          "text": "When interpretability is the main concern"
+        },
+        {
+          "label": "c",
+          "text": "When training data is limited and faster convergence is desired"
+        },
+        {
+          "label": "d",
+          "text": "When bidirectional processing is required"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "GRUs are preferred over LSTMs when training data is limited (fewer parameters reduce overfitting risk) and faster convergence is needed. LSTMs are preferred for very long sequences requiring complex long-term memory.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q7",
+      "week": 8,
+      "text": "Which statement correctly compares LSTM and GRU in terms of model complexity?",
+      "options": [
+        {
+          "label": "a",
+          "text": "GRU has more parameters than LSTM"
+        },
+        {
+          "label": "b",
+          "text": "LSTM and GRU have identical parameter counts"
+        },
+        {
+          "label": "c",
+          "text": "LSTM has more parameters due to additional gates"
+        },
+        {
+          "label": "d",
+          "text": "GRU requires more memory because of cell states"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "LSTM has 4 weight matrices (input, forget, output gate + candidate) while GRU has 3 (reset, update gate + candidate). LSTM has more parameters. GRU has no separate cell state, using less memory.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q8",
+      "week": 8,
+      "text": "Why is the attention mechanism useful in RNN-based models?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It reduces the number of RNN layers"
+        },
+        {
+          "label": "b",
+          "text": "It allows the model to focus on relevant time steps dynamically"
+        },
+        {
+          "label": "c",
+          "text": "It replaces the need for embeddings"
+        },
+        {
+          "label": "d",
+          "text": "It eliminates sequential processing"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Attention allows the decoder to dynamically weight all encoder hidden states at each decoding step, focusing on the most relevant input positions rather than compressing everything into a fixed-length context vector.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q9",
+      "week": 8,
+      "text": "In an attention mechanism, attention weights are normalized using which function?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Softmax"
+        },
+        {
+          "label": "b",
+          "text": "ReLU"
+        },
+        {
+          "label": "c",
+          "text": "Sigmoid"
+        },
+        {
+          "label": "d",
+          "text": "Tanh"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Softmax normalizes raw attention scores into a probability distribution over all time steps, ensuring all attention weights are positive and sum to 1, allowing them to be interpreted as attention probabilities.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w8q10",
+      "week": 8,
+      "text": "Which task benefits MOST from using attention on top of an LSTM?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Predicting stock prices using short sequences"
+        },
+        {
+          "label": "b",
+          "text": "Image classification"
+        },
+        {
+          "label": "c",
+          "text": "Machine translation of long sentences"
+        },
+        {
+          "label": "d",
+          "text": "Binary classification of tabular data"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Attention is most valuable for machine translation of long sentences because it allows the decoder to directly access any encoder position, overcoming the bottleneck of encoding an entire long sentence into a single fixed vector.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q1",
+      "week": 9,
+      "text": "Which of the following is an NLP task focused on assigning a label to each word in a sentence?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Text Classification"
+        },
+        {
+          "label": "b",
+          "text": "Named Entity Recognition (NER)"
+        },
+        {
+          "label": "c",
+          "text": "Machine Translation"
+        },
+        {
+          "label": "d",
+          "text": "Sentiment Analysis"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Named Entity Recognition (NER) is a sequence labeling task that assigns a category label (e.g., PERSON, LOCATION, ORGANIZATION) to each token in a sentence, unlike text classification which assigns one label to the whole text.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q2",
+      "week": 9,
+      "text": "What is a major limitation of classical NLP approaches compared to deep learning-based NLP?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Require large datasets for training"
+        },
+        {
+          "label": "b",
+          "text": "Cannot handle structured text"
+        },
+        {
+          "label": "c",
+          "text": "Reliance on handcrafted features and limited context understanding"
+        },
+        {
+          "label": "d",
+          "text": "Lack of tokenization"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Classical NLP approaches (bag-of-words, TF-IDF, rule-based systems) rely heavily on handcrafted features and struggle to capture long-range context. Deep learning models learn representations automatically from data.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q3",
+      "week": 9,
+      "text": "Which preprocessing step involves splitting text into words, subwords, or sentences?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Lemmatization"
+        },
+        {
+          "label": "b",
+          "text": "Tokenization"
+        },
+        {
+          "label": "c",
+          "text": "Stopword removal"
+        },
+        {
+          "label": "d",
+          "text": "Word embedding"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Tokenization is the process of splitting raw text into smaller units called tokens (words, subwords, characters, or sentences). It is the foundational preprocessing step before any NLP task.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q4",
+      "week": 9,
+      "text": "What is the main purpose of removing stopwords during text preprocessing?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reduce vocabulary size and noise"
+        },
+        {
+          "label": "b",
+          "text": "Improve embedding quality"
+        },
+        {
+          "label": "c",
+          "text": "Increase sequence length"
+        },
+        {
+          "label": "d",
+          "text": "Perform tokenization"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Stopwords (e.g., 'the', 'is', 'and') are very frequent but carry little semantic information. Removing them reduces vocabulary size, reduces computational load, and removes noise that could dilute meaningful features.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q5",
+      "week": 9,
+      "text": "Lemmatization differs from stemming because it:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reduces words to arbitrary prefixes"
+        },
+        {
+          "label": "b",
+          "text": "Converts words to their dictionary/base form considering context"
+        },
+        {
+          "label": "c",
+          "text": "Removes punctuation only"
+        },
+        {
+          "label": "d",
+          "text": "Splits sentences into tokens"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Lemmatization reduces words to their dictionary/lemma form ('running' → 'run', 'better' → 'good') using morphological analysis. Stemming crudely chops suffixes ('running' → 'runn') without understanding linguistic context.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q6",
+      "week": 9,
+      "text": "In one-hot encoding of words:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Each word is represented as a dense vector of real numbers"
+        },
+        {
+          "label": "b",
+          "text": "Each word is represented as a unique sparse vector with one '1' and the rest '0'"
+        },
+        {
+          "label": "c",
+          "text": "Words are grouped into clusters"
+        },
+        {
+          "label": "d",
+          "text": "Embeddings capture semantic similarity"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "One-hot encoding represents each word as a vector of length |vocabulary| with a 1 at the word's index and 0 everywhere else. It is sparse, high-dimensional, and captures no semantic similarity between words.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q7",
+      "week": 9,
+      "text": "Which word representation method captures semantic similarity between words in a continuous vector space?",
+      "options": [
+        {
+          "label": "a",
+          "text": "One-hot encoding"
+        },
+        {
+          "label": "b",
+          "text": "Bag-of-words"
+        },
+        {
+          "label": "c",
+          "text": "Word embeddings (Word2Vec, GloVe, FastText)"
+        },
+        {
+          "label": "d",
+          "text": "TF-IDF"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Word embeddings like Word2Vec, GloVe, and FastText map words to dense low-dimensional vectors where semantically similar words have similar vector representations (e.g., 'king' − 'man' + 'woman' ≈ 'queen').",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q8",
+      "week": 9,
+      "text": "What is the key advantage of FastText over Word2Vec?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Uses larger corpus"
+        },
+        {
+          "label": "b",
+          "text": "Represents words as subword (character n-gram) embeddings"
+        },
+        {
+          "label": "c",
+          "text": "Requires no preprocessing"
+        },
+        {
+          "label": "d",
+          "text": "Does not use context words"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "FastText represents each word as a bag of character n-grams (subwords). This allows it to handle out-of-vocabulary words and morphologically rich languages better than Word2Vec, which treats each word as an atomic unit.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q9",
+      "week": 9,
+      "text": "Which classical NLP approach often relies on frequency-based features like TF-IDF?",
+      "options": [
+        {
+          "label": "a",
+          "text": "RNNs"
+        },
+        {
+          "label": "b",
+          "text": "Deep learning embeddings"
+        },
+        {
+          "label": "c",
+          "text": "Bag-of-Words"
+        },
+        {
+          "label": "d",
+          "text": "Transformers"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The Bag-of-Words (BoW) model represents documents as frequency vectors over the vocabulary, often weighted by TF-IDF. It ignores word order and grammar but is simple and effective for classical text classification.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w9q10",
+      "week": 9,
+      "text": "Which type of neural network is commonly used for sequential NLP tasks such as language modeling or text generation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "CNN"
+        },
+        {
+          "label": "b",
+          "text": "RNN/LSTM"
+        },
+        {
+          "label": "c",
+          "text": "Autoencoder"
+        },
+        {
+          "label": "d",
+          "text": "Feedforward NN"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "RNNs and LSTMs are designed for sequential data and maintain hidden state across time steps, making them naturally suited for language modeling, text generation, and other tasks where word order and context matter.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q1",
+      "week": 10,
+      "text": "The encoder in an autoencoder learns a mapping from:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Latent space → input space"
+        },
+        {
+          "label": "b",
+          "text": "Input space → latent space"
+        },
+        {
+          "label": "c",
+          "text": "Input space → output labels"
+        },
+        {
+          "label": "d",
+          "text": "Latent space → probability distribution"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The encoder compresses the input x into a compact latent representation z (Input space → Latent space). The decoder then reconstructs the input from z (Latent space → Input space).",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q2",
+      "week": 10,
+      "text": "Which loss function is most commonly used in a basic autoencoder for continuous data?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Binary Cross-Entropy"
+        },
+        {
+          "label": "b",
+          "text": "Categorical Cross-Entropy"
+        },
+        {
+          "label": "c",
+          "text": "Mean Squared Error"
+        },
+        {
+          "label": "d",
+          "text": "Hinge Loss"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Mean Squared Error (MSE) measures the pixel-wise or element-wise squared difference between the original input and the reconstructed output. It is the standard reconstruction loss for continuous-valued data.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q3",
+      "week": 10,
+      "text": "What condition forces an autoencoder to learn meaningful representations instead of copying inputs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Large decoder"
+        },
+        {
+          "label": "b",
+          "text": "Bottleneck (latent space constraint)"
+        },
+        {
+          "label": "c",
+          "text": "High learning rate"
+        },
+        {
+          "label": "d",
+          "text": "Using softmax activation"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The bottleneck (latent space smaller than input) forces the autoencoder to learn a compressed representation capturing only the most essential information. Without it, the network could simply learn the identity mapping.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q4",
+      "week": 10,
+      "text": "Which type of autoencoder uses convolution and pooling layers?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sparse Autoencoder"
+        },
+        {
+          "label": "b",
+          "text": "Deep Autoencoder"
+        },
+        {
+          "label": "c",
+          "text": "CNN-based Autoencoder"
+        },
+        {
+          "label": "d",
+          "text": "Variational Autoencoder"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "CNN-based Autoencoders use convolutional layers (and pooling/striding) for encoding and transposed convolutions (upsampling) for decoding. They are well-suited for image data as they exploit spatial structure.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q5",
+      "week": 10,
+      "text": "Which two parameters define the latent distribution in a VAE?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Mean and variance"
+        },
+        {
+          "label": "b",
+          "text": "Mean and standard deviation"
+        },
+        {
+          "label": "c",
+          "text": "Mean and log-variance"
+        },
+        {
+          "label": "d",
+          "text": "Variance and entropy"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The VAE encoder outputs mean (μ) and log-variance (log σ²) of the latent distribution. Log-variance is used instead of variance for numerical stability and to ensure σ² is always positive (σ² = exp(log σ²)).",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q6",
+      "week": 10,
+      "text": "Why is the reparameterization trick required in VAEs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To reduce reconstruction error"
+        },
+        {
+          "label": "b",
+          "text": "To enable backpropagation through stochastic sampling"
+        },
+        {
+          "label": "c",
+          "text": "To increase latent space size"
+        },
+        {
+          "label": "d",
+          "text": "To avoid overfitting"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Sampling z ~ N(μ, σ²) is not differentiable. The reparameterization trick rewrites z = μ + σ × ε (where ε ~ N(0,1)), making z a deterministic function of μ and σ, allowing gradients to flow through backpropagation.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q7",
+      "week": 10,
+      "text": "The total loss function of a VAE consists of:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Reconstruction loss only"
+        },
+        {
+          "label": "b",
+          "text": "KL divergence only"
+        },
+        {
+          "label": "c",
+          "text": "Reconstruction loss + KL divergence"
+        },
+        {
+          "label": "d",
+          "text": "Cross-entropy + accuracy"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "VAE loss = Reconstruction loss (how well the decoder reconstructs the input) + KL divergence (regularization that forces the latent distribution to be close to the standard normal prior N(0,1)).",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q8",
+      "week": 10,
+      "text": "What does the KL divergence term in VAE encourage?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Perfect reconstruction"
+        },
+        {
+          "label": "b",
+          "text": "Sparse weights"
+        },
+        {
+          "label": "c",
+          "text": "Latent distribution close to prior (usually N(0,1))"
+        },
+        {
+          "label": "d",
+          "text": "Faster training"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The KL divergence term KL(q(z|x) || p(z)) penalizes the encoder's posterior from deviating from the prior N(0,1), regularizing the latent space to be smooth and continuous, enabling meaningful interpolation and generation.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q9",
+      "week": 10,
+      "text": "Which statement about autoencoders is TRUE?",
+      "options": [
+        {
+          "label": "a",
+          "text": "They require labeled data"
+        },
+        {
+          "label": "b",
+          "text": "They are supervised learning models"
+        },
+        {
+          "label": "c",
+          "text": "They can be used for anomaly detection"
+        },
+        {
+          "label": "d",
+          "text": "They always improve classification accuracy"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Autoencoders are unsupervised models trained only on normal data. At inference time, anomalies (unusual inputs) have high reconstruction error since the model never learned to reconstruct them, making anomaly detection possible.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w10q10",
+      "week": 10,
+      "text": "Which autoencoder variant is best suited for image denoising?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sparse Autoencoder"
+        },
+        {
+          "label": "b",
+          "text": "CNN-based Autoencoder"
+        },
+        {
+          "label": "c",
+          "text": "Linear Autoencoder"
+        },
+        {
+          "label": "d",
+          "text": "Shallow Autoencoder"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "CNN-based Autoencoders (specifically Denoising CNNs) are best for image denoising because convolutional filters naturally exploit spatial patterns in images, learning to reconstruct clean images from noisy inputs.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q1",
+      "week": 11,
+      "text": "What is the key motivation for replacing RNNs with attention mechanisms in sequence modeling?",
+      "options": [
+        {
+          "label": "a",
+          "text": "RNNs require too much labeled data"
+        },
+        {
+          "label": "b",
+          "text": "RNNs cannot model local dependencies"
+        },
+        {
+          "label": "c",
+          "text": "RNNs suffer from vanishing gradients"
+        },
+        {
+          "label": "d",
+          "text": "RNNs have too many parameters"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "RNNs suffer from vanishing gradients over long sequences, making it hard to learn long-range dependencies. Attention mechanisms provide direct connections between all positions, solving this issue with O(1) path length between any two positions.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q2",
+      "week": 11,
+      "text": "Why is the dot-product attention scaled by √d before softmax?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To reduce computational complexity"
+        },
+        {
+          "label": "b",
+          "text": "To ensure the query and key vectors have unit norm"
+        },
+        {
+          "label": "c",
+          "text": "To prevent large values causing softmax saturation"
+        },
+        {
+          "label": "d",
+          "text": "To enforce positional encoding constraints"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "As dimensionality d increases, dot products grow large in magnitude, pushing softmax into regions with very small gradients (saturation). Scaling by 1/√d keeps the dot products in a stable range with healthy gradients.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q3",
+      "week": 11,
+      "text": "What is the main role of positional encoding in transformers?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To normalize the input vectors"
+        },
+        {
+          "label": "b",
+          "text": "To preserve token order information lost due to parallel processing"
+        },
+        {
+          "label": "c",
+          "text": "To improve residual connections"
+        },
+        {
+          "label": "d",
+          "text": "To reduce dimensionality of input vectors"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Transformers process all tokens in parallel (unlike sequential RNNs), so they have no inherent notion of position. Positional encodings are added to token embeddings to inject information about each token's position in the sequence.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q4",
+      "week": 11,
+      "text": "In multi-head attention, why do we use multiple heads?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To reduce training time"
+        },
+        {
+          "label": "b",
+          "text": "To allow the model to capture different types of relationships across tokens"
+        },
+        {
+          "label": "c",
+          "text": "To reduce the number of parameters"
+        },
+        {
+          "label": "d",
+          "text": "To share weights across layers"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Each attention head projects queries, keys, and values into different subspaces, allowing it to attend to different aspects of the input (e.g., syntactic, semantic, positional relationships) simultaneously, capturing richer representations.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q5",
+      "week": 11,
+      "text": "In decoder-only models, what is the loss function typically used?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Masked language modeling loss"
+        },
+        {
+          "label": "b",
+          "text": "Contrastive loss"
+        },
+        {
+          "label": "c",
+          "text": "Next-token prediction loss"
+        },
+        {
+          "label": "d",
+          "text": "Reconstruction loss"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Decoder-only models (like GPT) are trained with next-token prediction (causal language modeling): given all previous tokens, predict the next token. MLM is used in encoder-only models like BERT.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q6",
+      "week": 11,
+      "text": "Which of the following best describes in-context learning?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Fine-tuning model parameters using few samples"
+        },
+        {
+          "label": "b",
+          "text": "Learning new tasks only using unlabeled data"
+        },
+        {
+          "label": "c",
+          "text": "Training the model with reinforcement learning"
+        },
+        {
+          "label": "d",
+          "text": "Performing new tasks using examples provided in the input context without updating model weights"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "In-context learning allows LLMs to perform new tasks by simply providing task demonstrations (few-shot examples) or instructions in the prompt, without any gradient updates or parameter changes to the model.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q7",
+      "week": 11,
+      "text": "Masked Language Modeling (MLM) used in encoder-only models is an example of what type of learning?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Self-supervised learning"
+        },
+        {
+          "label": "b",
+          "text": "Semi-supervised learning"
+        },
+        {
+          "label": "c",
+          "text": "Fully supervised learning"
+        },
+        {
+          "label": "d",
+          "text": "Reinforcement learning"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "MLM creates supervision signals from the data itself by masking tokens and predicting them, requiring no human-labeled data. This makes it self-supervised learning, enabling pretraining on massive unlabeled text corpora.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q8",
+      "week": 11,
+      "text": "Which of the following is NOT listed as a key building block of transformers?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Attention"
+        },
+        {
+          "label": "b",
+          "text": "Residual connections"
+        },
+        {
+          "label": "c",
+          "text": "Convolutional layers"
+        },
+        {
+          "label": "d",
+          "text": "Positional encoding"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The core building blocks of the Transformer (Vaswani et al., 2017) are: Multi-head Attention, Feed-Forward Networks, Residual Connections, Layer Normalization, and Positional Encoding. Convolutional layers are NOT part of the standard Transformer.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q9",
+      "week": 11,
+      "text": "In Low-Rank Adaptation (LoRA), what is the main benefit mentioned for using low-rank matrices A and B?",
+      "options": [
+        {
+          "label": "a",
+          "text": "They enable parameter-efficient fine-tuning by updating only a small fraction of parameters"
+        },
+        {
+          "label": "b",
+          "text": "They improve positional encoding"
+        },
+        {
+          "label": "c",
+          "text": "They make training completely unsupervised"
+        },
+        {
+          "label": "d",
+          "text": "They remove the need for attention"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "LoRA decomposes weight updates into two low-rank matrices (W_updated = W + BA, where B and A are low-rank), updating only these small matrices during fine-tuning. This reduces trainable parameters by orders of magnitude while preserving model quality.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w11q10",
+      "week": 11,
+      "text": "Which of the following is a typical pretext task used in self-supervised learning for text and speech transformers?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sequence classification"
+        },
+        {
+          "label": "b",
+          "text": "Reward optimization"
+        },
+        {
+          "label": "c",
+          "text": "Clustering sentences"
+        },
+        {
+          "label": "d",
+          "text": "Masked Language Modeling (MLM)"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Masked Language Modeling is a self-supervised pretext task where random tokens are masked and the model learns to predict them from context. It is used in BERT and many other encoder-only transformers for pretraining.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q1",
+      "week": 12,
+      "text": "What is the primary training objective of Large Language Models (LLMs)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Predicting masked words in a sentence"
+        },
+        {
+          "label": "b",
+          "text": "Next-token prediction in a sequence"
+        },
+        {
+          "label": "c",
+          "text": "Classifying input into categories"
+        },
+        {
+          "label": "d",
+          "text": "Generating embeddings for multimodal data"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "LLMs (like GPT) are primarily trained on next-token prediction (causal/autoregressive language modeling): given a prefix of tokens, maximize the probability of the next token. This simple objective on massive data leads to emergent capabilities.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q2",
+      "week": 12,
+      "text": "In tokenization, what is the major advantage of using Byte Pair Encoding (BPE)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It removes the need for a vocabulary"
+        },
+        {
+          "label": "b",
+          "text": "It ensures all words are split into characters"
+        },
+        {
+          "label": "c",
+          "text": "It produces a compact vocabulary using frequent subword merges"
+        },
+        {
+          "label": "d",
+          "text": "It encodes sentences as fixed-length vectors"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "BPE iteratively merges the most frequent pairs of characters/subwords, building a compact vocabulary that balances between whole-word and character-level tokenization. It handles rare/OOV words through subword decomposition.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q3",
+      "week": 12,
+      "text": "In top-p (nucleus) sampling, tokens are selected based on:",
+      "options": [
+        {
+          "label": "a",
+          "text": "The top K tokens ranked by probability"
+        },
+        {
+          "label": "b",
+          "text": "All tokens with probability above a fixed threshold"
+        },
+        {
+          "label": "c",
+          "text": "Only tokens with probability higher than the median"
+        },
+        {
+          "label": "d",
+          "text": "The smallest set of tokens whose cumulative probability exceeds p"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Top-p (nucleus) sampling selects the smallest set of most probable tokens whose cumulative probability mass exceeds p (e.g., 0.9). Unlike top-k, this adapts the number of candidates based on the distribution's sharpness.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q4",
+      "week": 12,
+      "text": "Increasing the temperature value (T > 1) during sampling causes:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Flatter distribution producing more diverse outputs"
+        },
+        {
+          "label": "b",
+          "text": "Sharper, more peaked probability distribution"
+        },
+        {
+          "label": "c",
+          "text": "More deterministic outputs"
+        },
+        {
+          "label": "d",
+          "text": "Removal of low-probability tokens"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Temperature T divides logits before softmax. T > 1 flattens the distribution, giving more probability mass to lower-ranked tokens, producing more diverse and creative (but potentially less coherent) outputs. T < 1 sharpens it.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q5",
+      "week": 12,
+      "text": "In multimodal pre-training, non-text inputs such as images or audio are first converted into:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Embedding matrices"
+        },
+        {
+          "label": "b",
+          "text": "Modality-specific dense vectors"
+        },
+        {
+          "label": "c",
+          "text": "Direct inputs to the transformer without tokenization"
+        },
+        {
+          "label": "d",
+          "text": "Modality-specific tokens (e.g., visual tokens, acoustic tokens)"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "In multimodal transformers, images are split into patches and projected into visual tokens, and audio is converted into acoustic tokens. These modality-specific tokens are processed alongside text tokens in a unified transformer.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q6",
+      "week": 12,
+      "text": "What is the primary purpose of instruction tuning?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To make the model follow natural-language instructions across many tasks"
+        },
+        {
+          "label": "b",
+          "text": "To train a reward model from human judgments"
+        },
+        {
+          "label": "c",
+          "text": "To optimize performance for a single downstream task"
+        },
+        {
+          "label": "d",
+          "text": "To reduce vocabulary size during training"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Instruction tuning fine-tunes LLMs on diverse instruction-following datasets, teaching the model to respond to natural-language task descriptions. This improves zero-shot generalization across unseen tasks.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q7",
+      "week": 12,
+      "text": "In DPO (Direct Preference Optimization), human preference data is used to:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Train a separate reward model"
+        },
+        {
+          "label": "b",
+          "text": "Perform policy gradient updates using PPO"
+        },
+        {
+          "label": "c",
+          "text": "Perform contrastive learning between tokens"
+        },
+        {
+          "label": "d",
+          "text": "Directly optimize a supervised loss comparing preferred and rejected outputs"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "DPO bypasses the explicit reward model by deriving a closed-form supervised loss directly from preference pairs (preferred vs. rejected responses), training the policy model to increase probability of preferred outputs relative to rejected ones.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q8",
+      "week": 12,
+      "text": "Which statement best describes the difference between PPO and DPO?",
+      "options": [
+        {
+          "label": "a",
+          "text": "PPO requires no reward model; DPO requires one"
+        },
+        {
+          "label": "b",
+          "text": "PPO is fully supervised; DPO uses reinforcement learning"
+        },
+        {
+          "label": "c",
+          "text": "PPO uses RL with a reward model; DPO removes the reward model and uses preference pairs directly"
+        },
+        {
+          "label": "d",
+          "text": "DPO works only for multimodal models"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "RLHF with PPO requires training a separate reward model from human preferences, then optimizing the LLM policy using PPO. DPO eliminates the reward model step, directly optimizing from preference pairs using a simpler supervised loss.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q9",
+      "week": 12,
+      "text": "Why is reinforcement learning used in post-training LLMs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To reduce the vocabulary size"
+        },
+        {
+          "label": "b",
+          "text": "To teach LLMs what humans prefer rather than what they merely say"
+        },
+        {
+          "label": "c",
+          "text": "To improve tokenizer efficiency"
+        },
+        {
+          "label": "d",
+          "text": "To encode multimodal signals"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "RL-based post-training (RLHF) aligns LLMs with human preferences by optimizing for a reward signal derived from human judgments, teaching the model what responses humans find helpful, harmless, and honest — beyond just mimicking training text.",
+      "isMultiSelect": false
+    },
+    {
+      "id": "w12q10",
+      "week": 12,
+      "text": "What is a 'token' in the context of LLMs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "A basic unit of text that can be a word, subword, punctuation, or special symbol"
+        },
+        {
+          "label": "b",
+          "text": "A fixed-length sequence of 10 characters"
+        },
+        {
+          "label": "c",
+          "text": "Always a full word in the input text"
+        },
+        {
+          "label": "d",
+          "text": "A single Unicode code point only"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "A token is the fundamental unit of text that LLMs process. Depending on the tokenizer, a token can be a full word, a subword (e.g., '##ing'), a punctuation mark, a number, or a special symbol. The average English word is ~1.3 tokens.",
+      "isMultiSelect": false
+    }
+  ]
+}
