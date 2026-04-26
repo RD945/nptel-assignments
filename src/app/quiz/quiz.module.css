@@ -51,7 +51,7 @@
 
 .optionWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 12px;
 }
 
@@ -69,12 +69,15 @@
 
 .label {
   display: flex;
+  align-items: flex-start;
   gap: 12px;
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.2s ease;
   flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .input:disabled ~ .label {
@@ -104,7 +107,12 @@
 }
 
 .optionText {
-  word-break: break-word;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .feedback {
