@@ -50,6 +50,24 @@ export default function Home() {
         "Same weekly flow, but the answer choices are shuffled in the UI so the option pattern changes every time",
       enabled: true,
     },
+    ...(subject === "entrepreneurship-essentials-2"
+      ? [
+          {
+            href: "/quiz-ee2-numericals",
+            title: "🔢 Numericals Only",
+            description:
+              "Entrepreneurship Essentials 2 only: all numerical questions from all weeks with shuffled question and option order",
+            enabled: true,
+          },
+          {
+            href: "/quiz-ee2-non-numericals",
+            title: "📝 Non-Numericals Only",
+            description:
+              "Entrepreneurship Essentials 2 only: all non-numerical questions from all weeks with shuffled question and option order",
+            enabled: true,
+          },
+        ]
+      : []),
     {
       href: "/quiz-multi-select",
       title: "🔀 Multi-Select Shuffle",
