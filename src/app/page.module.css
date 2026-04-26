@@ -54,6 +54,18 @@
   margin-bottom: 10px;
 }
 
+.sourceNote {
+  width: 100%;
+  border: 1px solid #c7b866;
+  background: #fffbe6;
+  color: #4a430f;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
 .modesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -120,6 +132,11 @@
 
   .subtitle {
     font-size: 16px;
+  }
+
+  .sourceNote {
+    font-size: 13px;
+    padding: 10px 12px;
   }
 
   .modesGrid {

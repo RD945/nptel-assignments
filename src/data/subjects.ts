@@ -1,6 +1,7 @@
 export const subjectIds = [
   "llm",
   "entrepreneurship",
+  "entrepreneurship-essentials-2",
   "foundations-deep-learning",
 ] as const;
 
@@ -28,6 +29,13 @@ export const subjects: Record<SubjectId, SubjectInfo> = {
     shortLabel: "Entrepreneurship",
     description: "Weekly entrepreneurship questions with the same quiz modes.",
     homeTitle: "Entrepreneurship Essentials Quiz",
+  },
+  "entrepreneurship-essentials-2": {
+    id: "entrepreneurship-essentials-2",
+    label: "Entrepreneurship Essentials 2",
+    shortLabel: "Entrepreneurship 2",
+    description: "Exact text-based questions parsed from entrepreneurship_essentials_quiz.txt.",
+    homeTitle: "Entrepreneurship Essentials 2 Quiz",
   },
   "foundations-deep-learning": {
     id: "foundations-deep-learning",

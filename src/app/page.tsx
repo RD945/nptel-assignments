@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { useSubject } from "@/context/SubjectContext";
 import { getSubjectInfo } from "@/data/subjects";
-import { getQuestionsForSubject, hasMultiSelectQuestions } from "@/data/subject-questions";
+import {
+  getQuestionsForSubject,
+  getWeeksForSubject,
+  hasMultiSelectQuestions,
+} from "@/data/subject-questions";
 import SubjectSelector from "@/components/SubjectSelector";
 import styles from "./page.module.css";
 
@@ -22,19 +26,21 @@ export default function Home() {
 
   const subjectInfo = getSubjectInfo(subject);
   const availableQuestions = getQuestionsForSubject(subject);
+  const weeks = getWeeksForSubject(subject);
   const multiSelectAvailable = hasMultiSelectQuestions(subject);
+  const weekText = weeks.length > 0 ? weeks.join(", ") : "N/A";
 
   const modeCards = [
     {
       href: "/review",
       title: "📖 Review All Questions",
-      description: "View all questions and answers in order from Week 1 to Week 12",
+      description: `View all questions and answers in order across weeks: ${weekText}`,
       enabled: true,
     },
     {
       href: "/quiz-weekly",
       title: "📅 Weekly Quiz",
-      description: "Week by week - questions randomized within each week",
+      description: `Choose from ${weeks.length} available weeks, with randomized questions inside each week`,
       enabled: true,
     },
     {
@@ -91,6 +97,13 @@ export default function Home() {
       </div>
 
       <p className={styles.subtitle}>Select a quiz mode:</p>
+
+      {subject === "entrepreneurship-essentials-2" && (
+        <div className={styles.sourceNote}>
+          Source-aligned mode: this subject is parsed directly from the provided text file and currently
+          includes {availableQuestions.length} questions across weeks {weekText}.
+        </div>
+      )}
 
       <div className={styles.modesGrid}>
         {modeCards.map((mode) =>

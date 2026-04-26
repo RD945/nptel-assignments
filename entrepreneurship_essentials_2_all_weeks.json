@@ -1,0 +1,3398 @@
+{
+  "metadata": {
+    "course": "Entrepreneurship Essentials 2",
+    "source": "entrepreneurship_essentials_quiz.txt",
+    "total_questions": 115,
+    "weeks_detected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "questions_per_week": {
+      "1": 10,
+      "2": 10,
+      "3": 9,
+      "4": 9,
+      "5": 10,
+      "6": 9,
+      "7": 10,
+      "8": 9,
+      "9": 10,
+      "10": 9,
+      "11": 10,
+      "12": 10
+    },
+    "multi_select_count": 0,
+    "single_select_count": 115
+  },
+  "questions": [
+    {
+      "week": 1,
+      "qNum": 1,
+      "text": "Out of the following options, which is the most significant motivation for individuals to embark on entrepreneurship?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Personal fulfillment, alleviating acute pain and societal contribution"
+        },
+        {
+          "label": "b",
+          "text": "Maximizing economic value for the individual"
+        },
+        {
+          "label": "c",
+          "text": "Pursuing autonomy and being one's own boss"
+        },
+        {
+          "label": "d",
+          "text": "Tackling environmental challenges for global betterment and a sustainable world"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "While all options are correct to some extent, the option \"Personal fulfillment, alleviating acute pain and societal contribution\" is the most compelling. Any entrepreneurial venture is typically established to address a significant problem in society. Individuals create new ventures to become their own bosses, fulfilling personal aspirations. Entrepreneurs have the potential to generate substantial value for society and achieve selfactualization. Option 'a' in the question precisely reflects this idea. I hope this clarifies the point.",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q1_1"
+    },
+    {
+      "week": 1,
+      "qNum": 2,
+      "text": "All the following statements appear to be correct to some extent. Which one of the following statements is more accurate than the rest?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Entrepreneurship, being highly risky, is only viable for individuals with a background in"
+        },
+        {
+          "label": "b",
+          "text": "The level of entrepreneurship in a country is a key determinant of its citizens' quality of"
+        },
+        {
+          "label": "c",
+          "text": "Engaging in entrepreneurship invariably leads to an improvement in the quality of life for"
+        },
+        {
+          "label": "d",
+          "text": "Extroverted individuals are predominant among successful entrepreneurs."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Entrepreneurship index is positively correlated with per-capita GDP of a nation. Per-capita-GDP of a nation is directly correlated with the quality-of-life index. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q2_2"
+    },
+    {
+      "week": 1,
+      "qNum": 3,
+      "text": "What is the most significant aspect of entrepreneurs among the following?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Entrepreneurs generate wealth for investors."
+        },
+        {
+          "label": "b",
+          "text": "Entrepreneurs primarily accumulate wealth for themselves."
+        },
+        {
+          "label": "c",
+          "text": "Entrepreneurs contribute to national wealth creation in many ways."
+        },
+        {
+          "label": "d",
+          "text": "Entrepreneurs play a crucial role in social advancements in a country."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "All answers are correct, but the wealth creation for the nation is the most impactful. ______________________________________________________________________________ NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q3_3"
+    },
+    {
+      "week": 1,
+      "qNum": 4,
+      "text": "Which of the following characteristics best describes entrepreneurs?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Fearful of risks and uncertainties"
+        },
+        {
+          "label": "b",
+          "text": "Enthusiastic about taking calculated risks"
+        },
+        {
+          "label": "c",
+          "text": "Indifferent to risk considerations and focused on immediate gains"
+        },
+        {
+          "label": "d",
+          "text": "Averse to risk-taking in general"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Entrepreneurs identify opportunities in adversities. They are not risk averse. They use a risky situation to find solutions and alleviate the risk. They do not love risk, but take it as an opportunity to turn a risky situation into an opportunity. They know that there can be no good opportunity without risk. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q4_4"
+    },
+    {
+      "week": 1,
+      "qNum": 5,
+      "text": "Which of the following is NOT acknowledged as a misconception about entrepreneurship?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Entrepreneurs are born into business families."
+        },
+        {
+          "label": "b",
+          "text": "A significant portion of entrepreneurial knowledge can be acquired through learning."
+        },
+        {
+          "label": "c",
+          "text": "Entrepreneurs are typically extroverts."
+        },
+        {
+          "label": "d",
+          "text": "Initiating an entrepreneurial venture demands substantial capital."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "It has been empirically documented that entrepreneurship can be learned. Therefore, it is not a myth. NPTEL Online Certification Courses Indian Institute of Technology Kharagpur ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q5_5"
+    },
+    {
+      "week": 1,
+      "qNum": 6,
+      "text": "What factor is NOT attributed to the success of Sophia Amoruso?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Her acute understanding of the customers"
+        },
+        {
+          "label": "b",
+          "text": "Her expertise as the CEO of NastyGal"
+        },
+        {
+          "label": "c",
+          "text": "Her social skills"
+        },
+        {
+          "label": "d",
+          "text": "Uncompromised and consistent ethics"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Sophia lacked the experience that is present in an experienced CEO and failure to hire an experienced CEO is attributed to the failure of NastyGal.",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q6_6"
+    },
+    {
+      "week": 1,
+      "qNum": 7,
+      "text": "The ____ in simple words is where a company wants to reach in the long run. All members of the company must share the same _____ to reach that goal. Which of the following words is ideal to fill the above blank?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Vision"
+        },
+        {
+          "label": "b",
+          "text": "Mission"
+        },
+        {
+          "label": "c",
+          "text": "Strategies"
+        },
+        {
+          "label": "d",
+          "text": "Values"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "It is the vision of an enterprise that tells where it aims to reach in the long run. NPTEL Online Certification Courses Indian Institute of Technology Kharagpur _____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q7_7"
+    },
+    {
+      "week": 1,
+      "qNum": 8,
+      "text": "Which among the following qualities are the LEAST requirement for employees to pursue 'Corporate Entrepreneurship'?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Full empowerment to think out of the box and act like an entrepreneur without major part"
+        },
+        {
+          "label": "b",
+          "text": "Should possess creativity and be innovative in conceiving new products, services, and"
+        },
+        {
+          "label": "c",
+          "text": "Action-oriented, self-driven, and creative."
+        },
+        {
+          "label": "d",
+          "text": "Have managerial, technical, and interpersonal skills."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "To pursue corporate entrepreneurship one needs to be creative, self-driven, and must be able to take calculated risks. One should be a good executioner. The managerial capability maybe good but not absolutely essential.",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q8_8"
+    },
+    {
+      "week": 1,
+      "qNum": 9,
+      "text": "You want to start an e-commerce company. You target the niche market of hand-made goods. You have written the following statement: \" We curate and showcase a diverse array of exquisitely crafted handmade products, connecting artisans globally with discerning customers, and fostering a marketplace that celebrates craftsmanship, authenticity, and unique artistic expressions.\" - What can this statement be termed as?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Vision"
+        },
+        {
+          "label": "b",
+          "text": "Mission"
+        },
+        {
+          "label": "c",
+          "text": "Strategies"
+        },
+        {
+          "label": "d",
+          "text": "Values"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The statement elaborates the strategy of the company to source products, and acquire, and grow new customers. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q9_9"
+    },
+    {
+      "week": 1,
+      "qNum": 10,
+      "text": "Which of the following best defines empathy?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The ability to understand and share the sorrows of another and express our pain"
+        },
+        {
+          "label": "b",
+          "text": "The ability to feel the pain of others almost as much as we feel when we suffer"
+        },
+        {
+          "label": "c",
+          "text": "The ability to sympathize with others for all their pains as well as celebrate their"
+        },
+        {
+          "label": "d",
+          "text": "Never to miss a chance to say \"sorry' when one comes to know about another"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Empathy is the ability to feel the pain of others almost as much as we feel when we suffer the same. If we can empathize with people we can define the pain better and can design a product that will solve the pain well - a product-market fit. It is suggested that entrepreneurs should meet people with pain, live with them, and suffer their pain to meaningfully define it and only then they will be able to come up with a solution that will effectively and efficiently solve the problem. ******* NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w1_q10_10"
+    },
+    {
+      "week": 2,
+      "qNum": 1,
+      "text": "Which of the following CANNOT be concluded from the story of Dhirubhai Ambani? (Need to remember the last week's lectures)",
+      "options": [
+        {
+          "label": "a",
+          "text": "Entrepreneurs identify opportunities in adversities."
+        },
+        {
+          "label": "b",
+          "text": "Entrepreneurs start it big to be successful."
+        },
+        {
+          "label": "c",
+          "text": "Entrepreneurs are knowledge seekers."
+        },
+        {
+          "label": "d",
+          "text": "Entrepreneurs have a compelling vision and a comprehensive plan to execute it."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Dhirubhai Ambani started from scratch. It is clear from his story that one does not require to start big to eventually create a large business enterprise. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q1_11"
+    },
+    {
+      "week": 2,
+      "qNum": 2,
+      "text": "Which of the following represents the five forces of competition as espoused by Porter?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Core competency, Competitive rivalry, government policy, threat of new entrant, threat of"
+        },
+        {
+          "label": "b",
+          "text": "Competitive rivalry, government policy, buyer power, threat of substitution, threat of new"
+        },
+        {
+          "label": "c",
+          "text": "Competitive rivalry, supplier power, buyer power, threat of substitution, International"
+        },
+        {
+          "label": "d",
+          "text": "Competitive rivalry, supplier power, buyer power, threat of substitution, threat of new"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "The exact components of Porter's five forces are: Competitive rivalry, supplier power, buyer power, threat of substitution, threat of new entrant. Porter's Five Forces is a strategic framework developed by NPTEL Online Certification Courses Indian Institute of Technology Kharagpur Michael Porter that analyzes the competitive forces shaping an industry. It consists of five key factors: the threat of new entrants, the bargaining power of buyers, the bargaining power of suppliers, the threat of substitute products or services, and the intensity of competitive rivalry. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q2_12"
+    },
+    {
+      "week": 2,
+      "qNum": 3,
+      "text": "Which of the following helps startups gain the LEAST amount of competitive advantage?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Innovative technology and protecting intellectual property rights (IPR)."
+        },
+        {
+          "label": "b",
+          "text": "Efficient cost management to ensure price advantage."
+        },
+        {
+          "label": "c",
+          "text": "Building trusted brands with increasing loyal followers."
+        },
+        {
+          "label": "d",
+          "text": "To achieve first-mover advantage through great execution."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "First movers may not necessarily have a sustainable competitive advantage because they often bear the costs of pioneering innovations, allowing later entrants to learn from their mistakes and leapfrog with improved technologies or strategies. Additionally, the rapid pace of technological change and evolving consumer preferences can erode the advantages of being a first mover, as more agile competitors adapt to emerging trends more efficiently.",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q3_13"
+    },
+    {
+      "week": 2,
+      "qNum": 4,
+      "text": "Identify the correct statement from the following: What is meant by the construct 'limited liability' in the context of a limited liability form of legal entity?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The liability of the company is limited to its resources."
+        },
+        {
+          "label": "b",
+          "text": "The liability of any owner is limited to his/her share of the business at any point in"
+        },
+        {
+          "label": "c",
+          "text": "The liability of any owner is limited to his/her proportional shareholding in the"
+        },
+        {
+          "label": "d",
+          "text": "The liability of a company is limited to the market value of its assets."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "NPTEL Online Certification Courses Indian Institute of Technology Kharagpur The liability of any owner is limited to his/her share of the business at any point in time. His/her/ their personal assets are not at risk for the recovery of any company debts. Imagine a person, 'X,' who has invested Rs. 1.00 lakh in a business and received 10,000 shares (assuming a face value or par value of Rs. 10/- for each share), constituting 20% of the shareholding. Suppose the company borrows Rs. 100 lakh from a bank and defaults. Let's assume the bank obtains a court decree to recover the money from the company. The court is entitled to receive proceeds by selling the company's assets but cannot touch the personal assets of 'X' or any other shareholders. Consequently, in the liquidation process, 'X' may have to forfeit their shares without affecting personal assets. Option 'c' in the question suggests that liability is PROPORTIONAL to shareholding, implying that 'X' must pay Rs. 10 lakh to the bank. However, option 'b' accurately states that liability is limited to the SHARES one owns (and not the shareholding percentage). Of course, the value of the shares may change over time.",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q4_14"
+    },
+    {
+      "week": 2,
+      "qNum": 5,
+      "text": "In partnership form of business, the written agreement duly stamped and registered is known as",
+      "options": [
+        {
+          "label": "a",
+          "text": "Partnership MOU"
+        },
+        {
+          "label": "b",
+          "text": "Memorandum of partnership"
+        },
+        {
+          "label": "c",
+          "text": "Partnership deed"
+        },
+        {
+          "label": "d",
+          "text": "Partnership agreement"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The written agreement duly stamped and registered is known as the Partnership Deed. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q5_15"
+    },
+    {
+      "week": 2,
+      "qNum": 6,
+      "text": "Which form of business has a limited life?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Limited liability partnership"
+        },
+        {
+          "label": "b",
+          "text": "Proprietorship"
+        },
+        {
+          "label": "c",
+          "text": "Private limited company"
+        },
+        {
+          "label": "d",
+          "text": "Public limited company"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "NPTEL Online Certification Courses Indian Institute of Technology Kharagpur A proprietorship firm ceases to exist as and when the proprietor dies, whereas a limited liability company continues to exist even when one or more directors die.",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q6_16"
+    },
+    {
+      "week": 2,
+      "qNum": 7,
+      "text": "Investors prefer which form of the legal structure of an enterprise and why? Choose the most appropriate statement from the following:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Proprietorship because it gives absolute liberty to the proprietor for execution and the"
+        },
+        {
+          "label": "b",
+          "text": "Partnership because it has all attributes of proprietorships and more than one founders"
+        },
+        {
+          "label": "c",
+          "text": "Private limited company because the personal assets of shareholders cannot be attached"
+        },
+        {
+          "label": "d",
+          "text": "Public limited since it can issue shares to the public, list its shares to stock exchanges,"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Investors prefer a Private limited form of enterprise because the personal assets of shareholders cannot be attached to meet company obligations and this kind of enterprise can induct new investors as shareholders. Investors do not insist on a public limited structure due to higher compliances associated with such companies. Investors will have no problem with a public limited structure, though they would not insist it since it involves a lot more unnecessary compliances and cost that a startup should not normally incur.",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q7_17"
+    },
+    {
+      "week": 2,
+      "qNum": 8,
+      "text": "When should a startup convert its venture into a limited liability company?",
+      "options": [
+        {
+          "label": "a",
+          "text": "At the idea stage"
+        },
+        {
+          "label": "b",
+          "text": "When the prototype is ready and customer validation is in the process"
+        },
+        {
+          "label": "c",
+          "text": "When the business demands such as approaching investors or incubators"
+        },
+        {
+          "label": "d",
+          "text": "When applying for patent or trademark or GST registration, whichever is earlier."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Startup should save resources by not registering their enterprise as a limited liability company as long as it is not absolutely necessary. But as they approach investors, incubators, accelerators, NPTEL Online Certification Courses Indian Institute of Technology Kharagpur etc. they require by regulation to register their business as a limited liability company. So, a startup should register a limited liability company when the business demands.",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q8_18"
+    },
+    {
+      "week": 2,
+      "qNum": 9,
+      "text": "What was the main reason for the failure of Iridium? Choose the best answer.",
+      "options": [
+        {
+          "label": "a",
+          "text": "Over-pricing"
+        },
+        {
+          "label": "b",
+          "text": "Excessive capital cost"
+        },
+        {
+          "label": "c",
+          "text": "The technology was ahead of time."
+        },
+        {
+          "label": "d",
+          "text": "Lack of product-market fit."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Iridium, a satellite-based communication venture launched in the late 1990s, faced a monumental failure attributed largely to its lack of product-market fit. Despite pioneering mobile satellite technology, Iridium struggled to align its offerings with consumer needs, resulting in high costs, limited demand, and eventual bankruptcy in 1999. This case serves as a cautionary example of the critical importance of understanding and meeting market requirements for a product's success.",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q9_19"
+    },
+    {
+      "week": 2,
+      "qNum": 10,
+      "text": "Which of the following can create the least of Entry Barriers ?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Brand loyalty"
+        },
+        {
+          "label": "b",
+          "text": "Business process management at the shop floor"
+        },
+        {
+          "label": "c",
+          "text": "Ownership of intellectual property"
+        },
+        {
+          "label": "d",
+          "text": "Logistic advantage"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Business process management (BPM) is primarily a tool for optimizing and streamlining internal processes within a company. While BPM can enhance efficiency and agility, it may not necessarily create significant entry barriers. The transparency and standardization promoted by BPM could potentially lower barriers, as it facilitates easier understanding and replication of processes by new NPTEL Online Certification Courses Indian Institute of Technology Kharagpur entrants. Entry barriers typically involve factors like economies of scale, proprietary technologies, or strong brand presence, which are beyond the scope of what BPM primarily addresses. ************END******* NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w2_q10_20"
+    },
+    {
+      "week": 3,
+      "qNum": 1,
+      "text": "Which of the following statements concerning market research is correct?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Marketing research is relevant only when the enterprise is ready with their product and is"
+        },
+        {
+          "label": "b",
+          "text": "Secondary market research can be performed by designing a suitable questionnaire."
+        },
+        {
+          "label": "c",
+          "text": "An enterprise does market research even before they develop the product and market"
+        },
+        {
+          "label": "d",
+          "text": "A company should do marketing research when it reaches the saturation stage so that they"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w3_q1_21"
+    },
+    {
+      "week": 3,
+      "qNum": 2,
+      "text": "Which of the following statements concerning marketing research is correct?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Secondary data can be organized in-house through a questionnaire survey."
+        },
+        {
+          "label": "b",
+          "text": "Secondary market research (gathering secondary data) is quicker than primary market"
+        },
+        {
+          "label": "c",
+          "text": "Data obtainable from secondary sources helps to understand the granular details of the"
+        },
+        {
+          "label": "d",
+          "text": "Secondary research (gathering secondary data) involves personal interviews with the"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w3_q2_22"
+    },
+    {
+      "week": 3,
+      "qNum": 3,
+      "text": "Which of the following is NOT part of the secondary sources of data?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Survey"
+        },
+        {
+          "label": "b",
+          "text": "Census data."
+        },
+        {
+          "label": "c",
+          "text": "Data collected by government agencies."
+        },
+        {
+          "label": "d",
+          "text": "Newspaper."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Survey data are primary source of data as these are collected for specific purpose. Census data are for election or consumption of government and thus are secondary data for any other agency. So are data collected by government agencies. The company that uses the data is no way connected to the data collection process neither they order the newspaper owners to collect the data for the company. Therefore, such data sources are called secondary source. Newspaper publishes data NPTEL Online Certification Courses Indian Institute of Technology Kharagpur either from existing sources or make their own research and then make it available to the public at large, particularly those who purchase the newspaper. ------------------------------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w3_q3_23"
+    },
+    {
+      "week": 3,
+      "qNum": 4,
+      "text": "Select the INCORRECT statement.",
+      "options": [
+        {
+          "label": "a",
+          "text": "Markets with perfect competition have homogenous products without any pricing power."
+        },
+        {
+          "label": "b",
+          "text": "Oligopolistic markets have differentiated product types with high barrier for new entrants and"
+        },
+        {
+          "label": "c",
+          "text": "Monopolists have unique and simple type of products with great barrier for new entrants."
+        },
+        {
+          "label": "d",
+          "text": "Companies in a perfect competition market have high pricing power and high entry barriers"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w3_q4_24"
+    },
+    {
+      "week": 3,
+      "qNum": 5,
+      "text": "You are targeting a market with potential size of ₹50 crore within your geographical reach and in the exact segment that you would like to serve. The size of the aggregate market, including all sub-segments, in the whole country is ₹1000 crore. The size of the market in the market segment that you cater to in the whole country is ₹250 crore. What are TAM, SOM, & SAM",
+      "options": [
+        {
+          "label": "a",
+          "text": "₹50 crore, ₹ 250 crore & ₹ 1000 crore"
+        },
+        {
+          "label": "b",
+          "text": "₹ 250 crore, ₹50 crore, ₹ 1000 crore"
+        },
+        {
+          "label": "c",
+          "text": "₹ 1000 crore, ₹250 crore, ₹50 crore"
+        },
+        {
+          "label": "d",
+          "text": "₹ 1000 crore, ₹50 crore, ₹ 250 crore"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "NPTEL Online Certification Courses Indian Institute of Technology Kharagpur TAM is the total demand in the entire market (1000 crore), SAM is the total demand in the particular segment of the entire market (250 crore), SOM is the portion of the market you can potentially serve (50 crore). -----------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w3_q5_25"
+    },
+    {
+      "week": 3,
+      "qNum": 6,
+      "text": "Which is the right chronological order of the process of customer acquisition through the sales funnel?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Interest, awareness, consideration, intent, evaluation, purchase"
+        },
+        {
+          "label": "b",
+          "text": "Consideration, awareness, Interest, intent, evaluation, purchase"
+        },
+        {
+          "label": "c",
+          "text": "Awareness, interest, consideration, intent, evaluation, purchase"
+        },
+        {
+          "label": "d",
+          "text": "Intent, awareness, Interest, consideration, evaluation, purchase"
+        },
+        {
+          "label": "e",
+          "text": "Evaluation, awareness, Interest, consideration, intent, purchase"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Awareness, interest, consideration, intent, evaluation, purchase is the correct order. --------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w3_q6_26"
+    },
+    {
+      "week": 3,
+      "qNum": 7,
+      "text": "Difference between the use of 'public relation' and 'advertisement' in marketing. Choose the best answer.",
+      "options": [
+        {
+          "label": "a",
+          "text": "Public relation is creation of awareness and is associated with the term 'content"
+        },
+        {
+          "label": "b",
+          "text": "Companies has fair amount of control on marketing through public relation."
+        },
+        {
+          "label": "c",
+          "text": "Message can be sharper and more focused on the values of the product or service in case"
+        },
+        {
+          "label": "d",
+          "text": "Advertisement content is filtered through a reporter."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Marketing or sales funnel is a chronological step for customer acquisition. ----------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w3_q7_27"
+    },
+    {
+      "week": 3,
+      "qNum": 9,
+      "text": "The storytelling example of Huggies is about______________",
+      "options": [
+        {
+          "label": "a",
+          "text": "Online marketing"
+        },
+        {
+          "label": "b",
+          "text": "Social media marketing"
+        },
+        {
+          "label": "c",
+          "text": "Content marketing"
+        },
+        {
+          "label": "d",
+          "text": "Public Relation marketing"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Content marketing is about making customers aware of the various features of a product in general or about the subservient benefits. In a way, it aims to empower customers with information to make informed decisions while choosing a product. Huggies did exactly this. They made customers aware of the benefits of hugs and in the process customers chose their products. -----------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w3_q9_28"
+    },
+    {
+      "week": 3,
+      "qNum": 10,
+      "text": "Which of the following purpose is not directly fulfilled by market segmentation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To understand the customers, their unique requirements, and liking better"
+        },
+        {
+          "label": "b",
+          "text": "How to lower the cost of production and marketing."
+        },
+        {
+          "label": "c",
+          "text": "Understand market size, growth, and how to position your product"
+        },
+        {
+          "label": "d",
+          "text": "It helps to understand competition and the demand-supply gap"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w3_q10_29"
+    },
+    {
+      "week": 4,
+      "qNum": 1,
+      "text": "Which of the following statements is wrong as regards the business model canvas?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The 'Revenue model' is one of the building blocks of the Business model canvas."
+        },
+        {
+          "label": "b",
+          "text": "The 'Value proposition' is one of the building blocks of the Business Model Canvas."
+        },
+        {
+          "label": "c",
+          "text": "The business model canvas tells us the ecosystem that a company is part of."
+        },
+        {
+          "label": "d",
+          "text": "Business model canvas does not tell us the competitive landscape a company is in."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "None of the building blocks of the BMC gives us any hint about the ecosystem that a company is in. ---------------------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q1_30"
+    },
+    {
+      "week": 4,
+      "qNum": 2,
+      "text": "Which of the following statements is NOT correct as regards the business model canvas (BMC)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The value proposition is the central part of BMC and it explains how the value"
+        },
+        {
+          "label": "b",
+          "text": "The business model canvas does not indicate the vision, mission, and value statement."
+        },
+        {
+          "label": "c",
+          "text": "The market segment block explains how the company builds brands, acquires and"
+        },
+        {
+          "label": "d",
+          "text": "In the Business Model Canvas (BMC), the right side focuses on the market, detailing"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The central component of the BMC is the 'value proposition'. In the right part, we explain who the value is to be dispensed to, how we reach out to them, how we create a lasting relationship so that they come back to us to make a repeat purchase and we have a brand presence in their minds and they talk to their friends about our products to convert them into our customers. We also show how we make money. In the left part, we talk about all that is required to create the value and how much cost we incur so that we have some idea about the profitability. The market segment block tells us which group of customers the company targets and caters to. It, however, does not tell anything about brand or means to build long-term relationship. -----------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q2_31"
+    },
+    {
+      "week": 4,
+      "qNum": 3,
+      "text": "Wich of the following does not serve by market segmentation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "To understand the customers better"
+        },
+        {
+          "label": "b",
+          "text": "To create product differentiation"
+        },
+        {
+          "label": "c",
+          "text": "To improve the assessment of post-sales customer experiences."
+        },
+        {
+          "label": "d",
+          "text": "It helps to understand competition and the demand-supply gap"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w4_q3_32"
+    },
+    {
+      "week": 4,
+      "qNum": 4,
+      "text": "Choose the correct answer: Innovation and invention are not the same. Innovation is:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Developing new technologies with novelties, not obvious to people with adequate"
+        },
+        {
+          "label": "b",
+          "text": "Developing new technology and the infrastructure necessary to make the solution"
+        },
+        {
+          "label": "c",
+          "text": "Developing new cutting-edge technology that is yet to emerge in the market and that is"
+        },
+        {
+          "label": "d",
+          "text": "Developing solutions that do a lot of good to society."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Invention is creating new knowledge that did not exist, whereas, innovation includes invention and taking all other actions so that the benefits of the new invention reach the people or businesses who need them. Thomas Edison invented a technology for the long useful life of the electric light bulb. That was an invention. He laid electric cable, the electricity generating unit, and all other infrastructure for the people to get the benefit of the electric light. The whole process of inventing the technology and reaching the benefits to the people is innovation. -------------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q4_33"
+    },
+    {
+      "week": 4,
+      "qNum": 5,
+      "text": "In the early 1900s, General Electric (GE) of Thomas Edison disciplined the chaotic process of scientific discovery into a systematic process of innovation. Results: over the next 70 years, won more patents than any other company in the US. Much of GE's competitive prowess during the century following can be traced to that extraordinary accomplishment. Which of the following most accurately describes the above revolutionary act of GE?",
+      "options": [
+        {
+          "label": "a",
+          "text": "This is a technological innovation that gave General Electric many patents."
+        },
+        {
+          "label": "b",
+          "text": "This is an invention that gave the end-beneficiary enormous advantages and thus GE"
+        },
+        {
+          "label": "c",
+          "text": "This is an invention of business process management."
+        },
+        {
+          "label": "d",
+          "text": "This is an example of research process innovation."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Let us first understand the distinction between Innovation and invention. Since GE has put the knowledge in real use, the new knowledge is an innovation and not invention. Invention and innovation are possible in every sphere of business. There are wonderful examples of gaining unassailable competitive advantages through management innovation. General Electric innovated a system of scientific discovery that systematized the whole process improving efficiency and reducing redundancy. Over the next 70 years, GE won more patents than any other company in the US. Much of GE's competitive prowess during the century following can be traced to that extraordinary accomplishment. ------------------------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q5_34"
+    },
+    {
+      "week": 4,
+      "qNum": 6,
+      "text": "In 1903, DuPont systematized capital-budgeting techniques. A few years later, the company also developed a standardized way of estimating the return on investment. They used it in comparing the performance of its numerous product departments. These innovations and more helped DuPont become one of America's industrial giants.",
+      "options": [
+        {
+          "label": "a",
+          "text": "This is a financial management innovation and falls under management innovation."
+        },
+        {
+          "label": "b",
+          "text": "This is not an innovation but a core part of business process management that gave"
+        },
+        {
+          "label": "c",
+          "text": "This is an innovation in funding R&D activities giving DuPont competitive advantages"
+        },
+        {
+          "label": "d",
+          "text": "This is an accounting invention that helped DuPont cut cost and time of building new"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Innovation is possible in every sphere of business. There are wonderful examples of gaining unassailable competitive advantages through management innovation. DuPont did the same through management innovation as mentioned in the statement. -------------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q6_35"
+    },
+    {
+      "week": 4,
+      "qNum": 7,
+      "text": "Business model innovation is Least possible through which of the following?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Changing the value proposition based on customers' changing aspirations."
+        },
+        {
+          "label": "b",
+          "text": "Changing business system architecture to improve process efficiencies."
+        },
+        {
+          "label": "c",
+          "text": "Through management innovation of various kind such as improvement in logistics,"
+        },
+        {
+          "label": "d",
+          "text": "Engaging in R&D for improvement in environment management in general and effective"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Protecting environment and contributing to society indirectly helps a company in the long run and make the business sustainable. However, out of all the options available, the one related to this is the least effective to make the company competitive and thus is the weakest form of business model innovation. -------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q7_36"
+    },
+    {
+      "week": 4,
+      "qNum": 8,
+      "text": "Uber could define the pain points and it could apply the latest technologies to solve them. In urban places of high mobility. It is very difficult to get a taxi. One that would come and pick you up One with some identity for reliability and safety. To know when a taxi will arrive. Ease of paying for the tip. They innovated the solution based on the pains. The above text is related to which block in the business model canvas?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Customer segment"
+        },
+        {
+          "label": "b",
+          "text": "Key activities"
+        },
+        {
+          "label": "c",
+          "text": "Key partners"
+        },
+        {
+          "label": "d",
+          "text": "Value proposition"
+        },
+        {
+          "label": "e",
+          "text": "Revenue model"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "All the points relate to the understanding of customer pains and the gap between customers' needs and what is provided by the existing solutions. This helps to determine the values to be proposed to customers. Therefore, they relate to the value proposition. ---------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q8_37"
+    },
+    {
+      "week": 4,
+      "qNum": 9,
+      "text": "How do you promote customer experience management?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Comparing your own performance and the performance of competitors and taking"
+        },
+        {
+          "label": "b",
+          "text": "By gathering data on customers' purchase behavior, their browsing patterns, and"
+        },
+        {
+          "label": "c",
+          "text": "You sell products with the best quality, at the lowest price, and best aesthetic look so"
+        },
+        {
+          "label": "d",
+          "text": "Offer free gifts to your customers so that they are pleasantly surprised and come back"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The level of satisfactory customers' experience can be captured by collecting data on customers' behavior as regards their visit and purchases, analyzing the data, and taking suitable actions to give customers possible full satisfaction. ---------------------- Question No. 10 Which of the following statements is most appropriate? a. A business model is mostly a written document or slide deck delineating the process of execution, marketing and growth plan, and the projected financial performance. b. A business model describes the rationale of how an organization creates, delivers, and captures value, in economic, social, cultural, or other contexts. c. A business model describes the rationale of how an organization develops products or services using modern cutting-edge and futuristic technologies. d. A business model describes the rationale of how an organization builds a team, identifies opportunities, and goes-to-market. Correct answer: b -------------------------------- Detailed Solution: A business model describes the rationale of how an organization creates, delivers, and captures value for the customers, in economic, social, cultural, or other contexts so that an increasing number of customers will find their products or services more attractive compared to those of competitors. ************END******* NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w4_q9_38"
+    },
+    {
+      "week": 5,
+      "qNum": 1,
+      "text": "In his book 'Crossing the Chasm,' Geoffrey Moore explained that a majority of startups fail even after raising a good amount of funds and acquiring a substantial number of customers terming the event as CHASM. When does the chasm occur? Choose the best answer.",
+      "options": [
+        {
+          "label": "a",
+          "text": "As a company grows, attains maturity, the growth diminishes and the product"
+        },
+        {
+          "label": "b",
+          "text": "As a company go-to-market, it acquires customers of the innovator kind and the"
+        },
+        {
+          "label": "c",
+          "text": "As a company grows and starts acquiring customers from the early majority to"
+        },
+        {
+          "label": "d",
+          "text": "The chasm is defined as the critical phase of product development when more"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Innovator and early adopter types of customers constitute only 16% of the market. They are educated and knowledgeable people with some leadership roles. People in both these groups have some risk appetite and they are forgiving about the aesthetics and perfection of the product. But other customers want more validation, more features, and perfection in product or service. So, it becomes difficult to attract them. This and many other reasons such as resources for the growth NPTEL Online Certification Courses Indian Institute of Technology Kharagpur phase, need of the business process management, need of a professional CEO, etc. make it difficult to convince and acquire customers from among the early majority. _____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q1_39"
+    },
+    {
+      "week": 5,
+      "qNum": 2,
+      "text": "The world and the aspiration of people are ever-changing. The changes offer a unique opportunity for new companies to preemptively build products or services to fulfill the changing needs. Companies that are ahead of the trend frequently become winners. Such pioneering companies integrate trending things into their business model setting them apart and keeping them vibrant. Which of the following sentences is correct as regard business trends? Choose the one that appears the most appropriate.",
+      "options": [
+        {
+          "label": "a",
+          "text": "You must follow the trend to identify a winning business model."
+        },
+        {
+          "label": "b",
+          "text": "Startups who operate at the forefront of the trend enjoy first-mover advantages and always"
+        },
+        {
+          "label": "c",
+          "text": "One must start a business based on the forecast of the technology trend in the respective"
+        },
+        {
+          "label": "d",
+          "text": "First-movers enjoy some advantages by remaining ahead of a trend, but to be successful"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Nothing can assure success. Remaining ahead or with the trend is important. It offers natural advantages. But it is anything but a sure recipe for success. Trend alone does not guarantee success. _____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q2_40"
+    },
+    {
+      "week": 5,
+      "qNum": 3,
+      "text": "Several factors are responsible for the chasm in the life cycle of a company that is difficult for many to cross. Which of the following factors is the least responsible to cause the chasm?",
+      "options": [
+        {
+          "label": "a",
+          "text": "During the growth phase many ventures fail to arrange the required infrastructure for"
+        },
+        {
+          "label": "b",
+          "text": "The products are at an early stage that is liked by the early adopters but the early"
+        },
+        {
+          "label": "c",
+          "text": "In some companies, the disharmony among the co-founders leads to great friction"
+        },
+        {
+          "label": "d",
+          "text": "Product not gaining acceptance by the early majority of the customers and lack of"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The chasm is manifested by the fact that it is difficult for the product or service to gain acceptance by the early majority, though it gains early growth among innovators and early adopters kinds of customers. One of the main reasons for failing to acquire early-majority-type customers due to lack of capability to manage business processes to handle growth beyond a certain point. Handling growth entails higher infrastructure requiring money. The inability to attract and serve the customers belonging to the early majority subsumes all other reasons that may be attributed to the chasm. Disharmony among co-founders is a common phenomenon that can occur at any stage of the life of a company and it is not related to the chasm that Geoffrey Moore talked about.",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q3_41"
+    },
+    {
+      "week": 5,
+      "qNum": 4,
+      "text": "Which of the following statements is the most appropriate regarding business process management?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Business process management involves discovering, modeling, analyzing, measuring,"
+        },
+        {
+          "label": "b",
+          "text": "It is most critically important at the idea selection phase for a clear understanding of"
+        },
+        {
+          "label": "c",
+          "text": "It is the most critically important aspect of business for production process management."
+        },
+        {
+          "label": "d",
+          "text": "In the digital age, business process management is the most critically important for"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "As such, business process management is important at every stage of the business, and those companies who are capable of implementing a robust business process management run the business almost autonomously. However, in the beginning, business process management does not play a significant role. It becomes significant as the company starts acquiring an increasing number of customers. Every section of the business needs to be revamped to meet the growing challenges arising out of the expansion of the business. Many businesses fail at this stage because they are found unprepared in meeting this aspect, giving rise to all-round chaos. ______________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q4_42"
+    },
+    {
+      "week": 5,
+      "qNum": 5,
+      "text": "Which among the following is NOT a correct statement?",
+      "options": [
+        {
+          "label": "a",
+          "text": "If you start a business in the domain of your circle of competence you will have better"
+        },
+        {
+          "label": "b",
+          "text": "One may not be a genius, but may achieve great success by focusing and remaining within"
+        },
+        {
+          "label": "c",
+          "text": "The circle of competency is a domain where your knowledge is the best compared to your"
+        },
+        {
+          "label": "d",
+          "text": "The circle of competence is the core area of the knowledge domain of your key employees"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "The 'circle of competency' is the area of knowledge in which you are an expert in. We all have knowledge of many things. Most of us think that we know more things than we actually know. But, the fact is that every one of us has more knowledge in a particular domain than in any other domain and we may perform better if we try to perform on something in this domain. The circle of competency is that domain, i.e. where we are experts in. It is not related to the competency of your employees. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q5_43"
+    },
+    {
+      "week": 5,
+      "qNum": 6,
+      "text": "What is meant by a validated learning process?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It involves steps in product development wherein feedback from potential customers is"
+        },
+        {
+          "label": "b",
+          "text": "The validated learning process is learning through the process that has been validated by"
+        },
+        {
+          "label": "c",
+          "text": "The validated learning process is a process of product development, wherein an enterprise"
+        },
+        {
+          "label": "d",
+          "text": "It is a linear process of product development such as the waterfall model wherein a"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "The validated learning is part of product development requiring customer validation at various stages of the product development. It is a non-linear process. Depending on the feedback from the customers, the strategies and execution are refined. If a validated learning process is adopted, the chances of rejection of the product by customers are significantly reduced.",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q6_44"
+    },
+    {
+      "week": 5,
+      "qNum": 7,
+      "text": "Which of the following best defines the Agile Process?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The agile process dictates reducing waste at all steps and stages to make the business"
+        },
+        {
+          "label": "b",
+          "text": "It is a non-linear process of product development that follows the strategy of reduction of"
+        },
+        {
+          "label": "c",
+          "text": "Agile process is a linear process in which a large project is broken into components and"
+        },
+        {
+          "label": "d",
+          "text": "The agile process is a component of the lean startup strategy that involves breaking the"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "The agile process along with the lean product development strategy constitutes the lean startup process. Agile is a non-linear and validated learning process or an iterative process in which a large project is broken into components and development progresses in regular collaboration with the targeted users. It is a key component of lean startup philosophies.",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q7_45"
+    },
+    {
+      "week": 5,
+      "qNum": 8,
+      "text": "A startup begins with two hypotheses: A value hypothesis and a growth hypothesis. Which of the following is NOT in conformity with the value hypothesis? Choose the most appropriate option.",
+      "options": [
+        {
+          "label": "a",
+          "text": "The value hypothesis is that the company will attain a valuation that is several times the"
+        },
+        {
+          "label": "b",
+          "text": "The proposed product will be superior compared to those of the competitors in terms of"
+        },
+        {
+          "label": "c",
+          "text": "The value hypothesis states that the quality and features of the product or service offered"
+        },
+        {
+          "label": "d",
+          "text": "The value hypothesis is a presumption that customers will receive superior value for their"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "The value hypothesis is that the product or service being proposed will lead to a superior value proposition compared to those of the competitors and customers will have reasons to buy our product and not those of the competitors. The product or service will be superior only if our value hypothesis is proven right. The value hypothesis is not related to stakeholders in particular.",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q8_46"
+    },
+    {
+      "week": 5,
+      "qNum": 9,
+      "text": "A startup begins with a leap of faith. What is a leap of faith in this regard?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It is an assumption, without any data to support such assumption, that the product will"
+        },
+        {
+          "label": "b",
+          "text": "A leap of faith is belief in God and remaining positive that if we are honest God will"
+        },
+        {
+          "label": "c",
+          "text": "A leap of faith is a risky but calculated hypothesis about a favorable action by potential"
+        },
+        {
+          "label": "d",
+          "text": "A leap of faith is taking a leap in the faith of becoming successful based on limited data"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Leap of faith is an assumption without any data that the product being developed will be liked and purchased by the target customers. Most of the customers may not be aware of the exact form of a plausible solution, but may find it attractive once they buy it. This market is almost unknown as even the customers are not aware of the pain until they use the product. So, startups take a leap of faith that the product they are planning to make will be accepted by the targeting customers.",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q9_47"
+    },
+    {
+      "week": 5,
+      "qNum": 10,
+      "text": "Select all the correct options from the following in respect of the lean startup concept? a) The lean startup uses the agile philosophy of build-measure-learn feedback loop. b) The lean startup applies the lean manufacturing philosophy of reducing waste wherever c) The lean startup reduces the time, effort, and cost of product development. d) The lean startup emphasizes the lean and thin enterprise, lean funding, and lean",
+      "options": [
+        {
+          "label": "a",
+          "text": "A, B & C"
+        },
+        {
+          "label": "b",
+          "text": "B & C"
+        },
+        {
+          "label": "c",
+          "text": "B & D"
+        },
+        {
+          "label": "d",
+          "text": "A, B, & D"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Lean startup concept is a combination of agile system and lean manufacturing that is executed through the build, measure, and learn iterative process. The agile system espouses iterative validation at different stages of development in order to ensure that the final product is acceptable to customers. The lean manufacturing principle minimizes wastage and reduces cost. Thus lean startup concept reduces failure of new product and reduces the cost of developing a product. ______________________________________________________________________________ ************END******* NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w5_q10_48"
+    },
+    {
+      "week": 6,
+      "qNum": 1,
+      "text": "Identify the correct statement from the following:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Design thinking formalizes the process of innovative product development by"
+        },
+        {
+          "label": "b",
+          "text": "Leap of faith is a kind of hypothesis based on limited data that a startup relies on"
+        },
+        {
+          "label": "c",
+          "text": "Design thinking presupposes that some people are inherently creative and become"
+        },
+        {
+          "label": "d",
+          "text": "Design thinking is a convergence-divergence process that encourages a large idea"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "There is no known and easy tool for increasing creativity. However, Design Thinking provides a systematic method for product development beginning with defining the problem by empathizing and integrating idea generation, prototyping, and validation process. _____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q1_49"
+    },
+    {
+      "week": 6,
+      "qNum": 2,
+      "text": "Which of the following statements is correct?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Design thinking is a convergence-divergence process"
+        },
+        {
+          "label": "b",
+          "text": "One can generate creative ideas by applying the design thinking process and thus"
+        },
+        {
+          "label": "c",
+          "text": "Design thinking does not help in creative idea generation but stimulates product"
+        },
+        {
+          "label": "d",
+          "text": "Design thinking is predominantly a product development process and is not very"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Design thinking provides a systematic method for product development beginning with defining the problem by empathizing and integrating idea generation, prototyping, and validation process. It stimulates product development teams to generate many ideas some of which may lead to inventions. It per se does not help in creative thinking. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q2_50"
+    },
+    {
+      "week": 6,
+      "qNum": 3,
+      "text": "Which of the following is not strictly one of the profiles of design thinkers?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Empathy."
+        },
+        {
+          "label": "b",
+          "text": "Lateral or 'out of the box' thinker."
+        },
+        {
+          "label": "c",
+          "text": "Integrative thinker."
+        },
+        {
+          "label": "d",
+          "text": "Experimentalism."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Lateral thinking or horizontal thinking, contrary to vertical thinking, is a form of disruptive thinking that is not immediately obvious. It uses indirect and creative methods to think outside the NPTEL Online Certification Courses Indian Institute of Technology Kharagpur box and see problems from radically new angles, gaining insights to help find innovative solutions. Design thinking surely stimulates generating many new ideas, but there is no evidence that it helps in lateral thinking or thinking outside the box. _______________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q3_51"
+    },
+    {
+      "week": 6,
+      "qNum": 4,
+      "text": "Which of the following is the most impactful statement about open innovation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "By sharing the capabilities, resources, and talents between collaborators, open innovation"
+        },
+        {
+          "label": "b",
+          "text": "Open innovation failed because of the possibility of disputes over the intellectual"
+        },
+        {
+          "label": "c",
+          "text": "It is better to choose partners or collaborators from the same country as cultural"
+        },
+        {
+          "label": "d",
+          "text": "Open innovation process is a sure-shot method to beat the competition since it ensures"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Open innovation is about new innovations through the process of shared resources, talents, and infrastructure to accelerate the development process. Faster product development and lowering of cost through collaborations among ventures all across the globe is the hallmark of open innovation. However, open innovation could not sustain because of • Cultural Bias within internal R&D teams, • High Transaction Costs and Coordination Complexity, • Misalignment of Incentives",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q4_52"
+    },
+    {
+      "week": 6,
+      "qNum": 5,
+      "text": "Which of the following is true?",
+      "options": [
+        {
+          "label": "a",
+          "text": "TRIZ involves 40 contradictions and 39 inventive principles."
+        },
+        {
+          "label": "b",
+          "text": "Primary steps in TRIZ involve brainstorming, synectics, lateral thinking, and"
+        },
+        {
+          "label": "c",
+          "text": "One of the major limitations of TRIZ is that it cannot overcome psychological"
+        },
+        {
+          "label": "d",
+          "text": "The primary premise of TRIZ is that one can learn how to innovate."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "TRIZ involves 39 contradictions and 40 inventive principles. TRIZ is an empirical process and brainstorming etc. is not part of the process at the beginning. TRIZ helps in overcoming psychological Inertia, which is due to habits, education, paradigms, internal processes, past successes, past failures. TRIZ helps anyone to be successful in creative problem solving and thus by learning it anybody can be creative. Thus, the primary premise of TRIZ is that one can learn how to innovate.",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q5_53"
+    },
+    {
+      "week": 6,
+      "qNum": 6,
+      "text": "Which of the following is not true?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Synectics is a process of communication in the subconscious state of the creative"
+        },
+        {
+          "label": "b",
+          "text": "While developing a new product, building a prototype enables a practical"
+        },
+        {
+          "label": "c",
+          "text": "The meanings that a product or service might have for its users include the"
+        },
+        {
+          "label": "d",
+          "text": "Technological innovations are important for business success. But the capability"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Synectics is a problem-solving methodology that stimulates thought processes of which the subject may be unaware. It involves communication in our subconscious brain between the cognitive and the creative sides of the brain exploring a solution by joining together the different and apparently irrelevant elements. ____________________________________________________________________________ Question 7 All the following statements about entrepreneurs are true to varied degrees. Select the one that defines entrepreneurs the least. a. Entrepreneurs identify opportunities around a major pain or adversities and create solutions to alleviate the pain or adversities. b. Entrepreneurs are capable of identifying opportunities in adversities, estimating the risk, taking calculated steps to minimize risks, and executing smartly. c. Entrepreneurs prefer to manage people in an office setting rather than working for a supervisor in a large corporation. d. Entrepreneurs create successful businesses by offering solutions that are superior to those offered by competitors and giving higher value to customers. NPTEL Online Certification Courses Indian Institute of Technology Kharagpur Answer: c Detailed solution True entrepreneurs don't just build products; they build remedies. By identifying a \"major pain,\" they ensure there is a built-in market demand. In deep tech, this is the difference between a \"science project\" and a \"scalable venture.\" The ability to de-risk a project through incremental steps and \"pivot\" based on data is what allows a startup to survive the \"Valley of Death\" in the R&D cycle. A business only survives if it offers a \"Value Surplus\"-where the benefit to the customer significantly outweighs the cost and exceeds the competitor's offering. This characteristic ensures the business has a \"moat\" to protect its market share.",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q6_54"
+    },
+    {
+      "week": 6,
+      "qNum": 8,
+      "text": "Which of the following statements is the most appropriate (your answer should be based on the lecture materials only)? [The recent data may show different analogy]",
+      "options": [
+        {
+          "label": "a",
+          "text": "Maximum percentage of companies fail because of lack of product-market fit."
+        },
+        {
+          "label": "b",
+          "text": "Lack of necessary funds for scaling is the cause of failure of the largest"
+        },
+        {
+          "label": "c",
+          "text": "Maximum percentage of startups fail because they are not thrifty."
+        },
+        {
+          "label": "d",
+          "text": "Disharmony among founders is not a significant reason for the failure of startups."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w6_q8_55"
+    },
+    {
+      "week": 6,
+      "qNum": 9,
+      "text": "Which of the following arguments on the difference between Small Businesses and Entrepreneurial ventures is not correct?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Entrepreneurial ventures target high growth, whereas small businesses usually"
+        },
+        {
+          "label": "b",
+          "text": "Entrepreneurial ventures are innovation-driven, whereas small businesses do not"
+        },
+        {
+          "label": "c",
+          "text": "Small businesses have a long-term business perspective, whereas entrepreneurial"
+        },
+        {
+          "label": "d",
+          "text": "Small businesses can translate themselves into entrepreneurial ventures by"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w6_q9_56"
+    },
+    {
+      "week": 6,
+      "qNum": 10,
+      "text": "Identify the correct definition of 'Synectic' from the following.",
+      "options": [
+        {
+          "label": "a",
+          "text": "Understanding how the cognitive conscious part of the brain interacts with the"
+        },
+        {
+          "label": "b",
+          "text": "The art of joining pieces of information to create new knowledge through"
+        },
+        {
+          "label": "c",
+          "text": "The to-and-fro communication and dynamic validation between the challenges"
+        },
+        {
+          "label": "d",
+          "text": "Collaboration between the cognitive and the creative part of the brain at the"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "The subconscious assumes control of the creative process, uses the reservoir of knowledge and experience we acquire over the years, tirelessly works to find a solution without our conscious knowledge. This art of communication between the cognitive part and creative part of the brain and joining different pieces of information to create new knowledge by the subconscious is known as 'Synectic'. ************END******* NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w6_q10_57"
+    },
+    {
+      "week": 7,
+      "qNum": 1,
+      "text": "Use the following data to answer the question following them: (All figures are in Rupees except when specifically mentioned otherwise) Sales: 3,000 Purchase of equipment: 50 Closing Stock: 500 Opening Stock: 1,000 Payment of electricity bill: 30 Purchase of goods: 1500 What is the gross profit?",
+      "options": [
+        {
+          "label": "a",
+          "text": "1500"
+        },
+        {
+          "label": "b",
+          "text": "(-) 500"
+        },
+        {
+          "label": "c",
+          "text": "1,000"
+        },
+        {
+          "label": "d",
+          "text": "970"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w7_q1_58"
+    },
+    {
+      "week": 7,
+      "qNum": 2,
+      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise) Amortization: 100 Interest payment: 200 Income tax: 100 Depreciation: 50 Other operating expenses: 500 Dividend: 200 Gross profit: 1,200 What is the operating profit for the year 2021-22? (be mindful of excess data)",
+      "options": [
+        {
+          "label": "a",
+          "text": "400"
+        },
+        {
+          "label": "b",
+          "text": "350"
+        },
+        {
+          "label": "c",
+          "text": "550"
+        },
+        {
+          "label": "d",
+          "text": "250"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w7_q2_59"
+    },
+    {
+      "week": 7,
+      "qNum": 3,
+      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise) Gross profit: 500 Interest payment: 50 Amortization: 50 Other operating expenses: 200 Dividend: 100 The book value of the fixed asset of the company as of 31-3-2021 is Rs.1,300. The depreciation rate is 10% using the declining value method (this is the method followed in practice sum). The company purchases machinery worth Rs. 700 during the year 2021-22 and does not sell any of its fixed assets during the year. What is the book value of the fixed assets as of 31.03.2022? Be mindful of excess data.",
+      "options": [
+        {
+          "label": "a",
+          "text": "1800"
+        },
+        {
+          "label": "b",
+          "text": "1870"
+        },
+        {
+          "label": "c",
+          "text": "1880"
+        },
+        {
+          "label": "d",
+          "text": "1700"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w7_q3_60"
+    },
+    {
+      "week": 7,
+      "qNum": 4,
+      "text": "Which of the following is not part of the operating expense?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Interest"
+        },
+        {
+          "label": "b",
+          "text": "Salary"
+        },
+        {
+          "label": "c",
+          "text": "Amortization"
+        },
+        {
+          "label": "d",
+          "text": "Depreciation"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w7_q4_61"
+    },
+    {
+      "week": 7,
+      "qNum": 5,
+      "text": "Identify the correct statement",
+      "options": [
+        {
+          "label": "a",
+          "text": "Both the balance sheet and profit & loss account pertain to a financial year."
+        },
+        {
+          "label": "b",
+          "text": "The cash flow statement pertains to a period of time"
+        },
+        {
+          "label": "c",
+          "text": "The balance sheet of a company pertains to a period of time such as a financial"
+        },
+        {
+          "label": "d",
+          "text": "The profit & loss account pertains to a particular date"
+        },
+        {
+          "label": "e",
+          "text": "The cash flow statement pertains to a particular date"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w7_q5_62"
+    },
+    {
+      "week": 7,
+      "qNum": 6,
+      "text": "A company sells pens. Following information pertains to its operation in a particular year (All data are in Rupees except when otherwise mentioned): Per unit selling price of pen: ₹ 10 Number of pens sold during the year: 100 (number) Closing Stock: ₹ 100 Depreciation: ₹ 100 Opening Stock: ₹ 50 Amortization: ₹100 Purchase of goods: ₹ 800 What is the gross profit margin during this period?",
+      "options": [
+        {
+          "label": "a",
+          "text": "15%"
+        },
+        {
+          "label": "b",
+          "text": "35%"
+        },
+        {
+          "label": "c",
+          "text": "30%"
+        },
+        {
+          "label": "d",
+          "text": "25%"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Gross profit = Sales minus cost of goods sold (CoGS). CoGS = Opening stock + Purchase during the period - closing stock. Sales = number of pen sold multiplied by the selling price of each pen = 100*10 = 1,000. Depreciation and amortization are not part of the CoGS. CoGS = 50+800-100 = 750. GP = 10*100 - 750 = 250 GP Margin = 250/1,000*100 = 25% ______________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w7_q6_63"
+    },
+    {
+      "week": 7,
+      "qNum": 7,
+      "text": "Following data are related to a company for the financial year 2016-2017. (All figures are in Rupees except when specifically mentioned otherwise) Sales: 1,000 Gross profit: 800 Interest payment: 50 Depreciation: 50 Salary: 250 Rent: 50 Other operating expenses: 200 Dividend: 100 What is the operating profit margin for the company during 2016-17?",
+      "options": [
+        {
+          "label": "a",
+          "text": "40%"
+        },
+        {
+          "label": "b",
+          "text": "25%"
+        },
+        {
+          "label": "c",
+          "text": "30%"
+        },
+        {
+          "label": "d",
+          "text": "35%"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Operating profit = Gross profit - operating expenses. Operating expenses include all expenses including salary, rent, depreciation & amortization but excluding interest. Dividend is not an expense. The dividend is paid to owners out of net profit. Operating profit = 800 - (50+250+50+200) = 800 - 550 = 250 OP margin = 250/1000*100 = 25% ______________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w7_q7_64"
+    },
+    {
+      "week": 7,
+      "qNum": 8,
+      "text": "Following data are related to a company for the financial year 2021-2022. (all figures are in Rupees except when specifically mentioned otherwise) Gross profit: 800 Interest payment: 50 Depreciation: 50 Other operating expenses: 400 Dividend: 100 Assume that the company doesn't pay any income tax, what is the retained profit?",
+      "options": [
+        {
+          "label": "a",
+          "text": "300"
+        },
+        {
+          "label": "b",
+          "text": "400"
+        },
+        {
+          "label": "c",
+          "text": "100"
+        },
+        {
+          "label": "d",
+          "text": "200"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Retained profit = operating profit - interest - income tax - dividend. In this case, the company does not pay any income tax. Operating profit = Gross profit - operating expenses. Retained profit = 800 (Gross profit) - [(400 + 50) (operating expense) - 50 (interest) - 100 (dividend)] = 200 ______________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w7_q8_65"
+    },
+    {
+      "week": 7,
+      "qNum": 9,
+      "text": "Following data are related to a company for the financial year 2021-2022. (all figures are in Rupees except when specifically mentioned otherwise) Gross profit: 600 Amortization: 10 Interest payment: 50 Depreciation: 40 Other operating expenses: 200 Dividend: 100 If the income tax is 30% what is the EBITDA?",
+      "options": [
+        {
+          "label": "a",
+          "text": "350"
+        },
+        {
+          "label": "b",
+          "text": "400"
+        },
+        {
+          "label": "c",
+          "text": "300"
+        },
+        {
+          "label": "d",
+          "text": "200"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Retained earnings is equal to net profit minus dividend. Net profit is equal to profit before tax minus income tax. Profit before tax is equal to operating profit minus interest payment. Operating profit = Gross profit - Operating expenses. EBITDA = Gross profit - Operating expenses other than depreciation and amortization. Income tax and dividend are not to be deducted = 600 - 200 = 400 _______________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w7_q9_66"
+    },
+    {
+      "week": 7,
+      "qNum": 10,
+      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise) Gross profit: 950 Interest payment: 50 Depreciation: 50 Other operating expenses: 250 Dividend: 100 Reserves and surplus as of 31-3-2021: 900 The company pays income tax @30% What is the reserves and surplus of the company as of 31-3-2022?",
+      "options": [
+        {
+          "label": "a",
+          "text": "1,220"
+        },
+        {
+          "label": "b",
+          "text": "1,170"
+        },
+        {
+          "label": "c",
+          "text": "1,500"
+        },
+        {
+          "label": "d",
+          "text": "1,400"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Reserves & Surplus is equal to the previous year balance plus the retained earnings. Retained earnings is equal to net profit minus dividend. Net profit is equal to profit before tax minus income tax. Profit before tax is equal to operating profit minus interest payment. Operating profit = 950 - (50+50+250) = 600. Income tax = 600*.3 = 180. Net profit = 600 - 180 = 420. Transferred to Reserves & Surplus = 420 - 100 = 320. Previous reserves = 900. Present reserves = 900 + 320 = 1,220 ************END******* NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w7_q10_67"
+    },
+    {
+      "week": 8,
+      "qNum": 1,
+      "text": "The following data are related to a particular company for the year 2021-2022: (All figures are in Rupees except when specifically mentioned otherwise) Fixed cost per year: 2000 Variable cost for the year: 1500 Number of units produced and sold during the year: 100 Unit selling price: 20 The break-even point is:",
+      "options": [
+        {
+          "label": "a",
+          "text": "500"
+        },
+        {
+          "label": "b",
+          "text": "400"
+        },
+        {
+          "label": "c",
+          "text": "350"
+        },
+        {
+          "label": "d",
+          "text": "430"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q1_68"
+    },
+    {
+      "week": 8,
+      "qNum": 2,
+      "text": "Which of the following is definitely not an assumption in break-even point analysis?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The cost can be divided into fixed and variable."
+        },
+        {
+          "label": "b",
+          "text": "Change in volume of sales does not change in fixed cost."
+        },
+        {
+          "label": "c",
+          "text": "Stock consumption or 'Cost of Goods Sold' is equal to opening stock plus purchase"
+        },
+        {
+          "label": "d",
+          "text": "Change in the volume of sales does not affect the price of the product."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q2_69"
+    },
+    {
+      "week": 8,
+      "qNum": 4,
+      "text": "The following data pertain to a particular year of operation of a company. (All figures are in Rupees except when specifically mentioned otherwise) Sales for the year: 10000 The variable cost for the year: 6000 Fixed cost for the year: 1000 Number of units produced and sold during the year: 400 What is the margin of safety?",
+      "options": [
+        {
+          "label": "a",
+          "text": "1000"
+        },
+        {
+          "label": "b",
+          "text": "300"
+        },
+        {
+          "label": "c",
+          "text": "400"
+        },
+        {
+          "label": "d",
+          "text": "200"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q4_70"
+    },
+    {
+      "week": 8,
+      "qNum": 5,
+      "text": "Estimate the contribution margin in 'Rupees per unit' using the following data. 1. Sales: ₹ 5000 2. Number of units produced and sold: 100 3. Total variable cost: ₹ 2000 4. Annual fixed cost: ₹ 1000",
+      "options": [
+        {
+          "label": "a",
+          "text": "₹ 40"
+        },
+        {
+          "label": "b",
+          "text": "₹ 20"
+        },
+        {
+          "label": "c",
+          "text": "₹ 10"
+        },
+        {
+          "label": "d",
+          "text": "₹ 30"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q5_71"
+    },
+    {
+      "week": 8,
+      "qNum": 6,
+      "text": "For a company, the fixed cost F = 40,000 for a year, the variable cost V = 20 per unit, selling price S = 30 per unit. How many units the company should produce and sell to make a profit of ₹10,000?",
+      "options": [
+        {
+          "label": "a",
+          "text": "5,000"
+        },
+        {
+          "label": "b",
+          "text": "5,500"
+        },
+        {
+          "label": "c",
+          "text": "10,000"
+        },
+        {
+          "label": "d",
+          "text": "6,500"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q6_72"
+    },
+    {
+      "week": 8,
+      "qNum": 7,
+      "text": "By applying a lean start-up process a company has reduced its variable cost by 10% without changing the fixed cost. What will happen to the operating leverage?",
+      "options": [
+        {
+          "label": "a",
+          "text": "It will go up"
+        },
+        {
+          "label": "b",
+          "text": "It will go down"
+        },
+        {
+          "label": "c",
+          "text": "No change since operating leverage is related to fixed cost."
+        },
+        {
+          "label": "d",
+          "text": "The question is inappropriate since both fixed cost and variable cost are unrelated"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q7_73"
+    },
+    {
+      "week": 8,
+      "qNum": 8,
+      "text": "Which one of the following is not a direct expense?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Raw material"
+        },
+        {
+          "label": "b",
+          "text": "Selling and marketing"
+        },
+        {
+          "label": "c",
+          "text": "Packaging"
+        },
+        {
+          "label": "d",
+          "text": "Wages"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q8_74"
+    },
+    {
+      "week": 8,
+      "qNum": 9,
+      "text": "All units are in Rupees The unit selling price of a product: 300 Total all-inclusive variable cost per unit: 200 Total all-inclusive fixed cost per year: 2,00,000 How much profit the company makes if it produces and sells 3,000 units of products?",
+      "options": [
+        {
+          "label": "a",
+          "text": "1,00,000"
+        },
+        {
+          "label": "b",
+          "text": "2,00,000"
+        },
+        {
+          "label": "c",
+          "text": "10,000"
+        },
+        {
+          "label": "d",
+          "text": "20,000"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q9_75"
+    },
+    {
+      "week": 8,
+      "qNum": 10,
+      "text": "Which of the following is correct?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The profit before tax is the money that belongs to the owners"
+        },
+        {
+          "label": "b",
+          "text": "A positive margin of safety does not necessarily mean that the company is operating in"
+        },
+        {
+          "label": "c",
+          "text": "A company's capacity to absorb raw-material price fluctuations can be gauzed from the"
+        },
+        {
+          "label": "d",
+          "text": "Financial leverage is the degree to which a firm can increase operating income by"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w8_q10_76"
+    },
+    {
+      "week": 9,
+      "qNum": 1,
+      "text": "Arrange the following in the order of importance in the context of the success of a startup as suggested by Bill Gross (most important first)",
+      "options": [
+        {
+          "label": "a",
+          "text": "Team, Timing, Business model, Team"
+        },
+        {
+          "label": "b",
+          "text": "Team, Timing, idea, execution"
+        },
+        {
+          "label": "c",
+          "text": "Timing, Team, Idea, execution"
+        },
+        {
+          "label": "d",
+          "text": "Timing, Team, execution, Idea"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Bill Gross gives many examples that timing was the key to their success. The second most important aspect is the team who can execute even a poor idea into a successful business. The third is the execution and then the idea. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w9_q1_77"
+    },
+    {
+      "week": 9,
+      "qNum": 2,
+      "text": "What is meant by complementary skills? Choose the best answer.",
+      "options": [
+        {
+          "label": "a",
+          "text": "A team of cofounders with different skills so that all the skills that are necessary for"
+        },
+        {
+          "label": "b",
+          "text": "A team with all the skillsets demanded by the concurrent industries so that a startup can"
+        },
+        {
+          "label": "c",
+          "text": "The skillset complementary to that demanded by the changing technological landscape in"
+        },
+        {
+          "label": "d",
+          "text": "All the team members having all the skills similar to those demanded by the startup."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "NPTEL Online Certification Courses Indian Institute of Technology Kharagpur To run a startup efficiently and effectively, several different skills are required such as expertise in technology, market, finance, and operation. It is difficult, if not impossible for one person to possess all the skills. Different team members may possess different skill completing the requirements. This is referred to as complementary skills. It is desirable to have complementarity of skills of the team members. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w9_q2_78"
+    },
+    {
+      "week": 9,
+      "qNum": 3,
+      "text": "Which of the following is the correct interpretation of the construct 'insurgent mission' in the context of entrepreneurship mentality?",
+      "options": [
+        {
+          "label": "a",
+          "text": "You are in a blue ocean market and are on a mission to capture enough customers before"
+        },
+        {
+          "label": "b",
+          "text": "You are on a mission to seize customers from competitors and acquire them by hook or"
+        },
+        {
+          "label": "c",
+          "text": "You are on a mission to wage a war with the customers and want to win them over at any"
+        },
+        {
+          "label": "d",
+          "text": "You are at war against competitors on behalf of the underserved customers and would not"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w9_q3_79"
+    },
+    {
+      "week": 9,
+      "qNum": 4,
+      "text": "Which of the following is arranged in correct chronology in the context of applying Design Thinking:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Empathize, Ideate, Define, Prototype, Test"
+        },
+        {
+          "label": "b",
+          "text": "Empathize, Prototype, Define, Ideate, Test"
+        },
+        {
+          "label": "c",
+          "text": "Define, Empathize, Ideate, Prototype, Test"
+        },
+        {
+          "label": "d",
+          "text": "Empathize, Define, Ideate, Prototype, Test"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "The choice is obvious and an explanation is not required. Nevertheless, here are they: Empathize, Define, Ideate, Prototype, and Test. Before embarking on development of a product or service, it is essential to define the problem thoroughly which is possible only through empathy with the target audience having the pain. After you empathize you are able to define the various contours of the problem helping you to come up with many ideas. You choose the best among them and begin to prototype because a prototype helps visualize the solution better. When the prototype is ready, get it validated by customers/users and with the feedback come back to refine it. _____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w9_q4_80"
+    },
+    {
+      "week": 9,
+      "qNum": 5,
+      "text": "Which of the following is not true?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Invention is the creation of new knowledge and innovation is the creation of new"
+        },
+        {
+          "label": "b",
+          "text": "Innovation is creating new knowledge, whereas invention is putting the invention"
+        },
+        {
+          "label": "c",
+          "text": "Innovation is how the entrepreneur either creates new wealth-producing resources"
+        },
+        {
+          "label": "d",
+          "text": "A leap of faith is an assumption of a future solution without any supporting data"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Invention is creating new knowledge, whereas innovation is putting the invention into public use. (The opposite of what is stated in the question).",
+      "isMultiSelect": false,
+      "id": "ee2_w9_q5_81"
+    },
+    {
+      "week": 9,
+      "qNum": 6,
+      "text": "Which of the following is not an essential component of the elevator Pitch or speech?",
+      "options": [
+        {
+          "label": "a",
+          "text": "An elevator pitch should be no longer than 60 seconds, ideally 20 to 30 seconds long"
+        },
+        {
+          "label": "b",
+          "text": "In an elevator pitch, you should explain why you think that you have a winning proposition,"
+        },
+        {
+          "label": "c",
+          "text": "Speak as fast as you can since the time is short and you want to convey as much information"
+        },
+        {
+          "label": "d",
+          "text": "Remain open to an interjection by your audience at any time."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Do not speak too fast. Remain mindful of clarity of what you are trying to convey, change the pitch of your voice. Don't do rambling. Always remain ready for interjections. ____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w9_q6_82"
+    },
+    {
+      "week": 9,
+      "qNum": 7,
+      "text": "Which of the following is the correct interpretation of the construct 'owners' mindset' in the context of entrepreneurship? a) The sense that the company is theirs and that the prosperity of the company is aligned b) The sense that the company belongs to them and they should try to take away as much c) One is as responsible as the owners and would take all the actions that are for the best d) To avoid bureaucracy and take immediate and appropriate action without waiting for",
+      "options": [
+        {
+          "label": "a",
+          "text": "A, C, D"
+        },
+        {
+          "label": "b",
+          "text": "A, B, D"
+        },
+        {
+          "label": "c",
+          "text": "A, B, C,"
+        },
+        {
+          "label": "d",
+          "text": "All the options are part of the 'owners' mindset'."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w9_q7_83"
+    },
+    {
+      "week": 9,
+      "qNum": 8,
+      "text": "Guy Kawasaki recommended",
+      "options": [
+        {
+          "label": "a",
+          "text": "Twenty-minute presentation, ten slides, and minimum thirty font size"
+        },
+        {
+          "label": "b",
+          "text": "Twenty-minute presentation, thirty slides, and minimum ten font size"
+        },
+        {
+          "label": "c",
+          "text": "Thirty-minute presentation, twenty slides, and minimum ten font size"
+        },
+        {
+          "label": "d",
+          "text": "Ten-minute presentation, twenty slides, and minimum thirty font size"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Kawasaki advocated the 10-20-30 Rule of PowerPoint, which banks on the idea that a presentation should have ten slides, last no more than twenty minutes, and contain no font smaller than thirty points. _____________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w9_q8_84"
+    },
+    {
+      "week": 9,
+      "qNum": 9,
+      "text": "Which of the following is the correct interpretation of the construct 'frontline obsession' in the context of entrepreneurship? a) Use market research and apply proper promotional schemes to acquire increasing number b) Take customer feedback to help the product development team understand what is to be c) It is a mindset among individual employees and teams to create an environment where d) Try to understand every detail about customers' response to features of the product, earn",
+      "options": [
+        {
+          "label": "a",
+          "text": "B, C, & D"
+        },
+        {
+          "label": "b",
+          "text": "A, & D"
+        },
+        {
+          "label": "c",
+          "text": "A, B, & C"
+        },
+        {
+          "label": "d",
+          "text": "B & D"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w9_q9_85"
+    },
+    {
+      "week": 9,
+      "qNum": 10,
+      "text": "For a particular company: Sales: ₹ 50,000 Total annual variable cost: ₹ 40,000 Number of units produced and sold: 5,000 Total annual fixed cost: ₹ 2,00,000 How many units of the product the company must produce and sell to make a profit of 2,00,000?",
+      "options": [
+        {
+          "label": "a",
+          "text": "1,00,000"
+        },
+        {
+          "label": "b",
+          "text": "2,00,000"
+        },
+        {
+          "label": "c",
+          "text": "3,00,000"
+        },
+        {
+          "label": "d",
+          "text": "4,00,000"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w9_q10_86"
+    },
+    {
+      "week": 10,
+      "qNum": 1,
+      "text": "Which of the following analogy is NOT correct about raising money through debt, preference shares, and equity?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Preference share holder's voting right is limited to their percentage holding in total"
+        },
+        {
+          "label": "b",
+          "text": "Debt is repayable whereas there is no such provision in the case of equity."
+        },
+        {
+          "label": "c",
+          "text": "Money in the form of debt requires to be secured by providing collaterals in most"
+        },
+        {
+          "label": "d",
+          "text": "Interest is payable in the case of debt, whereas there is no such requirement in the"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Preference shareholders do not have any voting rights. Preference capital has properties of both debt and equity but not voting rights.",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q1_87"
+    },
+    {
+      "week": 10,
+      "qNum": 2,
+      "text": "A business angel invests 100 million in a startup for a pre-money valuation of 400 million. The angel has 2X liquidity and participatory preference. The company later has a liquidity event (is sold) for 800 million. How much money the founders will receive?",
+      "options": [
+        {
+          "label": "a",
+          "text": "600 million"
+        },
+        {
+          "label": "b",
+          "text": "480 million"
+        },
+        {
+          "label": "c",
+          "text": "640 million"
+        },
+        {
+          "label": "d",
+          "text": "360 million"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The liquidity clause tells that the investor should get their money back at the first instance before any other calculation. The X in the liquidation clause indicates how many times of the investment the investors are to receive. A 2X liquidation means that two times the money invested is to be paid to investors before any other calculation. Participatory means the investors participate in the equity and their holding percentage is estimated based on the pre-money valuation and the amount of fund brought in by them. In the present sum, the angel has 2X liquidity. So, they are given 2X100 = ₹200 million before any other estimation. The remaining sales proceed is: 800 - 200 = 600 million. Now, the investors have a participation in the equity. What is their percentage holding in the equity? Pre-money value = 400. They invests 100, so the post-money valuation is 400+100 = 500. Their holding percentage = (100/500) *100 = 20%. Therefore, they should now receive 20% of the remaining amount or 20% of 600 = 120 million. Therefore, total money received by investors = 200 + 120 = 320, leaving behind ₹480 million (=800-320) for the founders.",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q2_88"
+    },
+    {
+      "week": 10,
+      "qNum": 3,
+      "text": "Choose the correct option. What is the difference between primary and collateral securities?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Primary security is a charge on the assets created out of the loan and Collateral"
+        },
+        {
+          "label": "b",
+          "text": "Collateral security is a charge on the assets created out of the loan and primary"
+        },
+        {
+          "label": "c",
+          "text": "Primary security is a charge on liquid assets whereas collateral securities is a"
+        },
+        {
+          "label": "d",
+          "text": "Primary securities are the assets of the co-founders whereas collateral securities"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Primary security is a charge on the assets created out of the loan and Collateral securities relate to a charge on assets other than those created out of the loan. Suppose you raise a loan of ₹1.0 lakh from a bank to purchase a computer. The bank will create a charge known as hypothecation which is on the assets funded by them. In the present case, the hypothecation charge on the computer is the primary security. You offer to pledge some fixed deposit or to assign some LIC policies or mortgage over a housing property to secure the creditors and these are different forms of collateral securities.",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q3_89"
+    },
+    {
+      "week": 10,
+      "qNum": 4,
+      "text": "A business angel invests 300 million in a startup at a pre-money valuation of 400 million in 2X liquidity and non-participatory preference shares. The company later has a liquidity event (meaning that the company is sold) for 1,000 million. How much money the founders will receive? (All figures are in Rupees million)",
+      "options": [
+        {
+          "label": "a",
+          "text": "600 million"
+        },
+        {
+          "label": "b",
+          "text": "400 million"
+        },
+        {
+          "label": "c",
+          "text": "800 million"
+        },
+        {
+          "label": "d",
+          "text": "300 million"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The X in the liquidation clause indicates how many times of the investment the investors are to receive. A 2X liquidation means that two times the money invested is to be paid to investors. The liquidity clause tells that the investor should receive two times their money back on liquidation of the company. There is no participation by investors in the equity. So, there is no other claim by the investors. In the present sum, the angel has 2X liquidity clause. So, they will recieve 2X300 = ₹600 million. The remaining part of the proceeds is: 1,000 - 600 = ₹400 million, which is available to the founders. ------------------------------------------------------------------",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q4_90"
+    },
+    {
+      "week": 10,
+      "qNum": 5,
+      "text": "Which of the following is true?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Payment of dividend is mandatory for preference shares at pre-agreed rate, whereas"
+        },
+        {
+          "label": "b",
+          "text": "Preference equity shareholders' voting rights are proportional to the amounts invested."
+        },
+        {
+          "label": "c",
+          "text": "In the case of preference shares, the payment of dividends or no dividends is the"
+        },
+        {
+          "label": "d",
+          "text": "The rate of dividend payable in the case of equity share is always proportional to the"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "The dividend on preference shares is based on the agreement with the investors. It is compulsory at the rate agreed upon at the time of investment which may be 0% as well. In any case, the dividends on the preference shares as per the initial agreement can be carry forwarded in case cash flow is inadequate for such payment during a particular year(s), but it has to be paid. However, payment of dividends on equity shares is not at all mandatory and is the prerogative of the management/board of directors/owners. There is no question of paying dividends to lenders.",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q5_91"
+    },
+    {
+      "week": 10,
+      "qNum": 6,
+      "text": "A new venture raises 360 million Rupees at a pre-money valuation of 540 million Rupees. What is the post-money shareholding percentage of the founders?",
+      "options": [
+        {
+          "label": "a",
+          "text": "60%"
+        },
+        {
+          "label": "b",
+          "text": "70%"
+        },
+        {
+          "label": "c",
+          "text": "75%"
+        },
+        {
+          "label": "d",
+          "text": "80%"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Pre-money value = 540 Money brought in by investors: 360 NPTEL Online Certification Courses Indian Institute of Technology Kharagpur Post money value = 540+360 = 900 Post-money, founders' holding = 540/900*100 = 0.60*100 or 60w% ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q6_92"
+    },
+    {
+      "week": 10,
+      "qNum": 7,
+      "text": "A company raises 500 million rupees at a post-money valuation of 1000 million rupees in the form of simple participating preference shares with no liquidation preference. A few years later the company realizes a liquidity event and is acquired for 5000 million rupees. How much money the founders would receive?",
+      "options": [
+        {
+          "label": "a",
+          "text": "3500 million rupees"
+        },
+        {
+          "label": "b",
+          "text": "4000 million rupees"
+        },
+        {
+          "label": "c",
+          "text": "2500 million rupees"
+        },
+        {
+          "label": "d",
+          "text": "1500 million rupees"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Participating preference shares eventually provide proportional holding in the equity. For the ₹ 500 million investment, the investors would receive [500/1000] = 50% ownership, while the founders would receive the remaining 50%. Since there is no liquidation preference, the founders would receive 50% of the liquidation proceeds, i.e. 0.50X5000 = ₹ 2500 million. In case: If they had 1X liquidation preference and no participation, they would only receive back their investment, i.e. ₹ 500 million and the founders would receive the remaining ₹ 4500 million. If the investors had 2X liquidation preference, they would receive 2 times their investment,i.e. 2X500 = ₹ 1000 million and the founders would receive ₹ 4000 million. If the investor had 1x liquidation preference and participation (meaning they hold equity of 50%), they would first receive the 1 multiple of their investment, i.e. 500 million and then receive 50% of the rest 4000, i.e. ₹ 2000 million taking the total to ₹ 2500 million and the founders would receive the remaining ₹ 2500 million. Question 8 NPTEL Online Certification Courses Indian Institute of Technology Kharagpur Choose the right statement a. Long-term loan from banks is for the working capital requirement. b. The short-term loan from banks is for the procurement of fixed assets. c. Only long-term loan from banks is related to equity dilution. d. Long-term loan from banks is repayable in installments along with interest. Correct Answer: d Detailed Solution: The short-term loan is given to meet the working capital requirement and usually does not have a fixed repayment period. The long-term loan is given for procuring fixed assets and is extended for a specific period within which it has to be completely repaid with interest. ______________________________________________________________________________",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q7_93"
+    },
+    {
+      "week": 10,
+      "qNum": 9,
+      "text": "A company raises 150 million rupees at a pre-money valuation of 450 million rupees in the form of a simple participating preference share with 3x liquidation preference. A few years later the company realizes a liquidity event and is acquired for 1000 million rupees. How much money the founders receive",
+      "options": [
+        {
+          "label": "a",
+          "text": "514.5 million"
+        },
+        {
+          "label": "b",
+          "text": "655.0 million"
+        },
+        {
+          "label": "c",
+          "text": "412.5 million"
+        },
+        {
+          "label": "d",
+          "text": "523.6 million"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The investors have 2x liquidation preference and participation (meaning they hold equity of 150/(150+450) = 25% ownership), they would first receive the 1 multiple of their investment (for 3x liquidation preference), i.e. 3X150 = 450 million and will additionally receive 25% of the NPTEL Online Certification Courses Indian Institute of Technology Kharagpur remaining sum of 550 million, i.e. 137.5. Thus, they receive a total of (450 + 137.5) = 587.5 million. Rest is received by the founders, i.e. 412.5 million. Another way of estimating it is that the founders received 75% of 550 = 412.5 million",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q9_94"
+    },
+    {
+      "week": 10,
+      "qNum": 10,
+      "text": "A business angel invests 300 million in a venture at a pre-money valuation of 700 million in participating preference shares (no liquidation preference). The venture also raises funds of 100 million from a bank as a long-term loan and the outstanding balance in the loan account is 100 million (the company has to repay 100 million to the bank). At this point, the company is liquidated for 350 million. How much money the founders will receive if the investor continues to hold the preference shares?",
+      "options": [
+        {
+          "label": "a",
+          "text": "175 million"
+        },
+        {
+          "label": "b",
+          "text": "0 million"
+        },
+        {
+          "label": "c",
+          "text": "Negative (-) 50 million (Founders have to pay 50 million to the angel."
+        },
+        {
+          "label": "d",
+          "text": "250 million"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "The bank has seniority in claims on proceeds of liquidation. Therefore, they will take away 100 million at the very outset leaving behind only 250 million. Preference shareholders are senior to the equity shareholders. They will try to take away their money before anything is given to the equity shareholders. Since only 250 million is left after the bank took away 100 million, the preference shareholders will take away all of it as their claim is 300 million leaving nothing behind. Founders are the equity shareholders, and will not receive anything. However, if the preference shares of the investor are converted into equity shares at any stage, the investor will be treated at par with other equity shareholders, here the founders. Under such a situation, the investors will receive only 30% of the remaining 250 million and the founders will receive 70% of 250 i.e. 175 million. *********End********** NPTEL Online Certification Courses Indian Institute of Technology Kharagpur NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w10_q10_95"
+    },
+    {
+      "week": 11,
+      "qNum": 1,
+      "text": "Question: Read the following statements regarding estimating discounted net present value and answer the question following them. a) It is assumed that all cash flows other than the initial investment occur at the end of respective periods. b) All cash flows generated by an investment project are immediately reinvested at a rate of return equal to the IRR of the project. c) All cash flows generated by an investment project are immediately reinvested at a rate of return equal to the discount rate. d) All cash flows other than the initial investment occur at the beginning of respective periods.",
+      "options": [
+        {
+          "label": "a",
+          "text": "A & C"
+        },
+        {
+          "label": "b",
+          "text": "A & D"
+        },
+        {
+          "label": "c",
+          "text": "B & D"
+        },
+        {
+          "label": "d",
+          "text": "C & D"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Discounted NPV assumes that all cash flows after the initial investment occur at the end of the respective period. It also assumes that cash flows generated by the project are reinvested at the discount rate. This is one reason NPV is considered more realistic than IRR in many capital budgeting decisions. Why the other options are wrong: b. A is correct, but D is wrong because cash flows are assumed to occur at the end, not beginning, of periods. c. B is an IRR-related reinvestment assumption, not the NPV assumption; D is also wrong. d. C is correct, but D is wrong.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q1_96"
+    },
+    {
+      "week": 11,
+      "qNum": 2,
+      "text": "Question: Which of the following statements is incorrect? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "A project may look attractive based on the discounted net present value method but may not be so based on break-even analysis."
+        },
+        {
+          "label": "b",
+          "text": "The hurdle rate is the minimum rate of return below which a company will not accept a project."
+        },
+        {
+          "label": "c",
+          "text": "The break-even point estimation takes into account the time value of money."
+        },
+        {
+          "label": "d",
+          "text": "The payback period method does not take into account the time value of money."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "Break-even analysis does not consider the time value of money. It simply tells how many units or how much sales value is needed to cover fixed and variable costs. It is not a discounted cash flow method. Why the other options are wrong: a. This is true because different methods measure different things. NPV checks value creation using discounted cash flows, while break-even checks cost-volume-profit relationship. b. This is true. Hurdle rate is the minimum acceptable return. d. This is true. Simple payback period ignores the time value of money. c. This is incorrect, so it is the answer.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q2_97"
+    },
+    {
+      "week": 11,
+      "qNum": 3,
+      "text": "Question: An article appeared in the Vogue journal with the title \"Netflix of Eye Wear\" and that led to a huge number of customer registration for purchasing the product. The article itself was influenced by word of mouth by one of the faculty members of the university where the founders were studying. Which marketing method did Warby Parker use? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Public relations"
+        },
+        {
+          "label": "b",
+          "text": "Content marketing"
+        },
+        {
+          "label": "c",
+          "text": "Social media"
+        },
+        {
+          "label": "d",
+          "text": "Advertisement"
+        },
+        {
+          "label": "e",
+          "text": "Influencer marketing"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Warby Parker used public relations. The company got coverage through a magazine article, which created awareness and credibility. PR is different from paid advertising because the message is delivered through media coverage, often by a journalist or publication. Why the other options are wrong: b. Content marketing means educating or attracting customers through content created or controlled by the company. Here, the key point is media coverage in Vogue. c. Social media is not the method described in the question. d. Advertisement is paid media; the Vogue article was not a paid advertisement. e. Influencer marketing involves using influential people to promote the product directly. The question is mainly about PR coverage.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q3_98"
+    },
+    {
+      "week": 11,
+      "qNum": 4,
+      "text": "Question: Which of the following is not part of a great launch? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Empathizing to define the pain-point"
+        },
+        {
+          "label": "b",
+          "text": "Timing and cross-functional readiness"
+        },
+        {
+          "label": "c",
+          "text": "Influencers/Customers"
+        },
+        {
+          "label": "d",
+          "text": "Pre-brief"
+        },
+        {
+          "label": "e",
+          "text": "Messaging"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Empathizing to define the customer pain point happens much earlier in the entrepreneurial process. It is part of problem discovery and product development, not the launch stage. Why the other options are wrong: b. Timing and cross-functional readiness are important for a launch because marketing, sales, operations, support, and supply must be ready. c. Influencers and customers can be part of launch communication and awareness building. d. Pre-briefing helps prepare stakeholders, media, partners, or internal teams before launch. e. Messaging is crucial because customers must clearly understand the product's value proposition.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q4_99"
+    },
+    {
+      "week": 11,
+      "qNum": 5,
+      "text": "Question: Which of the following is not part of the go-to-market strategies? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Market segmentation and strategic product roadmap, marketing strategies"
+        },
+        {
+          "label": "b",
+          "text": "Product-market-fit, competitive landscape, and pricing model"
+        },
+        {
+          "label": "c",
+          "text": "Distribution/Channel/Partner model"
+        },
+        {
+          "label": "d",
+          "text": "Engagement with the early majority of customers for achieving growth"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Go-to-market strategy is about how the product will be taken to market after validation. It includes segmentation, value proposition, pricing, distribution/channel strategy, communication, demand generation, and launch execution. The lecture transcript also describes GTM as including market segmentation, strategic product roadmap, pricing model, distribution/channel/partner model, corporate communication, demand generation, and engagement models. Why the other options are wrong: a. Segmentation, roadmap, and marketing strategy are part of GTM. b. Product-market fit, competitive landscape, and pricing model are relevant to GTM. c. Distribution/channel/partner model is directly part of GTM. d. Early majority engagement happens later during scaling or crossing the chasm, not as a basic launch-stage GTM element.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q5_100"
+    },
+    {
+      "week": 11,
+      "qNum": 6,
+      "text": "Question: Which of the following is not true? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Customer acquisition cost must be less than the lifetime value."
+        },
+        {
+          "label": "b",
+          "text": "If our business does not offer the choice for a customer to come back repeatedly, we should not spend as much money to acquire customers as we earn from that customer in the first transaction."
+        },
+        {
+          "label": "c",
+          "text": "The number of registered users is definitely regarded as an important metric that can be highlighted during a presentation before investors since investors would view that as a guaranteed success factor."
+        },
+        {
+          "label": "d",
+          "text": "Network-based companies such as Amazon & Flipkart can afford to spend a lot of money to acquire customers at a high burn rate since they offer many choices to customers to come back repeatedly."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": "The number of registered users can be a vanity metric. It may look impressive, but it does not prove that users are buying, returning, generating revenue, or becoming loyal customers. A better metric is repeat customers, paying customers, retention, or revenue per customer. Why the other options are wrong: a. This is true. A business usually needs lifetime value to be greater than customer acquisition cost. b. This is true. If repeat purchase is unlikely, spending heavily to acquire a customer may destroy value. d. This is true in principle for network or marketplace businesses because repeat purchase opportunities can justify higher acquisition cost. c. This is not true because registered users alone do not guarantee success.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q6_101"
+    },
+    {
+      "week": 11,
+      "qNum": 7,
+      "text": "Question: Which of the following is not part of the capital budgeting decision process? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Comparing two or more business models"
+        },
+        {
+          "label": "b",
+          "text": "Estimating the acceptability of a project based on the expected return"
+        },
+        {
+          "label": "c",
+          "text": "Selection between multiple machines based on the cash flow attributed to the respective machines"
+        },
+        {
+          "label": "d",
+          "text": "Estimating the break-even point"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Capital budgeting is about evaluating long-term investment decisions using expected cash flows and return criteria such as NPV, IRR, payback, and hurdle rate. Break-even analysis is a cost-volume-profit tool, not a capital budgeting decision method. Why the other options are wrong: a. Comparing business models may involve capital budgeting if investment choices and future returns are being compared. b. Estimating project acceptability based on expected return is central to capital budgeting. c. Choosing between machines based on their cash flows is a typical capital budgeting decision. d. Break-even estimation is not part of capital budgeting.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q7_102"
+    },
+    {
+      "week": 11,
+      "qNum": 8,
+      "text": "Question: Which of the following statements is NOT correct about capital budgeting? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "It helps us to assess the performance of managers in the efficient deployment of capital."
+        },
+        {
+          "label": "b",
+          "text": "It helps entrepreneurs to understand the comparative merits of business opportunities."
+        },
+        {
+          "label": "c",
+          "text": "Though information for applying capital budgeting techniques is futuristic, it provides useful information for decision-making."
+        },
+        {
+          "label": "d",
+          "text": "Helps in selection between multiple machines and 'buy or lease' decisions."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Capital budgeting helps decide whether a project or investment is financially acceptable. It compares investment alternatives, future cash flows, returns, and risk. It is not mainly a tool to evaluate the performance of managers. Why the other options are wrong: b. This is true because capital budgeting compares business opportunities. c. This is true because even though estimates are future-based, they still help decision-making. d. This is true because capital budgeting can help choose between machines or buy-versus-lease options. a. This is not correct because managerial performance assessment is not the purpose of capital budgeting.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q8_103"
+    },
+    {
+      "week": 11,
+      "qNum": 9,
+      "text": "Question: A business contract requires Rs700 initial investment at year zero. It is likely to generate an annual net cash flow of Rs200 for five years beginning from year one and return no salvage value at the end of the business horizon. Use rate of return at 10%. The present value multiplication factor for 10% discount rate for 5 years is 3.79. Estimate the net present value rounded off to full rupee. Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Rs58"
+        },
+        {
+          "label": "b",
+          "text": "Rs258"
+        },
+        {
+          "label": "c",
+          "text": "Rs358"
+        },
+        {
+          "label": "d",
+          "text": "Rs158"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "NPV = Present value of future cash inflows - Initial investment. Annual cash flow = Rs200 PV factor = 3.79 Present value of inflows = 200 x 3.79 = Rs758 Initial investment = Rs700 NPV = 758 - 700 = Rs58 Since the NPV is positive, the project creates value above the discount rate. Why the other options are wrong: b. Rs258 overstates the NPV by adding too much value. c. Rs358 is also an overestimate. d. Rs158 is a calculation error. a. Rs58 is obtained by correctly discounting the five-year cash flows and subtracting initial investment.",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q9_104"
+    },
+    {
+      "week": 11,
+      "qNum": 10,
+      "text": "Question: What is hurdle rate? Options:",
+      "options": [
+        {
+          "label": "a",
+          "text": "It is the internal rate of return of a project."
+        },
+        {
+          "label": "b",
+          "text": "It is the rate at which the payback period is estimated by discounting the future cash flow."
+        },
+        {
+          "label": "c",
+          "text": "It is the minimum rate of return on equity from a project for it to be favorably considered."
+        },
+        {
+          "label": "d",
+          "text": "It is the minimum rate of return that a project must generate for it to be accepted by a company."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Hurdle rate is the minimum acceptable return for a project. It is usually based on the company's weighted average cost of capital plus a risk premium depending on the project. Why the other options are wrong: a. IRR is a project's internal return, but hurdle rate is the minimum required return used to judge that IRR or NPV. b. This confuses hurdle rate with discounted payback logic. c. It says \"return on equity,\" which is too narrow. Hurdle rate applies to the whole project. d. This is the correct definition. NPTEL Online Certification Courses Indian Institute of Technology Kharagpur",
+      "isMultiSelect": false,
+      "id": "ee2_w11_q10_105"
+    },
+    {
+      "week": 12,
+      "qNum": 1,
+      "text": "Which of the following is not correct?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Early recruits can fill key knowledge gaps. Human resource experts can help identify and"
+        },
+        {
+          "label": "b",
+          "text": "HR people can identify great talents, attract them, integrate them with the company, and"
+        },
+        {
+          "label": "c",
+          "text": "HR personnel have all-round business views and can prepare a wonderful business plan"
+        },
+        {
+          "label": "d",
+          "text": "Startups frequently get embroiled in legal issues that use up a good part of their precious"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w12_q1_106"
+    },
+    {
+      "week": 12,
+      "qNum": 2,
+      "text": "Which of the following are elements of the founders' mentality? a) Insurgent mission b) Frontline obsession c) Stakeholders' interest d) Vision driven e) Owners' mindset",
+      "options": [
+        {
+          "label": "a",
+          "text": "A, B, & C."
+        },
+        {
+          "label": "b",
+          "text": "B, C, & D."
+        },
+        {
+          "label": "c",
+          "text": "C, D, & E."
+        },
+        {
+          "label": "d",
+          "text": "A, B, & E."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w12_q2_107"
+    },
+    {
+      "week": 12,
+      "qNum": 3,
+      "text": "Which of the following is not part of the four-step recruitment process?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Define and identify workforce"
+        },
+        {
+          "label": "b",
+          "text": "Conduct supply analysis"
+        },
+        {
+          "label": "c",
+          "text": "Conduct gap analysis"
+        },
+        {
+          "label": "d",
+          "text": "Fix the financial package"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w12_q3_108"
+    },
+    {
+      "week": 12,
+      "qNum": 4,
+      "text": "Which of the following is not an important part of the growth strategy? Options",
+      "options": [
+        {
+          "label": "a",
+          "text": "Upgrade your sales funnel"
+        },
+        {
+          "label": "b",
+          "text": "Do not chase vanity metrics"
+        },
+        {
+          "label": "c",
+          "text": "Hiving off non-profitable units."
+        },
+        {
+          "label": "d",
+          "text": "Estimate possible virality effect"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w12_q4_109"
+    },
+    {
+      "week": 12,
+      "qNum": 5,
+      "text": "Metrics to measure growth should be of four major types. Which of the following is not one of the types?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Qualitative."
+        },
+        {
+          "label": "b",
+          "text": "Quantitative."
+        },
+        {
+          "label": "c",
+          "text": "Exploratory."
+        },
+        {
+          "label": "d",
+          "text": "Competitive."
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "explanation": null,
+      "isMultiSelect": false,
+      "id": "ee2_w12_q5_110"
+    },
+    {
+      "week": 12,
+      "qNum": 6,
+      "text": "Which one of the following statements is not correct regarding the startup valuation?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The early-stage startup valuation is done based on the discounted cash flow model."
+        },
+        {
+          "label": "b",
+          "text": "The future cash flows for startups lack visibility."
+        },
+        {
+          "label": "c",
+          "text": "Startups mostly are not in profit during the early years."
+        },
+        {
+          "label": "d",
+          "text": "A golden rule or credible method to value startups is missing at present."
+        },
+        {
+          "label": "e",
+          "text": "Financial metrics are not the only value drivers for startups."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Cash flows of the early stage startups are not much visible; therefore, discounted cash flow is not the method to value them. They are usually valued using future EBITDA multiples.",
+      "isMultiSelect": false,
+      "id": "ee2_w12_q6_111"
+    },
+    {
+      "week": 12,
+      "qNum": 7,
+      "text": "Which of the following is NOT true about equity capital?",
+      "options": [
+        {
+          "label": "a",
+          "text": "The paid-up capital is the portion of the authorized capital that shareholders have"
+        },
+        {
+          "label": "b",
+          "text": "When a company requires to raise equity capital beyond the existing authorized capital, it"
+        },
+        {
+          "label": "c",
+          "text": "Owners' equity is the sum total of 'Paid-up Equity Capital' and 'Reserves & Surplus'."
+        },
+        {
+          "label": "d",
+          "text": "Equity capital consists of the number of equity shares with equal face values of a certain"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "A company has to take permission from the Registrar of Companies before raising capital beyond what has already been approved.",
+      "isMultiSelect": false,
+      "id": "ee2_w12_q7_112"
+    },
+    {
+      "week": 12,
+      "qNum": 8,
+      "text": "A company has an authorized capital of Rupees 10,000. A, B, and C are the three cofounder shareholders. A holds 20 shares of Rupees 100 each, B holds 10 shares of Rupees 100 each, and C holds 20 shares of Rupees 100 each. There is no other shareholder in the company. What are their percentage holdings in the company?",
+      "options": [
+        {
+          "label": "a",
+          "text": "20%, 10% & 20% respectively"
+        },
+        {
+          "label": "b",
+          "text": "40%, 10% & 40% respectively"
+        },
+        {
+          "label": "c",
+          "text": "26.67%, 6.67%, and 26.67% respectively."
+        },
+        {
+          "label": "d",
+          "text": "40%, 20% & 40% respectively"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "explanation": "Total paid-up capital consists of 20, 10, and 20 shares of Rupees 100 each, totaling Rupees 500. A holds 200/500*100 = 40%, C holds 100/500*100 = 20% and C holds 40%.",
+      "isMultiSelect": false,
+      "id": "ee2_w12_q8_113"
+    },
+    {
+      "week": 12,
+      "qNum": 9,
+      "text": "The company, 'Your Company', has an authorized capital of Rupees 1000. A, B, and C are the three cofounder shareholders. A holds 20 shares of Rupees 10 each, B holds 10 shares of Rupees 10 each, and C holds 20 shares of Rupees 10 each. There is no other shareholder in the company. 'Your Company', has negotiated an investment round with an angel. The angel has valued Your Company at Rupees 10,000 before investment. They agreed to invest Rupees 10,000 for 50% of the company (equity). How 'Your Company' will issue shares to the angel to avail of this investment? Choose the most appropriate option.",
+      "options": [
+        {
+          "label": "a",
+          "text": "All cofounders give away 50% of their shares to the angel. Therefore, the cofounder"
+        },
+        {
+          "label": "b",
+          "text": "Your company creates 50 new shares of Rupees 10 and allot to the angel."
+        },
+        {
+          "label": "c",
+          "text": "Your company creates 500 new shares of Rupees 10 and allot to the angel."
+        },
+        {
+          "label": "d",
+          "text": "Your company creates 100 new shares of Rupees 100 and allot to the angel."
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "explanation": "Post investment, the angel should hold 50% of equity capital, and the three cofounders together should hold 50%. Therefore, total number of shares after allotment to angel = (20+10+20)*2 = 50*2 = 100. Therefore, the angel is to receive 50 shares of Rupees 10 each. Alternately, the three cofounders could give away 25 shares to the angel to have 50:50 holding. But that is never done since the money brought in by the angel should remain with the company and not with the cofounders.",
+      "isMultiSelect": false,
+      "id": "ee2_w12_q9_114"
+    },
+    {
+      "week": 12,
+      "qNum": 10,
+      "text": "An angel agrees to invest Rupees 40 million in a startup at a pre-money valuation of Rupees 120 million. All the cofounders together hold 750 shares of Rupees 10 each. This is the first-time investment for the company and there is no other existing shareholder at present. How many shares are to be allotted to the angel for this round of investment?",
+      "options": [
+        {
+          "label": "a",
+          "text": "250"
+        },
+        {
+          "label": "b",
+          "text": "360"
+        },
+        {
+          "label": "c",
+          "text": "200"
+        },
+        {
+          "label": "d",
+          "text": "350"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "explanation": "Post-money valuation of the company is = 120+40 = Rupees 160 million. The angel should receive (40/160)*100 % share = 25%. Therefore, the angel should receive 25% of the post-money equity. The cofounder will hold (100 - 25) % of the post-money equity. Therefore, the angel will receive [750/(100- 75) - 500] = 750/.75 - 750 = 1000 - 750 = 250 shares.",
+      "isMultiSelect": false,
+      "id": "ee2_w12_q10_115"
+    }
+  ]
+}
