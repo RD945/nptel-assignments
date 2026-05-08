@@ -91,6 +91,13 @@ export default function Review() {
                     <FormattedText text={question.explanation} />
                   </div>
                 )}
+
+                {question.detailedSolution && (
+                  <div className={styles.explanation}>
+                    <strong>Detailed Solution:</strong>{" "}
+                    <FormattedText text={question.detailedSolution} />
+                  </div>
+                )}
               </div>
             ))}
           </div>

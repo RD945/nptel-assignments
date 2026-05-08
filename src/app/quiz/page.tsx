@@ -233,6 +233,12 @@ export default function Quiz() {
                 <FormattedText text={currentQuestion.explanation} />
               </div>
             )}
+            {currentQuestion.detailedSolution && (
+              <div className={styles.explanation}>
+                <strong>Detailed Solution:</strong>{" "}
+                <FormattedText text={currentQuestion.detailedSolution} />
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -10,6 +10,7 @@ export interface Question {
   options: QuestionOption[];
   correctAnswers: string[];
   explanation: string | null;
+  detailedSolution?: string | null;
   isMultiSelect: boolean;
 }
 

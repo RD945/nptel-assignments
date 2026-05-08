@@ -2,8 +2,24 @@ import re
 import json
 from pathlib import Path
 
-p = Path('entrepreneurship_essentials_all_weeks.txt')
-text = p.read_text(encoding='utf-8')
+
+def load_source_text() -> str:
+    # Prefer the detailed solutions source if present.
+    source_candidates = [
+        Path("entrepreneurship_essentials_all_weeks_solns.txt"),
+        Path("entrepreneurship_essentials_all_weeks.txt"),
+    ]
+
+    for source_path in source_candidates:
+        if source_path.exists():
+            return source_path.read_text(encoding="utf-8")
+
+    raise FileNotFoundError(
+        "No entrepreneurship source file found. Expected entrepreneurship_essentials_all_weeks_solns.txt or entrepreneurship_essentials_all_weeks.txt"
+    )
+
+
+text = load_source_text()
 
 sec_pat = re.compile(r"##\s*Week\s+(\d+)", re.IGNORECASE)
 matches = list(sec_pat.finditer(text))
@@ -51,6 +67,7 @@ for week, content in sorted(sections.items()):
         opts = {}
         correct = None
         explanation = ""
+        detailed_solution_lines = []
         state = 'question'
         for ln in lines:
             ln_strip = ln.strip()
@@ -76,6 +93,16 @@ for week, content in sorted(sections.items()):
                     # fallback: try to find letters in ca
                     letters = re.findall(r'([a-e])', ca, re.IGNORECASE)
                     correct = [x.lower() for x in letters]
+            elif ln_strip.startswith('**Detailed Solution:**'):
+                state = 'detailed_solution'
+                content = ln_strip.replace('**Detailed Solution:**', '').strip()
+                if content:
+                    detailed_solution_lines.append(content)
+            elif ln_strip.startswith('**Explanation:**'):
+                state = 'explanation'
+                content = ln_strip.replace('**Explanation:**', '').strip()
+                if content:
+                    explanation = content
             elif state == 'question':
                 if ln_strip:
                     qlines.append(ln_strip)
@@ -84,8 +111,14 @@ for week, content in sorted(sections.items()):
                 if opts:
                     last = list(opts.keys())[-1]
                     opts[last] = opts[last] + ' ' + ln_strip
+            elif state == 'detailed_solution':
+                if ln_strip:
+                    detailed_solution_lines.append(ln_strip)
+            elif state == 'explanation' and ln_strip:
+                explanation = f"{explanation} {ln_strip}".strip() if explanation else ln_strip
             # ignore other markers
         qtext = format_question_text(qlines)
+        detailed_solution = '\n'.join(detailed_solution_lines).strip()
         # build options list
         options_list = []
         for lbl in sorted(opts.keys()):
@@ -98,6 +131,7 @@ for week, content in sorted(sections.items()):
             "options": options_list,
             "correctAnswers": correct if correct else [],
             "explanation": explanation,
+            "detailedSolution": detailed_solution,
             "isMultiSelect": False
         })
 
