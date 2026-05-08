@@ -20,6 +20,24 @@ else:
 
 questions = []
 option_token_pattern = re.compile(r'(?:(?<=^)|(?<=\s))([a-e])\.\s')
+
+
+def format_question_text(lines):
+    text = '\n'.join(lines).strip()
+    marker_matches = re.findall(r'(?<![A-Za-z])([A-E])\.\s', text)
+
+    if len(marker_matches) >= 2:
+        # Split inline statement markers onto separate lines for better readability.
+        text = re.sub(r'\s([A-E])\.\s', r'\n\1. ', text)
+        text = re.sub(
+            r'\.\s(Which of the above|Which of the following|Select all the correct options)',
+            r'.\n\n\1',
+            text,
+        )
+
+    return text
+
+
 for week, content in sorted(sections.items()):
     # find question blocks
     pattern = re.compile(r"\*\*QUESTION\s+(\d+)\*\*([\s\S]*?)(?=\*\*QUESTION\s+\d+\*\*|$)", re.IGNORECASE)
@@ -67,7 +85,7 @@ for week, content in sorted(sections.items()):
                     last = list(opts.keys())[-1]
                     opts[last] = opts[last] + ' ' + ln_strip
             # ignore other markers
-        qtext = ' '.join(qlines).strip()
+        qtext = format_question_text(qlines)
         # build options list
         options_list = []
         for lbl in sorted(opts.keys()):

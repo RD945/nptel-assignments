@@ -265,7 +265,7 @@
     {
       "id": "w1q9",
       "week": 1,
-      "text": "You want to start an e-commerce company. You target the niche market of hand-made goods. You have written the following statement: \"We curate and showcase a diverse array of exquisitely crafted handmade products, connecting artisans globally with discerning customers, and fostering a marketplace that celebrates craftsmanship, authenticity, and unique artistic expressions.\" What can this statement be termed as?",
+      "text": "You want to start an e-commerce company. You target the niche market of hand-made goods. You have written the following statement:\n\"We curate and showcase a diverse array of exquisitely crafted handmade products, connecting artisans globally with discerning customers, and fostering a marketplace that celebrates craftsmanship, authenticity, and unique artistic expressions.\"\nWhat can this statement be termed as?",
       "options": [
         {
           "label": "a",
@@ -1421,7 +1421,7 @@
     {
       "id": "w5q10",
       "week": 5,
-      "text": "Select all the correct options from the following in respect of the lean startup concept. A. The lean startup uses the agile philosophy of build-measure-learn feedback loop. B. The lean startup applies the lean manufacturing philosophy of reducing waste wherever possible. C. The lean startup reduces the time, effort, and cost of product development. D. The lean startup emphasizes the lean and thin enterprise, lean funding, and lean investment. Options:",
+      "text": "Select all the correct options from the following in respect of the lean startup concept.\nA. The lean startup uses the agile philosophy of build-measure-learn feedback loop.\nB. The lean startup applies the lean manufacturing philosophy of reducing waste wherever possible.\nC. The lean startup reduces the time, effort, and cost of product development.\nD. The lean startup emphasizes the lean and thin enterprise, lean funding, and lean investment.\nOptions:",
       "options": [
         {
           "label": "a",
@@ -1729,7 +1729,7 @@
     {
       "id": "w7q1",
       "week": 7,
-      "text": "Use the following data to answer the question following them: (All figures are in Rupees except when specifically mentioned otherwise) Sales: 3,000 Purchase of equipment: 50 Closing Stock: 500 Opening Stock: 1,000 Payment of electricity bill: 30 Purchase of goods: 1500 What is the gross profit?",
+      "text": "Use the following data to answer the question following them: (All figures are in Rupees except when specifically mentioned otherwise)\nSales: 3,000\nPurchase of equipment: 50\nClosing Stock: 500\nOpening Stock: 1,000\nPayment of electricity bill: 30\nPurchase of goods: 1500\nWhat is the gross profit?",
       "options": [
         {
           "label": "a",
@@ -1757,7 +1757,7 @@
     {
       "id": "w7q2",
       "week": 7,
-      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise) Amortization: 100 Interest payment: 200 Income tax: 100 Depreciation: 50 Other operating expenses: 500 Dividend: 200 Gross profit: 1,200 What is the operating profit for the year 2021-22? (be mindful of excess data)",
+      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise)\nAmortization: 100\nInterest payment: 200\nIncome tax: 100\nDepreciation: 50\nOther operating expenses: 500\nDividend: 200\nGross profit: 1,200\nWhat is the operating profit for the year 2021-22? (be mindful of excess data)",
       "options": [
         {
           "label": "a",
@@ -1785,7 +1785,7 @@
     {
       "id": "w7q3",
       "week": 7,
-      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise) Gross profit: 500 Interest payment: 50 Amortization: 50 Other operating expenses: 200 Dividend: 100 The book value of the fixed asset of the company as of 31-3-2021 is Rs. 1,300. The depreciation rate is 10% using the declining value method. The company purchases machinery worth Rs. 700 during the year 2021-22 and does not sell any of its fixed assets during the year. What is the book value of the fixed assets as of 31.03.2022? Be mindful of excess data.",
+      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise)\nGross profit: 500\nInterest payment: 50\nAmortization: 50\nOther operating expenses: 200\nDividend: 100\nThe book value of the fixed asset of the company as of 31-3-2021 is Rs. 1,300. The depreciation rate is 10% using the declining value method. The company purchases machinery worth Rs. 700 during the year 2021-22 and does not sell any of its fixed assets during the year. What is the book value of the fixed assets as of 31.03.2022? Be mindful of excess data.",
       "options": [
         {
           "label": "a",
@@ -1873,7 +1873,7 @@
     {
       "id": "w7q6",
       "week": 7,
-      "text": "A company sells pens. Following information pertains to its operation in a particular year (All data are in Rupees except when otherwise mentioned): Per unit selling price of pen: ₹10 Number of pens sold during the year: 100 Closing Stock: ₹100 Depreciation: ₹100 Opening Stock: ₹50 Amortization: ₹100 Purchase of goods: ₹800 What is the gross profit margin during this period?",
+      "text": "A company sells pens. Following information pertains to its operation in a particular year (All data are in Rupees except when otherwise mentioned):\nPer unit selling price of pen: ₹10\nNumber of pens sold during the year: 100\nClosing Stock: ₹100\nDepreciation: ₹100\nOpening Stock: ₹50\nAmortization: ₹100\nPurchase of goods: ₹800\nWhat is the gross profit margin during this period?",
       "options": [
         {
           "label": "a",
@@ -1901,7 +1901,7 @@
     {
       "id": "w7q7",
       "week": 7,
-      "text": "Following data are related to a company for the financial year 2016-2017. (All figures are in Rupees except when specifically mentioned otherwise) Sales: 1,000 Gross profit: 800 Interest payment: 50 Depreciation: 50 Salary: 250 Rent: 50 Other operating expenses: 200 Dividend: 100 What is the operating profit margin for the company during 2016-17?",
+      "text": "Following data are related to a company for the financial year 2016-2017. (All figures are in Rupees except when specifically mentioned otherwise)\nSales: 1,000\nGross profit: 800\nInterest payment: 50\nDepreciation: 50\nSalary: 250\nRent: 50\nOther operating expenses: 200\nDividend: 100\nWhat is the operating profit margin for the company during 2016-17?",
       "options": [
         {
           "label": "a",
@@ -1929,7 +1929,7 @@
     {
       "id": "w7q8",
       "week": 7,
-      "text": "Following data are related to a company for the financial year 2021-2022. (all figures are in Rupees except when specifically mentioned otherwise) Gross profit: 800 Interest payment: 50 Depreciation: 50 Other operating expenses: 400 Dividend: 100 Assume that the company doesn’t pay any income tax, what is the retained profit?",
+      "text": "Following data are related to a company for the financial year 2021-2022. (all figures are in Rupees except when specifically mentioned otherwise)\nGross profit: 800\nInterest payment: 50\nDepreciation: 50\nOther operating expenses: 400\nDividend: 100\nAssume that the company doesn’t pay any income tax, what is the retained profit?",
       "options": [
         {
           "label": "a",
@@ -1957,7 +1957,7 @@
     {
       "id": "w7q9",
       "week": 7,
-      "text": "Following data are related to a company for the financial year 2021-2022. (all figures are in Rupees except when specifically mentioned otherwise) Gross profit: 600 Amortization: 10 Interest payment: 50 Depreciation: 40 Other operating expenses: 200 Dividend: 100 If the income tax is 30% what is the EBITDA?",
+      "text": "Following data are related to a company for the financial year 2021-2022. (all figures are in Rupees except when specifically mentioned otherwise)\nGross profit: 600\nAmortization: 10\nInterest payment: 50\nDepreciation: 40\nOther operating expenses: 200\nDividend: 100\nIf the income tax is 30% what is the EBITDA?",
       "options": [
         {
           "label": "a",
@@ -1985,7 +1985,7 @@
     {
       "id": "w7q10",
       "week": 7,
-      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise) Gross profit: 950 Interest payment: 50 Depreciation: 50 Other operating expenses: 250 Dividend: 100 Reserves and surplus as of 31-3-2021: 900 The company pays income tax @30% What is the reserves and surplus of the company as of 31-3-2022?",
+      "text": "The following data are related to a company for the financial year 2021-2022. (All figures are in Rupees except when specifically mentioned otherwise)\nGross profit: 950\nInterest payment: 50\nDepreciation: 50\nOther operating expenses: 250\nDividend: 100\nReserves and surplus as of 31-3-2021: 900\nThe company pays income tax @30%\nWhat is the reserves and surplus of the company as of 31-3-2022?",
       "options": [
         {
           "label": "a",
@@ -2013,7 +2013,7 @@
     {
       "id": "w8q1",
       "week": 8,
-      "text": "The following data are related to a particular company for the year 2021-2022: Fixed cost per year: 2000 Variable cost for the year: 1500 Number of units produced and sold during the year: 100 Unit selling price: 20 The break-even point is:",
+      "text": "The following data are related to a particular company for the year 2021-2022:\nFixed cost per year: 2000\nVariable cost for the year: 1500\nNumber of units produced and sold during the year: 100\nUnit selling price: 20\nThe break-even point is:",
       "options": [
         {
           "label": "a",
@@ -2069,7 +2069,7 @@
     {
       "id": "w8q3",
       "week": 8,
-      "text": "The following data are related to a company for the financial year 2021-2022. Gross profit: 1000 Interest payment: 50 Operating expenses excluding depreciation: 350 Dividend: 100 The book value of the fixed asset of the company as of 31-3-2021 was 300. The depreciation rate is 10%. The company purchases machinery worth 700 during the year 2021-22 and sells existing fixed assets of book value of 500 during the same year. What is the operating profit of the company during 2021-22?",
+      "text": "The following data are related to a company for the financial year 2021-2022.\nGross profit: 1000\nInterest payment: 50\nOperating expenses excluding depreciation: 350\nDividend: 100\nThe book value of the fixed asset of the company as of 31-3-2021 was 300. The depreciation rate is 10%. The company purchases machinery worth 700 during the year 2021-22 and sells existing fixed assets of book value of 500 during the same year. What is the operating profit of the company during 2021-22?",
       "options": [
         {
           "label": "a",
@@ -2097,7 +2097,7 @@
     {
       "id": "w8q4",
       "week": 8,
-      "text": "The following data pertain to a particular year of operation of a company. Sales for the year: 10000 The variable cost for the year: 6000 Fixed cost for the year: 1000 Number of units produced and sold during the year: 400 What is the margin of safety?",
+      "text": "The following data pertain to a particular year of operation of a company.\nSales for the year: 10000\nThe variable cost for the year: 6000\nFixed cost for the year: 1000\nNumber of units produced and sold during the year: 400\nWhat is the margin of safety?",
       "options": [
         {
           "label": "a",
@@ -2125,7 +2125,7 @@
     {
       "id": "w8q5",
       "week": 8,
-      "text": "Estimate the contribution margin in Rupees per unit using the following data. 1. Sales: ₹5000 2. Number of units produced and sold: 100 3. Total variable cost: ₹2000 4. Annual fixed cost: ₹1000",
+      "text": "Estimate the contribution margin in Rupees per unit using the following data.\n1. Sales: ₹5000\n2. Number of units produced and sold: 100\n3. Total variable cost: ₹2000\n4. Annual fixed cost: ₹1000",
       "options": [
         {
           "label": "a",
@@ -2237,7 +2237,7 @@
     {
       "id": "w8q9",
       "week": 8,
-      "text": "All units are in Rupees. The unit selling price of a product: 300 Total all-inclusive variable cost per unit: 200 Total all-inclusive fixed cost per year: 2,00,000 How much profit the company makes if it produces and sells 3,000 units of products?",
+      "text": "All units are in Rupees.\nThe unit selling price of a product: 300\nTotal all-inclusive variable cost per unit: 200\nTotal all-inclusive fixed cost per year: 2,00,000\nHow much profit the company makes if it produces and sells 3,000 units of products?",
       "options": [
         {
           "label": "a",
@@ -2461,7 +2461,7 @@
     {
       "id": "w9q7",
       "week": 9,
-      "text": "Which of the following is the correct interpretation of the construct owners’ mindset in the context of entrepreneurship? A. The sense that the company is theirs and that the prosperity of the company is aligned with their personal prosperity. B. The sense that the company belongs to them and they should try to take away as much from the company as possible. C. One is as responsible as the owners and would take all the actions that are for the best interest of the company. D. To avoid bureaucracy and take immediate and appropriate action without waiting for instructions from the hierarchy or the sense that it is someone else’s responsibility.",
+      "text": "Which of the following is the correct interpretation of the construct owners’ mindset in the context of entrepreneurship?\nA. The sense that the company is theirs and that the prosperity of the company is aligned with their personal prosperity.\nB. The sense that the company belongs to them and they should try to take away as much from the company as possible.\nC. One is as responsible as the owners and would take all the actions that are for the best interest of the company.\nD. To avoid bureaucracy and take immediate and appropriate action without waiting for instructions from the hierarchy or the sense that it is someone else’s responsibility.",
       "options": [
         {
           "label": "a",
@@ -2517,7 +2517,7 @@
     {
       "id": "w9q9",
       "week": 9,
-      "text": "Which of the following is the correct interpretation of the construct frontline obsession in the context of entrepreneurship? A. Use market research and apply proper promotional schemes to acquire increasing number of repeat customers. B. Take customer feedback to help the product development team understand what is to be built to meet the gap in product features and serve the customer better. C. It is a mindset among individual employees and teams to create an environment where everyone feels valued for their contributions and is committed to the success of the organization. D. Try to understand every detail about customers’ response to features of the product, earn customer advocacy, and loyalty, and not resort to the blame game for non-performance.",
+      "text": "Which of the following is the correct interpretation of the construct frontline obsession in the context of entrepreneurship?\nA. Use market research and apply proper promotional schemes to acquire increasing number of repeat customers.\nB. Take customer feedback to help the product development team understand what is to be built to meet the gap in product features and serve the customer better.\nC. It is a mindset among individual employees and teams to create an environment where everyone feels valued for their contributions and is committed to the success of the organization.\nD. Try to understand every detail about customers’ response to features of the product, earn customer advocacy, and loyalty, and not resort to the blame game for non-performance.",
       "options": [
         {
           "label": "a",
@@ -2545,7 +2545,7 @@
     {
       "id": "w9q10",
       "week": 9,
-      "text": "For a particular company: Sales: ₹50,000 Total annual variable cost: ₹40,000 Number of units produced and sold: 5,000 Total annual fixed cost: ₹2,00,000 How many units of the product the company must produce and sell to make a profit of ₹2,00,000?",
+      "text": "For a particular company:\nSales: ₹50,000\nTotal annual variable cost: ₹40,000\nNumber of units produced and sold: 5,000\nTotal annual fixed cost: ₹2,00,000\nHow many units of the product the company must produce and sell to make a profit of ₹2,00,000?",
       "options": [
         {
           "label": "a",
@@ -2853,7 +2853,7 @@
     {
       "id": "w11q1",
       "week": 11,
-      "text": "Read the following statements regarding estimating discounted net present value and answer the question following them. A. It is assumed that all cash flows other than the initial investment occur at the end of respective periods. B. All cash flows generated by an investment project are immediately reinvested at a rate of return equal to the IRR of the project. C. All cash flows generated by an investment project are immediately reinvested at a rate of return equal to the discount rate. D. All cash flows other than the initial investment occur at the beginning of respective periods. Which of the above are the two correct major assumptions of discounted net present value estimation?",
+      "text": "Read the following statements regarding estimating discounted net present value and answer the question following them.\nA. It is assumed that all cash flows other than the initial investment occur at the end of respective periods.\nB. All cash flows generated by an investment project are immediately reinvested at a rate of return equal to the IRR of the project.\nC. All cash flows generated by an investment project are immediately reinvested at a rate of return equal to the discount rate.\nD. All cash flows other than the initial investment occur at the beginning of respective periods.\n\nWhich of the above are the two correct major assumptions of discounted net present value estimation?",
       "options": [
         {
           "label": "a",
@@ -3169,7 +3169,7 @@
     {
       "id": "w12q2",
       "week": 12,
-      "text": "Which of the following are elements of the founders’ mentality? A. Insurgent mission B. Frontline obsession C. Stakeholders’ interest D. Vision driven E. Owners’ mindset",
+      "text": "Which of the following are elements of the founders’ mentality?\nA. Insurgent mission\nB. Frontline obsession\nC. Stakeholders’ interest\nD. Vision driven\nE. Owners’ mindset",
       "options": [
         {
           "label": "a",

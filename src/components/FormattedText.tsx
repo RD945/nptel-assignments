@@ -71,5 +71,16 @@ function formatInlineMath(input: string): ReactNode[] {
 
 export default function FormattedText({ text }: FormattedTextProps) {
   const normalized = normalizeSymbols(text);
-  return <>{formatInlineMath(normalized)}</>;
+  const lines = normalized.split("\n");
+
+  return (
+    <>
+      {lines.map((line, index) => (
+        <Fragment key={`line-${index}`}>
+          {formatInlineMath(line)}
+          {index < lines.length - 1 ? <br /> : null}
+        </Fragment>
+      ))}
+    </>
+  );
 }
