@@ -53,10 +53,16 @@ function WeeklyQuizQuestionScreen({
   const isLastQuestion = state.currentIndex === totalInWeek - 1;
 
   const displayedOptions = useMemo(
-    () =>
-      shuffleOptions
+    () => {
+      const options = shuffleOptions
         ? shuffleArray(currentQuestion.options)
-        : currentQuestion.options,
+        : currentQuestion.options;
+
+      return options.map((option, index) => ({
+        ...option,
+        displayLabel: String.fromCharCode(97 + index),
+      }));
+    },
     [currentQuestion.id, shuffleOptions]
   );
 
@@ -149,7 +155,7 @@ function WeeklyQuizQuestionScreen({
             <div key={option.label} className={styles.optionWrapper}>
               <input
                 type={currentQuestion.isMultiSelect ? "checkbox" : "radio"}
-                id={option.label}
+                id={`${currentQuestion.id}-${option.label}`}
                 name={currentQuestion.id}
                 value={option.label}
                 checked={state.selectedAnswers.includes(option.label)}
@@ -158,7 +164,7 @@ function WeeklyQuizQuestionScreen({
                 className={styles.input}
               />
               <label
-                htmlFor={option.label}
+                htmlFor={`${currentQuestion.id}-${option.label}`}
                 className={`${styles.label} ${
                   state.submitted
                     ? currentQuestion.correctAnswers.includes(option.label)
@@ -169,7 +175,7 @@ function WeeklyQuizQuestionScreen({
                     : ""
                 }`}
               >
-                <span className={styles.optionLabel}>{option.label}.</span>
+                <span className={styles.optionLabel}>{option.displayLabel}.</span>
                 <span className={styles.optionText}>
                   <FormattedText text={option.text} />
                 </span>

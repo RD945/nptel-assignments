@@ -757,7 +757,11 @@
         },
         {
           "label": "d",
-          "text": "Intent, awareness, interest, consideration, evaluation, purchase e. Evaluation, awareness, interest, consideration, intent, purchase"
+          "text": "Intent, awareness, interest, consideration, evaluation, purchase"
+        },
+        {
+          "label": "e",
+          "text": "Evaluation, awareness, interest, consideration, intent, purchase"
         }
       ],
       "correctAnswers": [
@@ -1093,7 +1097,11 @@
         },
         {
           "label": "d",
-          "text": "Value proposition e. Revenue model"
+          "text": "Value proposition"
+        },
+        {
+          "label": "e",
+          "text": "Revenue model"
         }
       ],
       "correctAnswers": [
@@ -1849,7 +1857,11 @@
         },
         {
           "label": "d",
-          "text": "The profit & loss account pertains to a particular date. e. The cash flow statement pertains to a particular date."
+          "text": "The profit & loss account pertains to a particular date."
+        },
+        {
+          "label": "e",
+          "text": "The cash flow statement pertains to a particular date."
         }
       ],
       "correctAnswers": [
@@ -2913,7 +2925,11 @@
         },
         {
           "label": "d",
-          "text": "Advertisement e. Influencer marketing"
+          "text": "Advertisement"
+        },
+        {
+          "label": "e",
+          "text": "Influencer marketing"
         }
       ],
       "correctAnswers": [
@@ -2941,7 +2957,11 @@
         },
         {
           "label": "d",
-          "text": "Pre-brief e. Messaging"
+          "text": "Pre-brief"
+        },
+        {
+          "label": "e",
+          "text": "Messaging"
         }
       ],
       "correctAnswers": [
@@ -3277,7 +3297,11 @@
         },
         {
           "label": "d",
-          "text": "A golden rule or credible method to value startups is missing at present. e. Financial metrics are not the only value drivers for startups."
+          "text": "A golden rule or credible method to value startups is missing at present."
+        },
+        {
+          "label": "e",
+          "text": "Financial metrics are not the only value drivers for startups."
         }
       ],
       "correctAnswers": [

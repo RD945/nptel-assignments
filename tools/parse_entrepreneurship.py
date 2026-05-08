@@ -19,6 +19,7 @@ else:
     sections[1] = text.strip()
 
 questions = []
+option_token_pattern = re.compile(r'(?:(?<=^)|(?<=\s))([a-e])\.\s')
 for week, content in sorted(sections.items()):
     # find question blocks
     pattern = re.compile(r"\*\*QUESTION\s+(\d+)\*\*([\s\S]*?)(?=\*\*QUESTION\s+\d+\*\*|$)", re.IGNORECASE)
@@ -35,29 +36,32 @@ for week, content in sorted(sections.items()):
         state = 'question'
         for ln in lines:
             ln_strip = ln.strip()
-            # Treat only lowercase a./b./c./d. as answer options.
+            option_tokens = list(option_token_pattern.finditer(ln_strip))
+            # Treat only lowercase a./b./c./d./e. as answer options.
             # Uppercase A./B./C./D. lines are often statement blocks in the question stem.
-            if re.match(r'^[a-d]\.\s', ln_strip):
+            if option_tokens and option_tokens[0].start() == 0:
                 state = 'options'
-                lbl = ln_strip[0].lower()
-                txt = ln_strip[2:].strip()
-                # accumulate if option continues on next lines
-                opts[lbl] = txt
+                for idx, token in enumerate(option_tokens):
+                    lbl = token.group(1).lower()
+                    start = token.end()
+                    end = option_tokens[idx + 1].start() if idx + 1 < len(option_tokens) else len(ln_strip)
+                    txt = ln_strip[start:end].strip()
+                    opts[lbl] = txt
             elif ln_strip.startswith('**Correct Answer:**'):
                 state = 'correct'
                 ca = ln_strip.replace('**Correct Answer:**','').strip()
                 # ca might be like 'a. text' or 'a' or 'a. A, B & C'
-                mca = re.match(r'([a-d])\.?', ca.strip(), re.IGNORECASE)
+                mca = re.match(r'([a-e])\.?', ca.strip(), re.IGNORECASE)
                 if mca:
                     correct = [mca.group(1).lower()]
                 else:
                     # fallback: try to find letters in ca
-                    letters = re.findall(r'([a-d])', ca, re.IGNORECASE)
+                    letters = re.findall(r'([a-e])', ca, re.IGNORECASE)
                     correct = [x.lower() for x in letters]
             elif state == 'question':
                 if ln_strip:
                     qlines.append(ln_strip)
-            elif state == 'options' and ln_strip and not re.match(r'^[a-d]\.\s', ln_strip):
+            elif state == 'options' and ln_strip and not (option_tokens and option_tokens[0].start() == 0):
                 # continuation of previous option
                 if opts:
                     last = list(opts.keys())[-1]

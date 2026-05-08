@@ -195,7 +195,7 @@ export default function ShuffleQuizMode({
         </h2>
 
         <div className={styles.options}>
-          {currentQuestion.options.map((option) => (
+          {currentQuestion.options.map((option, index) => (
             <div key={`${currentQuestion.id}-${option.label}-${option.text}`} className={styles.optionWrapper}>
               <input
                 type={currentQuestion.isMultiSelect ? "checkbox" : "radio"}
@@ -219,7 +219,7 @@ export default function ShuffleQuizMode({
                     : ""
                 }`}
               >
-                <span className={styles.optionLabel}>{option.label}.</span>
+                <span className={styles.optionLabel}>{String.fromCharCode(97 + index)}.</span>
                 <span className={styles.optionText}>
                   <FormattedText text={option.text} />
                 </span>
