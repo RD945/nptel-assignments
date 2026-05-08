@@ -35,7 +35,9 @@ for week, content in sorted(sections.items()):
         state = 'question'
         for ln in lines:
             ln_strip = ln.strip()
-            if re.match(r'^[a-d]\.\s', ln_strip, re.IGNORECASE):
+            # Treat only lowercase a./b./c./d. as answer options.
+            # Uppercase A./B./C./D. lines are often statement blocks in the question stem.
+            if re.match(r'^[a-d]\.\s', ln_strip):
                 state = 'options'
                 lbl = ln_strip[0].lower()
                 txt = ln_strip[2:].strip()
@@ -55,7 +57,7 @@ for week, content in sorted(sections.items()):
             elif state == 'question':
                 if ln_strip:
                     qlines.append(ln_strip)
-            elif state == 'options' and ln_strip and not re.match(r'^[a-d]\.\s', ln_strip, re.IGNORECASE):
+            elif state == 'options' and ln_strip and not re.match(r'^[a-d]\.\s', ln_strip):
                 # continuation of previous option
                 if opts:
                     last = list(opts.keys())[-1]
