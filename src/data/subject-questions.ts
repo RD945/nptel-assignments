@@ -1,10 +1,13 @@
 import { questions as llmQuestions } from "@/data/questions";
 import { foundationsDeepLearningQuestions } from "@/data/foundations-deep-learning-questions";
+import { entrepreneurshipEssentialsQuestions } from "@/data/entrepreneurship-questions";
 import type { Question } from "@/data/questions";
 import type { SubjectId } from "@/data/subjects";
 
 export function getQuestionsForSubject(subject: SubjectId): Question[] {
   switch (subject) {
+    case "entrepreneurship-essentials":
+      return entrepreneurshipEssentialsQuestions;
     case "foundations-deep-learning":
       return foundationsDeepLearningQuestions;
     default:

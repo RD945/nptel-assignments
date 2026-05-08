@@ -1,6 +1,7 @@
 export const subjectIds = [
   "llm",
   "foundations-deep-learning",
+  "entrepreneurship-essentials",
 ] as const;
 
 export type SubjectId = (typeof subjectIds)[number];
@@ -27,6 +28,13 @@ export const subjects: Record<SubjectId, SubjectInfo> = {
     shortLabel: "FDL",
     description: "Deep learning concepts and applications with week-wise quiz modes.",
     homeTitle: "Foundations of Deep Learning Quiz",
+  },
+  "entrepreneurship-essentials": {
+    id: "entrepreneurship-essentials",
+    label: "Entrepreneurship Essentials",
+    shortLabel: "Entrepreneurship",
+    description: "Entrepreneurship Essentials course questions, weekly and practice modes.",
+    homeTitle: "Entrepreneurship Essentials Quiz",
   },
 };
 
