@@ -1,12 +1,12 @@
 # Quiz Flash Cards
 
-A Next.js quiz application with a first-load subject picker for four courses:
-LLM / NLP, Entrepreneurship Essentials, Entrepreneurship Essentials 2, and Foundations of Deep Learning.
+A Next.js quiz application with a first-load subject picker for multiple courses:
+LLM / NLP and Foundations of Deep Learning.
 It includes multiple study modes, instant feedback, and score tracking.
 
 ## Features
 
-- First-load subject picker for LLM / NLP, Entrepreneurship Essentials, Entrepreneurship Essentials 2, or Foundations of Deep Learning
+- First-load subject picker for LLM / NLP or Foundations of Deep Learning
 - LLM / NLP mode set:
    - Full Shuffle Quiz (all questions in random order)
    - Weekly Quiz (choose week, randomized within that week)
@@ -15,16 +15,7 @@ It includes multiple study modes, instant feedback, and score tracking.
    - AI Generated Practice Questions (45 AI-generated questions in one shuffled pool)
    - Notes (two sections: term definitions and lecture notes)
    - Review Mode (all questions in week-wise order)
-- Entrepreneurship Essentials mode set:
-   - Full Shuffle Quiz
-   - Weekly Quiz
-   - Weekly Quiz + Shuffled Options
-   - Review Mode
-- Entrepreneurship Essentials 2 mode set:
-   - Full Shuffle Quiz
-   - Weekly Quiz
-   - Weekly Quiz + Shuffled Options
-   - Review Mode
+(Entrepreneurship subjects removed from this build)
 - Foundations of Deep Learning mode set:
    - Full Shuffle Quiz
    - Weekly Quiz
@@ -44,9 +35,7 @@ It includes multiple study modes, instant feedback, and score tracking.
 - Weeks Covered: 1-12
 - Multi-Select Questions: 20
 - Single-Select Questions: 92
-- Entrepreneurship Essentials: 120 questions across 12 weeks
-- Entrepreneurship Essentials 2: 115 parsed questions from the provided text source
-- Foundations of Deep Learning: 120 questions across 12 weeks
+-- Foundations of Deep Learning: 120 questions across 12 weeks
 - Subject choice is session-only, so the app asks again on refresh
 
 ## Project Structure
@@ -79,8 +68,7 @@ src/
 │       └── review.module.css
 └── data/
    ├── questions.ts                 # LLM / NLP typed question dataset (112)
-   ├── entrepreneurship-questions.ts# Entrepreneurship typed question dataset (120)
-   ├── entrepreneurship-essentials-2-questions.ts # Entrepreneurship Essentials 2 typed dataset (115)
+   
    ├── foundations-deep-learning-questions.ts # Foundations of Deep Learning typed dataset (120)
    ├── subject-questions.ts         # Subject-to-dataset lookup helpers
    ├── subjects.ts                  # Subject registry and labels
