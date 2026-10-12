@@ -75,7 +75,7 @@ export default function Review() {
                         <FormattedText text={option.text} />
                       </span>
                       {question.correctAnswers.includes(option.label) && (
-                        <span className={styles.correctBadge}>✓ CORRECT</span>
+                        <span className={styles.correctBadge}>CORRECT</span>
                       )}
                     </div>
                   ))}

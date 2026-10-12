@@ -33,19 +33,19 @@ export default function Home() {
   const modeCards = [
     {
       href: "/review",
-      title: "📖 Review All Questions",
+      title: "Review All Questions",
       description: `View all questions and answers in order across weeks: ${weekText}`,
       enabled: true,
     },
     {
       href: "/quiz-weekly",
-      title: "📅 Weekly Quiz",
+      title: "Weekly Quiz",
       description: `Choose from ${weeks.length} available weeks, with randomized questions inside each week`,
       enabled: true,
     },
     {
       href: "/quiz-weekly-shuffled",
-      title: "📅 Weekly Quiz + Shuffled Options",
+      title: "Weekly Quiz + Shuffled Options",
       description:
         "Same weekly flow, but the answer choices are shuffled in the UI so the option pattern changes every time",
       enabled: true,
@@ -53,31 +53,16 @@ export default function Home() {
     
     {
       href: "/quiz-multi-select",
-      title: "🔀 Multi-Select Shuffle",
+      title: "Multi-Select Shuffle",
       description: multiSelectAvailable
         ? "Only questions with multiple correct answers, shuffled together from all weeks"
         : "This subject has no multi-select questions.",
       enabled: multiSelectAvailable,
     },
-    ...(subject === "llm"
-      ? [
-          {
-            href: "/quiz-ai-practice",
-            title: "🤖 AI Generated Practice Questions",
-            description: "45 AI-generated practice questions in one fully shuffled pool",
-            enabled: true,
-          },
-          {
-            href: "/notes",
-            title: "Notes",
-            description: "Study notes in two sections: term definitions and lecture notes",
-            enabled: true,
-          },
-        ]
-      : []),
+
     {
       href: "/quiz",
-      title: "🎲 Full Shuffle",
+      title: "Full Shuffle",
       description: `All ${availableQuestions.length} questions randomized - complete random order`,
       enabled: true,
     },
