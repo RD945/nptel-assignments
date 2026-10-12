@@ -3,6 +3,8 @@ export interface QuestionOption {
   text: string;
 }
 
+export type QuestionKind = "choice" | "text";
+
 export interface Question {
   id: string;
   week: number;
@@ -12,6 +14,8 @@ export interface Question {
   explanation: string | null;
   detailedSolution?: string | null;
   isMultiSelect: boolean;
+  kind?: QuestionKind;
+  placeholder?: string;
 }
 
 export const questions: Question[] = [

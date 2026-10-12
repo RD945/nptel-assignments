@@ -66,6 +66,15 @@ function WeeklyQuizQuestionScreen({
     [currentQuestion.id, shuffleOptions]
   );
 
+  const isTextQuestion = currentQuestion.kind === "text";
+  const isTextCorrect =
+    isTextQuestion &&
+    state.submitted &&
+    state.selectedAnswers[0]?.trim() !== "" &&
+    currentQuestion.correctAnswers.some(
+      (ans) => ans.trim().toLowerCase() === state.selectedAnswers[0]?.trim().toLowerCase()
+    );
+
   const handleOptionSelect = (label: string) => {
     if (state.submitted) return;
 
@@ -84,8 +93,26 @@ function WeeklyQuizQuestionScreen({
     }
   };
 
+  const handleTextChange = (value: string) => {
+    if (state.submitted) return;
+    setState((prev) => ({ ...prev!, selectedAnswers: [value] }));
+  };
+
   const handleSubmit = () => {
-    if (state.selectedAnswers.length === 0 || state.submitted) return;
+    if (state.submitted) return;
+    if (isTextQuestion) {
+      if (!state.selectedAnswers[0]?.trim()) return;
+      const normalized = state.selectedAnswers[0].trim().toLowerCase();
+      const isCorrect = currentQuestion.correctAnswers.some(
+        (ans) => ans.trim().toLowerCase() === normalized
+      );
+      const newScore = state.score + (isCorrect ? 1 : 0);
+      const feedback = isCorrect ? "Correct!" : "Incorrect.";
+      setState((prev) => ({ ...prev!, submitted: true, feedback, score: newScore }));
+      return;
+    }
+
+    if (state.selectedAnswers.length === 0) return;
 
     const isCorrect =
       state.selectedAnswers.length === currentQuestion.correctAnswers.length &&
@@ -150,39 +177,58 @@ function WeeklyQuizQuestionScreen({
           <FormattedText text={currentQuestion.text} />
         </h2>
 
-        <div className={styles.options}>
-          {displayedOptions.map((option) => (
-            <div key={option.label} className={styles.optionWrapper}>
-              <input
-                type={currentQuestion.isMultiSelect ? "checkbox" : "radio"}
-                id={`${currentQuestion.id}-${option.label}`}
-                name={currentQuestion.id}
-                value={option.label}
-                checked={state.selectedAnswers.includes(option.label)}
-                onChange={() => handleOptionSelect(option.label)}
-                disabled={state.submitted}
-                className={styles.input}
-              />
-              <label
-                htmlFor={`${currentQuestion.id}-${option.label}`}
-                className={`${styles.label} ${
-                  state.submitted
-                    ? currentQuestion.correctAnswers.includes(option.label)
-                      ? styles.correct
-                      : state.selectedAnswers.includes(option.label)
-                      ? styles.incorrect
+        {isTextQuestion ? (
+          <div className={styles.options}>
+            <input
+              type="text"
+              className={`${styles.textInput} ${state.submitted ? (isTextCorrect ? styles.textInputCorrect : styles.textInputIncorrect) : ""}`}
+              placeholder={currentQuestion.placeholder ?? "Type your answer"}
+              value={state.selectedAnswers[0] ?? ""}
+              onChange={(e) => handleTextChange(e.target.value)}
+              disabled={state.submitted}
+              autoComplete="off"
+            />
+            {state.submitted && (
+              <div className={styles.correctAnswerBox}>
+                Correct answer: <strong>{currentQuestion.correctAnswers.join(", ")}</strong>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className={styles.options}>
+            {displayedOptions.map((option) => (
+              <div key={option.label} className={styles.optionWrapper}>
+                <input
+                  type={currentQuestion.isMultiSelect ? "checkbox" : "radio"}
+                  id={`${currentQuestion.id}-${option.label}`}
+                  name={currentQuestion.id}
+                  value={option.label}
+                  checked={state.selectedAnswers.includes(option.label)}
+                  onChange={() => handleOptionSelect(option.label)}
+                  disabled={state.submitted}
+                  className={styles.input}
+                />
+                <label
+                  htmlFor={`${currentQuestion.id}-${option.label}`}
+                  className={`${styles.label} ${
+                    state.submitted
+                      ? currentQuestion.correctAnswers.includes(option.label)
+                        ? styles.correct
+                        : state.selectedAnswers.includes(option.label)
+                        ? styles.incorrect
+                        : ""
                       : ""
-                    : ""
-                }`}
-              >
-                <span className={styles.optionLabel}>{option.displayLabel}.</span>
-                <span className={styles.optionText}>
-                  <FormattedText text={option.text} />
-                </span>
-              </label>
-            </div>
-          ))}
-        </div>
+                  }`}
+                >
+                  <span className={styles.optionLabel}>{option.displayLabel}.</span>
+                  <span className={styles.optionText}>
+                    <FormattedText text={option.text} />
+                  </span>
+                </label>
+              </div>
+            ))}
+          </div>
+        )}
 
         {state.submitted && (
           <div className={styles.feedback}>
@@ -208,7 +254,7 @@ function WeeklyQuizQuestionScreen({
           <button
             className={styles.submitButton}
             onClick={handleSubmit}
-            disabled={state.selectedAnswers.length === 0}
+            disabled={isTextQuestion ? !state.selectedAnswers[0]?.trim() : state.selectedAnswers.length === 0}
           >
             Submit
           </button>

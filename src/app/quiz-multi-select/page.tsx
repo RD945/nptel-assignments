@@ -34,7 +34,7 @@ export default function QuizMultiSelect() {
   const [state, setState] = useState<QuizState | null>(null);
   const questions = subject ? getQuestionsForSubject(subject) : [];
   const multiSelectQuestions = useMemo(
-    () => questions.filter((question) => question.isMultiSelect),
+    () => questions.filter((question) => question.isMultiSelect && question.kind !== "text"),
     [questions]
   );
 

@@ -60,30 +60,41 @@ export default function Review() {
                   Q{idx + 1}. <FormattedText text={question.text} />
                 </div>
 
-                <div className={styles.optionsList}>
-                  {question.options.map((option) => (
-                    <div
-                      key={option.label}
-                      className={`${styles.option} ${
-                        question.correctAnswers.includes(option.label)
-                          ? styles.correct
-                          : ""
-                      }`}
-                    >
-                      <span className={styles.optionLabel}>{option.label}.</span>
-                      <span className={styles.optionText}>
-                        <FormattedText text={option.text} />
-                      </span>
-                      {question.correctAnswers.includes(option.label) && (
-                        <span className={styles.correctBadge}>CORRECT</span>
-                      )}
+                {question.kind === "text" ? (
+                  <div className={styles.correctAnswer}>
+                    Type-in answer: <strong>{question.correctAnswers.join(", ")}</strong>
+                    {question.placeholder && (
+                      <span style={{ color: "#666" }}> ({question.placeholder})</span>
+                    )}
+                  </div>
+                ) : (
+                  <>
+                    <div className={styles.optionsList}>
+                      {question.options.map((option) => (
+                        <div
+                          key={option.label}
+                          className={`${styles.option} ${
+                            question.correctAnswers.includes(option.label)
+                              ? styles.correct
+                              : ""
+                          }`}
+                        >
+                          <span className={styles.optionLabel}>{option.label}.</span>
+                          <span className={styles.optionText}>
+                            <FormattedText text={option.text} />
+                          </span>
+                          {question.correctAnswers.includes(option.label) && (
+                            <span className={styles.correctBadge}>CORRECT</span>
+                          )}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
 
-                <div className={styles.correctAnswer}>
-                  Correct Answer(s): <strong>{question.correctAnswers.join(", ")}</strong>
-                </div>
+                    <div className={styles.correctAnswer}>
+                      Correct Answer(s): <strong>{question.correctAnswers.join(", ")}</strong>
+                    </div>
+                  </>
+                )}
 
                 {question.explanation && (
                   <div className={styles.explanation}>

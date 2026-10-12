@@ -105,8 +105,38 @@ export default function ShuffleQuizMode({
     }));
   };
 
+  const handleTextChange = (value: string) => {
+    if (state.submitted) return;
+    setState((prev) => ({ ...prev!, selectedAnswers: [value] }));
+  };
+
+  const isTextQuestion = currentQuestion.kind === "text";
+  const isTextCorrect =
+    isTextQuestion &&
+    state.submitted &&
+    state.selectedAnswers[0]?.trim() !== "" &&
+    currentQuestion.correctAnswers.some(
+      (ans) => ans.trim().toLowerCase() === state.selectedAnswers[0]?.trim().toLowerCase()
+    );
+
   const handleSubmit = () => {
-    if (state.selectedAnswers.length === 0 || state.submitted) return;
+    if (state.submitted) return;
+    if (isTextQuestion) {
+      if (!state.selectedAnswers[0]?.trim()) return;
+      const normalized = state.selectedAnswers[0].trim().toLowerCase();
+      const isCorrect = currentQuestion.correctAnswers.some(
+        (ans) => ans.trim().toLowerCase() === normalized
+      );
+      setState((prev) => ({
+        ...prev!,
+        submitted: true,
+        feedback: isCorrect ? "Correct!" : "Incorrect.",
+        score: prev!.score + (isCorrect ? 1 : 0),
+      }));
+      return;
+    }
+
+    if (state.selectedAnswers.length === 0) return;
 
     const isCorrect =
       state.selectedAnswers.length === currentQuestion.correctAnswers.length &&
@@ -194,39 +224,60 @@ export default function ShuffleQuizMode({
           <FormattedText text={currentQuestion.text} />
         </h2>
 
-        <div className={styles.options}>
-          {currentQuestion.options.map((option, index) => (
-            <div key={`${currentQuestion.id}-${option.label}-${option.text}`} className={styles.optionWrapper}>
-              <input
-                type={currentQuestion.isMultiSelect ? "checkbox" : "radio"}
-                id={`${currentQuestion.id}-${option.label}`}
-                name={currentQuestion.id}
-                value={option.label}
-                checked={state.selectedAnswers.includes(option.label)}
-                onChange={() => handleOptionSelect(option.label)}
-                disabled={state.submitted}
-                className={styles.input}
-              />
-              <label
-                htmlFor={`${currentQuestion.id}-${option.label}`}
-                className={`${styles.label} ${
-                  state.submitted
-                    ? currentQuestion.correctAnswers.includes(option.label)
-                      ? styles.correct
-                      : state.selectedAnswers.includes(option.label)
-                        ? styles.incorrect
-                        : ""
-                    : ""
-                }`}
-              >
-                <span className={styles.optionLabel}>{String.fromCharCode(97 + index)}.</span>
-                <span className={styles.optionText}>
-                  <FormattedText text={option.text} />
-                </span>
-              </label>
-            </div>
-          ))}
-        </div>
+        {isTextQuestion ? (
+          <div className={styles.options}>
+            <input
+              type="text"
+              className={`${styles.textInput} ${
+                state.submitted ? (isTextCorrect ? styles.textInputCorrect : styles.textInputIncorrect) : ""
+              }`}
+              placeholder={currentQuestion.placeholder ?? "Type your answer"}
+              value={state.selectedAnswers[0] ?? ""}
+              onChange={(e) => handleTextChange(e.target.value)}
+              disabled={state.submitted}
+              autoComplete="off"
+            />
+            {state.submitted && (
+              <div className={styles.correctAnswerBox}>
+                Correct answer: <strong>{currentQuestion.correctAnswers.join(", ")}</strong>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className={styles.options}>
+            {currentQuestion.options.map((option, index) => (
+              <div key={`${currentQuestion.id}-${option.label}-${option.text}`} className={styles.optionWrapper}>
+                <input
+                  type={currentQuestion.isMultiSelect ? "checkbox" : "radio"}
+                  id={`${currentQuestion.id}-${option.label}`}
+                  name={currentQuestion.id}
+                  value={option.label}
+                  checked={state.selectedAnswers.includes(option.label)}
+                  onChange={() => handleOptionSelect(option.label)}
+                  disabled={state.submitted}
+                  className={styles.input}
+                />
+                <label
+                  htmlFor={`${currentQuestion.id}-${option.label}`}
+                  className={`${styles.label} ${
+                    state.submitted
+                      ? currentQuestion.correctAnswers.includes(option.label)
+                        ? styles.correct
+                        : state.selectedAnswers.includes(option.label)
+                          ? styles.incorrect
+                          : ""
+                      : ""
+                  }`}
+                >
+                  <span className={styles.optionLabel}>{String.fromCharCode(97 + index)}.</span>
+                  <span className={styles.optionText}>
+                    <FormattedText text={option.text} />
+                  </span>
+                </label>
+              </div>
+            ))}
+          </div>
+        )}
 
         {state.submitted && (
           <div className={styles.feedback}>
@@ -250,7 +301,7 @@ export default function ShuffleQuizMode({
           <button
             className={styles.submitButton}
             onClick={handleSubmit}
-            disabled={state.selectedAnswers.length === 0}
+            disabled={isTextQuestion ? !state.selectedAnswers[0]?.trim() : state.selectedAnswers.length === 0}
           >
             Submit
           </button>
