@@ -3,8 +3,8 @@ import type { Question } from "@/data/questions";
 export const programmingGenerativeAiMetadata = {
   course: "Programming with Generative AI",
   platform: "NPTEL / Online Certification",
-  total_questions: 38,
-  weeks_covered: [1, 2, 3, 4],
+  total_questions: 50,
+  weeks_covered: [1, 2, 3, 4, 5, 6, 7],
 };
 
 export const programmingGenerativeAiQuestions: Question[] = [
@@ -579,5 +579,340 @@ export const programmingGenerativeAiQuestions: Question[] = [
     correctAnswers: ["b", "c", "d", "e"],
     explanation: "Per CodeCheck: whitespace (space, newline, tab) separates words; client wants unique words case-insensitively, not comma-separated, not case-sensitive unique, not all duplicates.",
     isMultiSelect: true,
+  },
+  {
+    id: "pgai-w5q1",
+    week: 5,
+    text: `Your friend has used this CodeCheck link to ask the client clarifying questions before writing the following code:
+
+def first_word(s: str) -> str:
+    """Return the first word in sentence s.
+    >>> first_word('first word')
+    'first'
+    >>> first_word('15th August, 1947')
+    '15th'
+    """
+    try:
+        s = s.split(' ')
+        return s[0]
+    except IndexError:
+        return ''
+
+On which of the following inputs will the behaviour of your friend's code be different from the behaviour expected by the client?`,
+    options: [
+      { label: "a", text: "''" },
+      { label: "b", text: "'1st word'" },
+      { label: "c", text: "'First word'" },
+      { label: "d", text: "' firstword'" },
+      { label: "e", text: "None of the above" },
+    ],
+    correctAnswers: ["c", "d"],
+    explanation: "The supplied answer key identifies 'First word' and ' firstword' as mismatches. The code preserves the capital F and, for leading spaces, split(' ') produces an empty first item rather than the first word.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w5q2",
+    week: 5,
+    text: `Use this CodeCheck link to ask the client clarifying questions for this Python function:
+
+def max_positive_int(data: list) -> int:
+    """Return the maximum positive integer in data.
+    >>> max_positive_int([1, -2, 3])
+    3
+    >>> max_positive_int('one', 2, 3.14)
+    2
+    """
+    pass
+
+Which implementation (if any) among the options below does the client want?
+
+Hint: Each of the following implementations makes assumptions. You need to:
+Recognize these assumptions by reading the code.
+Based on these assumptions, identify specific inputs and "ask the client" for the expected behaviour on these inputs using the CodeCheck link above.
+Eliminate all implementations below that do not have the desired behaviour.`,
+    options: [
+      { label: "a", text: "def max_positive_int(data: list) -> int:\n    if data == []: return 0\n    return max(data)" },
+      { label: "b", text: "def max_positive_int(data: list) -> int:\n    data = [item for item in data if item > 0]\n    if data == []: return 0\n    return max(data)" },
+      { label: "c", text: "def max_positive_int(data: list) -> int:\n    data = [item for item in data if type(item) == int]\n    if data == []: return 0\n    return max(data)" },
+      { label: "d", text: "None of these" },
+    ],
+    correctAnswers: ["d"],
+    explanation: "None of the implementations checks both required properties: integer type and positive value. The first performs no filtering, the second can include floats or fail on strings, and the third can return a non-positive integer.",
+    isMultiSelect: false,
+  },
+  {
+    id: "pgai-w5q3",
+    week: 5,
+    text: `Use this CodeCheck link to ask the client clarifying questions for this Python function:
+
+def factors(n: int, data: list) -> list:
+    """Find all the factors of n among the numbers in data.
+    >>> factors(8, [1, 2, 3])
+    [1, 2]
+    """
+    pass
+
+Which implementation (if any) among the options below does the client want?
+
+Hint: Each of the following implementations makes assumptions. You need to:
+Recognize these assumptions by reading the code.
+Based on these assumptions, identify specific inputs and "ask the client" for the expected behaviour on these inputs using the CodeCheck link above.
+Eliminate all implementations below that do not have the desired behaviour.`,
+    options: [
+      { label: "a", text: "def factors(n: int, data: list) -> list:\n    return [x for x in data if n % x == 0]" },
+      { label: "b", text: "def factors(n: int, data: list) -> list:\n    return [x for x in data if type(x) == int and x != 0 and n % x == 0]" },
+      { label: "c", text: "def factors(n: int, data: list) -> list:\n    result = []\n    for x in data:\n        if (type(x) in (int, float)) and x != 0 and n % x == 0:\n            result.append(x)\n    return result" },
+      { label: "d", text: "def factors(n: int, data: list) -> list:\n    result = []\n    for x in data:\n        try:\n            if n % x == 0:\n                result.append(x)\n        except:\n            pass\n    return result" },
+      { label: "e", text: "None of these" },
+    ],
+    correctAnswers: ["e"],
+    explanation: "The supplied answer key is None of these. The implementations make different assumptions about types, zero, duplicates, and error handling; the example alone does not specify all the client's requirements.",
+    isMultiSelect: false,
+  },
+  {
+    id: "pgai-w6q1",
+    week: 6,
+    text: "Recall that Python's print function typically takes one argument of type str and automatically prints a newline after printing it. The print function can also be called with an additional argument end that specifies what should be printed after the given string. For example print('Hello!', end='') will print the string 'Hello!' without adding a newline. Based on this information alone, which of these could be the signature of the print function?",
+    options: [
+      { label: "a", text: "def print(text: str, end: str) -> str:" },
+      { label: "b", text: "def print(text: str, end: str) -> None:" },
+      { label: "c", text: "def print(text: str, end: str='\\n') -> str:" },
+      { label: "d", text: "def print(text: str, end: str='\\n') -> None:" },
+    ],
+    correctAnswers: ["d"],
+    explanation: "end must have a default newline so the function can be called with just text. print produces output as a side effect and returns None.",
+    isMultiSelect: false,
+  },
+  {
+    id: "pgai-w6q2",
+    week: 6,
+    text: `The following Python function counts the number of even integers in the given list:
+
+def num_even(data: list[int]) -> int:  # Line 1
+    i = 0                           # Line 2
+    result = 0                      # Line 3
+    while i < len(data):             # Line 4
+        if data[i] % 2 == 0:         # Line 5
+            result += data[i]       # Line 6
+        i += 1                      # Line 7
+    return result                   # Line 8
+
+Note: You can also view the code on PythonTutor.
+Your friend wants to rewrite this function using a for-loop instead of a while-loop. What changes should your friend make?`,
+    options: [
+      { label: "a", text: "(Line 2) Delete" },
+      { label: "b", text: "(Line 2) Replace with: i = 1" },
+      { label: "c", text: "(Line 4) Replace with: for i in len(range(data)):" },
+      { label: "d", text: "(Line 4) Replace with: for i in range(len(data) - 1):" },
+      { label: "e", text: "(Line 4) Replace with: for i in data:" },
+      { label: "f", text: "(Line 6) Replace with: data += i" },
+      { label: "g", text: "(Line 6) Replace with: result += i" },
+      { label: "h", text: "(Line 7) Delete" },
+    ],
+    correctAnswers: ["a", "e", "g", "h"],
+    explanation: "The supplied key replaces manual indexing with iteration over elements. Note: Line 5 would also need to become if i % 2 == 0. The shown code sums even values rather than counting them; counting would require result += 1.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w6q3",
+    week: 6,
+    text: `Your friend has written the following Python function to find the number of unique integers in a list:
+
+def num_unique(data: list[int]):           # Line 1
+    result = 0                           # Line 2
+    i = 0                                # Line 3
+    while i < len(data) - 1:              # Line 4
+        if data[i] not in data[i + 1:]:   # Line 5
+            result += 1                  # Line 6
+        i += 1                           # Line 7
+    return result                        # Line 8
+
+Note: You can also view the code on PythonTutor.
+Identify all true statements from the options below:`,
+    options: [
+      { label: "a", text: "(Line 1) The return type-hint int should be added" },
+      { label: "b", text: "(Line 1) The return type-hint list[int] should be added" },
+      { label: "c", text: "When we call num_unique([]), Line 4 is executed once." },
+      { label: "d", text: "When we call num_unique([]), Line 4 is never executed." },
+      { label: "e", text: "When we call num_unique([7]), Line 5 is executed once." },
+      { label: "f", text: "When we call num_unique([7]), Line 5 is never executed." },
+      { label: "g", text: "When we call num_unique([7, 8]), Line 6 is executed once." },
+      { label: "h", text: "When we call num_unique([7, 8]), Line 6 is executed twice." },
+      { label: "i", text: "When we call num_unique([7, 7]), Line 6 is never executed." },
+    ],
+    correctAnswers: ["a", "c", "f", "g", "i"],
+    explanation: "The function returns an integer. Even for an empty list, the while condition on Line 4 is evaluated once. A one-item list never enters the body. For [7, 8], the first 7 is absent from the remaining slice so result is incremented once; for [7, 7], it is present so result is never incremented.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w6q4",
+    week: 6,
+    text: `Your friend has written the following Python function to sort a list of integers in ascending order:
+
+def sort_ascending(data: list[int]):              # Line 1
+    i = 0                                       # Line 2
+    while i < len(data) - 1:                     # Line 3
+        if data[i] > data[i + 1]:                # Line 4
+            data[i], data[i + 1] = data[i + 1], data[i]  # Line 5
+        i += 1                                  # Line 6
+
+Suppose all the integers in data are either 0 or 1. Identify the shortest list data that the above function does not sort correctly.`,
+    options: [],
+    correctAnswers: ["[1, 1, 0]"],
+    explanation: "For [1, 1, 0], the first pair is unchanged and the second pair is swapped, leaving [1, 0, 1], which is not sorted. All lists of length at most two are sorted by this single pass.",
+    isMultiSelect: false,
+    kind: "text",
+    textAnswerFormat: "integer-list",
+    placeholder: "Enter a list, e.g. [0, 1, 0]",
+  },
+  {
+    id: "pgai-w6q5",
+    week: 6,
+    text: `Your friend used this CodeCheck link to ask the client certain clarifying questions. Based on these clarifications, your friend wrote the following function:
+
+def next_month(month: str) -> str:
+    """Find the month after the given month."""
+    next = {
+        'january': 'February', 'february': 'March', 'march': 'April',
+        'april': 'May', 'may': 'June', 'june': 'July',
+        'july': 'August', 'august': 'September', 'september': 'October',
+        'october': 'November', 'november': 'December', 'december': 'January'
+    }
+    month = month.casefold()
+    return next[month]
+
+Identify all additional clarifying questions that your friend may have forgotten to ask from the options below.`,
+    options: [
+      { label: "a", text: "Should I ignore the difference between upper-case and lower-case month names (e.g., 'may' vs. 'MAY')?" },
+      { label: "b", text: "Should the return value have the same case as the input (e.g., should 'MAY' return 'JUNE')?" },
+      { label: "c", text: "Should I handle short-form month names (e.g., 'Jan' for 'January')?" },
+      { label: "d", text: "What should I do with illegal month names (e.g., 'junk')?" },
+    ],
+    correctAnswers: ["c", "d"],
+    explanation: "The supplied key identifies abbreviations and illegal month names as the remaining clarifications. The dictionary only contains full month names; an abbreviation or unknown name raises KeyError.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w7q1",
+    week: 7,
+    text: `First read this blog post to understand the difference between the isdigit, isnumeric, and isdecimal methods. Now consider the following AI-generated body for the Python function below:
+
+def unique_digits(s: str) -> int:
+    """Count the number of unique digits in s.
+    >>> unique_digits('15 Aug 1947')
+    5
+    """
+    return len(set(c for c in s if c.isdigit()))  # AI suggestion
+
+Our client wants the function to satisfy the following doctests:
+>>> unique_digits('The equation is x ** 2 = y')
+1
+>>> unique_digits('The equation is x² = y')
+0
+>>> unique_digits('We had 5 subjects in Class 5')
+1
+>>> unique_digits('We had 5 subjects in Class V')
+1
+>>> unique_digits('We had 5 subjects in Class Ⅴ')
+2
+
+What change (if any) needs to be made to the AI suggestion to satisfy all doctests?`,
+    options: [
+      { label: "a", text: "No changes" },
+      { label: "b", text: "Replace c.isdigit() with c.isnumeric()" },
+      { label: "c", text: "Replace c.isdigit() with c.isdecimal()" },
+      { label: "d", text: "Replace c.isdigit() with '0' <= c <= '9'" },
+      { label: "e", text: "Replace set with list" },
+      { label: "f", text: "Replace set with tuple" },
+    ],
+    correctAnswers: ["c", "d"],
+    explanation: "The supplied key selects isdecimal() and the ASCII digit range; both exclude superscript ². There is an inconsistency in the last doctest: both also exclude Roman numeral Ⅴ and return 1, not 2. isnumeric() includes Ⅴ but also includes ², so none of the listed changes satisfies every doctest as written.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w7q2",
+    week: 7,
+    text: `Your friend wants this C program to print: x = 0 followed by a new-line.
+
+1: #include ;
+2: int main() {
+3:     int x;
+4:     printf("x = %d/n", x);
+5:
+6: }
+
+Select all changes that your friend should make to improve this program.`,
+    options: [
+      { label: "a", text: "(Line 1) Delete ; at the end of the line" },
+      { label: "b", text: "(Line 1) Delete line" },
+      { label: "c", text: "(Line 1) Modify to: import" },
+      { label: "d", text: "(Line 2) Rewrite as: def main() -> int {" },
+      { label: "e", text: "(Line 2) Rewrite as: void main() {" },
+      { label: "f", text: "(Line 2) Rewrite as: def main(int) {" },
+      { label: "g", text: "(Line 3) Rewrite as: x = 0;" },
+      { label: "h", text: "(Line 3) Rewrite as: x: int = 0;" },
+      { label: "i", text: "(Line 3) Rewrite to declare and initialize x" },
+      { label: "j", text: "(Line 4) Rewrite as: printf(\"x = {x}\");" },
+      { label: "k", text: "(Line 4) Rewrite as: printf(\"x = %d\\n\");" },
+      { label: "l", text: "(Line 4) Rewrite as: printf(\"x = %d\\n\", x);" },
+      { label: "m", text: "(Line 5) Add: return;" },
+      { label: "n", text: "(Line 5) Add: return 0;" },
+      { label: "o", text: "(Line 5): Delete" },
+    ],
+    correctAnswers: ["a", "i", "l", "n"],
+    explanation: "Initialize x with int x = 0;, use the newline escape \\n and pass x for %d, and return 0 from main. The supplied key also removes the semicolon from the include directive. The provided excerpt omits the header name; printf requires #include <stdio.h>.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w7q3",
+    week: 7,
+    text: `Consider the following Python program:
+
+def num_digits(n: int) -> int:
+    if -9 <= n <= 9:
+        return 1
+    return 1 + num_digits(n // 10)
+
+if __name__ == '__main__':
+    n = 4
+    print(num_digits(n))
+
+Your friend has tried to translate this program into C (PythonTutor). First fix the warning in this program. (Hint: If you cannot spot the problem, click on Visualize Execution and scroll down to see the warning. If you cannot fix this problem yourself, seek help from PythonTutor's AI Tutor.)
+
+After fixing the C program, identify the largest negative integer n for which the Python program and the C program produce different answers.`,
+    options: [],
+    correctAnswers: ["-91"],
+    explanation: "Python floor division gives -91 // 10 = -10, so the recursive function returns 3. C integer division truncates toward zero, giving -91 / 10 = -9 and a result of 2. Values -90 through -1 give matching digit counts.",
+    isMultiSelect: false,
+    kind: "text",
+    placeholder: "Enter a negative integer",
+  },
+  {
+    id: "pgai-w7q4",
+    week: 7,
+    text: `Consider the following Python program:
+
+def num_digits(n: int) -> int:
+    if n < 0:
+        n = -n
+    result = 1
+    while n >= 10:
+        result += 1
+        n //= 10
+    return result
+
+if __name__ == '__main__':
+    n = -100
+    print(num_digits(n))
+
+Your friend has tried to translate this program into C (PythonTutor). In PythonTutor, integers in C are represented using 32 bits. You can read about the range of representable C integers here. First fix the error in your friend's program. (Hint: If you cannot spot the error, click on Visualize Execution and see the line that causes the error. If you cannot fix this error yourself, seek help from PythonTutor's AI Tutor.)
+
+After fixing the C program, identify the only integer n that is representable in C for which the Python program and the C program produce different answers.`,
+    options: [],
+    correctAnswers: ["-2147483648"],
+    explanation: "The minimum signed 32-bit integer is -2147483648. Its positive counterpart, 2147483648, is outside that C int range, so negation causes signed overflow (undefined behaviour in C). Python integers can represent that positive value and count its 10 digits.",
+    isMultiSelect: false,
+    kind: "text",
+    placeholder: "Enter an integer",
   },
 ];

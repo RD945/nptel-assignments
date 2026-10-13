@@ -16,6 +16,7 @@ export interface Question {
   isMultiSelect: boolean;
   kind?: QuestionKind;
   placeholder?: string;
+  textAnswerFormat?: "integer-list";
 }
 
 export const questions: Question[] = [

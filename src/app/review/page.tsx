@@ -46,7 +46,7 @@ export default function Review() {
     <div className={styles.container}>
       <SubjectHeader
         title={`${subjectInfo?.label} Questions & Answers`}
-        subtitle="Week 1 to Week 12 in order"
+        subtitle={`Available weeks: ${weeks.join(", ")} in order`}
       />
 
       <div className={styles.questions}>

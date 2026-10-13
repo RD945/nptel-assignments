@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import type { Question } from "@/data/questions";
+import { matchesTextAnswer } from "@/data/question-answers";
 import FormattedText from "@/components/FormattedText";
 import SubjectHeader from "@/components/SubjectHeader";
 import styles from "@/app/quiz-weekly/quiz-weekly.module.css";
@@ -70,10 +71,7 @@ function WeeklyQuizQuestionScreen({
   const isTextCorrect =
     isTextQuestion &&
     state.submitted &&
-    state.selectedAnswers[0]?.trim() !== "" &&
-    currentQuestion.correctAnswers.some(
-      (ans) => ans.trim().toLowerCase() === state.selectedAnswers[0]?.trim().toLowerCase()
-    );
+    matchesTextAnswer(currentQuestion, state.selectedAnswers[0] ?? "");
 
   const handleOptionSelect = (label: string) => {
     if (state.submitted) return;
@@ -102,10 +100,7 @@ function WeeklyQuizQuestionScreen({
     if (state.submitted) return;
     if (isTextQuestion) {
       if (!state.selectedAnswers[0]?.trim()) return;
-      const normalized = state.selectedAnswers[0].trim().toLowerCase();
-      const isCorrect = currentQuestion.correctAnswers.some(
-        (ans) => ans.trim().toLowerCase() === normalized
-      );
+      const isCorrect = matchesTextAnswer(currentQuestion, state.selectedAnswers[0]);
       const newScore = state.score + (isCorrect ? 1 : 0);
       const feedback = isCorrect ? "Correct!" : "Incorrect.";
       setState((prev) => ({ ...prev!, submitted: true, feedback, score: newScore }));
@@ -181,6 +176,8 @@ function WeeklyQuizQuestionScreen({
           <div className={styles.options}>
             <input
               type="text"
+              name={currentQuestion.id}
+              aria-label="Your answer"
               className={`${styles.textInput} ${state.submitted ? (isTextCorrect ? styles.textInputCorrect : styles.textInputIncorrect) : ""}`}
               placeholder={currentQuestion.placeholder ?? "Type your answer"}
               value={state.selectedAnswers[0] ?? ""}
