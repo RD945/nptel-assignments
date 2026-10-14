@@ -7,7 +7,7 @@ export const programmingGenerativeAiMetadata = {
   weeks_covered: [1, 2, 3, 4, 5, 6, 7],
 };
 
-export const programmingGenerativeAiQuestions: Question[] = [
+const programmingGenerativeAiQuestionData: Question[] = [
   {
     id: "pgai-w1q1",
     week: 1,
@@ -131,7 +131,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w1q10",
     week: 1,
-    text: "Your friend performs an experiment in the REPL and observes the following: >>> (2 / 3) > (2 // 3)\nTrue\nSelect all true statements that help explain this observation.",
+    text: "Your friend performs an experiment in the REPL and observes the following:\n\n>>> (2 / 3) > (2 // 3)\nTrue\n\nSelect all true statements that help explain this observation.",
     options: [
       { label: "a", text: "The / operator has higher precedence than the // operator" },
       { label: "b", text: "The expression (2 / 3) evaluates to a positive float value" },
@@ -209,7 +209,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w1q15",
     week: 1,
-    text: "Your friend performs an experiment in the REPL and observes the following: >>> 2 ** 0.5 ** 2 == 2\nFalse\nWhich of these modified expressions evaluate to True?",
+    text: "Your friend performs an experiment in the REPL and observes the following:\n\n>>> 2 ** 0.5 ** 2 == 2\nFalse\n\nWhich of these modified expressions evaluate to True?",
     options: [
       { label: "a", text: "((2 ** 0.5) ** 2) == 2" },
       { label: "b", text: "(2 ** (0.5 ** 2)) == 2" },
@@ -223,7 +223,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q1",
     week: 2,
-    text: "Your friend performs the following experiment in the REPL: >>> n = 7\n>>> m = n - 1\n>>> n = n - 1\nAfter performing these three assignments, which of the following expressions will evaluate to True?",
+    text: "Your friend performs the following experiment in the REPL:\n\n>>> n = 7\n>>> m = n - 1\n>>> n = n - 1\n\nAfter performing these three assignments, which of the following expressions will evaluate to True?",
     options: [
       { label: "a", text: "m == n" },
       { label: "b", text: "n == 7" },
@@ -237,7 +237,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q2",
     week: 2,
-    text: "Your friend initializes a variable n with some unknown value and then performs the following experiment in the REPL: >>> (n / 2) == (n // 2)\nTrue\nSelect all values that n can be from the options below.",
+    text: "Your friend initializes a variable n with some unknown value and then performs the following experiment in the REPL:\n\n>>> (n / 2) == (n // 2)\nTrue\n\nSelect all values that n can be from the options below.",
     options: [
       { label: "a", text: "-2" },
       { label: "b", text: "-1" },
@@ -253,7 +253,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q3",
     week: 2,
-    text: "Your friend initializes a variable n with some unknown value and then performs the following experiment in the REPL: >>> n + n * n == (n + n) * n\nTrue\nSelect all values that n can be from the options below.",
+    text: "Your friend initializes a variable n with some unknown value and then performs the following experiment in the REPL:\n\n>>> n + n * n == (n + n) * n\nTrue\n\nSelect all values that n can be from the options below.",
     options: [
       { label: "a", text: "-2" },
       { label: "b", text: "-1" },
@@ -269,7 +269,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q4",
     week: 2,
-    text: "Your friend initializes a variable n with some unknown value and then performs the following experiment in the REPL: >>> n + n * 2 == (n + n) * 2\nFalse\nSelect all values that n can be from the options below.",
+    text: "Your friend initializes a variable n with some unknown value and then performs the following experiment in the REPL:\n\n>>> n + n * 2 == (n + n) * 2\nFalse\n\nSelect all values that n can be from the options below.",
     options: [
       { label: "a", text: "0" },
       { label: "b", text: "0.0" },
@@ -285,7 +285,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q5",
     week: 2,
-    text: "Your friend uses assignment statements to initialize variables x and y with some unknown values and then performs the following experiment in the REPL: >>> x + y == y + x\nFalse\nWhich of these could have been the assignment statements performed by your friend?",
+    text: "Your friend uses assignment statements to initialize variables x and y with some unknown values and then performs the following experiment in the REPL:\n\n>>> x + y == y + x\nFalse\n\nWhich of these could have been the assignment statements performed by your friend?",
     options: [
       { label: "a", text: "x = 0" },
       { label: "b", text: "x = '0'" },
@@ -301,7 +301,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q6",
     week: 2,
-    text: "Your friend performs the following experiment in the REPL: >>> Ord('A')\nNameError: name 'Ord' is not defined. Did you mean: 'ord'? What should your friend have typed?",
+    text: "Your friend performs the following experiment in the REPL:\n\n>>> Ord('A')\nNameError: name 'Ord' is not defined. Did you mean: 'ord'?\n\nWhat should your friend have typed?",
     options: [
       { label: "a", text: "ord(A)" },
       { label: "b", text: "ord('A')" },
@@ -316,7 +316,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q7",
     week: 2,
-    text: "Your friend performs the following experiment in the REPL: >>> radius = input('Radius: ')\nRadius: 0.5\n>>> 2 * radius\nWhat will be printed in the REPL?",
+    text: "Your friend performs the following experiment in the REPL:\n\n>>> radius = input('Radius: ')\nRadius: 0.5\n>>> 2 * radius\n\nWhat will be printed in the REPL?",
     options: [
       { label: "a", text: "An error message" },
       { label: "b", text: "1" },
@@ -331,7 +331,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q8",
     week: 2,
-    text: "Your friend performs the following experiment in the REPL: >>> ord(max('Zero'))\n114\nExplanation: We first evaluate Blank1, which is the value Blank2, and then we evaluate Blank3, which is 114. To complete the above explanation, what are Blank1, Blank2, and Blank3?",
+    text: "Your friend performs the following experiment in the REPL:\n\n>>> ord(max('Zero'))\n114\n\nExplanation: We first evaluate Blank1, which is the value Blank2, and then we evaluate Blank3, which is 114. To complete the above explanation, what are Blank1, Blank2, and Blank3?",
     options: [
       { label: "a", text: "Blank1 is ord('Zero')" },
       { label: "b", text: "Blank1 is ord('Z')" },
@@ -349,7 +349,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q9",
     week: 2,
-    text: "Your friend performs the following experiment in the REPL: >>> x = input('Do you want to return? ')\nDo you want to return? Yes\nInstead of x, which of the following would be the most appropriate variable name?",
+    text: "Your friend performs the following experiment in the REPL:\n\n>>> x = input('Do you want to return? ')\nDo you want to return? Yes\n\nInstead of x, which of the following would be the most appropriate variable name?",
     options: [
       { label: "a", text: "return" },
       { label: "b", text: "Return" },
@@ -363,7 +363,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w2q10",
     week: 2,
-    text: "Your friend performs the following experiment in the REPL: >>> x = float(input('Net import value (in lakhs): '))\n66.5\nInstead of x, which of the following would be the most appropriate variable name?",
+    text: "Your friend performs the following experiment in the REPL:\n\n>>> x = float(input('Net import value (in lakhs): '))\n66.5\n\nInstead of x, which of the following would be the most appropriate variable name?",
     options: [
       { label: "a", text: "niv" },
       { label: "b", text: "import" },
@@ -377,7 +377,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w3q1",
     week: 3,
-    text: "Consider the following Python function: def f(x, y, z): return (x + y) == z\nSelect all expressions that evaluate to True from the options below.",
+    text: "Consider the following Python function:\n\ndef f(x, y, z):\n    return (x + y) == z\n\nSelect all expressions that evaluate to True from the options below.",
     options: [
       { label: "a", text: "f(0, 0, 0.0)" },
       { label: "b", text: "f(1 / 2, 1 / 2, 1)" },
@@ -393,7 +393,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w3q2",
     week: 3,
-    text: "Your friend has written the following function based on this Wikipedia article: def f(x: float) -> float: return x / 4.184\nThe names f and x are meaningless. Which of the following are the most appropriate names for this function and parameter from the options below?",
+    text: "Your friend has written the following function based on this Wikipedia article:\n\ndef f(x: float) -> float:\n    return x / 4.184\n\nThe names f and x are meaningless. Which of the following are the most appropriate names for this function and parameter from the options below?",
     options: [
       { label: "a", text: "The function name should be to_calories" },
       { label: "b", text: "The function name should be to_joules" },
@@ -409,7 +409,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w3q3",
     week: 3,
-    text: "Your friend has written the following function based on this Wikipedia article: def f(x: int, y: int) -> float: return x / y ** 2 * 703\nWhich of the following are helpful suggestions to give to your friend?",
+    text: "Your friend has written the following function based on this Wikipedia article:\n\ndef f(x: int, y: int) -> float:\n    return x / y ** 2 * 703\n\nWhich of the following are helpful suggestions to give to your friend?",
     options: [
       { label: "a", text: "The expression x / y ** 2 * 703 should be rewritten as (x / (y ** 2)) * 703" },
       { label: "b", text: "The function name should be BMI" },
@@ -427,7 +427,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w3q4",
     week: 3,
-    text: "Consider the following Python function: def f(x: int, y: int) -> int:\n    if x < y: return y - x\n    elif x == y: return 0\n    else: return x - y\nWhich of the following is the most appropriate name for this function?",
+    text: "Consider the following Python function:\n\ndef f(x: int, y: int) -> int:\n    if x < y:\n        return y - x\n    elif x == y:\n        return 0\n    else:\n        return x - y\n\nWhich of the following is the most appropriate name for this function?",
     options: [
       { label: "a", text: "abs" },
       { label: "b", text: "gap_between" },
@@ -442,7 +442,7 @@ export const programmingGenerativeAiQuestions: Question[] = [
   {
     id: "pgai-w3q5",
     week: 3,
-    text: "Consider the following Python function description: The function can be rewritten as: def f(x: int, y: int) -> bool:\n    # Line 1\n    return EXPRESSION\nwhere EXPRESSION is:",
+    text: "Consider the following Python function description: The function can be rewritten as:\n\ndef f(x: int, y: int) -> bool:\n    # Line 1\n    return EXPRESSION\n\nwhere EXPRESSION is:",
     options: [
       { label: "a", text: "(x % y == 0) or (y == 0)" },
       { label: "b", text: "(x % y == 0) and (y == 0)" },
@@ -916,3 +916,7 @@ After fixing the C program, identify the only integer n that is representable in
     placeholder: "Enter an integer",
   },
 ];
+
+export const programmingGenerativeAiQuestions: Question[] = programmingGenerativeAiQuestionData.map(
+  (question) => ({ ...question, textFormat: "programming" })
+);

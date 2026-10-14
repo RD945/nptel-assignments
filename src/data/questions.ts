@@ -4,6 +4,7 @@ export interface QuestionOption {
 }
 
 export type QuestionKind = "choice" | "text";
+export type TextFormat = "math" | "programming";
 
 export interface Question {
   id: string;
@@ -17,6 +18,7 @@ export interface Question {
   kind?: QuestionKind;
   placeholder?: string;
   textAnswerFormat?: "integer-list";
+  textFormat?: TextFormat;
 }
 
 export const questions: Question[] = [

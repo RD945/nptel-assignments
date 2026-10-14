@@ -166,6 +166,7 @@
   border-radius: 4px;
   transition: background-color 0.2s ease;
   flex: 1;
+  min-width: 0;
 }
 
 .input:disabled ~ .label {
@@ -195,6 +196,8 @@
 }
 
 .optionText {
+  flex: 1;
+  min-width: 0;
   word-break: break-word;
 }
 

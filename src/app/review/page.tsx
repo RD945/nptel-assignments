@@ -57,7 +57,7 @@ export default function Review() {
             {questionsByWeek[week].map((question, idx) => (
               <div key={question.id} className={styles.questionCard}>
                 <div className={styles.questionNumber}>
-                  Q{idx + 1}. <FormattedText text={question.text} />
+                  Q{idx + 1}. <FormattedText text={question.text} format={question.textFormat} />
                 </div>
 
                 {question.kind === "text" ? (
@@ -81,7 +81,7 @@ export default function Review() {
                         >
                           <span className={styles.optionLabel}>{option.label}.</span>
                           <span className={styles.optionText}>
-                            <FormattedText text={option.text} />
+                            <FormattedText text={option.text} format={question.textFormat} />
                           </span>
                           {question.correctAnswers.includes(option.label) && (
                             <span className={styles.correctBadge}>CORRECT</span>
@@ -99,14 +99,14 @@ export default function Review() {
                 {question.explanation && (
                   <div className={styles.explanation}>
                     <strong>Explanation:</strong>{" "}
-                    <FormattedText text={question.explanation} />
+                    <FormattedText text={question.explanation} format={question.textFormat} />
                   </div>
                 )}
 
                 {question.detailedSolution && (
                   <div className={styles.explanation}>
                     <strong>Detailed Solution:</strong>{" "}
-                    <FormattedText text={question.detailedSolution} />
+                    <FormattedText text={question.detailedSolution} format={question.textFormat} />
                   </div>
                 )}
               </div>

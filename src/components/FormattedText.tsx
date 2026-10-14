@@ -1,7 +1,10 @@
 import { Fragment, ReactNode } from "react";
+import type { TextFormat } from "@/data/questions";
+import styles from "./FormattedText.module.css";
 
 interface FormattedTextProps {
   text: string;
+  format?: TextFormat;
 }
 
 const SYMBOL_REPLACEMENTS: Array<[RegExp, string]> = [
@@ -69,7 +72,38 @@ function formatInlineMath(input: string): ReactNode[] {
   return nodes;
 }
 
-export default function FormattedText({ text }: FormattedTextProps) {
+function formatProgrammingText(text: string) {
+  const paragraphs = text.split("\n\n");
+
+  return (
+    <span className={styles.programmingText}>
+      {paragraphs.map((paragraph, index) => {
+        const isCode = /^(?:def\s|>>>\s|if\s+__name__\b|(?:\d+:\s*)?#include\b)/.test(
+          paragraph.trimStart()
+        );
+
+        return (
+          <Fragment key={`paragraph-${index}`}>
+            {isCode ? (
+              <code className={paragraph.includes("\n") ? styles.codeBlock : styles.inlineCode}>
+                {paragraph}
+              </code>
+            ) : paragraph}
+            {index < paragraphs.length - 1 ? "\n\n" : null}
+          </Fragment>
+        );
+      })}
+    </span>
+  );
+}
+
+export default function FormattedText({ text, format = "math" }: FormattedTextProps) {
+  // Source code must be rendered verbatim: _ is not a subscript, ^ is not
+  // an exponent, and operators like <= and >= must keep their original syntax.
+  if (format === "programming") {
+    return formatProgrammingText(text);
+  }
+
   const normalized = normalizeSymbols(text);
   const lines = normalized.split("\n");
 

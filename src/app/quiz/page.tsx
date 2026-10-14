@@ -209,7 +209,7 @@ export default function Quiz() {
 
       <div className={styles.questionCard}>
         <h2 className={styles.questionText}>
-          <FormattedText text={currentQuestion.text} />
+          <FormattedText text={currentQuestion.text} format={currentQuestion.textFormat} />
         </h2>
 
         {isTextQuestion ? (
@@ -259,7 +259,7 @@ export default function Quiz() {
                 >
                   <span className={styles.optionLabel}>{option.label}.</span>
                   <span className={styles.optionText}>
-                    <FormattedText text={option.text} />
+                    <FormattedText text={option.text} format={currentQuestion.textFormat} />
                   </span>
                 </label>
               </div>
@@ -273,13 +273,13 @@ export default function Quiz() {
             {currentQuestion.explanation && (
               <div className={styles.explanation}>
                 <strong>Explanation:</strong>{" "}
-                <FormattedText text={currentQuestion.explanation} />
+                <FormattedText text={currentQuestion.explanation} format={currentQuestion.textFormat} />
               </div>
             )}
             {currentQuestion.detailedSolution && (
               <div className={styles.explanation}>
                 <strong>Detailed Solution:</strong>{" "}
-                <FormattedText text={currentQuestion.detailedSolution} />
+                <FormattedText text={currentQuestion.detailedSolution} format={currentQuestion.textFormat} />
               </div>
             )}
           </div>
