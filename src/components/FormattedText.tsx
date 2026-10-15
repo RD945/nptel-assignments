@@ -78,7 +78,7 @@ function formatProgrammingText(text: string) {
   return (
     <span className={styles.programmingText}>
       {paragraphs.map((paragraph, index) => {
-        const isCode = /^(?:def\s|>>>\s|if\s+__name__\b|(?:\d+:\s*)?#include\b)/.test(
+        const isCode = /^(?:\d+:\s*)?(?:def\s|>>>\s|if\s+__name__\b|#include\b|(?:int|void)\s+[A-Za-z_]\w*\s*\()/.test(
           paragraph.trimStart()
         );
 

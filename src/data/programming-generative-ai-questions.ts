@@ -3,8 +3,8 @@ import type { Question } from "@/data/questions";
 export const programmingGenerativeAiMetadata = {
   course: "Programming with Generative AI",
   platform: "NPTEL / Online Certification",
-  total_questions: 50,
-  weeks_covered: [1, 2, 3, 4, 5, 6, 7],
+  total_questions: 54,
+  weeks_covered: [1, 2, 3, 4, 5, 6, 7, 8],
 };
 
 const programmingGenerativeAiQuestionData: Question[] = [
@@ -914,6 +914,108 @@ After fixing the C program, identify the only integer n that is representable in
     isMultiSelect: false,
     kind: "text",
     placeholder: "Enter an integer",
+  },
+  {
+    id: "pgai-w8q1",
+    week: 8,
+    text: "Your friend is familiar with programming language A and is keen to learn a new programming language B. The two languages have similar syntax. Your friend is most likely to struggle if statements and expressions with similar BLANK1 in the two languages have BLANK2 BLANK3. What are the most appropriate values of BLANK1, BLANK2, and BLANK3?",
+    options: [
+      { label: "a", text: "BLANK1 is: syntax" },
+      { label: "b", text: "BLANK1 is: semantics" },
+      { label: "c", text: "BLANK2 is: similar" },
+      { label: "d", text: "BLANK2 is: different" },
+      { label: "e", text: "BLANK3 is: syntax" },
+      { label: "f", text: "BLANK3 is: semantics" },
+    ],
+    correctAnswers: ["a", "d", "f"],
+    explanation: "Similar syntax can suggest familiar behaviour, but different semantics means the same-looking statements or expressions can do different things. This makes transferring assumptions between languages misleading.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w8q2",
+    week: 8,
+    text: `Consider this Python function:
+
+1: def first_even(data: list[int]):
+2:     n = len(data)
+3:     for i in range(n):
+4:         if data[i] % 2 == 0:
+5:             return i
+6:     return n
+
+Select the most appropriate versions of the points below that your friend should keep in mind while translating this function into C:`,
+    options: [
+      { label: "a", text: "(Line 1) The parameter should be of type int *" },
+      { label: "b", text: "(Line 1) The parameter should be of type const int *" },
+      { label: "c", text: "(Line 1) The function's return type must be specified" },
+      { label: "d", text: "(Line 2) The variable n must be declared locally" },
+      { label: "e", text: "(Line 2) The variable n must be an extra parameter" },
+      { label: "f", text: "(Line 2) A local variable int i; must be declared before the for-loop" },
+      { label: "g", text: "(Line 3) The for-loop should be written as: for (int i = 0; i < n; i++) { ... }" },
+      { label: "h", text: "(Line 3) The for-loop must be written as: for (int i = 0; i < n; i++) { ... }" },
+      { label: "i", text: "(Line 3) The for-loop should be written as: for (i = 0; i < n; i++) { ... }" },
+      { label: "j", text: "(Line 4) The if-condition must be within parentheses (...)" },
+      { label: "k", text: "(Line 4) The if-condition should be within parentheses (...)" },
+      { label: "l", text: "(Line 5) This line cannot be rewritten as return i; since a return statement in C does not immediately exit the function" },
+      { label: "m", text: "(Line 5) This line cannot be rewritten as return i; since C does not permit multiple return statements within a function" },
+    ],
+    correctAnswers: ["b", "c", "e", "g", "j"],
+    explanation: "The array is only read, so const int * is appropriate. C requires an explicit return type and a separate length parameter because the pointer does not carry the array length. A C99-style for-loop can declare i in its initializer, and the if-condition requires parentheses. A return statement immediately exits a C function, and multiple return statements are permitted.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w8q3",
+    week: 8,
+    text: `Consider this C function:
+
+1: int avg(const char *s) {
+2:     int total = 0;
+3:     int i = 0;
+4:     while (s[i]) {
+5:         if (s[i] >= '0' && s[i] <= '9') {
+6:             total += (s[i] - '0');
+7:         }
+8:         i++;
+9:     }
+10:    return total / i;
+11: }
+
+Select the most appropriate versions of the points below that your friend should keep in mind while translating this function into Python:`,
+    options: [
+      { label: "a", text: "(Line 1) The type-hint for parameter s should be str" },
+      { label: "b", text: "(Line 4) Can be translated as: while i:" },
+      { label: "c", text: "(Line 4) Can be translated as: while s[i]:" },
+      { label: "d", text: "(Line 4) Can be translated as: while i < len(s):" },
+      { label: "e", text: "(Line 4) Can be translated as: while i <= len(s):" },
+      { label: "f", text: "(Line 5) Should be translated as: if s[i] >= '0' and s[i] <= '9':" },
+      { label: "g", text: "(Line 5) Should be translated as: if '0' <= s[i] <= '9':" },
+      { label: "h", text: "(Line 6) Should be translated as: total += (s[i] - '0')" },
+      { label: "i", text: "(Line 6) Should be translated as: total += int(s[i])" },
+      { label: "j", text: "(Line 6) Should be translated as: total += ord(s[i])" },
+      { label: "k", text: "(Line 10) Should be translated as: return total / i" },
+      { label: "l", text: "(Line 10) Should be translated as: return total // i" },
+      { label: "m", text: "(Line 10) Can result in a divide by zero error (only in C)" },
+      { label: "n", text: "(Line 10) Can result in a divide by zero error (only in Python)" },
+      { label: "o", text: "(Line 10) Can result in a divide by zero error (in both C and Python)" },
+    ],
+    correctAnswers: ["a", "d", "g", "i", "l", "o"],
+    explanation: "Use str and an explicit length check because Python strings do not end with an accessible null terminator. The chained comparison is idiomatic, and int(s[i]) converts a digit character to its numeric value. Since total and i are non-negative, // matches C integer division here. An empty string makes i zero: Python raises ZeroDivisionError, while C integer division by zero has undefined behaviour.",
+    isMultiSelect: true,
+  },
+  {
+    id: "pgai-w8q4",
+    week: 8,
+    text: "A popular implementation of Python is CPython, where list objects are internally represented as C arrays. Select all sentences that help explain why the list.append method is fast in practice?",
+    options: [
+      { label: "a", text: "C arrays can grow as long as necessary" },
+      { label: "b", text: "C code runs much slower than Python code" },
+      { label: "c", text: "Each call to the Python append requires resizing the underlying C array" },
+      { label: "d", text: "The C array can be efficiently resized using malloc" },
+      { label: "e", text: "The C array can be efficiently resized using realloc" },
+    ],
+    correctAnswers: ["e"],
+    explanation: "The supplied key selects realloc, which can resize an existing allocation and may reuse it in place. CPython also overallocates list storage, so most appends use spare capacity and do not require resizing; append is amortized O(1).",
+    isMultiSelect: false,
   },
 ];
 
